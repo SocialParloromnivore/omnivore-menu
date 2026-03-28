@@ -368,6 +368,7 @@ function renderContent() {
   document.getElementById('genre-desc').textContent = desc;
 
   const grid = document.getElementById('drink-grid');
+  items = [...items].sort((a, b) => a.price - b.price);
   grid.innerHTML = items.map((item, i) => {
     const mediaHtml = item.img && IMAGES[item.img]
       ? `<div class="drink-img-wrap"><img src="${IMAGES[item.img]}" alt="${item.name}" loading="lazy"></div>`
