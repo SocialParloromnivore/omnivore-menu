@@ -73,8 +73,8 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
 .drink-price span { font-size:11px; color:var(--text-muted); font-weight:300; margin-left:2px; }
 
 /* MODAL */
-#modal-overlay { position:fixed; inset:0; background:rgba(255,46,139,0.08); backdrop-filter:blur(8px); z-index:50; display:none; align-items:center; justify-content:center; padding:40px; }
-#modal-overlay.open { display:flex; }
+#modal-overlay { position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(255,46,139,0.08); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); z-index:50; display:-webkit-flex; display:flex; -webkit-align-items:center; align-items:center; -webkit-justify-content:center; justify-content:center; padding:40px; opacity:0; visibility:hidden; pointer-events:none; -webkit-transition:opacity 0.2s, visibility 0.2s; transition:opacity 0.2s, visibility 0.2s; }
+#modal-overlay.open { opacity:1; visibility:visible; pointer-events:auto; }
 #modal { background:#fff; border:1.5px solid var(--border); border-radius:16px; max-width:480px; width:100%; max-height:80vh; overflow-y:auto; animation:modalIn 0.28s ease; scrollbar-width:none; position:relative; }
 @keyframes modalIn { from{opacity:0;transform:scale(0.95) translateY(8px)} to{opacity:1;transform:scale(1) translateY(0)} }
 #modal-img-wrap { width:100%; aspect-ratio:1/1; overflow:hidden; border-radius:14px 14px 0 0; background:var(--pink-bg); display:flex; align-items:center; justify-content:center; }
@@ -759,8 +759,12 @@ function openModal(i) {
 function closeModal() {
   document.getElementById('modal-overlay').classList.remove('open');
 }
-document.getElementById('modal-overlay').addEventListener('click', function(e) {
+var overlay = document.getElementById('modal-overlay');
+overlay.addEventListener('click', function(e) {
   if (e.target === this) closeModal();
+});
+overlay.addEventListener('touchend', function(e) {
+  if (e.target === this) { e.preventDefault(); closeModal(); }
 });
 
 init();
