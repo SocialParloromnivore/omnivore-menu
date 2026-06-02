@@ -62,7 +62,7 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
 .drink-card:hover { border-color:var(--pink-light); transform:translateY(-3px); box-shadow:0 8px 28px rgba(255,46,139,0.12); }
 
 .drink-img-wrap { width:100%; aspect-ratio:3/4; overflow:hidden; background:var(--pink-bg); }
-.drink-img-wrap img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; transition:transform 0.2s; }
+.drink-img-wrap img { width:100%; height:100%; object-fit:contain; object-position:center center; display:block; transition:transform 0.2s; }
 .drink-card:hover .drink-img-wrap img { transform:scale(1.04); }
 .drink-emoji-wrap { width:100%; aspect-ratio:auto; max-height:280px; background:var(--pink-bg); display:flex; align-items:center; justify-content:center; font-size:44px; transition:transform 0.2s; }
 .drink-card:hover .drink-emoji-wrap { transform:scale(1.04); }
