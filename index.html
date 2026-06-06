@@ -714,14 +714,14 @@ function renderContent() {
     document.getElementById('genre-title').textContent = '';
     document.getElementById('genre-desc').textContent = '';
     document.getElementById('drink-grid').innerHTML = `
-      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;gap:32px;min-height:60vh;">
-        <div style="text-align:center;line-height:2.2;font-size:15px;color:#444;max-width:460px;">
-          <p style="font-size:24px;font-weight:600;color:#222;margin-bottom:16px;">ご来店いただきありがとうございます。</p>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(16px,4vw,40px) 20px;gap:clamp(16px,3vw,32px);min-height:60vh;">
+        <div style="text-align:center;line-height:2;font-size:clamp(13px,2vw,15px);color:#444;max-width:460px;">
+          <p style="font-size:clamp(16px,3vw,24px);font-weight:600;color:#222;margin-bottom:12px;">ご来店いただきありがとうございます。</p>
           <p>こちらのiPadからは注文できませんので、<br>ご注文はお気軽に口頭でお申し付けください。</p>
-          <p style="margin-top:12px;">また、下記QRコードより携帯でも<br>同じメニューをご覧いただけます。</p>
+          <p style="margin-top:10px;">また、下記QRコードより携帯でも<br>同じメニューをご覧いただけます。</p>
         </div>
-        <img src="${IMAGES['qr_code']}" alt="QRコード" style="width:220px;height:220px;object-fit:contain;">
-        <p style="text-align:center;font-size:20px;font-weight:600;color:#222;line-height:2.2;">一緒に乾杯できる準備もできておりますので、<br>お気軽にお声がけください。</p>
+        <img src="${IMAGES['qr_code']}" alt="QRコード" style="width:clamp(140px,30vw,220px);height:clamp(140px,30vw,220px);object-fit:contain;">
+        <p style="text-align:center;font-size:clamp(14px,2.5vw,20px);font-weight:600;color:#222;line-height:2;">一緒に乾杯できる準備もできておりますので、<br>お気軽にお声がけください。</p>
       </div>
     `;
     return;
