@@ -482,7 +482,7 @@ const MENU = [
       {
         id: "ramen-toppings", name: "トッピング", nameEn: "Toppings",
         items: [
-          { name: "トッピング（2種選択）", img: "", emoji: "🍜", unit: "2種", price: 200, desc: "たまご・ほうれん草・キャベツ・高菜・紅ショウガ・きくらげ・コーン・バター・海苔2枚・ワンタン3個・小ライス・替玉（細麺）の中からお好きな2種をどうぞ。" },
+          { name: "トッピング（2種選択）", img: "", emoji: "🍜", hideModalImg: true, unit: "2種", price: 200, desc: "<b>たまご</b><br><b>ほうれん草</b><br><b>キャベツ</b><br><b>高菜</b><br><b>紅ショウガ</b><br><b>きくらげ</b><br><b>コーン</b><br><b>バター</b><br><b>スライスハラペーニョ</b><br><b>海苔2枚</b><br><b>ワンタン3個</b><br><b>小ライス</b><br><b>替玉（細麺）</b><br><br>の中からお好きな2種をどうぞ。" },
           { name: "自家製焼豚", img: "ramen_chashu", unit: "2枚", price: 300, desc: "店主が仕込む自家製の焼豚。豚肩ロースと豚バラを各1枚ずつ盛り合わせになります。" },
           { name: "トッピング例", img: "ramen_topping_ex", unit: "", price: 0, desc: "例）ZUBAAAN! 横浜家系醤油豚骨 ¥500 ＋ トッピング（ほうれん草・海苔2枚）¥200 ＋ 自家製焼豚 ¥300 ＝ 合計 ¥1,000" }
         ]
@@ -913,14 +913,19 @@ function renderContent() {
 function openModal(i) {
   const item = window._currentItems[i];
   const wrap = document.getElementById('modal-img-wrap');
-  if (item.img && IMAGES[item.img]) {
+  if (item.hideModalImg) {
+    wrap.style.display = 'none';
+    wrap.innerHTML = '';
+  } else if (item.img && IMAGES[item.img]) {
+    wrap.style.display = '';
     wrap.innerHTML = `<img src="${IMAGES[item.img]}" alt="${item.name}">`;
   } else {
+    wrap.style.display = '';
     wrap.innerHTML = `<span class="modal-emoji">${item.emoji || '🍶'}</span>`;
   }
   document.getElementById('modal-genre-tag').textContent = window._currentGenreEn;
   document.getElementById('modal-name').innerHTML = item.name;
-  document.getElementById('modal-desc').textContent = item.desc;
+  document.getElementById('modal-desc').innerHTML = item.desc;
   document.getElementById('modal-price').innerHTML = item.price === 0 ? '' : `¥${item.price.toLocaleString()}<span>（税込） / ${item.unit || '1杯'}</span>`;
   document.getElementById('modal-overlay').classList.add('open');
 }
