@@ -50,7 +50,7 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
 .sub-count { margin-left:auto; font-size:10px; opacity:0.5; }
 
 /* MAIN */
-#main { display:flex; flex-direction:column; overflow:hidden; background:var(--off-white); }
+#main { display:flex; flex-direction:column; overflow:hidden; min-height:0; background:var(--off-white); }
 #header { padding:32px 44px 24px; border-bottom:1px solid var(--border); flex-shrink:0; display:flex; align-items:flex-end; gap:16px; }
 #genre-title { font-size:32px; font-weight:400; color:var(--pink); letter-spacing:-0.02em; line-height:1; }
 #genre-desc { font-size:12px; color:var(--text-muted); letter-spacing:0.08em; padding-bottom:4px; }
@@ -189,6 +189,25 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
   #modal-body { padding: 20px 20px 24px; }
   #modal-name { font-size: 20px; }
   #modal-price { font-size: 24px; }
+}
+/* iPad横表示・タブレット向け */
+@media (min-width: 769px) and (max-width: 1200px) {
+  #drink-grid {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  #main {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* landscape orientation スクロール保証 */
+@media (orientation: landscape) and (max-height: 768px) {
+  #drink-grid {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 </style>
 </head>
