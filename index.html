@@ -97,7 +97,7 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   html, body { overflow: hidden; }
   #app { display: flex; flex-direction: column; height: 100vh; height:100dvh; }
 
@@ -131,11 +131,13 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
   /* Grid: scrollable, cards fixed size */
   #drink-grid {
     flex: 1;
+    min-height: 0;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: env(safe-area-inset-bottom, 20px);
-    padding-bottom: env(safe-area-inset-bottom, 20px);
+    touch-action: pan-y;
+    overscroll-behavior: contain;
     padding: 12px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom, 20px));
     grid-template-columns: 1fr;
     gap: 10px;
     align-content: start;
@@ -844,7 +846,7 @@ function renderGenreList() {
         <button class="genre-btn ${isActive ? 'active' : ''}" onclick="selectGenre('${g.id}')">
           <span class="genre-icon">${g.icon}</span>
           <span>${g.name}</span>
-          <span class="genre-count">${totalItems}</span>
+          <span class="genre-count">${totalItems ?? ''}</span>
         </button>
         ${subsHtml}
       </div>
