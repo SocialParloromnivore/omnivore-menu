@@ -224,6 +224,8 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
     align-content: start;
   }
   .drink-card { height: 100px; }
+  /* メインページはセンター寄せ・1列 */
+  #drink-grid.top-grid { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; }
   #genre-header { padding: 8px 20px 4px; }
   #genre-title { font-size: 22px; }
   #genre-desc { font-size: 11px; }
@@ -939,6 +941,7 @@ function renderContent() {
   document.getElementById('genre-desc').textContent = desc;
 
   const grid = document.getElementById('drink-grid');
+  if (genre.id === 'top') { grid.classList.add('top-grid'); } else { grid.classList.remove('top-grid'); }
   if (currentSubId !== "ramen-toppings") items = [...items].sort((a, b) => a.price - b.price);
   grid.innerHTML = items.map((item, i) => {
     const mediaHtml = item.img && IMAGES[item.img]
