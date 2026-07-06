@@ -118,7 +118,7 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
   .genre-btn { padding: 7px 12px; font-size: 12px; border-radius: 20px; white-space: nowrap; width: auto; }
   .genre-btn .genre-count { display: none; }
   .sub-list { display: none !important; }
-  .sub-list.open { display: flex !important; flex-direction: row; overflow-x: auto; padding: 0 8px 8px; gap: 4px; max-height: none; }
+  .sub-list.open { display: flex !important; flex-direction: row; overflow-x: auto; padding: 0 8px 8px; gap: 4px; max-height: none; touch-action: pan-x; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
   .sub-btn { padding: 5px 10px; font-size: 11px; border-radius: 16px; white-space: nowrap; width: auto; }
   .sub-count { display: none; }
 
@@ -231,6 +231,14 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
   #genre-header { padding: 8px 20px 4px; }
   #genre-title { font-size: 22px; }
   #genre-desc { font-size: 11px; }
+}
+/* メインページ：全デバイスでセンター寄せ・スクロール可能 */
+#drink-grid.top-grid {
+  display: block !important;
+  overflow-y: auto;
+}
+#drink-grid.top-grid > div {
+  min-height: auto !important;
 }
 </style>
 </head>
@@ -610,7 +618,7 @@ const MENU = [
         id: "whisky-japanese", name: "国産", nameEn: "Japanese",
         items: [
           { name: "サントリー角", img: "kaku", unit: "1杯", price: 500, desc: "1937年誕生のロングセラー。山崎・白州蒸溜所のバーボン樽熟成原酒をバランス良く配合。甘やかな香りと厚みのあるコクが特徴で、ハイボールとの相性が抜群。" },
-          { name: "<span style='color:red'>【欠品中】</span> 知多", img: "chita", unit: "1杯", price: 1000, desc: "愛知・知多蒸溜所が生み出すシングルグレーンウイスキー。コラムスチルで丁寧に蒸溜し、複数の樽でじっくり熟成。軽やかでなめらかな口当たりに、バニラやハニーの甘い余韻。" },
+          { name: "知多", img: "chita", unit: "1杯", price: 1000, desc: "愛知・知多蒸溜所が生み出すシングルグレーンウイスキー。コラムスチルで丁寧に蒸溜し、複数の樽でじっくり熟成。軽やかでなめらかな口当たりに、バニラやハニーの甘い余韻。" },
           { name: "京都ウイスキー 黒帯", img: "kyoto_whisky", unit: "1杯", price: 500, desc: "京都初のウイスキー蒸溜所「京都みやこ蒸溜所」が醸す黒帯。丹波高原の自然に囲まれた蒸溜所で作られ、USC2021で92点を獲得した実力派。西陣織の黒帯ラベルが京都らしい品格を纏う。" },
           { name: "竹鶴 Pure Malt", img: "taketsuru", unit: "1杯", price: 1500, desc: "ニッカウヰスキーの創業者・竹鶴政孝の名を冠したピュアモルト。余市と宮城峡、ふたつの蒸溜所のモルト原酒をヴァッティング。重厚でスモーキーな余市と、華やかで軽やかな宮城峡の個性が見事に調和。" },
           { name: "白州 NV", img: "hakushu_nv", unit: "1杯", price: 1500, desc: "南アルプスの深い森に囲まれた白州蒸溜所のシングルモルト。ノンヴィンテージながら瑞々しいグリーン感とスモーキーさが共存する、爽やかで軽快な味わい。ハイボールにも最適。" },
@@ -618,7 +626,7 @@ const MENU = [
           { name: "宮城峡 アロマティックイースト 2022", img: "miyagikyo_ay", unit: "1杯", price: 2500, desc: "ニッカウヰスキーの宮城峡蒸溜所が手がけるNIKKA DISCOVERYシリーズ。特別な酵母を使用したシングルモルト。華やかでフルーティな香りと甘みが印象的な一本。" },
           { name: "新道 エクスペリメンタル .02", img: "shindo", unit: "1杯", price: 2000, desc: "福岡・新道蒸溜所が追求する「王道と新道の掛け合わせ」。バーボン樽（ピート）67%、ミズナラ新樽、コニャック樽、オロロソシェリー樽を多層的にヴァッティング。スモーキーさとミルキーで甘い余韻が重なる実験的な一本。" },
           { name: "戸河内 PREMIUM", img: "togouchi", unit: "1杯", price: 500, desc: "広島・桜尾蒸留所が手がけるブレンデッドジャパニーズウイスキー。中国山地の清流に囲まれた廃鉄道トンネル「臥龍岩トンネル」で熟成。年間を通じて安定した低温環境が、まろやかな味わいと深いアロマをウイスキーに与える。アルコール40%、700ml。" },
-          { name: "戸河内 Peated Cask Finish", img: "togouchi_peated", unit: "1杯", price: 500, desc: "戸河内の標準ラインに、ピーテッドカスクフィニッシュを施した上位モデル。スモーキーなピートの香りがやわらかく重なり、奥行きのある複雑な味わいに仕上がっている。ブレンデッドジャパニーズウイスキーの新たな可能性を示す一本。アルコール40%、700ml。" },
+          { name: "<span style='color:red'>【欠品中】</span> 戸河内 Peated Cask Finish", img: "togouchi_peated", unit: "1杯", price: 500, desc: "戸河内の標準ラインに、ピーテッドカスクフィニッシュを施した上位モデル。スモーキーなピートの香りがやわらかく重なり、奥行きのある複雑な味わいに仕上がっている。ブレンデッドジャパニーズウイスキーの新たな可能性を示す一本。アルコール40%、700ml。" },
           { name: "厚岸 カムイチェップ", img: "akkeshi", unit: "1杯", price: 4000, desc: "北海道・厚岸蒸溜所の人気シリーズ「カムイウイスキー」。カムイチェップはアイヌ語で「鮭」を意味し、ラベルには力強い鮭が描かれる。ピートと潮風、厚岸の自然が凝縮されたシングルモルト。" },
           { name: "山崎 12年", img: "yamazaki_12", unit: "1杯", price: 2500, desc: "日本最古の蒸溜所・山崎が誇る12年熟成シングルモルト。ミズナラ・バーボン・シェリーの多彩な樽が生む、華やかな花の香りとビターチョコレートのような複雑な甘み。2024年サントリー創業100周年記念ラベルで特別な一本。" },
           { name: "響 ブレンダーズチョイス", img: "hibiki_bc", unit: "1杯", price: 2000, desc: "サントリーが手がけるブレンデッドジャパニーズウイスキー。山崎・白州・知多の原酒に加え、ミズナラ樽熟成原酒を使用した特別なブレンド。甘い果実香とウッディな余韻が調和した、飲みやすく奥深い一本。" },
@@ -800,7 +808,6 @@ const MENU = [
       { name: "菊正宗 ぽん酒", img: "ponzake", unit: "1杯", price: 500, desc: "日本酒×ぽん酢のさわやかな味と香り。菊正宗とミツカンぽん酢がコラボした個性派リキュール。900mLパック。アルコール8%。税込価格。" },
       { name: "ドロ沼ヨー子", img: "doronuma_yoko", unit: "1杯", price: 1000, desc: "楯の川酒造が手がける濃厚どぶろくスタイルのリキュール。ヨー子シリーズの中でも特にクリーミーでコクのある味わい。税込価格。" },
       { name: "BARヨー子 ハイボールレモン", img: "bar_yoko_lemon", unit: "1杯", price: 1000, desc: "鳥海山麓のBAR「ヨー子」が生んだこだわりのハイボール。旨み・コク・香りが炭酸で引き立つモルト＆グレーンに、瀬戸内の皮ごと絞ったレモン果汁をたっぷりブレンド。アルコール度数40度。おすすめは1：3の炭酸割り。税込価格。" },
-      { name: "Bar ヨー子 グレフルサワー", img: "bar_yoko_grefu", price: 1000, desc: "山形・楯の川酒造が手がけるBARヨー子シリーズの濃厚グレープフルーツリキュール。2種類のグレープフルーツ皮ごと果汁と純米大吟醸を組み合わせた超濃厚な味わい。炭酸1:1割りが蔵人イチオシの飲み方。アルコール度数14度。" },
       { name: "<span style='color:red'>【欠品中】</span> Bar ヨー子", img: "bar_yoko", price: 1000, desc: "楯の川酒造が手がける唯一無二のヨーグルト酒。北海道・岡山産の希少なジャージーヨーグルト（国内乳牛のわずか0.8%）を瓶の中身の50%まで贅沢にブレンド。合わせるのは楯の川 純米大吟醸。飲むヨーグルトのようなまろやかさに、華やかな吟醸香がふわりと広がる。アルコール6%。" }
     ]
   },
@@ -898,8 +905,10 @@ function renderContent() {
   if (genre.type === 'top') {
     document.getElementById('genre-title').textContent = '';
     document.getElementById('genre-desc').textContent = '';
-    document.getElementById('drink-grid').innerHTML = `
-      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(16px,4vw,40px) 20px;gap:clamp(24px,4vw,40px);min-height:60vh;">
+    const topGrid = document.getElementById('drink-grid');
+    topGrid.classList.add('top-grid');
+    topGrid.innerHTML = `
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:clamp(16px,4vw,40px) 20px;gap:clamp(24px,4vw,40px);">
         <div style="text-align:center;line-height:2;font-size:clamp(13px,2vw,15px);color:#444;max-width:460px;">
           <p style="font-size:clamp(16px,3vw,24px);font-weight:600;color:#222;margin-bottom:12px;">ご来店いただきありがとうございます。</p>
           <p>こちらのiPadからは注文できませんので、<br>ご注文はお気軽に口頭でお申し付けください。</p>
@@ -943,7 +952,7 @@ function renderContent() {
   document.getElementById('genre-desc').textContent = desc;
 
   const grid = document.getElementById('drink-grid');
-  if (genre.id === 'top') { grid.classList.add('top-grid'); } else { grid.classList.remove('top-grid'); }
+  grid.classList.remove('top-grid');
   if (currentSubId !== "ramen-toppings") items = [...items].sort((a, b) => a.price - b.price);
   grid.innerHTML = items.map((item, i) => {
     const mediaHtml = item.img && IMAGES[item.img]
