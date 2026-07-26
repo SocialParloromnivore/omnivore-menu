@@ -196,7 +196,7 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
 }
 /* iPad横表示：モバイルと同じ上部横スクロールレイアウト */
 @media (orientation: landscape) and (min-width: 769px) {
-  #app { display: flex; flex-direction: column; height: 100vh; height: 100dvh; }
+  #app { display: flex; flex-direction: column; height: 100vh; height: 100dvh; max-height: 100dvh; overflow: hidden; }
   #sidebar { width: 100%; height: auto; flex-direction: column; flex-shrink: 0; }
   #genre-label { display: none; }
   #genre-list {
@@ -218,12 +218,12 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
   #main { flex: 1; min-height: 0; display: flex; flex-direction: column; }
   #header { flex-direction: column; align-items: center; text-align: center; gap: 8px; }
   #drink-grid {
-    flex: 1; min-height: 0;
+    flex: 1 1 0; min-height: 0;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y;
     overscroll-behavior: contain;
-    padding: 12px 20px;
+    padding: 12px 20px 80px;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     align-content: start;
@@ -484,7 +484,12 @@ const IMAGES = {
 const MENU = [
   {
     id: "top", name: "メイン", nameEn: "Welcome", icon: "🏠", type: "top",
-    items: []
+    subs: [
+      { id: "top-welcome", name: "ようこそ", nameEn: "Welcome", items: [] },
+      { id: "top-wifi", name: "Wi-Fi", nameEn: "Wi-Fi", items: [] },
+      { id: "top-insta", name: "Instagram", nameEn: "Instagram", items: [] },
+      { id: "top-line", name: "LINE", nameEn: "LINE", items: [] }
+    ]
   },
   {
     id: "food", name: "フード", nameEn: "Food", icon: "🍽️", desc: "おつまみ・フードメニュー",
@@ -887,7 +892,7 @@ function renderGenreList() {
           <button class="sub-btn ${s.id === currentSubId ? 'active' : ''}"
                   onclick="selectSub('${g.id}','${s.id}',event)">
             ${s.name}
-            <span class="sub-count">${s.items.length}</span>
+            ${g.type === 'top' ? '' : `<span class="sub-count">${s.items.length}</span>`}
           </button>
         `).join('') +
         `</div>`;
@@ -897,7 +902,7 @@ function renderGenreList() {
         <button class="genre-btn ${isActive ? 'active' : ''}" onclick="selectGenre('${g.id}')">
           <span class="genre-icon">${g.icon}</span>
           <span>${g.name}</span>
-          <span class="genre-count">${totalItems}</span>
+          <span class="genre-count">${totalItems ?? ''}</span>
         </button>
         ${subsHtml}
       </div>
@@ -930,8 +935,34 @@ function renderContent() {
     document.getElementById('genre-desc').textContent = '';
     const topGrid = document.getElementById('drink-grid');
     topGrid.classList.add('top-grid');
-    topGrid.innerHTML = `
-      <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:clamp(16px,4vw,40px) 20px;gap:clamp(24px,4vw,40px);">
+    const wrapStyle = 'display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:clamp(16px,4vw,40px) 20px;gap:clamp(20px,4vw,36px);';
+    const qrBig = 'width:clamp(180px,45vw,260px);height:clamp(180px,45vw,260px);object-fit:contain;';
+    let inner = '';
+    if (currentSubId === 'top-wifi') {
+      inner = `
+        <p style="font-size:clamp(18px,3vw,26px);font-weight:600;color:#222;">Wi-Fi</p>
+        <img src="${IMAGES['qr_wifi']}" alt="Wi-Fi" style="${qrBig}">
+        <div style="text-align:center;line-height:2.2;font-size:clamp(14px,2.2vw,18px);color:#333;">
+          <p style="font-weight:600;color:#888;font-size:clamp(11px,1.6vw,13px);letter-spacing:0.08em;margin-bottom:2px;">SSID</p>
+          <p style="font-weight:600;color:#222;margin-bottom:12px;">SPWH_L13_D65BAF</p>
+          <p style="font-weight:600;color:#888;font-size:clamp(11px,1.6vw,13px);letter-spacing:0.08em;margin-bottom:2px;">PASSWORD</p>
+          <p style="font-weight:600;color:#222;">Omnivore2025</p>
+        </div>
+      `;
+    } else if (currentSubId === 'top-insta') {
+      inner = `
+        <p style="font-size:clamp(18px,3vw,26px);font-weight:600;color:#222;">Instagram</p>
+        <img src="${IMAGES['qr_insta']}" alt="Instagram" style="${qrBig}">
+        <p style="text-align:center;font-size:clamp(13px,2vw,16px);color:#555;line-height:2;">QRコードから<br>Instagramをフォローいただけます。</p>
+      `;
+    } else if (currentSubId === 'top-line') {
+      inner = `
+        <p style="font-size:clamp(18px,3vw,26px);font-weight:600;color:#222;">LINE</p>
+        <img src="${IMAGES['qr_line']}" alt="LINE" style="${qrBig}">
+        <p style="text-align:center;font-size:clamp(13px,2vw,16px);color:#555;line-height:2;">QRコードから<br>LINE公式アカウントを追加いただけます。</p>
+      `;
+    } else {
+      inner = `
         <div style="text-align:center;line-height:2;font-size:clamp(13px,2vw,15px);color:#444;max-width:460px;">
           <p style="font-size:clamp(16px,3vw,24px);font-weight:600;color:#222;margin-bottom:12px;">ご来店いただきありがとうございます。</p>
           <p>こちらのiPadからは注文できませんので、<br>ご注文はお気軽に口頭でお申し付けください。</p>
@@ -939,22 +970,9 @@ function renderContent() {
         </div>
         <img src="${IMAGES['qr_code']}" alt="QRコード" style="width:clamp(140px,30vw,220px);height:clamp(140px,30vw,220px);object-fit:contain;">
         <p style="text-align:center;font-size:clamp(14px,2.5vw,20px);font-weight:600;color:#222;line-height:2;">一緒に乾杯できる準備もできておりますので、<br>お気軽にお声がけください。</p>
-        <div style="display:flex;flex-direction:row;justify-content:center;align-items:flex-start;gap:clamp(8px,2vw,32px);flex-wrap:nowrap;width:100%;">
-          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;max-width:160px;">
-            <img src="${IMAGES['qr_wifi']}" alt="Wi-Fi" style="width:100%;aspect-ratio:1;object-fit:contain;">
-            <span style="font-size:clamp(10px,1.5vw,14px);color:#666;font-weight:500;">Wi-Fi</span>
-          </div>
-          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;max-width:160px;">
-            <img src="${IMAGES['qr_insta']}" alt="Instagram" style="width:100%;aspect-ratio:1;object-fit:contain;">
-            <span style="font-size:clamp(10px,1.5vw,14px);color:#666;font-weight:500;">Instagram</span>
-          </div>
-          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;max-width:160px;">
-            <img src="${IMAGES['qr_line']}" alt="LINE" style="width:100%;aspect-ratio:1;object-fit:contain;">
-            <span style="font-size:clamp(10px,1.5vw,14px);color:#666;font-weight:500;">LINE</span>
-          </div>
-        </div>
-      </div>
-    `;
+      `;
+    }
+    topGrid.innerHTML = `<div style="${wrapStyle}">${inner}</div>`;
     return;
   }
 
