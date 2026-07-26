@@ -196,7 +196,7 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
 }
 /* iPad横表示：モバイルと同じ上部横スクロールレイアウト */
 @media (orientation: landscape) and (min-width: 769px) {
-  #app { display: flex; flex-direction: column; height: 100vh; height: 100dvh; max-height: 100dvh; overflow: hidden; }
+  #app { display: flex; flex-direction: column; height: 100vh; height: 100dvh; }
   #sidebar { width: 100%; height: auto; flex-direction: column; flex-shrink: 0; }
   #genre-label { display: none; }
   #genre-list {
@@ -902,7 +902,7 @@ function renderGenreList() {
         <button class="genre-btn ${isActive ? 'active' : ''}" onclick="selectGenre('${g.id}')">
           <span class="genre-icon">${g.icon}</span>
           <span>${g.name}</span>
-          <span class="genre-count">${totalItems ?? ''}</span>
+          <span class="genre-count">${totalItems === null ? '' : totalItems}</span>
         </button>
         ${subsHtml}
       </div>
