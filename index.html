@@ -26,6 +26,8 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
 /* SIDEBAR */
 #sidebar { background:var(--pink); display:flex; flex-direction:column; overflow:hidden; position:relative; }
 #sidebar::before { content:''; position:absolute; top:-60px; left:-60px; width:260px; height:260px; border:2px solid rgba(255,255,255,0.2); border-radius:50%; pointer-events:none; }
+#lang-toggle { position:absolute; top:32px; right:20px; z-index:3; background:rgba(255,255,255,0.16); border:1px solid rgba(255,255,255,0.5); color:#fff; font-family:inherit; font-size:12px; font-weight:600; letter-spacing:0.08em; padding:6px 13px; border-radius:999px; cursor:pointer; -webkit-appearance:none; appearance:none; -webkit-tap-highlight-color:transparent; }
+#lang-toggle:active { background:rgba(255,255,255,0.32); }
 #logo { padding:36px 28px 28px; border-bottom:1px solid rgba(255,255,255,0.2); position:relative; z-index:1; }
 #logo .brand { font-size:22px; font-weight:400; color:#fff; line-height:1.2; letter-spacing:-0.01em; }
 #logo .brand span { font-weight:300; font-style:italic; }
@@ -104,6 +106,7 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
   /* Sidebar as horizontal tab bar */
   #sidebar { width: 100%; height: auto; flex-direction: column; flex-shrink: 0; }
   #logo { padding: 16px 20px 12px; }
+  #lang-toggle { top: 13px; right: 14px; font-size: 11px; padding: 5px 11px; }
   #logo .brand { font-size: 17px; }
   #logo .sub { font-size: 10px; }
   #genre-label { display: none; }
@@ -198,6 +201,7 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
 @media (orientation: landscape) and (min-width: 769px) {
   #app { display: flex; flex-direction: column; height: 100vh; height: 100dvh; }
   #sidebar { width: 100%; height: auto; flex-direction: column; flex-shrink: 0; }
+  #lang-toggle { top: 16px; right: 18px; font-size: 12px; padding: 5px 12px; }
   #genre-label { display: none; }
   #genre-list {
     display: flex; flex-direction: row;
@@ -252,6 +256,7 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
   <aside id="sidebar">
     <div id="logo">
       <div class="brand">Social Parlor<br><span>omnivore</span></div>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
       
     </div>
     
@@ -881,6 +886,236 @@ const MENU = [
 ];
 
 
+// ===== i18n (EN) =====
+var LANG = 'ja';
+var I18N = {
+  items: {
+    "スナック＆Mixナッツ（食べ放題）": { n: "Snacks & Mixed Nuts (All You Can Eat)" },
+    "カルパス": { n: "Kalpas Dry Sausage" },
+    "ポップコーン": { n: "Popcorn" },
+    "チーズアソート": { n: "Cheese Assortment" },
+    "うずらの卵のピクルス": { n: "Pickled Quail Eggs" },
+    "えだ豆（バター醬油味）": { n: "Edamame (Butter Soy Sauce)" },
+    "チョリソー": { n: "Chorizo" },
+    "ビーフジャーキー": { n: "Beef Jerky" },
+    "マッケンチーズ": { n: "Mac & Cheese" },
+    "フライドポテト（シューストリング）": { n: "French Fries (Shoestring)" },
+    "春巻き": { n: "Spring Rolls" },
+    "イカリング": { n: "Calamari Rings" },
+    "オニオンリング": { n: "Onion Rings" },
+    "あさりの白ワイン蒸し": { n: "Clams Steamed in White Wine" },
+    "ミックスオリーヴ": { n: "Mixed Olives" },
+    "餃子": { n: "Gyoza (Pan-Fried Dumplings)" },
+    "ベビーハム": { n: "Baby Ham" },
+    "揚げたてコーントルティーヤチップス": { n: "Freshly Fried Corn Tortilla Chips" },
+    "本日のカレー": { n: "Curry of the Day" },
+    "チャーシューエッグ丼": { n: "Chashu & Egg Rice Bowl" },
+    "ポーク・カルニタス タコス": { n: "Pork Carnitas Tacos" },
+    "サッポロ一番 みそラーメン": { n: "Sapporo Ichiban Miso Ramen" },
+    "ペヤングヌードル": { n: "Peyoung Noodle" },
+    "一平ちゃん 夜店の焼そば": { n: "Ippei-chan Yomise no Yakisoba" },
+    "ひきわり納豆そば": { n: "Hikiwari Natto Soba" },
+    "ZUBAAAN! 鶏油香る鶏中華そば": { n: "ZUBAAAN! Chicken Oil Chuka Soba" },
+    "ZUBAAAN! 博多豚骨ラーメン": { n: "ZUBAAAN! Hakata Tonkotsu Ramen" },
+    "ZUBAAAN! 横浜家系 醤油豚骨": { n: "ZUBAAAN! Yokohama Iekei Shoyu Tonkotsu" },
+    "ZUBAAAN! 背脂濃厚醤油": { n: "ZUBAAAN! Rich Back-Fat Shoyu" },
+    "農心 辛ラーメン": { n: "Nongshim Shin Ramyun" },
+    "ポックンミョン 韓国風甘辛カルボ": { n: "Bokkeum-myun Korean Sweet & Spicy Carbo" },
+    "韓国風旨辛ラーメン（辛ヨン）": { n: "Shin-Yon Korean Spicy Ramen" },
+    "うまかっちゃん": { n: "Umakacchan" },
+    "イチカラそば": { n: "Ichikara Soba" },
+    "下関ふくらーめん しお味": { n: "Shimonoseki Fugu Ramen (Salt)" },
+    "辛ヨン トムヤムクンラーメン": { n: "Shin-Yon Tom Yum Kung Ramen" },
+    "Sugakiya スガキヤラーメン": { n: "Sugakiya Ramen" },
+    "日清 ラ王 柚子しお": { n: "Nissin Raoh Yuzu Shio" },
+    "アラビヤン焼そば": { n: "Arabiyan Yakisoba" },
+    "中華房 麻辣燙（マーラータン）": { n: "Chukabo Malatang" },
+    "天下一品 京都濃厚鶏白湯": { n: "Tenkaippin Kyoto Rich Chicken Paitan" },
+    "元祖長浜屋 豚骨ラーメン": { n: "Ganso Nagahamaya Tonkotsu Ramen" },
+    "出前一丁": { n: "Demae Itcho" },
+    "トッピング（2種選択）": { n: "Toppings (Choose 2)" },
+    "自家製焼豚": { n: "Homemade Chashu" },
+    "トッピング例": { n: "Topping Example" },
+    "キリン一番搾り ミニ缶": { n: "Kirin Ichiban Shibori (Mini Can)" },
+    "ミチェラーダ / Michelada": { n: "Michelada" },
+    "アサヒ スーパードライ": { n: "Asahi Super Dry" },
+    "サッポロ 黒ラベル": { n: "Sapporo Black Label" },
+    "キリン ハートランド": { n: "Kirin Heartland" },
+    "Bottega グラス": { n: "Bottega (Glass)" },
+    "QUARTET ハーフボトル": { n: "QUARTET (Half Bottle)" },
+    "Bottega ハーフボトル": { n: "Bottega (Half Bottle)" },
+    "がぶ飲みシャトージュン・赤": { n: "Chateau Jun Red" },
+    "がぶ飲みシャトージュン・白": { n: "Chateau Jun White" },
+    "がぶ飲みシャトージュン・オレンジ": { n: "Chateau Jun Orange" },
+    "サントリー角": { n: "Suntory Kakubin" },
+    "知多": { n: "Chita" },
+    "京都ウイスキー 黒帯": { n: "Kyoto Whisky Kuroobi" },
+    "竹鶴 Pure Malt": { n: "Taketsuru Pure Malt" },
+    "白州 NV": { n: "Hakushu NV" },
+    "白州 12年": { n: "Hakushu 12 Year" },
+    "宮城峡 アロマティックイースト 2022": { n: "Miyagikyo Aromatic Yeast 2022" },
+    "新道 エクスペリメンタル .02": { n: "Shindo Experimental .02" },
+    "戸河内 PREMIUM": { n: "Togouchi Premium" },
+    "戸河内 Peated Cask Finish": { n: "Togouchi Peated Cask Finish" },
+    "厚岸 カムイチェップ": { n: "Akkeshi Kamuy Chep" },
+    "山崎 12年": { n: "Yamazaki 12 Year" },
+    "響 ブレンダーズチョイス": { n: "Hibiki Blender's Choice" },
+    "山崎 18年": { n: "Yamazaki 18 Year" },
+    "響 17年": { n: "Hibiki 17 Year" },
+    "余市 10年": { n: "Yoichi 10 Year" },
+    "あかし シングルモルト": { n: "Akashi Single Malt" },
+    "BARヨー子 ハイボールレモン": { n: "BAR Yoko Highball Lemon" },
+    "あかし シェリーカスク": { n: "Akashi Sherry Cask" },
+    "イチローズモルト ホワイトラベル": { n: "Ichiro's Malt White Label" },
+    "SOGAINI（ソガイニ）": { n: "SOGAINI" },
+    "グレンモーレンジィ オリジナル 10年": { n: "Glenmorangie Original 10 Year" },
+    "タリスカー 10年": { n: "Talisker 10 Year" },
+    "ブルックラディ ザ・クラシックラディ 10年": { n: "Bruichladdich The Classic Laddie 10 Year" },
+    "アードベッグ 10年": { n: "Ardbeg 10 Year" },
+    "ラフロイグ 10年": { n: "Laphroaig 10 Year" },
+    "マッカラン 12年 ダブルカスク": { n: "Macallan 12 Year Double Cask" },
+    "マッカラン 12年 シェリーオークカスク": { n: "Macallan 12 Year Sherry Oak Cask" },
+    "マッカラン 18年 シェリーオークカスク": { n: "Macallan 18 Year Sherry Oak Cask" },
+    "ボウモア 12年": { n: "Bowmore 12 Year" },
+    "ティーチャーズ ハイランドクリーム": { n: "Teacher's Highland Cream" },
+    "ハイランドクイーン シェリーカスクフィニッシュ": { n: "Highland Queen Sherry Cask Finish" },
+    "グレンフィディック 12年": { n: "Glenfiddich 12 Year" },
+    "フォアローゼス": { n: "Four Roses" },
+    "ワイルドターキー 8年": { n: "Wild Turkey 8 Year" },
+    "メーカーズマーク": { n: "Maker's Mark" },
+    "ヘブンズドア アセンション": { n: "Heaven's Door Ascension" },
+    "I.W.ハーパー 12年": { n: "I.W. Harper 12 Year" },
+    "ジャックダニエル": { n: "Jack Daniel's" },
+    "オールドパリロード": { n: "Old Pali Road" },
+    "カバラン ソリスト ヴィーニョバリック": { n: "Kavalan Solist Vinho Barrique" },
+    "ポールジョン ピーテッド セレクトカスク": { n: "Paul John Peated Select Cask" },
+    "ドメーヌ・デ・オート・グラス エピステーメ R16P24": { n: "Domaine des Hautes Glaces Episteme R16P24" },
+    "ドメーヌ・デ・オート・グラス アンディジェン": { n: "Domaine des Hautes Glaces Indigene" },
+    "まさひろ オキナワジン Recipe 01": { n: "Masahiro Okinawa Gin Recipe 01" },
+    "SAKURAO GIN 浜茄子 2025": { n: "SAKURAO GIN Hamanasu 2025" },
+    "まさひろ オキナワジン Recipe 02": { n: "Masahiro Okinawa Gin Recipe 02" },
+    "1800 クリスタリーノ": { n: "1800 Cristalino" },
+    "Don Julio Añejo（ドン フリオ アネホ）": { n: "Don Julio Anejo" },
+    "日置蒸溜蔵 甕壺貯蔵 芋（4年）": { n: "Hioki Distillery Kamétsubo Imo, 4 Years" },
+    "GAKUの誘惑": { n: "GAKU no Yuwaku" },
+    "三岳（みたけ）": { n: "Mitake" },
+    "イヨシコーラ酎": { n: "Iyoshi Cola-chu" },
+    "村尾": { n: "Murao" },
+    "魔王": { n: "Maou" },
+    "森伊蔵": { n: "Moriizo" },
+    "山椒 AKAYANE CRAFT SPIRITS": { n: "Sansho AKAYANE Craft Spirits" },
+    "日置蒸溜蔵 長期熟成 麦（8年）": { n: "Hioki Distillery Long-Aged Mugi, 8 Years" },
+    "豊永蔵 麦汁": { n: "Toyonagagura Mugijiru" },
+    "うかぜ": { n: "Ukaze" },
+    "いいちこ": { n: "iichiko" },
+    "青鹿毛（あおかげ）": { n: "Aokage" },
+    "CHILL GREEN（チルグリーン）": { n: "CHILL GREEN" },
+    "雲海": { n: "Unkai" },
+    "茉莉花": { n: "Matsurika" },
+    "胡麻祥酎 紅乙女": { n: "Beni Otome Sesame Shochu" },
+    "キンミヤ焼酎": { n: "Kinmiya Shochu" },
+    "1980 はとむぎ焼酎": { n: "1980 Hatomugi Shochu" },
+    "鍛高譚": { n: "Tantakatan" },
+    "金魚": { n: "Kingyo" },
+    "跳ねる一日": { n: "Haneru Ichinichi" },
+    "米焼酎 ねっか": { n: "Nekka Rice Shochu" },
+    "ブラック奄美": { n: "Black Amami" },
+    "鍋島 オレンジ ボトル": { n: "Nabeshima Orange (Bottle)" },
+    "獺祭 Blue": { n: "Dassai Blue" },
+    "Drunk Monkey S 穀良都": { n: "Drunk Monkey S Kokuryomiyako" },
+    "極上黒松剣菱": { n: "Gokujo Kuromatsu Kenbishi" },
+    "四季桜": { n: "Shikizakura" },
+    "瑞鷹 くまもとカップ": { n: "Zuiyo Kumamoto Cup" },
+    "黒松剣菱": { n: "Kuromatsu Kenbishi" },
+    "下関名産 とらふぐ骨酒": { n: "Shimonoseki Torafugu Kotsuzake" },
+    "おやじ極楽 純吟カップ": { n: "Oyaji Gokuraku Junginjo Cup" },
+    "有磯 曙 本醸造カップ": { n: "Ariiso Akebono Honjozo Cup" },
+    "あさ開 純米辛口 男のドライ": { n: "Asabiraki Junmai Karakuchi Otoko no Dry" },
+    "中野BC 赤紫蘇の梅酒": { n: "Nakano BC Red Shiso Umeshu" },
+    "菊正宗 ぽん酒": { n: "Kikumasamune Ponzake" },
+    "Bar ヨー子 りんご": { n: "Bar Yoko Apple" },
+    "ドロ沼ヨー子": { n: "Doronuma Yoko" },
+    "カンパリ": { n: "Campari" },
+    "BARヨー子 梅酒": { n: "BAR Yoko Umeshu" },
+    "ヘネシー VSOP": { n: "Hennessy VSOP" },
+    "Clamato クラマト・トマトカクテル": { n: "Clamato Tomato Cocktail" },
+    "クリスチャン ドルーアン クール ド リヨン ポムプリゾニエール": { n: "Christian Drouin Coeur de Lion Pomme Prisonniere" },
+    "シンビーノ ジャワティストレート Premium White": { n: "Sinbino Java Tea Straight Premium White" },
+    "シンビーノ ジャワティストレート Premium Red": { n: "Sinbino Java Tea Straight Premium Red" },
+    "クランベリージュース": { n: "Cranberry Juice" },
+    "東方樹葉 茉莉花茶": { n: "Oriental Leaf Jasmine Tea" },
+    "ABSENTE HEAVEN（アブサント ヘヴン）": { n: "ABSENTE HEAVEN" },
+    "アイスコーヒー": { n: "Iced Coffee" },
+    "ソイラテ": { n: "Soy Latte" },
+    "お茶各種": { n: "Assorted Teas" },
+    "コカコーラ": { n: "Coca-Cola" },
+    "ジンジャエール": { n: "Ginger Ale" },
+    "ジュース各種": { n: "Assorted Juices" },
+    "リッチブレンド（ホットコーヒー）": { n: "Rich Blend (Hot Coffee)" },
+    "アールグレイ（ホット）": { n: "Earl Grey (Hot)" },
+    "しょうが紅茶（ホット）": { n: "Ginger Tea (Hot)" },
+    "Chocca-Roo-Brew（ホット）": { n: "Chocca-Roo-Brew (Hot)" },
+    "阿里山 高山茶（ホット）": { n: "Alishan High Mountain Tea (Hot)" },
+    "京玄米茶（ホット）": { n: "Kyoto Genmaicha (Hot)" },
+  },
+  units: {"1杯": "1 glass", "1本": "1 bottle", "1袋": "1 pack", "1皿": "1 plate", "1缶": "1 can", "1人": "1 person", "2本": "2 pcs", "3ピース": "3 pieces", "2種": "2 kinds", "2枚": "2 slices", "1本（300ml）": "1 bottle (300ml)", "1合": "1 go (180ml)", "1カラフェ": "1 carafe"},
+  genreDesc: {"food": "Snacks and small plates", "ramen": "The owner's pick of instant noodles. Customize with toppings.", "beer": "Domestic and imported bottled beer", "wine": "A curated wine selection", "whisky": "A curated whisky collection", "spirits": "A curated spirits collection", "shochu": "A curated shochu collection", "nihonshu": "A curated sake collection", "liqueur": "A selection of fine liqueurs", "others": "Other drinks", "softdrink": "Non-alcoholic drinks", "sparkling": "Available by the glass or bottle"},
+  ui: {
+    tax: '(incl. tax)',
+    soldout: '[SOLD OUT]',
+    welcomeTitle: 'Thank you for visiting.',
+    welcome1: 'Orders cannot be placed from this iPad.<br>Please just tell us what you would like.',
+    welcome2: 'You can also view the same menu on your own phone<br>using the QR code below.',
+    welcome3: 'We are always happy to raise a glass with you,<br>so please feel free to say hello.',
+    instaNote: 'Scan the QR code to<br>follow us on Instagram.',
+    lineNote: 'Scan the QR code to<br>add our official LINE account.'
+  }
+};
+
+function omStripSold(n) {
+  return n.replace(/<span style='color:red'>【欠品中】<\/span>\s*/, '');
+}
+function omIsSold(n) { return n.indexOf('【欠品中】') !== -1; }
+function omEntry(item) {
+  var e = I18N.items[omStripSold(item.name)];
+  return e ? e : null;
+}
+function omName(item) {
+  if (LANG === 'ja') return item.name;
+  var base = omStripSold(item.name);
+  var e = omEntry(item);
+  var en = (e && e.n) ? e.n : base;
+  return omIsSold(item.name) ? "<span style='color:red'>" + I18N.ui.soldout + "</span> " + en : en;
+}
+function omDesc(item) {
+  var d = item.desc ? item.desc : '';
+  if (LANG === 'ja') return d;
+  var e = omEntry(item);
+  return (e && e.d) ? e.d : d;
+}
+function omUnit(u) {
+  var unit = u ? u : '1杯';
+  if (LANG === 'ja') return unit;
+  return I18N.units[unit] ? I18N.units[unit] : unit;
+}
+function omTax() { return LANG === 'ja' ? '（税込）' : I18N.ui.tax; }
+function omLabel(o) {
+  if (LANG === 'ja') return o.name;
+  return o.nameEn ? o.nameEn : o.name;
+}
+function omPrice(item) {
+  if (item.price === 0) return '';
+  return '¥' + item.price.toLocaleString() + '<span>' + omTax() + ' / ' + omUnit(item.unit) + '</span>';
+}
+function toggleLang() {
+  LANG = (LANG === 'ja') ? 'en' : 'ja';
+  var b = document.getElementById('lang-toggle');
+  if (b) b.textContent = (LANG === 'ja') ? 'EN' : '日本語';
+  closeModal();
+  renderGenreList();
+  renderContent();
+}
+
 // state
 let currentGenreId = null;
 let currentSubId = null;
@@ -910,7 +1145,7 @@ function renderGenreList() {
         g.subs.map(s => `
           <button class="sub-btn ${s.id === currentSubId ? 'active' : ''}"
                   onclick="selectSub('${g.id}','${s.id}',event)">
-            ${s.name}
+            ${omLabel(s)}
             ${g.type === 'top' ? '' : `<span class="sub-count">${s.items.length}</span>`}
           </button>
         `).join('') +
@@ -920,7 +1155,7 @@ function renderGenreList() {
       <div>
         <button class="genre-btn ${isActive ? 'active' : ''}" onclick="selectGenre('${g.id}')">
           <span class="genre-icon">${g.icon}</span>
-          <span>${g.name}</span>
+          <span>${omLabel(g)}</span>
           <span class="genre-count">${totalItems === null ? '' : totalItems}</span>
         </button>
         ${subsHtml}
@@ -972,23 +1207,23 @@ function renderContent() {
       inner = `
         <p style="font-size:clamp(18px,3vw,26px);font-weight:600;color:#222;">Instagram</p>
         <img src="${IMAGES['qr_insta']}" alt="Instagram" style="${qrBig}">
-        <p style="text-align:center;font-size:clamp(13px,2vw,16px);color:#555;line-height:2;">QRコードから<br>Instagramをフォローいただけます。</p>
+        <p style="text-align:center;font-size:clamp(13px,2vw,16px);color:#555;line-height:2;">${LANG === 'ja' ? 'QRコードから<br>Instagramをフォローいただけます。' : I18N.ui.instaNote}</p>
       `;
     } else if (currentSubId === 'top-line') {
       inner = `
         <p style="font-size:clamp(18px,3vw,26px);font-weight:600;color:#222;">LINE</p>
         <img src="${IMAGES['qr_line']}" alt="LINE" style="${qrBig}">
-        <p style="text-align:center;font-size:clamp(13px,2vw,16px);color:#555;line-height:2;">QRコードから<br>LINE公式アカウントを追加いただけます。</p>
+        <p style="text-align:center;font-size:clamp(13px,2vw,16px);color:#555;line-height:2;">${LANG === 'ja' ? 'QRコードから<br>LINE公式アカウントを追加いただけます。' : I18N.ui.lineNote}</p>
       `;
     } else {
       inner = `
         <div style="text-align:center;line-height:2;font-size:clamp(13px,2vw,15px);color:#444;max-width:460px;">
-          <p style="font-size:clamp(16px,3vw,24px);font-weight:600;color:#222;margin-bottom:12px;">ご来店いただきありがとうございます。</p>
-          <p>こちらのiPadからは注文できませんので、<br>ご注文はお気軽に口頭でお申し付けください。</p>
-          <p style="margin-top:10px;">また、下記QRコードより携帯でも<br>同じメニューをご覧いただけます。</p>
+          <p style="font-size:clamp(16px,3vw,24px);font-weight:600;color:#222;margin-bottom:12px;">${LANG === 'ja' ? 'ご来店いただきありがとうございます。' : I18N.ui.welcomeTitle}</p>
+          <p>${LANG === 'ja' ? 'こちらのiPadからは注文できませんので、<br>ご注文はお気軽に口頭でお申し付けください。' : I18N.ui.welcome1}</p>
+          <p style="margin-top:10px;">${LANG === 'ja' ? 'また、下記QRコードより携帯でも<br>同じメニューをご覧いただけます。' : I18N.ui.welcome2}</p>
         </div>
         <img src="${IMAGES['qr_code']}" alt="QRコード" style="width:clamp(140px,30vw,220px);height:clamp(140px,30vw,220px);object-fit:contain;">
-        <p style="text-align:center;font-size:clamp(14px,2.5vw,20px);font-weight:600;color:#222;line-height:2;">一緒に乾杯できる準備もできておりますので、<br>お気軽にお声がけください。</p>
+        <p style="text-align:center;font-size:clamp(14px,2.5vw,20px);font-weight:600;color:#222;line-height:2;">${LANG === 'ja' ? '一緒に乾杯できる準備もできておりますので、<br>お気軽にお声がけください。' : I18N.ui.welcome3}</p>
       `;
     }
     topGrid.innerHTML = `<div style="${wrapStyle}">${inner}</div>`;
@@ -1009,7 +1244,7 @@ function renderContent() {
   }
 
   document.getElementById('genre-title').textContent = titleEn;
-  document.getElementById('genre-desc').textContent = desc;
+  document.getElementById('genre-desc').textContent = (LANG === 'ja') ? desc : (I18N.genreDesc[genre.id] ? I18N.genreDesc[genre.id] : desc);
 
   const grid = document.getElementById('drink-grid');
   grid.classList.remove('top-grid');
@@ -1022,8 +1257,8 @@ function renderContent() {
       <div class="drink-card" onclick="openModal(${i})" style="animation-delay:${i*0.05}s">
         ${mediaHtml}
         ${item.cardImgOnly ? '' : `<div class="drink-info">
-          <div class="drink-name">${item.name}</div>
-          <div class="drink-price">${item.price === 0 ? '' : `¥${item.price.toLocaleString()}<span>（税込） / ${item.unit || '1杯'}</span>`}</div>
+          <div class="drink-name">${omName(item)}</div>
+          <div class="drink-price">${omPrice(item)}</div>
         </div>`}
       </div>
     `;
@@ -1046,9 +1281,9 @@ function openModal(i) {
   }
   document.getElementById('modal-genre-tag').textContent = window._currentGenreEn;
   document.getElementById('modal-genre-tag').style.display = '';
-  document.getElementById('modal-name').innerHTML = item.name;
-  document.getElementById('modal-desc').innerHTML = item.desc;
-  document.getElementById('modal-price').innerHTML = item.price === 0 ? '' : `¥${item.price.toLocaleString()}<span>（税込） / ${item.unit || '1杯'}</span>`;
+  document.getElementById('modal-name').innerHTML = omName(item);
+  document.getElementById('modal-desc').innerHTML = omDesc(item);
+  document.getElementById('modal-price').innerHTML = omPrice(item);
   document.getElementById('modal-overlay').classList.add('open');
 }
 
