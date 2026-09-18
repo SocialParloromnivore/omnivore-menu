@@ -478,6 +478,8 @@ const IMAGES = {
   "ramen_peyoung_noodle": "images/ramen_peyoung_noodle.jpg",
   "javatea_white": "images/javatea_white.jpg",
   "hioki_mugi": "images/hioki_mugi.jpg",
+  "miyagikyo_10": "images/miyagikyo_10.jpg",
+  "caol_ila_12": "images/caol_ila_12.jpg",
   "hioki_imo": "images/hioki_imo.jpg"
 };
 
@@ -624,6 +626,7 @@ const MENU = [
       {
         id: "whisky-japanese", name: "国産", nameEn: "Japanese",
         items: [
+          { name: "宮城峡 10年", img: "miyagikyo_10", unit: "1杯", price: 2500, desc: "ニッカウヰスキー宮城峡蒸溜所の10年熟成シングルモルト。仙台郊外・新川（にっかわ）の清流に囲まれた蒸溜所で、スチームによる間接加熱蒸溜が生む華やかでやわらかな酒質が特徴。10年の熟成でモルトの甘みに樽由来のバニラやドライフルーツの香りが重なる。力強い余市とは対照的な、穏やかで上品な一本。アルコール45%。" },
           { name: "サントリー角", img: "kaku", unit: "1杯", price: 500, desc: "1937年誕生のロングセラー。山崎・白州蒸溜所のバーボン樽熟成原酒をバランス良く配合。甘やかな香りと厚みのあるコクが特徴で、ハイボールとの相性が抜群。" },
           { name: "知多", img: "chita", unit: "1杯", price: 1000, desc: "愛知・知多蒸溜所が生み出すシングルグレーンウイスキー。コラムスチルで丁寧に蒸溜し、複数の樽でじっくり熟成。軽やかでなめらかな口当たりに、バニラやハニーの甘い余韻。" },
           { name: "京都ウイスキー 黒帯", img: "kyoto_whisky", unit: "1杯", price: 500, desc: "京都初のウイスキー蒸溜所「京都みやこ蒸溜所」が醸す黒帯。丹波高原の自然に囲まれた蒸溜所で作られ、USC2021で92点を獲得した実力派。西陣織の黒帯ラベルが京都らしい品格を纏う。" },
@@ -650,6 +653,7 @@ const MENU = [
       {
         id: "whisky-scotch", name: "スコッチ", nameEn: "Scotch",
         items: [
+          { name: "カリラ 12年", img: "caol_ila_12", unit: "1杯", price: 1300, desc: "アイラ島ポートアスケイグの入り江にひっそりと佇む、1846年創業のカリラ蒸溜所。アイラモルトとしては比較的ライトな酒質で、オイリーなスモークと潮の香りに、レモンやハーブの爽やかさが同居する。アイラらしさを持ちながら重すぎない、通好みの一本。" },
           { name: "グレンモーレンジィ オリジナル 10年", img: "glenmorangie_10", unit: "1杯", price: 1000, desc: "スコットランド・ハイランド産シングルモルト。バーボン樽で10年熟成し、バニラや柑橘のフルーティな甘みが広がる。スコッチ入門にも最適な、エレガントで飲みやすい一本。" },
           { name: "タリスカー 10年", img: "talisker_10", unit: "1杯", price: 1000, desc: "スカイ島唯一の蒸溜所が生む、力強い海のシングルモルト。潮風とピートのスモーキーさに、胡椒のようなスパイシーな余韻。荒々しくも洗練されたアイランズモルトの傑作。" },
           { name: "ブルックラディ ザ・クラシックラディ 10年", img: "bruichladdich", unit: "1杯", price: 1000, desc: "アイラ島・ブルックラディ蒸溜所のノンピートシングルモルト。スコットランド産大麦100%使用、ノンチルフィルタード。アイラらしからぬ華やかでフルーティな味わいが新鮮な一本。" },
@@ -935,6 +939,8 @@ var I18N = {
     "白州 NV": { n: "Hakushu NV", d: "A single malt from the Hakushu distillery, deep in the forests of the Southern Alps. Non-vintage, yet it holds fresh green notes and smoke together. Crisp and lively, and superb as a highball." },
     "白州 12年": { n: "Hakushu 12 Year", d: "A single malt aged at least 12 years at Hakushu. Forest-fresh green notes layered with a whisper of smoke and fruity sweetness. The definitive expression of the distillery." },
     "宮城峡 アロマティックイースト 2022": { n: "Miyagikyo Aromatic Yeast 2022", d: "Part of the NIKKA DISCOVERY series from the Miyagikyo distillery, made with a special yeast strain. A single malt marked by bright, fruity aromatics and sweetness." },
+    "宮城峡 10年": { n: "Miyagikyo 10 Year", d: "A 10-year single malt from Nikka's Miyagikyo distillery, set among the clear streams of the Nikkawa river outside Sendai. Indirect steam heating of the stills gives it a bright, gentle character, and ten years of maturation layer malt sweetness with vanilla and dried fruit from the cask. Quiet and refined — the counterpoint to the powerful Yoichi. 45% ABV." },
+    "カリラ 12年": { n: "Caol Ila 12 Year", d: "From Caol Ila, founded in 1846 and tucked into a cove at Port Askaig on Islay. Lighter in body than most Islay malts, with oily smoke and sea air alongside lemon and fresh herbs. All of Islay's character without the weight — a connoisseur's choice." },
     "新道 エクスペリメンタル .02": { n: "Shindo Experimental .02", d: "Shindo Distillery in Fukuoka pursues a crossing of the classic and the new. A layered vatting of peated bourbon casks (67%), virgin mizunara, cognac casks and oloroso sherry casks. Smoke meets a milky, sweet finish." },
     "戸河内 PREMIUM": { n: "Togouchi Premium", d: "A blended Japanese whisky from the Sakurao Distillery in Hiroshima, matured inside the disused Garyuiwa railway tunnel amid the clear streams of the Chugoku mountains. The year-round cool stability gives it a mellow character and deep aroma. 40% ABV, 700ml." },
     "戸河内 Peated Cask Finish": { n: "Togouchi Peated Cask Finish", d: "Togouchi's standard expression given a peated cask finish. The smoke sits softly over the base, adding depth and complexity — a glimpse of where blended Japanese whisky can go. 40% ABV, 700ml." },
