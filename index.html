@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-09-19b -->
+<!-- omnivore-menu build 2026-09-25c -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -457,7 +457,6 @@ const IMAGES = {
   "ramen_ichikara_soba": "images/ramen_ichikara_soba.jpg",
   "togouchi_peated": "images/togouchi_peated.jpg",
   "aokage": "images/aokage.jpg",
-  "drunk_monkey": "images/drunk_monkey.jpg",
   "ramen_karyon_tomyam": "images/ramen_karyon_tomyam.jpg",
   "masahiro_gin": "images/masahiro_gin.jpg",
   "absente_heaven": "images/absente_heaven.jpg",
@@ -510,8 +509,8 @@ const MENU = [
           { name: "マッケンチーズ", img: "food_mac_cheese", unit: "1杯", price: 800, desc: "マッケンチーズ（マカロニ・アンド・チーズ）は、茹でたマカロニを濃厚なチーズソースに絡めた、アメリカを代表するソウルフード（国民食）です。" },
           { name: "フライドポテト（シューストリング）", img: "food_fries_shoe", unit: "1皿", price: 500, desc: "細長くカットしたフライドポテトです。「靴ひも（Shoestring）」のように細いことから名付けられました。" },
           { name: "春巻き", img: "food_harumaki", unit: "2本", price: 500, desc: "種類の違う春巻きを2本盛り合わせでお出しします。うち1本は店主の自家製。中身はその日によって変わりますので、気になる方はお気軽にお尋ねください。お好みで、シラチャーソース（タイ発祥のチリソース）をつけて食べるのもオススメです。" },
-          { name: "イカリング", img: "food_ika_ring", unit: "1皿", price: 800, desc: "サクッと揚げた衣の中に、やわらかくジューシーなイカ。ビールにもハイボールにもよく合う定番のおつまみです。<br>本日のカレーのトッピングとしてもご注文いただけます（+¥800）。" },
-          { name: "オニオンリング", img: "food_onion_ring", unit: "1皿", price: 800, desc: "厚めに切った玉ねぎを衣をつけてカラッと。噛むと玉ねぎの甘みがじゅわっと広がります。<br>本日のカレーのトッピングとしてもご注文いただけます（+¥800）。" },
+          { name: "イカリング", img: "food_ika_ring", unit: "1皿", price: 800, desc: "サクッと揚げた衣の中に、やわらかくジューシーなイカ。ビールにもハイボールにもよく合う定番のおつまみです。" },
+          { name: "オニオンリング", img: "food_onion_ring", unit: "1皿", price: 800, desc: "厚めに切った玉ねぎを衣をつけてカラッと。噛むと玉ねぎの甘みがじゅわっと広がります。" },
           { name: "あさりの白ワイン蒸し", img: "food_asari_wine", unit: "1皿", price: 800, desc: "あさりを白ワインとにんにくでさっと蒸し上げました。貝の旨みが溶け出したスープまで美味しい一皿です。<br>+¥200でバゲット2個をお付けできます。残ったスープに浸してどうぞ。" },
           { name: "ミックスオリーヴ", img: "food_olive", unit: "1皿", price: 1000, desc: "グリーン、ブラックなど数種類のオリーヴを盛り合わせでご用意。ワインにもスピリッツにも合う、シンプルなおつまみです。種にご注意ください。" },
           { name: "餃子", img: "food_gyoza", unit: "1皿", price: 500, desc: "おそらく日本で一番食べられている冷凍餃子。油も水も不要、羽根つきでパリッと焼き上がる完成度の高さは、もはや家庭料理の定番を超えた存在です。<br><b>1〜6個 ¥500 / 7〜12個 ¥800</b>" },
@@ -647,7 +646,7 @@ const MENU = [
           { name: "響 17年", img: "hibiki_17", unit: "1杯", price: 5000, desc: "サントリーが誇るブレンデッドジャパニーズウイスキーの最高峰のひとつ。山崎・白州・知多の原酒を高度な技術でブレンド。花や果実の香りに蜂蜜のような甘み、ミズナラ由来の深みある余韻。現在は製造終了した幻の一本。" },
           { name: "余市 10年", img: "yoichi_10", unit: "1杯", price: 3000, desc: "ニッカウヰスキー創業の地・北海道余市蒸溜所が手がけるシングルモルト。石炭直火蒸溜による力強くピートの効いた味わいと、10年熟成による深いコクが特徴。海のミネラル感と重厚なスモーキーさが調和した一本。アルコール45%。" },
           { name: "あかし シングルモルト", img: "akashi_single", unit: "1杯", price: 1000, desc: "兵庫・江井ヶ嶋酒造（Eigashima Distillery）が手がけるシングルモルトジャパニーズウイスキー。複数の樽で熟成した原酒をヴァッティング。バランスの取れた果実香と、やわらかくスモーキーな余韻が特徴。" },
-          { name: "BARヨー子 ハイボールレモン", img: "bar_yoko_lemon", unit: "1杯", price: 1000, desc: "鳥海山麓のBAR「ヨー子」が生んだこだわりのハイボール。旨み・コク・香りが炭酸で引き立つモルト＆グレーンに、瀬戸内の皮ごと絞ったレモン果汁をたっぷりブレンド。アルコール度数40度。おすすめは1：3の炭酸割り。税込価格。" },
+          { name: "BARヨー子 ハイボールレモン", img: "bar_yoko_lemon", unit: "1杯", price: 1000, desc: "鳥海山麓のBAR「ヨー子」が生んだこだわりのハイボール。旨み・コク・香りが炭酸で引き立つモルト＆グレーンに、瀬戸内の皮ごと絞ったレモン果汁をたっぷりブレンド。アルコール度数40度。おすすめは1：3の炭酸割り。" },
           { name: "あかし シェリーカスク", img: "akashi_sherry", unit: "1杯", price: 500, desc: "兵庫・江井ヶ嶋酒造のWhite Oakシリーズ。オロロソシェリー樽で熟成したブレンデッドウイスキー。ドライフルーツやチョコレートのような濃厚な甘みと芳醇な香りが特徴。500円で楽しめるコスパ抜群の一本。" },
           { name: "イチローズモルト ホワイトラベル", img: "ichiros_white", unit: "1杯", price: 800, desc: "秩父蒸溜所の創業者・肥土伊知郎氏がブレンドしたワールドブレンデッドウイスキー。秩父モルトを軸に世界各国の原酒をヴァッティング。ノンチルフィルタード・ノンカラーで、華やかでバランスの取れた味わい。アルコール46%。" },
           { name: "SOGAINI（ソガイニ）", img: "sogaini", unit: "1杯", price: 500, desc: "広島・桜尾蒸留所（SAKURAO DISTILLERY）が手がけるブレンデッドジャパニーズウイスキー。戸河内と同じ蒸留所から生まれながら、よりアクセスしやすい価格帯で展開。アルコール40%、700cl。" }
@@ -702,7 +701,7 @@ const MENU = [
         id: "spirits-gin", name: "ジン", nameEn: "Gin",
         items: [
           { name: "Hendrick's Gin", img: "hendricks", unit: "1杯", price: 1000, desc: "スコットランド・ガーヴァン蒸溜所発のプレミアムクラフトジン。ローズとキュウリのエッセンスを加えたユニークなレシピが特徴。フローラルで華やかな香りと、すっきりとしたさわやかな味わい。黒いボトルのデザインも印象的。" },
-          { name: "BOMBAY SAPPHIRE", img: "bombay", unit: "1杯", price: 500, desc: "1761年のレシピをもとに英国で生まれたロンドンドライジン。10種類のボタニカルを蒸気蒸留で香り立てた、クリアでエレガントな味わい。アルコール47%。税込価格。" },
+          { name: "BOMBAY SAPPHIRE", img: "bombay", unit: "1杯", price: 500, desc: "1761年のレシピをもとに英国で生まれたロンドンドライジン。10種類のボタニカルを蒸気蒸留で香り立てた、クリアでエレガントな味わい。アルコール47%。" },
           { name: "まさひろ オキナワジン Recipe 01", img: "masahiro_gin", unit: "1杯", price: 500, desc: "沖縄・まさひろ酒造が手がけるクラフトジン。泡盛をベースに、シークワーサー・ジュニパーベリー・グァバ葉・ゴーヤー・ローゼル/ハイビスカス属・ピパーズ/ハワモドキを使用。アルコール47%、700ml。沖縄の素材を活かした個性豊かな一本。" },
           { name: "SAKURAO GIN 浜茄子 2025", img: "sakurao_hamagou", unit: "1杯", price: 500, desc: "広島・桜尾蒸溜所のジャパニーズドライジン限定版。宮島の対岸で手摘みしたハマナス（浜茄子）を使用したスモールバッチ蒸留。青いボトルが美しい2025年エディション。アルコール47%、700ml。" },
           { name: "まさひろ オキナワジン Recipe 02", img: "masahiro_gin_02", unit: "1杯", price: 500, desc: "沖縄・まさひろ酒造のクラフトジン第2弾。泡盛をベースに、沖縄特産の柑橘タンカンを主役として、ジュニパーベリー・ミント・アロマティカス・月桃・生姜・レモングラスを使用。柑橘の華やかさとハーブの清涼感が抜けていく爽快な仕上がり。アルコール47%、700ml。Recipe 01との飲み比べもぜひ。" }
@@ -712,7 +711,7 @@ const MENU = [
         id: "spirits-vodka", name: "ウォッカ", nameEn: "Vodka",
         items: [
           { name: "Belvedere Vodka", img: "belvedere", unit: "1杯", price: 1000, desc: "ポーランド・ジラルドフ産の最高峰プレミアムウォッカ。ダンコウスキー・ライ麦100%使用、4回蒸溜後にノンチルフィルタード。クリーンでまろやかな口当たりに、ほのかなバニラとアーモンドの香りが特徴。" },
-          { name: "ABSOLUT TABASCO", img: "absolut_tabasco", unit: "1杯", price: 500, desc: "スウェーデン発のプレミアムウォッカ「ABSOLUT」と世界的ホットソース「TABASCO」のコラボレーション。チリペッパーの刺激とウォッカのクリーンな味わいが融合した、スパイシーな一本。アルコール38%。税込価格。" }
+          { name: "ABSOLUT TABASCO", img: "absolut_tabasco", unit: "1杯", price: 500, desc: "スウェーデン発のプレミアムウォッカ「ABSOLUT」と世界的ホットソース「TABASCO」のコラボレーション。チリペッパーの刺激とウォッカのクリーンな味わいが融合した、スパイシーな一本。アルコール38%。" }
         ]
       },
       {
@@ -749,7 +748,7 @@ const MENU = [
           { name: "村尾", img: "murao", unit: "1杯", price: 1000, desc: "鹿児島・村尾酒造の芋焼酎。薩摩芋と米麹を甕壺で仕込む伝統的製法。生産量が極めて少なく入手困難な幻の焼酎のひとつ。穏やかな香りと上品でまろやかな旨み、すっきりとしたキレが特徴。" },
           { name: "魔王", img: "maou", unit: "1杯", price: 1000, desc: "鹿児島・白玉醸造が手がける「3M」のひとつ。フルーティーな甘い香りと、滑らかでまろやかな口当たりが特徴。芋焼酎らしさを感じさせないほどの飲みやすさで、芋焼酎入門にも最適な幻の銘柄。" },
           { name: "森伊蔵", img: "moriizou", unit: "1杯", price: 1500, desc: "鹿児島・森伊蔵酒造の甕壺仕込み芋焼酎。「3M」に数えられる幻の銘柄で、抽選でしか入手できない希少品。繊細でフルーティーな香りと、芋の甘みが凝縮された上品な味わいは唯一無二。" },
-          { name: "山椒 AKAYANE CRAFT SPIRITS", img: "akayane", unit: "1杯", price: 1000, desc: "1908年創業・赤屋根製麹所（AKAYANE）が手がけるクラフトスピリッツ。100年以上の焼酎技術を礎に、国産山椒を使用した個性的な一本。山椒の爽やかな香りとしびれる余韻が特徴。税込価格。" }
+          { name: "山椒 AKAYANE CRAFT SPIRITS", img: "akayane", unit: "1杯", price: 1000, desc: "1908年創業・赤屋根製麹所（AKAYANE）が手がけるクラフトスピリッツ。100年以上の焼酎技術を礎に、国産山椒を使用した個性的な一本。山椒の爽やかな香りとしびれる余韻が特徴。" }
         ]
       },
       {
@@ -772,7 +771,7 @@ const MENU = [
           { name: "胡麻祥酎 紅乙女", img: "beni_otome", unit: "1杯", price: 500, desc: "福岡・紅乙女酒造が手がける日本唯一のごま焼酎。焙煎ごまを20%以上使用した長期貯蔵焼酎。ごまの芳ばしい香りとまろやかなコク、上品な甘みが特徴の個性派。" },
           { name: "キンミヤ焼酎", img: "kinmiya", unit: "1杯", price: 500, desc: "三重・宮崎本店が手がける甲類焼酎の定番。純粋でクセのないクリアな味わいが特徴で、ホッピーや酎ハイのベースとして全国の居酒屋で愛される一本。" },
           { name: "1980 はとむぎ焼酎", img: "hatomugi_1980", unit: "1杯", price: 1500, desc: "大分県産はとむぎを使用した1980年製造の長期貯蔵焼酎。やわらかな舌触りと深いコクのある上品な味わい。珍しいはとむぎ焼酎として希少性も高い一本。" },
-          { name: "鍛高譚", img: "tantakatan", unit: "1杯", price: 500, desc: "北海道・高砂酒造が手がけるしそ焼酎。北海道産の赤しそを使用した、爽やかな香りとすっきりとした味わいのリキュール系焼酎。そのままでも炭酸割りでも楽しめる。アルコール20度。税込価格。" },
+          { name: "鍛高譚", img: "tantakatan", unit: "1杯", price: 500, desc: "北海道・高砂酒造が手がけるしそ焼酎。北海道産の赤しそを使用した、爽やかな香りとすっきりとした味わいのリキュール系焼酎。そのままでも炭酸割りでも楽しめる。アルコール20度。" },
           { name: "金魚", img: "kinngyo", unit: "1杯", price: 500, desc: "グラスの中に大葉（水草）と赤唐辛子（金魚）を浮かべて水槽に見立てる粋な飲み方。当店はキンミヤ焼酎に国産唐辛子とカラブリア州産唐辛子を漬け込んだベースを使用。大葉の爽やかな香りと唐辛子のピリッとした辛さが絶妙で、かなり辛い仕上がりです。" },
           { name: "跳ねる一日", img: "haneru_ichinichi", unit: "1杯", price: 800, desc: "鹿児島・志布志の若潮酒造が手がける「一日」シリーズ第2弾。麦と芋の焼酎をベースに、柚子の果汁と果皮を加えて再蒸留した爽やかな柑橘香とクリアな味わい。名前の由来は薩摩の言葉「泣こかい跳ぼかい、泣くよかひっ跳べ」——迷うくらいならまず動け。跳ねる金魚のラベルが目印。アルコール27%、720ml。" },
           { name: "米焼酎 ねっか", img: "shochu_nekka", unit: "1杯", price: 800, desc: "福島・奥会津の合同会社ねっかが手がける本格米焼酎。地元産の米を100%使用し、減圧蒸留で仕上げたクリアで華やかな味わい。フルーティーな吟醸香とすっきりとした後味が特徴。" },
@@ -795,8 +794,7 @@ const MENU = [
         items: [
           { name: "鍋島 オレンジ ボトル", img: "nabe_bottle", price: 6000, unit: "1本", desc: "佐賀・富久千代酒造。五百万石100%使用、精米歩合55%の純米吟醸生酒。オレンジのような果実感と素直な甘み、生酒ならではの鮮やかなガス感。鍋島の中でも最もポップな味わい。<b>甘口寄り</b>のジューシーなタイプです。" },
           { name: "獺祭 Blue", img: "dassai_blue", price: 12000, unit: "1本", desc: "山口・旭酒造がニューヨークに構えた蒸溜所で醸造する、獺祭初の海外醸造酒。精米歩合50%の純米大吟醸（Type 50）で、上品でクリアな香りと繊細でなめらかな甘み。NY発という特別なストーリーを纏った一本。<b>やや甘口</b>の華やかなタイプです。" },
-          { name: "Drunk Monkey S 穀良都", img: "drunk_monkey", unit: "1本", price: 6000, desc: "穀良都（こくりょうみやこ）という希少米を使用した個性的な清酒ボトル。「Drunk Monkey」のユニークなネーミングとスタイリッシュなデザインが印象的。<b>やや辛口</b>ですっきりとした飲み口。税込価格。" },
-          { name: "極上黒松剣菱", img: "kenbishi_bottle", unit: "1本（300ml）", price: 1800, desc: "1505年創業、日本最古の酒ブランド剣菱酒造の上級酒。「古今第一」を掲げ、複数年熟成の原酒をブレンド。豊かなコクと深いキレ、熟成による円熟した旨みが特徴。青いボトルが目を引く逸品。<b>甘辛でいえば旨口</b>——甘口でも辛口でもない、コク重視のタイプです。税込価格。" }
+          { name: "極上黒松剣菱", img: "kenbishi_bottle", unit: "1本（300ml）", price: 1800, desc: "1505年創業、日本最古の酒ブランド剣菱酒造の上級酒。「古今第一」を掲げ、複数年熟成の原酒をブレンド。豊かなコクと深いキレ、熟成による円熟した旨みが特徴。青いボトルが目を引く逸品。<b>甘辛でいえば旨口</b>——甘口でも辛口でもない、コク重視のタイプです。" }
         ]
       },
       {
@@ -828,11 +826,11 @@ const MENU = [
       { name: "Strawberry Wonder", img: "strawberry", price: 1000, desc: "CRAFT WONDERのストロベリーリキュール。完熟いちごの凝縮した甘みと香り、アルコール度数18%で飲みやすい。" },
       { name: "中野BC 赤紫蘇の梅酒", img: "nakano_akashiso", unit: "1杯", price: 500, desc: "赤しそと紀州和歌山県産の「南高梅」の組み合わせが、赤しそのすっきりとした風味と独特の鮮やかな色をつけることで、独自のルビー色と爽快感をもたらしたさっぱり梅酒。安心感があるのに新しい、少しだけ気分を変えたい日常にぴったり。30年以上ロングセラーの赤い梅酒。" },
       { name: "PRUCIA", img: "prucia", price: 500, desc: "サントリーのフランス産プラムリキュール。1853年創業・コニャック地方のルイ・ロワイエ社製造。プラムのスピリッツをブランデー樽で熟成した芳醇な味わい。IWSC2010 Best in Class受賞。アルコール15度。" },
-      { name: "菊正宗 ぽん酒", img: "ponzake", unit: "1杯", price: 500, desc: "日本酒×ぽん酢のさわやかな味と香り。菊正宗とミツカンぽん酢がコラボした個性派リキュール。900mLパック。アルコール8%。税込価格。" },
+      { name: "菊正宗 ぽん酒", img: "ponzake", unit: "1杯", price: 500, desc: "日本酒×ぽん酢のさわやかな味と香り。菊正宗とミツカンぽん酢がコラボした個性派リキュール。900mLパック。アルコール8%。" },
       { name: "Bar ヨー子 りんご", img: "yoko_ringo", unit: "1杯", price: 1000, desc: "山形・楯の川酒造のリキュール「Bar ヨー子」シリーズ。純米大吟醸「楯野川」に厳選したりんご果汁を合わせ、蜜入りりんごをそのまま搾ったようなみずみずしい甘酸っぱさに仕上げた一本。後口にはほろ苦いドライさも。アルコール8%、720ml。" },
-      { name: "ドロ沼ヨー子", img: "doronuma_yoko", unit: "1杯", price: 1000, desc: "楯の川酒造が手がける濃厚どぶろくスタイルのリキュール。ヨー子シリーズの中でも特にクリーミーでコクのある味わい。税込価格。" },
+      { name: "ドロ沼ヨー子", img: "doronuma_yoko", unit: "1杯", price: 1000, desc: "楯の川酒造が手がける濃厚どぶろくスタイルのリキュール。ヨー子シリーズの中でも特にクリーミーでコクのある味わい。" },
       { name: "カンパリ", img: "campari", unit: "1杯", price: 500, desc: "1860年イタリア・ミラノ生まれの真紅のビターリキュール。ハーブやスパイス、フルーツから作られる爽やかな苦味と甘みが特徴。ソーダ割りやオレンジジュース割り、カクテルベースとして楽しめる。" },
-      { name: "BARヨー子 梅酒", img: "bar_yoko_umeshu", unit: "1杯", price: 500, desc: "鳥海山麓のBAR「ヨー子」シリーズの梅酒。厳選された梅の豊かな果実味と、すっきりとした甘酸っぱさが楽しめる。ロックやソーダ割りでどうぞ。税込価格。" }
+      { name: "BARヨー子 梅酒", img: "bar_yoko_umeshu", unit: "1杯", price: 500, desc: "鳥海山麓のBAR「ヨー子」シリーズの梅酒。厳選された梅の豊かな果実味と、すっきりとした甘酸っぱさが楽しめる。ロックやソーダ割りでどうぞ。" }
     ]
   },
   {
@@ -852,26 +850,26 @@ const MENU = [
         items: [
       { name: "Clamato クラマト・トマトカクテル", img: "clamato", unit: "1缶", price: 1000, desc: "カナダ発の定番トマトカクテル。トマトジュースにハマグリのエキスをブレンドした独特の旨みが特徴。メキシコでは「ミチェラーダ」のベースとして絶大な人気を誇る221ml缶。そのまま飲んでも、お酒と合わせても楽しめる。" },
       { name: "シンビーノ ジャワティストレート Premium White", img: "javatea_white", unit: "1本", price: 1000, desc: "プレミアムジャワティのWhiteタイプ。色も味わいも軽やかで澄んだ印象の、すっきりした紅茶です。無糖・ストレートで甘さがないので、食事の邪魔をしません。375ml瓶。" },
-      { name: "クランベリージュース", img: "cranberry", unit: "1本", price: 800, desc: "順造選のクランベリー果汁50%ジュース。程よい甘みと酸味が特徴のクランベリー飲料。税込価格。" },
+      { name: "クランベリージュース", img: "cranberry", unit: "1本", price: 800, desc: "順造選のクランベリー果汁50%ジュース。程よい甘みと酸味が特徴のクランベリー飲料。" },
       { name: "東方樹葉 茉莉花茶", img: "dongfang_jasmine", unit: "1本", price: 1000, desc: "中国・農夫山泉が手がける本格派ジャスミン茶。茶葉由来のナチュラルな香りと、すっきりとした無糖の飲み口が特徴。中国で絶大な人気を誇るプレミアムボトルティー。500ml。" },
       { name: "ABSENTE HEAVEN（アブサント ヘヴン）", img: "absente_heaven", unit: "1缶", price: 1000, desc: "「悪魔の酒」アブサンから生まれた、日本初の<b>合法ハーブドリンク</b>。1898年からアブサンを造り続けるフランス「ABSENTE」監修のもと、ゴッホやピカソが愛飲したという禁断の魔酒と同じニガヨモギ・ウイキョウ・ペパーミント・レモンバームを配合。ノンアルなので20歳未満もキメられます。カフェイン・アルギニン入り。<br>キャッチコピーは「才能を開眼せよ 〜OPEN YOUR DARK EYES〜」、缶には堂々の<b>†THUG LIFE†</b>。強烈なハーブ感に一口目は誰もが衝撃を受けますが、気づけば虜に。抑圧にFxxK OFF。" },
-      { name: "アイスコーヒー", img: "ice_coffee", unit: "1杯", price: 500, desc: "UCC ドリップポッド「鑑定士の誇り」アイスコーヒー。コクと香りをしっかり抽出した本格アイスコーヒー。税込価格。" },
-      { name: "ソイラテ", img: "soy_latte", unit: "1杯", price: 500, desc: "UCC ドリップポッド「鑑定士の誇り」アイスコーヒーを使用したソイラテ。豆乳のまろやかさとコーヒーのコクが調和した一杯。税込価格。" },
-      { name: "お茶各種", img: "ocha_various", unit: "1カラフェ", price: 500, desc: "麦茶・ジャスミン茶・ウーロン茶・緑茶・無糖紅茶からお選びいただけます。カラフェでの提供です。税込価格。" },
-      { name: "コカコーラ", img: "cocacola", unit: "1本", price: 500, desc: "定番のコカコーラ。税込価格。" },
-      { name: "ジンジャエール", img: "canada_ginger", unit: "1本", price: 500, desc: "カナダドライ ジンジャエール。すっきりとした辛口の炭酸飲料。税込価格。" },
-      { name: "ジュース各種", img: "juice_various", unit: "1本", price: 500, desc: "オレンジジュース・グレープフルーツジュース・トマトジュースからお選びいただけます。税込価格。" }
+      { name: "アイスコーヒー", img: "ice_coffee", unit: "1杯", price: 500, desc: "UCC ドリップポッド「鑑定士の誇り」アイスコーヒー。コクと香りをしっかり抽出した本格アイスコーヒー。" },
+      { name: "ソイラテ", img: "soy_latte", unit: "1杯", price: 500, desc: "UCC ドリップポッド「鑑定士の誇り」アイスコーヒーを使用したソイラテ。豆乳のまろやかさとコーヒーのコクが調和した一杯。" },
+      { name: "お茶各種", img: "ocha_various", unit: "1カラフェ", price: 500, desc: "麦茶・ジャスミン茶・ウーロン茶・緑茶・無糖紅茶からお選びいただけます。カラフェでの提供です。" },
+      { name: "コカコーラ", img: "cocacola", unit: "1本", price: 500, desc: "定番のコカコーラ。" },
+      { name: "ジンジャエール", img: "canada_ginger", unit: "1本", price: 500, desc: "カナダドライ ジンジャエール。すっきりとした辛口の炭酸飲料。" },
+      { name: "ジュース各種", img: "juice_various", unit: "1本", price: 500, desc: "オレンジジュース・グレープフルーツジュース・トマトジュースからお選びいただけます。" }
         ]
       },
       {
         id: "softdrink-hot", name: "HOT", nameEn: "Hot",
         items: [
-          { name: "リッチブレンド（ホットコーヒー）", img: "hot_richblend", unit: "1杯", price: 500, desc: "UCC ドリップポッド「鑑定士の誇り」リッチブレンド。ブラジル・ホンジュラス産の豆を使用した、コクと香り豊かなホットコーヒー。税込価格。" },
-          { name: "アールグレイ（ホット）", img: "hot_earlgrey", unit: "1杯", price: 500, desc: "UCC ドリップポッドのアールグレイ紅茶。ベルガモットの華やかな香りが広がる、上品なホットティー。税込価格。" },
-          { name: "しょうが紅茶（ホット）", img: "hot_ginger", unit: "1杯", price: 500, desc: "鹿児島・下堂薗のしょうが紅茶。国産生姜のぴりっとした辛みと紅茶の香りが体を温める、三角ティーバッグの本格ホットティー。税込価格。" },
-          { name: "Chocca-Roo-Brew（ホット）", img: "hot_chocca", unit: "1杯", price: 500, desc: "ロンドンのJOE'S TEA Co.が手がけるチョコレート風味のルイボスブレンド。ノンカフェインで、ほんのり甘い香りが楽しめる英国発のホットティー。税込価格。" },
-          { name: "阿里山 高山茶（ホット）", img: "hot_alishan", unit: "1杯", price: 500, desc: "台湾・峰圃茶荘の阿里山高山烏龍茶。標高の高い阿里山で育まれた、華やかな香りとまろやかな甘みが特徴の高級台湾茶。税込価格。" },
-          { name: "京玄米茶（ホット）", img: "hot_genmaicha", unit: "1杯", price: 500, desc: "京都・東（Higashi）の京玄米茶。香ばしい玄米と緑茶のバランスが良い、ほっとする味わいのホット日本茶。税込価格。" }
+          { name: "リッチブレンド（ホットコーヒー）", img: "hot_richblend", unit: "1杯", price: 500, desc: "UCC ドリップポッド「鑑定士の誇り」リッチブレンド。ブラジル・ホンジュラス産の豆を使用した、コクと香り豊かなホットコーヒー。" },
+          { name: "アールグレイ（ホット）", img: "hot_earlgrey", unit: "1杯", price: 500, desc: "UCC ドリップポッドのアールグレイ紅茶。ベルガモットの華やかな香りが広がる、上品なホットティー。" },
+          { name: "しょうが紅茶（ホット）", img: "hot_ginger", unit: "1杯", price: 500, desc: "鹿児島・下堂薗のしょうが紅茶。国産生姜のぴりっとした辛みと紅茶の香りが体を温める、三角ティーバッグの本格ホットティー。" },
+          { name: "Chocca-Roo-Brew（ホット）", img: "hot_chocca", unit: "1杯", price: 500, desc: "ロンドンのJOE'S TEA Co.が手がけるチョコレート風味のルイボスブレンド。ノンカフェインで、ほんのり甘い香りが楽しめる英国発のホットティー。" },
+          { name: "阿里山 高山茶（ホット）", img: "hot_alishan", unit: "1杯", price: 500, desc: "台湾・峰圃茶荘の阿里山高山烏龍茶。標高の高い阿里山で育まれた、華やかな香りとまろやかな甘みが特徴の高級台湾茶。" },
+          { name: "京玄米茶（ホット）", img: "hot_genmaicha", unit: "1杯", price: 500, desc: "京都・東（Higashi）の京玄米茶。香ばしい玄米と緑茶のバランスが良い、ほっとする味わいのホット日本茶。" }
         ]
       }
     ]
@@ -894,8 +892,8 @@ var I18N = {
     "マッケンチーズ": { n: "Mac & Cheese", d: "Mac & cheese: boiled macaroni folded into a rich cheese sauce. One of America's great soul foods." },
     "フライドポテト（シューストリング）": { n: "French Fries (Shoestring)", d: "Thinly cut fries, named for their resemblance to shoestrings." },
     "春巻き": { n: "Spring Rolls", d: "Two different spring rolls served together. One of them is the owner's own, and the filling changes by the day — just ask if you are curious. We also recommend a dip of Sriracha (Thai chili sauce)." },
-    "イカリング": { n: "Calamari Rings", d: "Tender, juicy squid in a crisp fried batter. A classic that works with beer and highballs alike.<br>Also available as a topping for the Curry of the Day (+¥800)." },
-    "オニオンリング": { n: "Onion Rings", d: "Thick-cut onion, battered and fried until crisp. Every bite releases a rush of onion sweetness.<br>Also available as a topping for the Curry of the Day (+¥800)." },
+    "イカリング": { n: "Calamari Rings", d: "Tender, juicy squid in a crisp fried batter. A classic that works with beer and highballs alike." },
+    "オニオンリング": { n: "Onion Rings", d: "Thick-cut onion, battered and fried until crisp. Every bite releases a rush of onion sweetness." },
     "あさりの白ワイン蒸し": { n: "Clams Steamed in White Wine", d: "Clams quickly steamed with white wine and garlic. The broth, full of shellfish flavour, is as good as the clams themselves.<br>Add two pieces of baguette for +¥200 and soak up what is left." },
     "ミックスオリーヴ": { n: "Mixed Olives", d: "An assortment of green, black and other olives. A simple snack that suits wine and spirits equally. Mind the pits." },
     "餃子": { n: "Gyoza (Pan-Fried Dumplings)", d: "Probably the most-eaten frozen gyoza in Japan. No oil, no water, and they crisp up with a lacy skirt — a level of engineering that has outgrown the label of home cooking.<br><b>1–6 pcs ¥500 / 7–12 pcs ¥800</b>" },
@@ -953,7 +951,7 @@ var I18N = {
     "響 17年": { n: "Hibiki 17 Year", d: "One of the high points of Suntory's blended Japanese whisky. Yamazaki, Hakushu and Chita whiskies blended with great skill: flowers and fruit, honeyed sweetness and the depth mizunara brings. Now discontinued, and increasingly hard to find." },
     "余市 10年": { n: "Yoichi 10 Year", d: "A single malt from the Yoichi distillery in Hokkaido, where Nikka began. Direct coal-fired distillation gives a powerful, peaty character, and ten years of maturation adds depth. Sea minerality and heavy smoke in harmony. 45% ABV." },
     "あかし シングルモルト": { n: "Akashi Single Malt", d: "A single malt Japanese whisky from Eigashima Distillery in Hyogo, vatted from whiskies matured in several cask types. Balanced fruit aromatics with a soft, smoky finish." },
-    "BARヨー子 ハイボールレモン": { n: "BAR Yoko Highball Lemon", d: "A considered highball from BAR Yoko at the foot of Mt. Chokai. Malt and grain whisky whose depth and aroma open up with soda, blended generously with whole-pressed Setouchi lemon juice. 40% ABV. We suggest 1:3 with soda. Price includes tax." },
+    "BARヨー子 ハイボールレモン": { n: "BAR Yoko Highball Lemon", d: "A considered highball from BAR Yoko at the foot of Mt. Chokai. Malt and grain whisky whose depth and aroma open up with soda, blended generously with whole-pressed Setouchi lemon juice. 40% ABV. We suggest 1:3 with soda." },
     "あかし シェリーカスク": { n: "Akashi Sherry Cask", d: "From Eigashima's White Oak series in Hyogo. A blended whisky matured in oloroso sherry casks, with the rich sweetness of dried fruit and chocolate and a generous aroma. Remarkable value at ¥500." },
     "イチローズモルト ホワイトラベル": { n: "Ichiro's Malt White Label", d: "A world blended whisky put together by Ichiro Akuto, founder of the Chichibu distillery. Built around Chichibu malt with whiskies vatted from around the world. Non-chill filtered and natural colour, bright and well balanced. 46% ABV." },
     "SOGAINI（ソガイニ）": { n: "SOGAINI", d: "A blended Japanese whisky from the Sakurao Distillery in Hiroshima — the same distillery as Togouchi, offered at a more accessible price. 40% ABV, 700ml." },
@@ -991,7 +989,7 @@ var I18N = {
     "村尾": { n: "Murao", d: "An imo shochu from Murao Shuzo in Kagoshima, made the traditional way with sweet potato and rice koji fermented in earthenware pots. Production is tiny, and it is one of the genuinely hard-to-find bottles. Quiet aromatics, refined mellow flavour and a clean finish." },
     "魔王": { n: "Maou", d: "One of the \"3M\" bottles, made by Shiratama Jozo in Kagoshima. Sweet, fruity aromatics and a smooth, rounded palate — so easy that it barely reads as imo shochu. An ideal introduction, if you can find it." },
     "森伊蔵": { n: "Moriizo", d: "A pot-fermented imo shochu from Moriizo Shuzo in Kagoshima. One of the \"3M\", and available only by lottery. Delicate, fruity aromatics with concentrated sweet potato sweetness — refined and quite unlike anything else." },
-    "山椒 AKAYANE CRAFT SPIRITS": { n: "Sansho AKAYANE Craft Spirits", d: "A craft spirit from AKAYANE, the red-roofed koji house founded in 1908. More than a century of shochu craft applied to a distinctive bottling made with Japanese sansho pepper. Bright, citrusy aroma and a tingling finish. Price includes tax." },
+    "山椒 AKAYANE CRAFT SPIRITS": { n: "Sansho AKAYANE Craft Spirits", d: "A craft spirit from AKAYANE, the red-roofed koji house founded in 1908. More than a century of shochu craft applied to a distinctive bottling made with Japanese sansho pepper. Bright, citrusy aroma and a tingling finish." },
     "日置蒸溜蔵 長期熟成 麦（8年）": { n: "Hioki Distillery Long-Aged Mugi, 8 Years", d: "A strictly limited long-aged mugi shochu from Komasa Jyozo — the makers of the Kanosuke Japanese whisky — distilled at their Hioki Distillery in Kagoshima, founded in 1883. Barley and barley koji (white koji) are fermented with Komasa yeast and well water from the Gongen shrine, then aged eight years in American white oak casks. Mellow on the palate, with sweet, generous aromas of vanilla and nuts from the wood. Only 600 bottles produced." },
     "豊永蔵 麦汁": { n: "Toyonagagura Mugijiru", d: "An unfiltered barley shochu from Toyonagagura in Kumamoto. 100% domestic naked barley, barley koji, atmospheric distillation. Leaving it unfiltered keeps the toasty character and the raw aroma of the grain intact. Mellow, and good with water or soda — and with strongly flavoured food." },
     "うかぜ": { n: "Ukaze", d: "An honkaku barley shochu with a soft, watercolour-like label. Straightforward barley sweetness and a light palate make it a very easy place to start." },
@@ -1003,15 +1001,14 @@ var I18N = {
     "胡麻祥酎 紅乙女": { n: "Beni Otome Sesame Shochu", d: "The only sesame shochu in Japan, from Beni Otome Shuzo in Fukuoka. Long-aged and made with over 20% roasted sesame. Toasty aroma, mellow depth and a refined sweetness." },
     "キンミヤ焼酎": { n: "Kinmiya Shochu", d: "The standard korui shochu from Miyazakihonten in Mie. Pure and free of any distracting character, which is exactly why izakayas across Japan use it as the base for Hoppy and chuhai." },
     "1980 はとむぎ焼酎": { n: "1980 Hatomugi Shochu", d: "A long-aged shochu distilled in 1980 from Job's tears (hatomugi) grown in Oita. Soft on the tongue with real depth and a refined character. A rarity in more ways than one." },
-    "鍛高譚": { n: "Tantakatan", d: "A shiso shochu from Takasago Shuzo in Hokkaido, made with local red shiso. Bright aroma and a clean palate. Good neat or with soda. 20% ABV. Price includes tax." },
+    "鍛高譚": { n: "Tantakatan", d: "A shiso shochu from Takasago Shuzo in Hokkaido, made with local red shiso. Bright aroma and a clean palate. Good neat or with soda. 20% ABV." },
     "金魚": { n: "Kingyo", d: "An elegant way to drink: a shiso leaf as the water weed and a red chili as the goldfish, floating in the glass like an aquarium. We use Kinmiya shochu infused with Japanese and Calabrian chilies. The fresh shiso aroma against the chili heat is a wonderful combination — and yes, it is properly hot." },
     "跳ねる一日": { n: "Haneru Ichinichi", d: "The second in the \"Ichinichi\" series from Wakashio Shuzo in Shibushi, Kagoshima. A base of barley and imo shochu redistilled with yuzu juice and peel for a bright citrus aroma and a clean palate. The name comes from a Satsuma saying: \"Shall I cry or shall I leap? Better to leap than to cry\" — if you are hesitating, move. Look for the leaping goldfish. 27% ABV, 720ml." },
     "米焼酎 ねっか": { n: "Nekka Rice Shochu", d: "An honkaku rice shochu from Nekka in Okuaizu, Fukushima. Made from 100% local rice and vacuum distilled for a clear, expressive character. Fruity ginjo aromatics and a clean finish." },
     "ブラック奄美": { n: "Black Amami", d: "An honkaku kokuto (brown sugar) shochu from Amami Shurui on Tokunoshima, Kagoshima. Kokuto shochu may only be produced in the Amami islands; this one is long-aged in oak casks and bottled at 40%, close to cask strength. Amber in colour, with real depth and a faint sweetness from the brown sugar. Take your time with it, neat or on the rocks." },
     "鍋島 オレンジ ボトル": { n: "Nabeshima Orange (Bottle)", d: "From Fukuchiyo Shuzo in Saga. A junmai ginjo nama-shu, 100% Gohyakumangoku, milled to 55%. Orange-like fruit and a straightforward sweetness, with the vivid spritz that only unpasteurised sake gives. The most playful bottle in the Nabeshima range. <b>Leans sweet</b> and juicy." },
     "獺祭 Blue": { n: "Dassai Blue", d: "Dassai's first sake brewed outside Japan, made at Asahi Shuzo's New York brewery. A junmai daiginjo milled to 50% (Type 50), refined and clear on the nose with a delicate, silky sweetness. A bottle with a story attached. <b>Slightly sweet</b> and aromatic." },
-    "Drunk Monkey S 穀良都": { n: "Drunk Monkey S Kokuryomiyako", d: "A distinctive sake made with Kokuryomiyako, a rare heritage rice. The name and the styling are as memorable as the liquid. <b>Slightly dry</b> and clean on the finish. Price includes tax." },
-    "極上黒松剣菱": { n: "Gokujo Kuromatsu Kenbishi", d: "The senior bottling from Kenbishi Shuzo, founded in 1505 and Japan's oldest sake brand. Under the motto \"first among all, past and present\", it blends undiluted sake matured over several years. Deep body, a firm finish and the roundness that only age gives. The blue bottle is unmistakable. <b>In sweet-dry terms, umakuchi</b> — neither sweet nor dry, but built around depth. Price includes tax." },
+    "極上黒松剣菱": { n: "Gokujo Kuromatsu Kenbishi", d: "The senior bottling from Kenbishi Shuzo, founded in 1505 and Japan's oldest sake brand. Under the motto \"first among all, past and present\", it blends undiluted sake matured over several years. Deep body, a firm finish and the roundness that only age gives. The blue bottle is unmistakable. <b>In sweet-dry terms, umakuchi</b> — neither sweet nor dry, but built around depth." },
     "四季桜": { n: "Shikizakura", d: "A local sake from Utsunomiya Shuzo in Tochigi, brewed with underground water from the Kinugawa river. A tokubetsu junmai with a good balance of acidity and umami. <b>Slightly dry.</b>" },
     "瑞鷹 くまもとカップ": { n: "Zuiyo Kumamoto Cup", d: "From Zuiyo in Kumamoto, with a charming Kumamon label. Soft on the palate with a quiet umami. <b>Slightly dry</b>, with a clean finish." },
     "黒松剣菱": { n: "Kuromatsu Kenbishi", d: "The signature bottling of Kenbishi Shuzo in Hyogo, a brewery with over 500 years of history. A dry junmai with substantial umami and a sharp finish, good warmed or chilled. <b>In sweet-dry terms, leans umakuchi.</b>" },
@@ -1020,30 +1017,30 @@ var I18N = {
     "有磯 曙 本醸造カップ": { n: "Ariiso Akebono Honjozo Cup", d: "A honjozo from Takazawa Brewery in Himi, Toyama, with a wonderfully humorous label of people enjoying a feast. A local sake built to sit alongside the seafood of Toyama Bay: crisp and <b>dry</b>, and it fills out beautifully when warmed." },
     "あさ開 純米辛口 男のドライ": { n: "Asabiraki Junmai Karakuchi Otoko no Dry", d: "A dry junmai from Asabiraki in Morioka, Iwate. The copy reads \"A man's every day is dry\", and the wistful salaryman on the label says the rest. Decidedly <b>dry</b>, as promised, with a clean finish." },
     "中野BC 赤紫蘇の梅酒": { n: "Nakano BC Red Shiso Umeshu", d: "Red shiso paired with Nanko plums from Wakayama, giving this umeshu both its clean shiso character and its distinctive ruby colour. Refreshing, familiar and yet new — a good bottle for a day when you want a small change of pace. A red umeshu that has been a long-seller for over 30 years." },
-    "菊正宗 ぽん酒": { n: "Kikumasamune Ponzake", d: "Sake meets ponzu, bright in both flavour and aroma. A distinctive liqueur from a collaboration between Kikumasamune and Mizkan ponzu. 900ml pack, 8% ABV. Price includes tax." },
+    "菊正宗 ぽん酒": { n: "Kikumasamune Ponzake", d: "Sake meets ponzu, bright in both flavour and aroma. A distinctive liqueur from a collaboration between Kikumasamune and Mizkan ponzu. 900ml pack, 8% ABV." },
     "Bar ヨー子 りんご": { n: "Bar Yoko Apple", d: "From the \"Bar Yoko\" liqueur series by Tatenokawa Shuzo in Yamagata. Their junmai daiginjo Tatenokawa is blended with carefully selected apple juice, giving the juicy sweet-tartness of a honey-cored apple pressed whole, with a faintly bitter dryness on the finish. 8% ABV, 720ml." },
-    "ドロ沼ヨー子": { n: "Doronuma Yoko", d: "A rich doburoku-style liqueur from Tatenokawa Shuzo. The creamiest and most full-bodied of the Yoko series. Price includes tax." },
+    "ドロ沼ヨー子": { n: "Doronuma Yoko", d: "A rich doburoku-style liqueur from Tatenokawa Shuzo. The creamiest and most full-bodied of the Yoko series." },
     "カンパリ": { n: "Campari", d: "The crimson bitter liqueur born in Milan in 1860. Herbs, spices and fruit give its bright bitterness and sweetness. Good with soda, with orange juice, or as a cocktail base." },
-    "BARヨー子 梅酒": { n: "BAR Yoko Umeshu", d: "The umeshu in the BAR Yoko series from the foot of Mt. Chokai. Generous fruit from carefully selected plums with a clean sweet-tartness. On the rocks or with soda. Price includes tax." },
+    "BARヨー子 梅酒": { n: "BAR Yoko Umeshu", d: "The umeshu in the BAR Yoko series from the foot of Mt. Chokai. Generous fruit from carefully selected plums with a clean sweet-tartness. On the rocks or with soda." },
     "ヘネシー VSOP": { n: "Hennessy VSOP", d: "VSOP from the celebrated house of Hennessy. We serve ours topped up into an empty bottle of Calvados Coquerel Pomme d'Yves. Generous dried fruit and vanilla aromas, smooth and well balanced." },
     "Clamato クラマト・トマトカクテル": { n: "Clamato Tomato Cocktail", d: "The classic Canadian tomato cocktail: tomato juice blended with clam broth for a distinctive savoury depth. In Mexico it is the base of a Michelada, and hugely popular. 221ml can — good on its own or with a drink." },
     "クリスチャン ドルーアン クール ド リヨン ポムプリゾニエール": { n: "Christian Drouin Coeur de Lion Pomme Prisonniere", d: "An AOC Calvados from Pays d'Auge, Normandy. An apple has been grown to full size inside the bottle — the \"imprisoned apple\" — which makes it something close to an artwork. Fresh apple aroma meets the depth of aged Calvados." },
     "シンビーノ ジャワティストレート Premium White": { n: "Sinbino Java Tea Straight Premium White", d: "The White version of Premium Java Tea. Light and clear in both colour and flavour. Unsweetened and straight, so it never gets in the way of food. 375ml bottle." },
-    "クランベリージュース": { n: "Cranberry Juice", d: "Junzo-sen cranberry juice, 50% fruit. A good balance of sweetness and tartness. Price includes tax." },
+    "クランベリージュース": { n: "Cranberry Juice", d: "Junzo-sen cranberry juice, 50% fruit. A good balance of sweetness and tartness." },
     "東方樹葉 茉莉花茶": { n: "Oriental Leaf Jasmine Tea", d: "A serious jasmine tea from Nongfu Spring in China. Natural aroma from the leaves themselves and a clean, unsweetened palate. Enormously popular in China as a premium bottled tea. 500ml." },
     "ABSENTE HEAVEN（アブサント ヘヴン）": { n: "ABSENTE HEAVEN", d: "Born from absinthe, \"the devil's drink\": Japan's first <b>legal herb drink</b>. Supervised by France's ABSENTE, absinthe makers since 1898, it uses the same wormwood, fennel, peppermint and lemon balm as the forbidden spirit that van Gogh and Picasso were said to love. It is alcohol free, so under-20s can get lifted too. Contains caffeine and arginine.<br>The tagline reads \"Awaken your talent — OPEN YOUR DARK EYES\", and the can wears a proud <b>†THUG LIFE†</b>. The herbal hit shocks everyone on the first sip, and then somehow you are hooked. A firm FxxK OFF to repression." },
-    "アイスコーヒー": { n: "Iced Coffee", d: "UCC Drip Pod \"Kanteishi no Hokori\" iced coffee. Properly extracted for body and aroma. Price includes tax." },
-    "ソイラテ": { n: "Soy Latte", d: "A soy latte made with UCC Drip Pod \"Kanteishi no Hokori\" iced coffee. The mellowness of soy milk against the body of the coffee. Price includes tax." },
-    "お茶各種": { n: "Assorted Teas", d: "Choose from barley tea, jasmine tea, oolong tea, green tea or unsweetened black tea. Served in a carafe. Price includes tax." },
-    "コカコーラ": { n: "Coca-Cola", d: "Classic Coca-Cola. Price includes tax." },
-    "ジンジャエール": { n: "Ginger Ale", d: "Canada Dry Ginger Ale. Crisp and dry. Price includes tax." },
-    "ジュース各種": { n: "Assorted Juices", d: "Choose from orange juice, grapefruit juice or tomato juice. Price includes tax." },
-    "リッチブレンド（ホットコーヒー）": { n: "Rich Blend (Hot Coffee)", d: "UCC Drip Pod \"Kanteishi no Hokori\" Rich Blend. Brazilian and Honduran beans for a hot coffee with body and aroma. Price includes tax." },
-    "アールグレイ（ホット）": { n: "Earl Grey (Hot)", d: "UCC Drip Pod Earl Grey. Bright bergamot aroma in a refined hot tea. Price includes tax." },
-    "しょうが紅茶（ホット）": { n: "Ginger Tea (Hot)", d: "Ginger tea from Shimodozono in Kagoshima. The gentle heat of Japanese ginger with the aroma of black tea, in a proper pyramid tea bag. Warming. Price includes tax." },
-    "Chocca-Roo-Brew（ホット）": { n: "Chocca-Roo-Brew (Hot)", d: "A chocolate-flavoured rooibos blend from JOE'S TEA Co. in London. Caffeine free, with a softly sweet aroma. Price includes tax." },
-    "阿里山 高山茶（ホット）": { n: "Alishan High Mountain Tea (Hot)", d: "Alishan high mountain oolong from Hoho Chaso in Taiwan. Grown at altitude on Alishan, with an expressive aroma and a rounded sweetness. A fine Taiwanese tea. Price includes tax." },
-    "京玄米茶（ホット）": { n: "Kyoto Genmaicha (Hot)", d: "Kyo genmaicha from Higashi in Kyoto. A good balance of toasted brown rice and green tea — the kind of cup that settles you. Price includes tax." },
+    "アイスコーヒー": { n: "Iced Coffee", d: "UCC Drip Pod \"Kanteishi no Hokori\" iced coffee. Properly extracted for body and aroma." },
+    "ソイラテ": { n: "Soy Latte", d: "A soy latte made with UCC Drip Pod \"Kanteishi no Hokori\" iced coffee. The mellowness of soy milk against the body of the coffee." },
+    "お茶各種": { n: "Assorted Teas", d: "Choose from barley tea, jasmine tea, oolong tea, green tea or unsweetened black tea. Served in a carafe." },
+    "コカコーラ": { n: "Coca-Cola", d: "Classic Coca-Cola." },
+    "ジンジャエール": { n: "Ginger Ale", d: "Canada Dry Ginger Ale. Crisp and dry." },
+    "ジュース各種": { n: "Assorted Juices", d: "Choose from orange juice, grapefruit juice or tomato juice." },
+    "リッチブレンド（ホットコーヒー）": { n: "Rich Blend (Hot Coffee)", d: "UCC Drip Pod \"Kanteishi no Hokori\" Rich Blend. Brazilian and Honduran beans for a hot coffee with body and aroma." },
+    "アールグレイ（ホット）": { n: "Earl Grey (Hot)", d: "UCC Drip Pod Earl Grey. Bright bergamot aroma in a refined hot tea." },
+    "しょうが紅茶（ホット）": { n: "Ginger Tea (Hot)", d: "Ginger tea from Shimodozono in Kagoshima. The gentle heat of Japanese ginger with the aroma of black tea, in a proper pyramid tea bag. Warming." },
+    "Chocca-Roo-Brew（ホット）": { n: "Chocca-Roo-Brew (Hot)", d: "A chocolate-flavoured rooibos blend from JOE'S TEA Co. in London. Caffeine free, with a softly sweet aroma." },
+    "阿里山 高山茶（ホット）": { n: "Alishan High Mountain Tea (Hot)", d: "Alishan high mountain oolong from Hoho Chaso in Taiwan. Grown at altitude on Alishan, with an expressive aroma and a rounded sweetness. A fine Taiwanese tea." },
+    "京玄米茶（ホット）": { n: "Kyoto Genmaicha (Hot)", d: "Kyo genmaicha from Higashi in Kyoto. A good balance of toasted brown rice and green tea — the kind of cup that settles you." },
     "Guilty Pleasure Plate": { d: "Pure indulgence. By our AI's rough maths, over 1,500 kcal per serving. Eating it alone will absolutely give you heartburn, so we recommend ordering it for two or more." },
     "Budweiser": { d: "The American lager benchmark. Clean on the palate with a light bitterness. A world standard." },
     "Corona Extra": { d: "The Mexican lager loved worldwide. Golden through clear glass, clean and light on the palate, and traditionally served with a wedge of lime. 4.5% ABV, 330ml." },
@@ -1054,9 +1051,9 @@ var I18N = {
     "Laurent Perrier": { d: "A distinguished Champagne house founded in 1812. The Ultra Brut (brut nature) has no dosage, letting the pure Chardonnay character shine." },
     "Jameson": { d: "Founded in Dublin in 1780 and now the world's best-selling Irish whiskey. Triple distillation gives a smooth, clean palate with sweet vanilla and nutty aromas. Equally at home neat or in a highball." },
     "Hendrick's Gin": { d: "A premium craft gin from the Girvan distillery in Scotland, with its unusual infusion of rose and cucumber. Floral and expressive on the nose, clean and refreshing on the palate. The black apothecary bottle is a design classic." },
-    "BOMBAY SAPPHIRE": { d: "A London dry gin made in England from a recipe dating to 1761. Ten botanicals are vapour-infused for a clear, elegant character. 47% ABV. Price includes tax." },
+    "BOMBAY SAPPHIRE": { d: "A London dry gin made in England from a recipe dating to 1761. Ten botanicals are vapour-infused for a clear, elegant character. 47% ABV." },
     "Belvedere Vodka": { d: "A top-tier premium vodka from Żyrardów, Poland. Made from 100% Dankowskie rye, quadruple distilled and non-chill filtered. Clean and rounded, with faint vanilla and almond." },
-    "ABSOLUT TABASCO": { d: "A collaboration between Sweden's ABSOLUT and the world's best-known hot sauce, TABASCO. Chili pepper heat over the clean spine of the vodka. 38% ABV. Price includes tax." },
+    "ABSOLUT TABASCO": { d: "A collaboration between Sweden's ABSOLUT and the world's best-known hot sauce, TABASCO. Chili pepper heat over the clean spine of the vodka. 38% ABV." },
     "Myers's Rum Original Dark": { d: "The benchmark Jamaican dark rum, blended from nine rums for real complexity, with sweet tropical fruit and molasses on the nose. Rich and full — and a workhorse behind the bar." },
     "LAODI Pure Sugarcane Rhum White": { d: "An organic agricultural rum from Vientiane, Laos, made in the agricole style from pure sugarcane juice. Fresh and clean with a bright aroma — and a beautiful butterfly on the label." },
     "Ron Zacapa Centenario Solera Gran Reserva": { d: "A premium rum from Guatemala, aged in oak by the solera method at 2,300m above sea level. Complex vanilla, dried fruit and spice; silky and rich on the palate. 40% ABV, 750ml." },
