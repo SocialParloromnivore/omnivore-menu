@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-09-26a -->
+<!-- omnivore-menu build 2026-09-28a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -314,7 +314,6 @@ const IMAGES = {
   "mugjiru": "images/mugjiru.jpg",
   "ukaze": "images/ukaze.jpg",
   "twilight_awamori": "images/twilight_awamori.jpg",
-  "unkai": "images/unkai.jpg",
   "daiyame": "images/daiyame.jpg",
   "maou": "images/maou.jpg",
   "moriizou": "images/moriizou.jpg",
@@ -446,7 +445,6 @@ const IMAGES = {
   "food_curry": "images/food_curry.jpg",
   "food_charsiu": "images/food_charsiu.jpg",
   "ramen_sapporo_miso": "images/ramen_sapporo_miso.jpg",
-  "ramen_ippei_yakisoba": "images/ramen_ippei_yakisoba.jpg",
   "ramen_natto_soba": "images/ramen_natto_soba.jpg",
   "ramen_zubaaan_hakata": "images/ramen_zubaaan_hakata.jpg",
   "ramen_zubaaan_iekei": "images/ramen_zubaaan_iekei.jpg",
@@ -528,7 +526,6 @@ const MENU = [
         items: [
           { name: "サッポロ一番 みそラーメン", img: "ramen_sapporo_miso", unit: "1袋", price: 500, desc: "1968年発売、日本のインスタントラーメン史に残るロングセラー。七味唐辛子スパイス付きの本格みそスープに、もちもちとした太麺が絡む定番の一杯。" },
           { name: "ペヤングヌードル", img: "ramen_peyoung_noodle", unit: "1杯", price: 500, desc: "あの「ペヤング」のまるか食品がつくるカップラーメン。焼そばじゃないほうのペヤングです。東北・北関東が主戦場で、都内ではまず見かけない一杯。味はあっさりしょうゆ。ペヤング＝焼そばだと思っていた方、その認識をここで更新していってください。" },
-          { name: "一平ちゃん 夜店の焼そば", img: "ramen_ippei_yakisoba", unit: "1袋", price: 500, desc: "夜店ソースとオリジナルからしマヨネーズ「マヨビーム」のコンビが絶品。ソースが練り込まれた麺が特徴の焼そば系袋麺の人気作。フライパン一つで簡単調理。" },
           { name: "ひきわり納豆そば", img: "ramen_natto_soba", unit: "1袋", price: 500, desc: "新潟県産有機そば全粒粉使用の国産そば麺に、ひきわり納豆スープを合わせた個性派。カップ不要のどんぶり麺スタイルで熱湯3分。納豆好きにはたまらない一杯。" },
           { name: "ZUBAAAN! 博多豚骨ラーメン", img: "ramen_zubaaan_hakata", unit: "1袋", price: 500, desc: "マルちゃんZUBAAAN!シリーズ。博多スタイルの濃厚豚骨スープを袋麺で再現。クリーミーなとんこつ白湯に細麺が絡む、お店品質の一杯。" },
           { name: "ZUBAAAN! 横浜家系 醤油豚骨", img: "ramen_zubaaan_iekei", unit: "1袋", price: 500, desc: "マルちゃんZUBAAAN!シリーズ。横浜家系ラーメンの特徴である醤油豚骨スープを袋麺で再現。海苔・ほうれん草との相性抜群の濃厚スープが楽しめる。" },
@@ -763,7 +760,6 @@ const MENU = [
         id: "shochu-others", name: "その他", nameEn: "Others",
         items: [
           { name: "twilight Awamori", img: "twilight_awamori", unit: "1杯", price: 1000, desc: "沖縄の泡盛をベースにした個性派スピリッツ。アルコール度数44%のカスクストレングス。黄昏時の沖縄の風景を映したラベルが美しく、泡盛の新たな可能性を感じさせる一本。" },
-          { name: "雲海", img: "unkai", unit: "1杯", price: 500, desc: "宮崎・雲海酒造が手がけるそば焼酎の代名詞。国産そば100%使用、すっきりとした爽やかな香りとほのかな甘みが特徴。そば焼酎入門に最適なクリーンな味わい。" },
           { name: "茉莉花", img: "matsuri_ka", unit: "1杯", price: 500, desc: "サントリーが手がけるジャスミン焼酎。茉莉花（まつりか）はジャスミンの漢字表記。ジャスミンの華やかな香りとさわやかな甘みが特徴の、アルコール20%の飲みやすいリキュール系焼酎。" },
           { name: "胡麻祥酎 紅乙女", img: "beni_otome", unit: "1杯", price: 500, desc: "福岡・紅乙女酒造が手がける日本唯一のごま焼酎。焙煎ごまを20%以上使用した長期貯蔵焼酎。ごまの芳ばしい香りとまろやかなコク、上品な甘みが特徴の個性派。" },
           { name: "キンミヤ焼酎", img: "kinmiya", unit: "1杯", price: 500, desc: "三重・宮崎本店が手がける甲類焼酎の定番。純粋でクセのないクリアな味わいが特徴で、ホッピーや酎ハイのベースとして全国の居酒屋で愛される一本。" },
@@ -898,7 +894,6 @@ var I18N = {
     "ポーク・カルニタス タコス": { n: "Pork Carnitas Tacos", d: "Tacos filled with pork carnitas prepared in-house, on corn tortillas. Limited quantity, available until sold out." },
     "サッポロ一番 みそラーメン": { n: "Sapporo Ichiban Miso Ramen", d: "Released in 1968 and a landmark in Japan's instant noodle history. A proper miso broth with a sachet of shichimi spice, clinging to thick, chewy noodles." },
     "ペヤングヌードル": { n: "Peyoung Noodle", d: "A cup ramen from Maruka Foods, the makers of the famous Peyoung. This is the one that is not yakisoba. Mostly sold in Tohoku and the northern Kanto region, and almost never seen in Tokyo. Light soy sauce flavour. If you thought Peyoung meant yakisoba, here is your chance to update that." },
-    "一平ちゃん 夜店の焼そば": { n: "Ippei-chan Yomise no Yakisoba", d: "The festival-stall sauce paired with its signature mustard mayonnaise, \"Mayo Beam\", is superb. The noodles themselves are infused with sauce. A favourite among bagged yakisoba, and made in a single frying pan." },
     "ひきわり納豆そば": { n: "Hikiwari Natto Soba", d: "Domestic soba noodles made with organic wholegrain buckwheat from Niigata, served with a minced natto broth. A donburi-style noodle that needs no cup — just three minutes of boiling water. A dream for natto lovers." },
     "ZUBAAAN! 博多豚骨ラーメン": { n: "ZUBAAAN! Hakata Tonkotsu Ramen", d: "From Maruchan's ZUBAAAN! series. Hakata-style rich tonkotsu recreated in a bagged noodle. Creamy pork bone broth clinging to thin noodles — shop-quality at home." },
     "ZUBAAAN! 横浜家系 醤油豚骨": { n: "ZUBAAAN! Yokohama Iekei Shoyu Tonkotsu", d: "From Maruchan's ZUBAAAN! series. The shoyu-tonkotsu broth that defines Yokohama Iekei ramen, in bagged form. A rich broth that loves nori and spinach." },
@@ -991,7 +986,6 @@ var I18N = {
     "いいちこ": { n: "iichiko", d: "The definitive barley shochu, from Sanwa Shurui in Oita. \"Iichiko\" means \"good\" in the local dialect. Clean on the palate with a faint barley sweetness — a long-seller loved across Japan." },
     "青鹿毛（あおかげ）": { n: "Aokage", d: "A barley shochu with bold brushwork on a blue label. Generous barley character with a clean palate." },
     "CHILL GREEN（チルグリーン）": { n: "CHILL GREEN", d: "A new-generation flavoured shochu combining barley shochu with maki — a relative of sansho — for a spicy, citrus lift. Bright and quietly addictive. Best on the rocks or with soda." },
-    "雲海": { n: "Unkai", d: "The definitive buckwheat shochu, from Unkai Shuzo in Miyazaki. 100% domestic buckwheat, with a clean, fresh aroma and gentle sweetness. The best introduction to soba shochu." },
     "茉莉花": { n: "Matsurika", d: "A jasmine shochu from Suntory — matsurika is the Japanese name for jasmine. Expressive floral aroma with a fresh sweetness, at an easy-going 20% ABV." },
     "胡麻祥酎 紅乙女": { n: "Beni Otome Sesame Shochu", d: "The only sesame shochu in Japan, from Beni Otome Shuzo in Fukuoka. Long-aged and made with over 20% roasted sesame. Toasty aroma, mellow depth and a refined sweetness." },
     "キンミヤ焼酎": { n: "Kinmiya Shochu", d: "The standard korui shochu from Miyazakihonten in Mie. Pure and free of any distracting character, which is exactly why izakayas across Japan use it as the base for Hoppy and chuhai." },
