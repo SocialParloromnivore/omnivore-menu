@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-01b -->
+<!-- omnivore-menu build 2026-10-01e -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -511,7 +511,7 @@ const MENU = [
           { name: "オニオンリング", img: "food_onion_ring", unit: "1皿", price: 800, desc: "厚めに切った玉ねぎを衣をつけてカラッと。噛むと玉ねぎの甘みがじゅわっと広がります。" },
           { name: "あさりの白ワイン蒸し", img: "food_asari_wine", unit: "1皿", price: 800, desc: "あさりを白ワインとにんにくでさっと蒸し上げました。貝の旨みが溶け出したスープまで美味しい一皿です。<br>+¥200でバゲット2個をお付けできます。残ったスープに浸してどうぞ。" },
           { name: "ミックスオリーヴ", img: "food_olive", unit: "1皿", price: 1000, desc: "グリーン、ブラックなど数種類のオリーヴを盛り合わせでご用意。ワインにもスピリッツにも合う、シンプルなおつまみです。種にご注意ください。" },
-          { name: "餃子", img: "food_gyoza", unit: "1皿", price: 500, desc: "おそらく日本で一番食べられている冷凍餃子。油も水も不要、羽根つきでパリッと焼き上がる完成度の高さは、もはや家庭料理の定番を超えた存在です。<br><b>1〜6個 ¥500 / 7〜12個 ¥800</b>" },
+          { name: "餃子", img: "food_gyoza", unit: "1皿", price: 500, desc: "おそらく日本で一番食べられている冷凍餃子。油も水も不要、羽根つきでパリッと焼き上がる完成度の高さは、もはや家庭料理の定番を超えた存在です。<br><b>1〜6個 ¥500 / 7〜12個 ¥800</b><br><b>小ライス +¥200 / ライス +¥300</b>" },
           { name: "Guilty Pleasure Plate", img: "food_guilty", unit: "1皿", price: 1500, desc: "これこそ背徳感。AIのざっくりした計算で1食1500kcalオーバー。一人で食べたら絶対胸やけしちゃうメニューなので、お二人以上でのご注文をオススメします。" },
           { name: "揚げたてコーントルティーヤチップス", img: "food_tortilla_chips", unit: "1皿", price: 800, desc: "コーントルティーヤをその場で揚げた、サクサク食感のチップス。店主自家製のサルサソースを添えてお出しします。お酒のお供にぴったりの一皿です。" },
           { name: "本日のカレー", img: "food_curry", unit: "1皿", price: 800, desc: "店主の作る家庭的な欧風カレーです。使用されているお肉はその都度違いますので、気になる方はお手数ですがご確認ください。" },
@@ -550,6 +550,7 @@ const MENU = [
         items: [
           { name: "トッピング（2種選択）", img: "ramen_topping_ex", unit: "2種", price: 200, desc: "<b>たまご</b><br><b>ほうれん草</b><br><b>高菜</b><br><b>紅ショウガ</b><br><b>きくらげ</b><br><b>コーン</b><br><b>バター</b><br><b>スライスハラペーニョ</b><br><b>紫蘇</b><br><b>パクチー</b><br><b>海苔2枚</b><br><br>の中からお好きな2種をどうぞ。<br><br>例）ZUBAAAN! 横浜家系醤油豚骨 ¥500 ＋ トッピング（ほうれん草・海苔2枚）¥200 ＋ 自家製焼豚 ¥300 ＝ 合計 ¥1,000" },
           { name: "小ライス", img: "", emoji: "🍚", unit: "1膳", price: 200, desc: "ラーメンのお供に、あるいは〆に。残ったスープに投入して食べるのが最適解だと思っています。" },
+          { name: "ライス", img: "", emoji: "🍚", unit: "1膳", price: 300, desc: "小ライスより多めの普通盛りです。餃子のお供にも、ラーメンのゆでスープに投入するのにも。" },
           { name: "替玉（細麺）", img: "", emoji: "🍜", unit: "1玉", price: 200, desc: "麺だけのおかわりです。細麺なのでスープの絡み方が変わり、一杯の中で二度おいしい。スープが残っているうちにどうぞ。" },
           { name: "自家製焼豚", img: "ramen_chashu", unit: "2枚", price: 300, desc: "店主が仕込む自家製の焼豚。豚肩ロースと豚バラを各1枚ずつ盛り合わせになります。" }
         ]
@@ -560,7 +561,7 @@ const MENU = [
     id: "beer", name: "ビール", nameEn: "Beer", icon: "🍺", desc: "国産・輸入の瓶ビール",
     items: [
       { name: "キリン一番搾り ミニ缶", unit: "1缶", img: "beer_ichiban_mini", price: 300, desc: "チンカーチンカーに冷やした、ドロヘドロのHungry Bugグラスちょうど一杯分の飲み切りサイズです。" },
-      { name: "ミチェラーダ / Michelada", unit: "1杯", img: "beer_michelada", price: 500, desc: "ミチェラーダ（Michelada）は、メキシコ発祥のビールベースのカクテルです。暑い日にぴったりの酸味と刺激的な味わいが特徴の飲み物です。お好みでクラマトバージョン+1000円も提供可能！" },
+      { name: "ミチェラーダ / Michelada", unit: "1杯", img: "beer_michelada", price: 600, desc: "ミチェラーダ（Michelada）は、メキシコ発祥のビールベースのカクテルです。暑い日にぴったりの酸味と刺激的な味わいが特徴の飲み物です。お好みでクラマトバージョン+1000円も提供可能！" },
       { name: "Budweiser", unit: "1本", img: "budweiser", price: 500, desc: "アメリカ生まれの王道ラガー。スッキリとした飲み口と軽やかな苦み。世界中で愛されるビールの定番。" },
       { name: "アサヒ スーパードライ", unit: "1本", img: "superdry", price: 500, desc: "日本が誇るドライビールの代名詞。キレのある辛口と後味のすっきり感が特徴。どんな料理とも相性抜群。" },
       { name: "サッポロ 黒ラベル", unit: "1本", img: "kurolabel", price: 500, desc: "北海道・サッポロビールの看板銘柄。麦の旨みとホップの香りが調和した、飲み飽きない旨さ。" },
@@ -848,7 +849,7 @@ const MENU = [
         items: [
       { name: "Clamato クラマト・トマトカクテル", img: "clamato", unit: "1缶", price: 1000, desc: "カナダ発の定番トマトカクテル。トマトジュースにハマグリのエキスをブレンドした独特の旨みが特徴。メキシコでは「ミチェラーダ」のベースとして絶大な人気を誇る221ml缶。そのまま飲んでも、お酒と合わせても楽しめる。" },
       { name: "シンビーノ ジャワティストレート Premium White", img: "javatea_white", unit: "1本", price: 1000, desc: "プレミアムジャワティのWhiteタイプ。色も味わいも軽やかで澄んだ印象の、すっきりした紅茶です。無糖・ストレートで甘さがないので、食事の邪魔をしません。375ml瓶。" },
-      { name: "クランベリージュース", img: "cranberry", unit: "1本", price: 800, desc: "順造選のクランベリー果汁50%ジュース。程よい甘みと酸味が特徴のクランベリー飲料。" },
+      { name: "クランベリージュース", addon: true, img: "cranberry", unit: "1本", price: 800, desc: "順造選のクランベリー果汁50%ジュース。程よい甘みと酸味が特徴のクランベリー飲料。" },
       { name: "東方樹葉 茉莉花茶", img: "dongfang_jasmine", unit: "1本", price: 1000, desc: "中国・農夫山泉が手がける本格派ジャスミン茶。茶葉由来のナチュラルな香りと、すっきりとした無糖の飲み口が特徴。中国で絶大な人気を誇るプレミアムボトルティー。500ml。" },
       { name: "アイスコーヒー", img: "ice_coffee", unit: "1杯", price: 500, desc: "UCC ドリップポッド「鑑定士の誇り」アイスコーヒー。コクと香りをしっかり抽出した本格アイスコーヒー。" },
       { name: "ソイラテ", img: "soy_latte", unit: "1杯", price: 500, desc: "UCC ドリップポッド「鑑定士の誇り」アイスコーヒーを使用したソイラテ。豆乳のまろやかさとコーヒーのコクが調和した一杯。" },
@@ -892,7 +893,7 @@ var I18N = {
     "オニオンリング": { n: "Onion Rings", d: "Thick-cut onion, battered and fried until crisp. Every bite releases a rush of onion sweetness." },
     "あさりの白ワイン蒸し": { n: "Clams Steamed in White Wine", d: "Clams quickly steamed with white wine and garlic. The broth, full of shellfish flavour, is as good as the clams themselves.<br>Add two pieces of baguette for +¥200 and soak up what is left." },
     "ミックスオリーヴ": { n: "Mixed Olives", d: "An assortment of green, black and other olives. A simple snack that suits wine and spirits equally. Mind the pits." },
-    "餃子": { n: "Gyoza (Pan-Fried Dumplings)", d: "Probably the most-eaten frozen gyoza in Japan. No oil, no water, and they crisp up with a lacy skirt — a level of engineering that has outgrown the label of home cooking.<br><b>1–6 pcs ¥500 / 7–12 pcs ¥800</b>" },
+    "餃子": { n: "Gyoza (Pan-Fried Dumplings)", d: "Probably the most-eaten frozen gyoza in Japan. No oil, no water, and they crisp up with a lacy skirt — a level of engineering that has outgrown the label of home cooking.<br><b>1–6 pcs ¥500 / 7–12 pcs ¥800</b><br><b>Small rice +¥200 / Rice +¥300</b>" },
     "揚げたてコーントルティーヤチップス": { n: "Freshly Fried Corn Tortilla Chips", d: "Corn tortillas fried to order for a crisp, light crunch, served with the owner's homemade salsa. Perfect alongside a drink." },
     "本日のカレー": { n: "Curry of the Day", d: "The owner's homestyle European-style curry. The meat changes each time, so please ask if you would like to know what is in today's pot." },
     "チャーシューエッグ丼": { n: "Chashu & Egg Rice Bowl", d: "A rice bowl with the owner's homemade chashu — originally made as a ramen topping — and a fried egg." },
@@ -915,6 +916,7 @@ var I18N = {
     "出前一丁": { n: "Demae Itcho", d: "A long-seller since 1968. A wisp of the secret sesame oil over a nostalgic chuka soba. Light soy broth lifted by the sesame chili oil — loved across generations." },
     "トッピング（2種選択）": { n: "Toppings (Choose 2)", d: "<b>Egg</b><br><b>Spinach</b><br><b>Takana (pickled mustard greens)</b><br><b>Pickled red ginger</b><br><b>Kikurage mushroom</b><br><b>Corn</b><br><b>Butter</b><br><b>Sliced jalapeño</b><br><b>Shiso</b><br><b>Coriander</b><br><b>Nori (2 sheets)</b><br><br>Choose any two.<br><br>e.g. ZUBAAAN! Yokohama Iekei Shoyu Tonkotsu ¥500 + Toppings (spinach & nori) ¥200 + Homemade Chashu ¥300 = ¥1,000 total" },
     "レモンサワー": { n: "Lemon Sour", d: "Kinmiya shochu with lemon and soda. A clean, dependable glass. The mixer is already included in the price." },
+    "ライス": { n: "Rice", d: "A full portion, larger than the small rice. Good alongside the gyoza, or dropped into what is left of your ramen broth." },
     "小ライス": { n: "Small Rice", d: "Good alongside the noodles, or to finish. Dropping it into what is left of the broth is, in our view, the correct move." },
     "替玉（細麺）": { n: "Extra Noodles (Thin)", d: "A second helping of noodles only. The thin cut holds the broth differently, so one bowl gives you two experiences. Best while there is still broth left." },
     "自家製焼豚": { n: "Homemade Chashu", d: "Chashu prepared by the owner. One slice each of pork shoulder and pork belly." },
