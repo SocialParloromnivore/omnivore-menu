@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-01a -->
+<!-- omnivore-menu build 2026-10-01b -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -238,6 +238,7 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
   .drink-card { height: 100px; }
   /* カード高(100px)と画像枠(既定120px)がズレて写真の下が切れていたので合わせる */
   .drink-img-wrap { width: 100px; height: 100px; align-self: center; }
+  .drink-emoji-wrap { width: 100px; height: 100px; align-self: center; font-size: 38px; }
   /* メインページはセンター寄せ・1列 */
   #drink-grid.top-grid { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; }
   #genre-header { padding: 8px 20px 4px; }
@@ -697,32 +698,32 @@ const MENU = [
       {
         id: "spirits-gin", name: "ジン", nameEn: "Gin",
         items: [
-          { name: "Hendrick's Gin", img: "hendricks", unit: "1杯", price: 1000, desc: "スコットランド・ガーヴァン蒸溜所発のプレミアムクラフトジン。ローズとキュウリのエッセンスを加えたユニークなレシピが特徴。フローラルで華やかな香りと、すっきりとしたさわやかな味わい。黒いボトルのデザインも印象的。" },
-          { name: "BOMBAY SAPPHIRE", img: "bombay", unit: "1杯", price: 500, desc: "1761年のレシピをもとに英国で生まれたロンドンドライジン。10種類のボタニカルを蒸気蒸留で香り立てた、クリアでエレガントな味わい。アルコール47%。" },
-          { name: "まさひろ オキナワジン Recipe 01", img: "masahiro_gin", unit: "1杯", price: 500, desc: "沖縄・まさひろ酒造が手がけるクラフトジン。泡盛をベースに、シークワーサー・ジュニパーベリー・グァバ葉・ゴーヤー・ローゼル/ハイビスカス属・ピパーズ/ハワモドキを使用。アルコール47%、700ml。沖縄の素材を活かした個性豊かな一本。" },
-          { name: "SAKURAO GIN 浜茄子 2025", img: "sakurao_hamagou", unit: "1杯", price: 500, desc: "広島・桜尾蒸溜所のジャパニーズドライジン限定版。宮島の対岸で手摘みしたハマナス（浜茄子）を使用したスモールバッチ蒸留。青いボトルが美しい2025年エディション。アルコール47%、700ml。" },
-          { name: "まさひろ オキナワジン Recipe 02", img: "masahiro_gin_02", unit: "1杯", price: 500, desc: "沖縄・まさひろ酒造のクラフトジン第2弾。泡盛をベースに、沖縄特産の柑橘タンカンを主役として、ジュニパーベリー・ミント・アロマティカス・月桃・生姜・レモングラスを使用。柑橘の華やかさとハーブの清涼感が抜けていく爽快な仕上がり。アルコール47%、700ml。Recipe 01との飲み比べもぜひ。" }
+          { name: "Hendrick's Gin", addon: true, img: "hendricks", unit: "1杯", price: 1000, desc: "スコットランド・ガーヴァン蒸溜所発のプレミアムクラフトジン。ローズとキュウリのエッセンスを加えたユニークなレシピが特徴。フローラルで華やかな香りと、すっきりとしたさわやかな味わい。黒いボトルのデザインも印象的。" },
+          { name: "BOMBAY SAPPHIRE", addon: true, img: "bombay", unit: "1杯", price: 500, desc: "1761年のレシピをもとに英国で生まれたロンドンドライジン。10種類のボタニカルを蒸気蒸留で香り立てた、クリアでエレガントな味わい。アルコール47%。" },
+          { name: "まさひろ オキナワジン Recipe 01", addon: true, img: "masahiro_gin", unit: "1杯", price: 500, desc: "沖縄・まさひろ酒造が手がけるクラフトジン。泡盛をベースに、シークワーサー・ジュニパーベリー・グァバ葉・ゴーヤー・ローゼル/ハイビスカス属・ピパーズ/ハワモドキを使用。アルコール47%、700ml。沖縄の素材を活かした個性豊かな一本。" },
+          { name: "SAKURAO GIN 浜茄子 2025", addon: true, img: "sakurao_hamagou", unit: "1杯", price: 500, desc: "広島・桜尾蒸溜所のジャパニーズドライジン限定版。宮島の対岸で手摘みしたハマナス（浜茄子）を使用したスモールバッチ蒸留。青いボトルが美しい2025年エディション。アルコール47%、700ml。" },
+          { name: "まさひろ オキナワジン Recipe 02", addon: true, img: "masahiro_gin_02", unit: "1杯", price: 500, desc: "沖縄・まさひろ酒造のクラフトジン第2弾。泡盛をベースに、沖縄特産の柑橘タンカンを主役として、ジュニパーベリー・ミント・アロマティカス・月桃・生姜・レモングラスを使用。柑橘の華やかさとハーブの清涼感が抜けていく爽快な仕上がり。アルコール47%、700ml。Recipe 01との飲み比べもぜひ。" }
         ]
       },
       {
         id: "spirits-vodka", name: "ウォッカ", nameEn: "Vodka",
         items: [
-          { name: "Belvedere Vodka", img: "belvedere", unit: "1杯", price: 1000, desc: "ポーランド・ジラルドフ産の最高峰プレミアムウォッカ。ダンコウスキー・ライ麦100%使用、4回蒸溜後にノンチルフィルタード。クリーンでまろやかな口当たりに、ほのかなバニラとアーモンドの香りが特徴。" },
-          { name: "ABSOLUT TABASCO", img: "absolut_tabasco", unit: "1杯", price: 500, desc: "スウェーデン発のプレミアムウォッカ「ABSOLUT」と世界的ホットソース「TABASCO」のコラボレーション。チリペッパーの刺激とウォッカのクリーンな味わいが融合した、スパイシーな一本。アルコール38%。" }
+          { name: "Belvedere Vodka", addon: true, img: "belvedere", unit: "1杯", price: 1000, desc: "ポーランド・ジラルドフ産の最高峰プレミアムウォッカ。ダンコウスキー・ライ麦100%使用、4回蒸溜後にノンチルフィルタード。クリーンでまろやかな口当たりに、ほのかなバニラとアーモンドの香りが特徴。" },
+          { name: "ABSOLUT TABASCO", addon: true, img: "absolut_tabasco", unit: "1杯", price: 500, desc: "スウェーデン発のプレミアムウォッカ「ABSOLUT」と世界的ホットソース「TABASCO」のコラボレーション。チリペッパーの刺激とウォッカのクリーンな味わいが融合した、スパイシーな一本。アルコール38%。" }
         ]
       },
       {
         id: "spirits-rum", name: "ラム", nameEn: "Rum",
         items: [
-          { name: "Myers's Rum Original Dark", img: "myers_rum", unit: "1杯", price: 500, desc: "ジャマイカ産ダークラムの定番。9種のラムをブレンドした複雑な味わいで、トロピカルフルーツとモラセスの甘い香りが特徴。コクのある濃厚な味わいで、カクテルのベースとしても活躍する世界的名品。" },
-          { name: "LAODI Pure Sugarcane Rhum White", img: "laodi_rum", unit: "1杯", price: 500, desc: "ラオス・ビエンチャン産のオーガニック農業ラム。純粋なサトウキビジュースを使用したアグリコールスタイル。蝶のラベルが美しく、フレッシュでクリーンな甘みと爽やかな香りが楽しめる希少な一本。" },
-          { name: "Ron Zacapa Centenario Solera Gran Reserva", img: "zacapa", unit: "1杯", price: 1000, desc: "グアテマラ産プレミアムラム。標高2300mの山上でソレラ製法によりオーク樽で熟成。バニラ・ドライフルーツ・スパイスの複雑な香り、口当たりはシルキーでリッチ。アルコール40%、750ml。" }
+          { name: "Myers's Rum Original Dark", addon: true, img: "myers_rum", unit: "1杯", price: 500, desc: "ジャマイカ産ダークラムの定番。9種のラムをブレンドした複雑な味わいで、トロピカルフルーツとモラセスの甘い香りが特徴。コクのある濃厚な味わいで、カクテルのベースとしても活躍する世界的名品。" },
+          { name: "LAODI Pure Sugarcane Rhum White", addon: true, img: "laodi_rum", unit: "1杯", price: 500, desc: "ラオス・ビエンチャン産のオーガニック農業ラム。純粋なサトウキビジュースを使用したアグリコールスタイル。蝶のラベルが美しく、フレッシュでクリーンな甘みと爽やかな香りが楽しめる希少な一本。" },
+          { name: "Ron Zacapa Centenario Solera Gran Reserva", addon: true, img: "zacapa", unit: "1杯", price: 1000, desc: "グアテマラ産プレミアムラム。標高2300mの山上でソレラ製法によりオーク樽で熟成。バニラ・ドライフルーツ・スパイスの複雑な香り、口当たりはシルキーでリッチ。アルコール40%、750ml。" }
         ]
       },
       {
         id: "spirits-tequila", name: "テキーラ", nameEn: "Tequila",
         items: [
-          { name: "Don Julio Añejo（ドン フリオ アネホ）", img: "don_julio_anejo", unit: "1杯", price: 1500, desc: "1942年創業、テキーラの高級化を切り拓いた伝説の生産者ドン・フリオ・ゴンザレス。ハリスコ州ハイランズ産100%ブルーアガベを、アメリカンホワイトオーク樽で18ヶ月熟成。キャラメルとバニラの甘み、ほのかなスパイス、シルキーで長い余韻。ショットグラス（15ml）での提供も同価格。" }
+          { name: "Don Julio Añejo（ドン フリオ アネホ）", addon: true, img: "don_julio_anejo", unit: "1杯", price: 1500, desc: "1942年創業、テキーラの高級化を切り拓いた伝説の生産者ドン・フリオ・ゴンザレス。ハリスコ州ハイランズ産100%ブルーアガベを、アメリカンホワイトオーク樽で18ヶ月熟成。キャラメルとバニラの甘み、ほのかなスパイス、シルキーで長い余韻。ショットグラス（15ml）での提供も同価格。" }
         ]
       }
     ]
@@ -733,45 +734,46 @@ const MENU = [
       {
         id: "shochu-imo", name: "芋", nameEn: "Imo",
         items: [
-          { name: "日置蒸溜蔵 甕壺貯蔵 芋（4年）", img: "hioki_imo", unit: "1杯", price: 1000, desc: "国産ウイスキー「嘉之助」を手掛ける小正醸造が、鹿児島県日置市の日置蒸溜蔵（1883年創業）で仕込んだ超限定の長期熟成芋焼酎。厳選された鹿児島県産のさつま芋「黄金千貫」と米麹（黒麹菌）を、権現様の井戸水と小正酵母で仕込み、かめ壺で4年間熟成。芳醇な香りとやさしい口あたりが特徴です。製造本数わずか600本。" },
-          { name: "GLOW EP05 Ride the waves", img: "glow_ep05", unit: "1杯", price: 500, desc: "鹿児島・若潮酒造が手がけるクラフト芋焼酎シリーズ「GLOW」のEP05。「波に乗れ」をテーマにしたポップなラベルが印象的。25度の飲みやすい度数で、芋焼酎の旨みをカジュアルに楽しめる一本。" },
-          { name: "GLOW EP09 Ray of hope", img: "glow_ep09", unit: "1杯", price: 500, desc: "鹿児島・若潮酒造が手がけるクラフト芋焼酎シリーズ「GLOW」のEP09。テーマは「Ray of hope.」―ひとりひとりの小さな光がやがて誰かの希望の光になるという想いを込めた一本。さつま芋・米麹使用、常圧蒸留25度。グラスの中で少しずつ表情を変えていく味わいをお楽しみください。" },
-          { name: "DAIYAME", img: "daiyame", unit: "1杯", price: 500, desc: "鹿児島・濱田酒造の代表銘柄。「だいやめ」とは鹿児島弁で「晩酌」の意。ライチのような甘い香りが特徴の芋焼酎で、ロックや水割りで芋の旨みをじっくり楽しめる。" },
-          { name: "DAIYAME 40°", img: "daiyame_40", unit: "1杯", price: 1000, desc: "濱田酒造が誇るプレミアムDAIYAMEのハイプルーフ版。アルザス地方のワインを想起させる驚くほど華やかで力強いライチのような香りと、濃醇でフルーティーな味わい。輸出限定として海外で高評価を獲得後、国内販売を開始。世界中のバーテンダーやミクソロジストも認める芋焼酎の概念を超えたプレミアムスピリッツ。" },
-          { name: "KIRISHIMA No.8", img: "kirishima8", unit: "1杯", price: 500, desc: "宮崎・霧島酒造が手がける本格芋焼酎。フルーリーエレガンスをテーマに、華やかでフルーティーな香りと上品な甘みが特徴。従来の霧島シリーズとは一線を画す、洗練された芋焼酎の新境地。" },
-          { name: "GAKUの誘惑", img: "gaku_yuwaku", unit: "1杯", price: 500, desc: "鹿児島・西酒造が手がける「天使の誘惑」のシェリー樽10年熟成芋焼酎。ブランデーのような芳醇な香りと芋の甘みが絶妙に融合。アルコール度数40%の、芋焼酎の概念を超えた最高峰の一本。" },
-          { name: "三岳（みたけ）", img: "mitake", unit: "1杯", price: 500, desc: "世界自然遺産・屋久島の三岳酒造が造る本格芋焼酎。屋久島の名水（軟水）と鹿児島県産のさつま芋を使用し、雑味のないすっきりとした口当たりに、ほのかな芋の甘み。生産量が限られ、島内でも入手困難とされる人気銘柄。" },
-          { name: "イヨシコーラ酎", img: "iyoshi_cola", unit: "1杯", price: 800, desc: "新宿発・鹿児島の芋焼酎をベースに、コーラナッツ・シナモン・バニラ・クローブなど天然素材を組み合わせたクラフトコーラスピリッツ。カワセミのラベルが印象的な、焼酎の新たな可能性を提示する個性派。" },
-          { name: "村尾", img: "murao", unit: "1杯", price: 1000, desc: "鹿児島・村尾酒造の芋焼酎。薩摩芋と米麹を甕壺で仕込む伝統的製法。生産量が極めて少なく入手困難な幻の焼酎のひとつ。穏やかな香りと上品でまろやかな旨み、すっきりとしたキレが特徴。" },
-          { name: "魔王", img: "maou", unit: "1杯", price: 1000, desc: "鹿児島・白玉醸造が手がける「3M」のひとつ。フルーティーな甘い香りと、滑らかでまろやかな口当たりが特徴。芋焼酎らしさを感じさせないほどの飲みやすさで、芋焼酎入門にも最適な幻の銘柄。" },
-          { name: "森伊蔵", img: "moriizou", unit: "1杯", price: 1500, desc: "鹿児島・森伊蔵酒造の甕壺仕込み芋焼酎。「3M」に数えられる幻の銘柄で、抽選でしか入手できない希少品。繊細でフルーティーな香りと、芋の甘みが凝縮された上品な味わいは唯一無二。" },
-          { name: "山椒 AKAYANE CRAFT SPIRITS", img: "akayane", unit: "1杯", price: 1000, desc: "1908年創業・赤屋根製麹所（AKAYANE）が手がけるクラフトスピリッツ。100年以上の焼酎技術を礎に、国産山椒を使用した個性的な一本。山椒の爽やかな香りとしびれる余韻が特徴。" }
+          { name: "日置蒸溜蔵 甕壺貯蔵 芋（4年）", addon: true, img: "hioki_imo", unit: "1杯", price: 1000, desc: "国産ウイスキー「嘉之助」を手掛ける小正醸造が、鹿児島県日置市の日置蒸溜蔵（1883年創業）で仕込んだ超限定の長期熟成芋焼酎。厳選された鹿児島県産のさつま芋「黄金千貫」と米麹（黒麹菌）を、権現様の井戸水と小正酵母で仕込み、かめ壺で4年間熟成。芳醇な香りとやさしい口あたりが特徴です。製造本数わずか600本。" },
+          { name: "GLOW EP05 Ride the waves", addon: true, img: "glow_ep05", unit: "1杯", price: 500, desc: "鹿児島・若潮酒造が手がけるクラフト芋焼酎シリーズ「GLOW」のEP05。「波に乗れ」をテーマにしたポップなラベルが印象的。25度の飲みやすい度数で、芋焼酎の旨みをカジュアルに楽しめる一本。" },
+          { name: "GLOW EP09 Ray of hope", addon: true, img: "glow_ep09", unit: "1杯", price: 500, desc: "鹿児島・若潮酒造が手がけるクラフト芋焼酎シリーズ「GLOW」のEP09。テーマは「Ray of hope.」―ひとりひとりの小さな光がやがて誰かの希望の光になるという想いを込めた一本。さつま芋・米麹使用、常圧蒸留25度。グラスの中で少しずつ表情を変えていく味わいをお楽しみください。" },
+          { name: "DAIYAME", addon: true, img: "daiyame", unit: "1杯", price: 500, desc: "鹿児島・濱田酒造の代表銘柄。「だいやめ」とは鹿児島弁で「晩酌」の意。ライチのような甘い香りが特徴の芋焼酎で、ロックや水割りで芋の旨みをじっくり楽しめる。" },
+          { name: "DAIYAME 40°", addon: true, img: "daiyame_40", unit: "1杯", price: 1000, desc: "濱田酒造が誇るプレミアムDAIYAMEのハイプルーフ版。アルザス地方のワインを想起させる驚くほど華やかで力強いライチのような香りと、濃醇でフルーティーな味わい。輸出限定として海外で高評価を獲得後、国内販売を開始。世界中のバーテンダーやミクソロジストも認める芋焼酎の概念を超えたプレミアムスピリッツ。" },
+          { name: "KIRISHIMA No.8", addon: true, img: "kirishima8", unit: "1杯", price: 500, desc: "宮崎・霧島酒造が手がける本格芋焼酎。フルーリーエレガンスをテーマに、華やかでフルーティーな香りと上品な甘みが特徴。従来の霧島シリーズとは一線を画す、洗練された芋焼酎の新境地。" },
+          { name: "GAKUの誘惑", addon: true, img: "gaku_yuwaku", unit: "1杯", price: 500, desc: "鹿児島・西酒造が手がける「天使の誘惑」のシェリー樽10年熟成芋焼酎。ブランデーのような芳醇な香りと芋の甘みが絶妙に融合。アルコール度数40%の、芋焼酎の概念を超えた最高峰の一本。" },
+          { name: "三岳（みたけ）", addon: true, img: "mitake", unit: "1杯", price: 500, desc: "世界自然遺産・屋久島の三岳酒造が造る本格芋焼酎。屋久島の名水（軟水）と鹿児島県産のさつま芋を使用し、雑味のないすっきりとした口当たりに、ほのかな芋の甘み。生産量が限られ、島内でも入手困難とされる人気銘柄。" },
+          { name: "イヨシコーラ酎", addon: true, img: "iyoshi_cola", unit: "1杯", price: 800, desc: "新宿発・鹿児島の芋焼酎をベースに、コーラナッツ・シナモン・バニラ・クローブなど天然素材を組み合わせたクラフトコーラスピリッツ。カワセミのラベルが印象的な、焼酎の新たな可能性を提示する個性派。" },
+          { name: "村尾", addon: true, img: "murao", unit: "1杯", price: 1000, desc: "鹿児島・村尾酒造の芋焼酎。薩摩芋と米麹を甕壺で仕込む伝統的製法。生産量が極めて少なく入手困難な幻の焼酎のひとつ。穏やかな香りと上品でまろやかな旨み、すっきりとしたキレが特徴。" },
+          { name: "魔王", addon: true, img: "maou", unit: "1杯", price: 1000, desc: "鹿児島・白玉醸造が手がける「3M」のひとつ。フルーティーな甘い香りと、滑らかでまろやかな口当たりが特徴。芋焼酎らしさを感じさせないほどの飲みやすさで、芋焼酎入門にも最適な幻の銘柄。" },
+          { name: "森伊蔵", addon: true, img: "moriizou", unit: "1杯", price: 1500, desc: "鹿児島・森伊蔵酒造の甕壺仕込み芋焼酎。「3M」に数えられる幻の銘柄で、抽選でしか入手できない希少品。繊細でフルーティーな香りと、芋の甘みが凝縮された上品な味わいは唯一無二。" },
+          { name: "山椒 AKAYANE CRAFT SPIRITS", addon: true, img: "akayane", unit: "1杯", price: 1000, desc: "1908年創業・赤屋根製麹所（AKAYANE）が手がけるクラフトスピリッツ。100年以上の焼酎技術を礎に、国産山椒を使用した個性的な一本。山椒の爽やかな香りとしびれる余韻が特徴。" }
         ]
       },
       {
         id: "shochu-mugi", name: "麦", nameEn: "Mugi",
         items: [
-          { name: "日置蒸溜蔵 長期熟成 麦（8年）", img: "hioki_mugi", unit: "1杯", price: 1000, desc: "国産ウイスキー「嘉之助」を手掛ける小正醸造が、鹿児島県日置市の日置蒸溜蔵（1883年創業）で仕込んだ超限定の長期熟成麦焼酎。大麦と麦麹（白麹菌）を権現様の井戸水と小正酵母で仕込み、アメリカンホワイトオーク樽で8年間熟成。まろやかな口当たりと、樽由来のバニラやナッツを思わせる甘く芳醇な香りが特徴です。製造本数わずか600本。" },
-          { name: "豊永蔵 麦汁", img: "mugjiru", unit: "1杯", price: 500, desc: "熊本・豊永蔵が手がける無濾過の麦焼酎。国産はだか麦100%使用・麦麹・常圧蒸留。あえて無濾過で仕上げることで麦の香ばしさと原料本来の香りをそのまま残した。まろやかな口当たりで水割りやソーダ割りにも最適。濃い味の料理ともよく合う。" },
-          { name: "うかぜ", img: "ukaze", unit: "1杯", price: 500, desc: "本格麦焼酎。水彩画のような柔らかいラベルが印象的な一本。麦の素直な甘みと軽やかな口当たりで、焼酎入門にも最適な飲みやすい味わい。" },
-          { name: "いいちこ", img: "iichiko", unit: "1杯", price: 500, desc: "大分・三和酒類が手がける麦焼酎の定番中の定番。「いいちこ」は大分の方言で「いい子」の意。すっきりとした飲み口とほのかな麦の甘みで、日本全国で愛されるロングセラー。" },
-          { name: "青鹿毛（あおかげ）", img: "aokage", unit: "1杯", price: 800, desc: "大麦焼酎。青いラベルに力強い筆文字が印象的な一本。麦の豊かな風味とすっきりとした口当たりが特徴。" },
-          { name: "CHILL GREEN（チルグリーン）", img: "chill_green", unit: "1杯", price: 500, desc: "麦焼酎の旨みと、マキ（山椒の仲間）のスパイシー＆シトラスな風味を融合させた新感覚のフレーバー焼酎。爽やかでクセになる香りが特徴。ロックやソーダ割りがおすすめ。" }
+          { name: "日置蒸溜蔵 長期熟成 麦（8年）", addon: true, img: "hioki_mugi", unit: "1杯", price: 1000, desc: "国産ウイスキー「嘉之助」を手掛ける小正醸造が、鹿児島県日置市の日置蒸溜蔵（1883年創業）で仕込んだ超限定の長期熟成麦焼酎。大麦と麦麹（白麹菌）を権現様の井戸水と小正酵母で仕込み、アメリカンホワイトオーク樽で8年間熟成。まろやかな口当たりと、樽由来のバニラやナッツを思わせる甘く芳醇な香りが特徴です。製造本数わずか600本。" },
+          { name: "豊永蔵 麦汁", addon: true, img: "mugjiru", unit: "1杯", price: 500, desc: "熊本・豊永蔵が手がける無濾過の麦焼酎。国産はだか麦100%使用・麦麹・常圧蒸留。あえて無濾過で仕上げることで麦の香ばしさと原料本来の香りをそのまま残した。まろやかな口当たりで水割りやソーダ割りにも最適。濃い味の料理ともよく合う。" },
+          { name: "うかぜ", addon: true, img: "ukaze", unit: "1杯", price: 500, desc: "本格麦焼酎。水彩画のような柔らかいラベルが印象的な一本。麦の素直な甘みと軽やかな口当たりで、焼酎入門にも最適な飲みやすい味わい。" },
+          { name: "いいちこ", addon: true, img: "iichiko", unit: "1杯", price: 500, desc: "大分・三和酒類が手がける麦焼酎の定番中の定番。「いいちこ」は大分の方言で「いい子」の意。すっきりとした飲み口とほのかな麦の甘みで、日本全国で愛されるロングセラー。" },
+          { name: "青鹿毛（あおかげ）", addon: true, img: "aokage", unit: "1杯", price: 800, desc: "大麦焼酎。青いラベルに力強い筆文字が印象的な一本。麦の豊かな風味とすっきりとした口当たりが特徴。" },
+          { name: "CHILL GREEN（チルグリーン）", addon: true, img: "chill_green", unit: "1杯", price: 500, desc: "麦焼酎の旨みと、マキ（山椒の仲間）のスパイシー＆シトラスな風味を融合させた新感覚のフレーバー焼酎。爽やかでクセになる香りが特徴。ロックやソーダ割りがおすすめ。" }
         ]
       },
       {
         id: "shochu-others", name: "その他", nameEn: "Others",
         items: [
-          { name: "twilight Awamori", img: "twilight_awamori", unit: "1杯", price: 1000, desc: "沖縄の泡盛をベースにした個性派スピリッツ。アルコール度数44%のカスクストレングス。黄昏時の沖縄の風景を映したラベルが美しく、泡盛の新たな可能性を感じさせる一本。" },
-          { name: "茉莉花", img: "matsuri_ka", unit: "1杯", price: 500, desc: "サントリーが手がけるジャスミン焼酎。茉莉花（まつりか）はジャスミンの漢字表記。ジャスミンの華やかな香りとさわやかな甘みが特徴の、アルコール20%の飲みやすいリキュール系焼酎。" },
-          { name: "胡麻祥酎 紅乙女", img: "beni_otome", unit: "1杯", price: 500, desc: "福岡・紅乙女酒造が手がける日本唯一のごま焼酎。焙煎ごまを20%以上使用した長期貯蔵焼酎。ごまの芳ばしい香りとまろやかなコク、上品な甘みが特徴の個性派。" },
-          { name: "キンミヤ焼酎", img: "kinmiya", unit: "1杯", price: 500, desc: "三重・宮崎本店が手がける甲類焼酎の定番。純粋でクセのないクリアな味わいが特徴で、ホッピーや酎ハイのベースとして全国の居酒屋で愛される一本。" },
-          { name: "1980 はとむぎ焼酎", img: "hatomugi_1980", unit: "1杯", price: 1500, desc: "大分県産はとむぎを使用した1980年製造の長期貯蔵焼酎。やわらかな舌触りと深いコクのある上品な味わい。珍しいはとむぎ焼酎として希少性も高い一本。" },
-          { name: "鍛高譚", img: "tantakatan", unit: "1杯", price: 500, desc: "北海道・高砂酒造が手がけるしそ焼酎。北海道産の赤しそを使用した、爽やかな香りとすっきりとした味わいのリキュール系焼酎。そのままでも炭酸割りでも楽しめる。アルコール20度。" },
-          { name: "金魚", img: "kinngyo", unit: "1杯", price: 500, desc: "グラスの中に大葉（水草）と赤唐辛子（金魚）を浮かべて水槽に見立てる粋な飲み方。当店はキンミヤ焼酎に国産唐辛子とカラブリア州産唐辛子を漬け込んだベースを使用。大葉の爽やかな香りと唐辛子のピリッとした辛さが絶妙で、かなり辛い仕上がりです。" },
-          { name: "跳ねる一日", img: "haneru_ichinichi", unit: "1杯", price: 800, desc: "鹿児島・志布志の若潮酒造が手がける「一日」シリーズ第2弾。麦と芋の焼酎をベースに、柚子の果汁と果皮を加えて再蒸留した爽やかな柑橘香とクリアな味わい。名前の由来は薩摩の言葉「泣こかい跳ぼかい、泣くよかひっ跳べ」——迷うくらいならまず動け。跳ねる金魚のラベルが目印。アルコール27%、720ml。" },
-          { name: "米焼酎 ねっか", img: "shochu_nekka", unit: "1杯", price: 800, desc: "福島・奥会津の合同会社ねっかが手がける本格米焼酎。地元産の米を100%使用し、減圧蒸留で仕上げたクリアで華やかな味わい。フルーティーな吟醸香とすっきりとした後味が特徴。" },
-          { name: "ブラック奄美", img: "black_amami", unit: "1杯", price: 800, desc: "鹿児島・徳之島の奄美酒類が造る本格黒糖焼酎。奄美群島でのみ製造が認められている黒糖焼酎を樫樽で長期貯蔵し、アルコール度数40度の原酒に近い力強さに仕上げた一本。琥珀色をした深いコクと黒糖由来のほのかな甘い香りが特徴で、ロックやストレートでじっくりと。" }
+          { name: "twilight Awamori", addon: true, img: "twilight_awamori", unit: "1杯", price: 1000, desc: "沖縄の泡盛をベースにした個性派スピリッツ。アルコール度数44%のカスクストレングス。黄昏時の沖縄の風景を映したラベルが美しく、泡盛の新たな可能性を感じさせる一本。" },
+          { name: "茉莉花", addon: true, img: "matsuri_ka", unit: "1杯", price: 500, desc: "サントリーが手がけるジャスミン焼酎。茉莉花（まつりか）はジャスミンの漢字表記。ジャスミンの華やかな香りとさわやかな甘みが特徴の、アルコール20%の飲みやすいリキュール系焼酎。" },
+          { name: "胡麻祥酎 紅乙女", addon: true, img: "beni_otome", unit: "1杯", price: 500, desc: "福岡・紅乙女酒造が手がける日本唯一のごま焼酎。焙煎ごまを20%以上使用した長期貯蔵焼酎。ごまの芳ばしい香りとまろやかなコク、上品な甘みが特徴の個性派。" },
+          { name: "キンミヤ焼酎", addon: true, img: "kinmiya", unit: "1杯", price: 500, desc: "三重・宮崎本店が手がける甲類焼酎の定番。純粋でクセのないクリアな味わいが特徴で、ホッピーや酎ハイのベースとして全国の居酒屋で愛される一本。" },
+          { name: "1980 はとむぎ焼酎", addon: true, img: "hatomugi_1980", unit: "1杯", price: 1500, desc: "大分県産はとむぎを使用した1980年製造の長期貯蔵焼酎。やわらかな舌触りと深いコクのある上品な味わい。珍しいはとむぎ焼酎として希少性も高い一本。" },
+          { name: "鍛高譚", addon: true, img: "tantakatan", unit: "1杯", price: 500, desc: "北海道・高砂酒造が手がけるしそ焼酎。北海道産の赤しそを使用した、爽やかな香りとすっきりとした味わいのリキュール系焼酎。そのままでも炭酸割りでも楽しめる。アルコール20度。" },
+          { name: "金魚", img: "kinngyo", unit: "1杯", price: 600, desc: "グラスの中に大葉（水草）と赤唐辛子（金魚）を浮かべて水槽に見立てる粋な飲み方。当店はキンミヤ焼酎に国産唐辛子とカラブリア州産唐辛子を漬け込んだベースを使用。大葉の爽やかな香りと唐辛子のピリッとした辛さが絶妙で、かなり辛い仕上がりです。" },
+          { name: "レモンサワー", img: "", emoji: "🍋", unit: "1杯", price: 600, desc: "キンミヤ焼酎をベースに、レモンとソーダで。すっきりとした定番の一杯です。割り物代込みの価格です。" },
+          { name: "跳ねる一日", addon: true, img: "haneru_ichinichi", unit: "1杯", price: 800, desc: "鹿児島・志布志の若潮酒造が手がける「一日」シリーズ第2弾。麦と芋の焼酎をベースに、柚子の果汁と果皮を加えて再蒸留した爽やかな柑橘香とクリアな味わい。名前の由来は薩摩の言葉「泣こかい跳ぼかい、泣くよかひっ跳べ」——迷うくらいならまず動け。跳ねる金魚のラベルが目印。アルコール27%、720ml。" },
+          { name: "米焼酎 ねっか", addon: true, img: "shochu_nekka", unit: "1杯", price: 800, desc: "福島・奥会津の合同会社ねっかが手がける本格米焼酎。地元産の米を100%使用し、減圧蒸留で仕上げたクリアで華やかな味わい。フルーティーな吟醸香とすっきりとした後味が特徴。" },
+          { name: "ブラック奄美", addon: true, img: "black_amami", unit: "1杯", price: 800, desc: "鹿児島・徳之島の奄美酒類が造る本格黒糖焼酎。奄美群島でのみ製造が認められている黒糖焼酎を樫樽で長期貯蔵し、アルコール度数40度の原酒に近い力強さに仕上げた一本。琥珀色をした深いコクと黒糖由来のほのかな甘い香りが特徴で、ロックやストレートでじっくりと。" }
         ]
       }
     ]
@@ -812,30 +814,30 @@ const MENU = [
   {
     id: "liqueur", name: "リキュール", nameEn: "Liqueur", icon: "🍹", desc: "こだわりのリキュールセレクション",
     items: [
-      { name: "Aperol", img: "aperol", price: 500, desc: "イタリア・パドヴァ生まれのアペリティーヴォ。オレンジの甘みと独特のほろ苦さが特徴。スプリッツのベースとして世界中で愛される。" },
-      { name: "Jägermeister", img: "jagermeister", price: 500, desc: "ドイツ発、56種のハーブ・根・果皮・スパイスをブレンド。複雑なハーバル感と甘み、ひんやりとした後味。" },
-      { name: "B-10 Limoncello", img: "b10_limoncello", price: 500, desc: "恵比寿のレコードバー・Bar B-10のオーナー慎二さんお手製のリモンチェッロ。爽やかなレモンの香りと豊かな味わい。" },
-      { name: "MISTIA", img: "mistia", price: 500, desc: "フランス産マスカットリキュール。フロスト加工の美しいボトルに、白ぶどうの甘く華やかな香りが詰まっている。" },
-      { name: "RETURNER", img: "returner", price: 1000, desc: "スリランカ紅茶局公認の最高級アールグレイ茶葉を使用した紅茶リキュール。無着色・保存料無添加にこだわった究極の紅茶のお酒。" },
-      { name: "Bar BenFiddich Green Negroni", img: "green_negroni", price: 1000, desc: "新宿・Bar BenFiddichのシグネチャーネグローニ。レモンマートル、ローズマリー、ミント、ニガヨモギなど豊富なハーブを使用。Batch No.1。" },
-      { name: "SCARLET Menta Amaro", img: "scarlet", price: 1000, desc: "伊勢屋酒造（相模湖）製造。ミントとアマーロが融合した国産クラフトリキュール。甘さと苦みが絶妙に絡み合う。" },
-      { name: "Strawberry Wonder", img: "strawberry", price: 1000, desc: "CRAFT WONDERのストロベリーリキュール。完熟いちごの凝縮した甘みと香り、アルコール度数18%で飲みやすい。" },
-      { name: "中野BC 赤紫蘇の梅酒", img: "nakano_akashiso", unit: "1杯", price: 500, desc: "赤しそと紀州和歌山県産の「南高梅」の組み合わせが、赤しそのすっきりとした風味と独特の鮮やかな色をつけることで、独自のルビー色と爽快感をもたらしたさっぱり梅酒。安心感があるのに新しい、少しだけ気分を変えたい日常にぴったり。30年以上ロングセラーの赤い梅酒。" },
-      { name: "PRUCIA", img: "prucia", price: 500, desc: "サントリーのフランス産プラムリキュール。1853年創業・コニャック地方のルイ・ロワイエ社製造。プラムのスピリッツをブランデー樽で熟成した芳醇な味わい。IWSC2010 Best in Class受賞。アルコール15度。" },
-      { name: "菊正宗 ぽん酒", img: "ponzake", unit: "1杯", price: 500, desc: "日本酒×ぽん酢のさわやかな味と香り。菊正宗とミツカンぽん酢がコラボした個性派リキュール。900mLパック。アルコール8%。" },
-      { name: "Bar ヨー子 りんご", img: "yoko_ringo", unit: "1杯", price: 1000, desc: "山形・楯の川酒造のリキュール「Bar ヨー子」シリーズ。純米大吟醸「楯野川」に厳選したりんご果汁を合わせ、蜜入りりんごをそのまま搾ったようなみずみずしい甘酸っぱさに仕上げた一本。後口にはほろ苦いドライさも。アルコール8%、720ml。" },
-      { name: "ドロ沼ヨー子", img: "doronuma_yoko", unit: "1杯", price: 1000, desc: "楯の川酒造が手がける濃厚どぶろくスタイルのリキュール。ヨー子シリーズの中でも特にクリーミーでコクのある味わい。" },
-      { name: "カンパリ", img: "campari", unit: "1杯", price: 500, desc: "1860年イタリア・ミラノ生まれの真紅のビターリキュール。ハーブやスパイス、フルーツから作られる爽やかな苦味と甘みが特徴。ソーダ割りやオレンジジュース割り、カクテルベースとして楽しめる。" },
-      { name: "BARヨー子 梅酒", img: "bar_yoko_umeshu", unit: "1杯", price: 500, desc: "鳥海山麓のBAR「ヨー子」シリーズの梅酒。厳選された梅の豊かな果実味と、すっきりとした甘酸っぱさが楽しめる。ロックやソーダ割りでどうぞ。" }
+      { name: "Aperol", addon: true, img: "aperol", price: 500, desc: "イタリア・パドヴァ生まれのアペリティーヴォ。オレンジの甘みと独特のほろ苦さが特徴。スプリッツのベースとして世界中で愛される。" },
+      { name: "Jägermeister", addon: true, img: "jagermeister", price: 500, desc: "ドイツ発、56種のハーブ・根・果皮・スパイスをブレンド。複雑なハーバル感と甘み、ひんやりとした後味。" },
+      { name: "B-10 Limoncello", addon: true, img: "b10_limoncello", price: 500, desc: "恵比寿のレコードバー・Bar B-10のオーナー慎二さんお手製のリモンチェッロ。爽やかなレモンの香りと豊かな味わい。" },
+      { name: "MISTIA", addon: true, img: "mistia", price: 500, desc: "フランス産マスカットリキュール。フロスト加工の美しいボトルに、白ぶどうの甘く華やかな香りが詰まっている。" },
+      { name: "RETURNER", addon: true, img: "returner", price: 1000, desc: "スリランカ紅茶局公認の最高級アールグレイ茶葉を使用した紅茶リキュール。無着色・保存料無添加にこだわった究極の紅茶のお酒。" },
+      { name: "Bar BenFiddich Green Negroni", addon: true, img: "green_negroni", price: 1000, desc: "新宿・Bar BenFiddichのシグネチャーネグローニ。レモンマートル、ローズマリー、ミント、ニガヨモギなど豊富なハーブを使用。Batch No.1。" },
+      { name: "SCARLET Menta Amaro", addon: true, img: "scarlet", price: 1000, desc: "伊勢屋酒造（相模湖）製造。ミントとアマーロが融合した国産クラフトリキュール。甘さと苦みが絶妙に絡み合う。" },
+      { name: "Strawberry Wonder", addon: true, img: "strawberry", price: 1000, desc: "CRAFT WONDERのストロベリーリキュール。完熟いちごの凝縮した甘みと香り、アルコール度数18%で飲みやすい。" },
+      { name: "中野BC 赤紫蘇の梅酒", addon: true, img: "nakano_akashiso", unit: "1杯", price: 500, desc: "赤しそと紀州和歌山県産の「南高梅」の組み合わせが、赤しそのすっきりとした風味と独特の鮮やかな色をつけることで、独自のルビー色と爽快感をもたらしたさっぱり梅酒。安心感があるのに新しい、少しだけ気分を変えたい日常にぴったり。30年以上ロングセラーの赤い梅酒。" },
+      { name: "PRUCIA", addon: true, img: "prucia", price: 500, desc: "サントリーのフランス産プラムリキュール。1853年創業・コニャック地方のルイ・ロワイエ社製造。プラムのスピリッツをブランデー樽で熟成した芳醇な味わい。IWSC2010 Best in Class受賞。アルコール15度。" },
+      { name: "菊正宗 ぽん酒", addon: true, img: "ponzake", unit: "1杯", price: 500, desc: "日本酒×ぽん酢のさわやかな味と香り。菊正宗とミツカンぽん酢がコラボした個性派リキュール。900mLパック。アルコール8%。" },
+      { name: "Bar ヨー子 りんご", addon: true, img: "yoko_ringo", unit: "1杯", price: 1000, desc: "山形・楯の川酒造のリキュール「Bar ヨー子」シリーズ。純米大吟醸「楯野川」に厳選したりんご果汁を合わせ、蜜入りりんごをそのまま搾ったようなみずみずしい甘酸っぱさに仕上げた一本。後口にはほろ苦いドライさも。アルコール8%、720ml。" },
+      { name: "ドロ沼ヨー子", addon: true, img: "doronuma_yoko", unit: "1杯", price: 1000, desc: "楯の川酒造が手がける濃厚どぶろくスタイルのリキュール。ヨー子シリーズの中でも特にクリーミーでコクのある味わい。" },
+      { name: "カンパリ", addon: true, img: "campari", unit: "1杯", price: 500, desc: "1860年イタリア・ミラノ生まれの真紅のビターリキュール。ハーブやスパイス、フルーツから作られる爽やかな苦味と甘みが特徴。ソーダ割りやオレンジジュース割り、カクテルベースとして楽しめる。" },
+      { name: "BARヨー子 梅酒", addon: true, img: "bar_yoko_umeshu", unit: "1杯", price: 500, desc: "鳥海山麓のBAR「ヨー子」シリーズの梅酒。厳選された梅の豊かな果実味と、すっきりとした甘酸っぱさが楽しめる。ロックやソーダ割りでどうぞ。" }
     ]
   },
   {
     id: "others", name: "その他", nameEn: "Others", icon: "🥃", desc: "その他のお酒",
     items: [
-      { name: "クリスチャン ドルーアン クール ド リヨン ポムプリゾニエール", img: "christian_drouin", unit: "1杯", price: 1500, desc: "ノルマンディー・ペイドージュのAOCカルバドス。瓶の中でリンゴを丸ごと育てた「囚われのリンゴ」が入った芸術的な一本。フレッシュなリンゴの香りと熟成カルバドスの深みが融合した、唯一無二のスピリッツ。" },
-      { name: "Martell Cordon Bleu", img: "martell", unit: "1杯", price: 2000, desc: "1715年創業・コニャック最古のメゾンのひとつ、マルテルが誇るExtra Oldコニャック。トロンセ産オーク樽熟成による、プラムやスパイス、花の香りに深みある余韻。世界最高峰のコニャックに名を連ねる傑作。" },
-      { name: "ヘネシー VSOP", img: "hennessy_vsop", unit: "1杯", price: 1000, desc: "コニャックの名門ヘネシーのVSOP。当店ではカルヴァドス コクレル ポム・ド・イヴの空き瓶に継ぎ足してご提供しています。ドライフルーツやバニラの豊かな香りと、なめらかでバランスの良い味わい。" },
-      { name: "Hennessy X.O × Zhang Enli Year of the Tiger", img: "hennessy_xo", unit: "1杯", price: 3500, desc: "中国の現代美術家・張恩利（Zhang Enli）とのコラボレーションによる寅年限定XO。真紅に輝く特別ボトルは芸術品としても圧巻。複雑に熟成された100種以上のオー・ド・ヴィをブレンドした、ヘネシーXOの最高峰。" }
+      { name: "クリスチャン ドルーアン クール ド リヨン ポムプリゾニエール", addon: true, img: "christian_drouin", unit: "1杯", price: 1500, desc: "ノルマンディー・ペイドージュのAOCカルバドス。瓶の中でリンゴを丸ごと育てた「囚われのリンゴ」が入った芸術的な一本。フレッシュなリンゴの香りと熟成カルバドスの深みが融合した、唯一無二のスピリッツ。" },
+      { name: "Martell Cordon Bleu", addon: true, img: "martell", unit: "1杯", price: 2000, desc: "1715年創業・コニャック最古のメゾンのひとつ、マルテルが誇るExtra Oldコニャック。トロンセ産オーク樽熟成による、プラムやスパイス、花の香りに深みある余韻。世界最高峰のコニャックに名を連ねる傑作。" },
+      { name: "ヘネシー VSOP", addon: true, img: "hennessy_vsop", unit: "1杯", price: 1000, desc: "コニャックの名門ヘネシーのVSOP。当店ではカルヴァドス コクレル ポム・ド・イヴの空き瓶に継ぎ足してご提供しています。ドライフルーツやバニラの豊かな香りと、なめらかでバランスの良い味わい。" },
+      { name: "Hennessy X.O × Zhang Enli Year of the Tiger", addon: true, img: "hennessy_xo", unit: "1杯", price: 3500, desc: "中国の現代美術家・張恩利（Zhang Enli）とのコラボレーションによる寅年限定XO。真紅に輝く特別ボトルは芸術品としても圧巻。複雑に熟成された100種以上のオー・ド・ヴィをブレンドした、ヘネシーXOの最高峰。" }
     ]
   },
   {
@@ -912,6 +914,7 @@ var I18N = {
     "元祖長浜屋 豚骨ラーメン": { n: "Ganso Nagahamaya Tonkotsu Ramen", d: "Co-developed by Marutai and Ganso Nagahamaya of Nagahama, Fukuoka. Founded in 1952 and often credited with inventing kaedama, the shop's tonkotsu is faithfully recreated here. A light yet deep broth with ultra-thin non-fried noodles." },
     "出前一丁": { n: "Demae Itcho", d: "A long-seller since 1968. A wisp of the secret sesame oil over a nostalgic chuka soba. Light soy broth lifted by the sesame chili oil — loved across generations." },
     "トッピング（2種選択）": { n: "Toppings (Choose 2)", d: "<b>Egg</b><br><b>Spinach</b><br><b>Takana (pickled mustard greens)</b><br><b>Pickled red ginger</b><br><b>Kikurage mushroom</b><br><b>Corn</b><br><b>Butter</b><br><b>Sliced jalapeño</b><br><b>Shiso</b><br><b>Coriander</b><br><b>Nori (2 sheets)</b><br><br>Choose any two.<br><br>e.g. ZUBAAAN! Yokohama Iekei Shoyu Tonkotsu ¥500 + Toppings (spinach & nori) ¥200 + Homemade Chashu ¥300 = ¥1,000 total" },
+    "レモンサワー": { n: "Lemon Sour", d: "Kinmiya shochu with lemon and soda. A clean, dependable glass. The mixer is already included in the price." },
     "小ライス": { n: "Small Rice", d: "Good alongside the noodles, or to finish. Dropping it into what is left of the broth is, in our view, the correct move." },
     "替玉（細麺）": { n: "Extra Noodles (Thin)", d: "A second helping of noodles only. The thin cut holds the broth differently, so one bowl gives you two experiences. Best while there is still broth left." },
     "自家製焼豚": { n: "Homemade Chashu", d: "Chashu prepared by the owner. One slice each of pork shoulder and pork belly." },
@@ -1115,7 +1118,7 @@ function omLabel(o) {
 function omPrice(item) {
   if (item.price === 0) return '';
   var s = '¥' + item.price.toLocaleString() + '<span>' + omTax() + ' / ' + omUnit(item.unit) + '</span>';
-  if (item.addon) s = s + '<span class="addon">' + (LANG === 'ja' ? 'ソーダ割り +100（税込）' : 'With soda +¥100 (incl. tax)') + '</span>';
+  if (item.addon) s = s + '<span class="addon">' + (LANG === 'ja' ? '割り物 +100（税込）' : 'Mixer +¥100 (incl. tax)') + '</span>';
   return s;
 }
 function toggleLang() {
