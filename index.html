@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-09-29a -->
+<!-- omnivore-menu build 2026-10-01a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -74,6 +74,8 @@ html, body { height: 100%; background: var(--off-white); color: var(--text); fon
 .drink-name { font-size:12.5px; font-weight:400; color:var(--text); line-height:1.5; margin-bottom:8px; }
 .drink-price { font-size:19px; font-weight:500; color:var(--pink); letter-spacing:-0.01em; }
 .drink-price span { font-size:11px; color:var(--text-muted); font-weight:300; margin-left:2px; }
+.drink-price span.addon, .modal-price span.addon { display:block; margin-left:0; margin-top:2px; font-size:10px; color:var(--pink); opacity:0.85; }
+.modal-price span.addon { font-size:12px; margin-top:4px; }
 
 /* MODAL */
 #modal-overlay { position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(255,46,139,0.08); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); z-index:50; display:-webkit-flex; display:flex; -webkit-align-items:center; align-items:center; -webkit-justify-content:center; justify-content:center; padding:40px; opacity:0; visibility:hidden; pointer-events:none; -webkit-transition:opacity 0.2s, visibility 0.2s; transition:opacity 0.2s, visibility 0.2s; }
@@ -545,11 +547,10 @@ const MENU = [
       {
         id: "ramen-toppings", name: "トッピング", nameEn: "Toppings",
         items: [
-          { name: "トッピング（2種選択）", img: "", emoji: "🍜", hideModalImg: true, unit: "2種", price: 200, desc: "<b>たまご</b><br><b>ほうれん草</b><br><b>高菜</b><br><b>紅ショウガ</b><br><b>きくらげ</b><br><b>コーン</b><br><b>バター</b><br><b>スライスハラペーニョ</b><br><b>紫蘇</b><br><b>パクチー</b><br><b>海苔2枚</b><br><br>の中からお好きな2種をどうぞ。" },
+          { name: "トッピング（2種選択）", img: "ramen_topping_ex", unit: "2種", price: 200, desc: "<b>たまご</b><br><b>ほうれん草</b><br><b>高菜</b><br><b>紅ショウガ</b><br><b>きくらげ</b><br><b>コーン</b><br><b>バター</b><br><b>スライスハラペーニョ</b><br><b>紫蘇</b><br><b>パクチー</b><br><b>海苔2枚</b><br><br>の中からお好きな2種をどうぞ。<br><br>例）ZUBAAAN! 横浜家系醤油豚骨 ¥500 ＋ トッピング（ほうれん草・海苔2枚）¥200 ＋ 自家製焼豚 ¥300 ＝ 合計 ¥1,000" },
           { name: "小ライス", img: "", emoji: "🍚", unit: "1膳", price: 200, desc: "ラーメンのお供に、あるいは〆に。残ったスープに投入して食べるのが最適解だと思っています。" },
           { name: "替玉（細麺）", img: "", emoji: "🍜", unit: "1玉", price: 200, desc: "麺だけのおかわりです。細麺なのでスープの絡み方が変わり、一杯の中で二度おいしい。スープが残っているうちにどうぞ。" },
-          { name: "自家製焼豚", img: "ramen_chashu", unit: "2枚", price: 300, desc: "店主が仕込む自家製の焼豚。豚肩ロースと豚バラを各1枚ずつ盛り合わせになります。" },
-          { name: "トッピング例", img: "ramen_topping_ex", unit: "", price: 0, desc: "例）ZUBAAAN! 横浜家系醤油豚骨 ¥500 ＋ トッピング（ほうれん草・海苔2枚）¥200 ＋ 自家製焼豚 ¥300 ＝ 合計 ¥1,000" }
+          { name: "自家製焼豚", img: "ramen_chashu", unit: "2枚", price: 300, desc: "店主が仕込む自家製の焼豚。豚肩ロースと豚バラを各1枚ずつ盛り合わせになります。" }
         ]
       }
     ]
@@ -624,68 +625,68 @@ const MENU = [
       {
         id: "whisky-japanese", name: "国産", nameEn: "Japanese",
         items: [
-          { name: "宮城峡 10年", img: "miyagikyo_10", unit: "1杯", price: 3000, desc: "ニッカウヰスキー宮城峡蒸溜所の10年熟成シングルモルト。仙台郊外・新川（にっかわ）の清流に囲まれた蒸溜所で、スチームによる間接加熱蒸溜が生む華やかでやわらかな酒質が特徴。10年の熟成でモルトの甘みに樽由来のバニラやドライフルーツの香りが重なる。力強い余市とは対照的な、穏やかで上品な一本。アルコール45%。" },
-          { name: "サントリー角", img: "kaku", unit: "1杯", price: 500, desc: "1937年誕生のロングセラー。山崎・白州蒸溜所のバーボン樽熟成原酒をバランス良く配合。甘やかな香りと厚みのあるコクが特徴で、ハイボールとの相性が抜群。" },
-          { name: "知多", img: "chita", unit: "1杯", price: 1000, desc: "愛知・知多蒸溜所が生み出すシングルグレーンウイスキー。コラムスチルで丁寧に蒸溜し、複数の樽でじっくり熟成。軽やかでなめらかな口当たりに、バニラやハニーの甘い余韻。" },
-          { name: "京都ウイスキー 黒帯", img: "kyoto_whisky", unit: "1杯", price: 500, desc: "京都初のウイスキー蒸溜所「京都みやこ蒸溜所」が醸す黒帯。丹波高原の自然に囲まれた蒸溜所で作られ、USC2021で92点を獲得した実力派。西陣織の黒帯ラベルが京都らしい品格を纏う。" },
-          { name: "竹鶴 Pure Malt", img: "taketsuru", unit: "1杯", price: 1500, desc: "ニッカウヰスキーの創業者・竹鶴政孝の名を冠したピュアモルト。余市と宮城峡、ふたつの蒸溜所のモルト原酒をヴァッティング。重厚でスモーキーな余市と、華やかで軽やかな宮城峡の個性が見事に調和。" },
-          { name: "<span style='color:red'>【欠品中】</span> 白州 NV", img: "hakushu_nv", unit: "1杯", price: 1500, desc: "南アルプスの深い森に囲まれた白州蒸溜所のシングルモルト。ノンヴィンテージながら瑞々しいグリーン感とスモーキーさが共存する、爽やかで軽快な味わい。ハイボールにも最適。" },
-          { name: "白州 12年", img: "hakushu_12", unit: "1杯", price: 3000, desc: "白州蒸溜所で12年以上熟成されたシングルモルト。森林を思わせるさわやかなグリーンノートに、ほのかなスモーキーさとフルーティな甘みが重なる。白州らしさを堪能できる定番の一本。" },
-          { name: "宮城峡 アロマティックイースト 2022", img: "miyagikyo_ay", unit: "1杯", price: 2500, desc: "ニッカウヰスキーの宮城峡蒸溜所が手がけるNIKKA DISCOVERYシリーズ。特別な酵母を使用したシングルモルト。華やかでフルーティな香りと甘みが印象的な一本。" },
-          { name: "新道 エクスペリメンタル .02", img: "shindo", unit: "1杯", price: 2000, desc: "福岡・新道蒸溜所が追求する「王道と新道の掛け合わせ」。バーボン樽（ピート）67%、ミズナラ新樽、コニャック樽、オロロソシェリー樽を多層的にヴァッティング。スモーキーさとミルキーで甘い余韻が重なる実験的な一本。" },
-          { name: "戸河内 PREMIUM", img: "togouchi", unit: "1杯", price: 500, desc: "広島・桜尾蒸留所が手がけるブレンデッドジャパニーズウイスキー。中国山地の清流に囲まれた廃鉄道トンネル「臥龍岩トンネル」で熟成。年間を通じて安定した低温環境が、まろやかな味わいと深いアロマをウイスキーに与える。アルコール40%、700ml。" },
-          { name: "戸河内 Peated Cask Finish", img: "togouchi_peated", unit: "1杯", price: 800, desc: "戸河内の標準ラインに、ピーテッドカスクフィニッシュを施した上位モデル。スモーキーなピートの香りがやわらかく重なり、奥行きのある複雑な味わいに仕上がっている。ブレンデッドジャパニーズウイスキーの新たな可能性を示す一本。アルコール40%、700ml。" },
-          { name: "厚岸 カムイチェップ", img: "akkeshi", unit: "1杯", price: 4000, desc: "北海道・厚岸蒸溜所の人気シリーズ「カムイウイスキー」。カムイチェップはアイヌ語で「鮭」を意味し、ラベルには力強い鮭が描かれる。ピートと潮風、厚岸の自然が凝縮されたシングルモルト。" },
-          { name: "山崎 12年", img: "yamazaki_12", unit: "1杯", price: 3000, desc: "日本最古の蒸溜所・山崎が誇る12年熟成シングルモルト。ミズナラ・バーボン・シェリーの多彩な樽が生む、華やかな花の香りとビターチョコレートのような複雑な甘み。2024年サントリー創業100周年記念ラベルで特別な一本。" },
-          { name: "響 ブレンダーズチョイス", img: "hibiki_bc", unit: "1杯", price: 2000, desc: "サントリーが手がけるブレンデッドジャパニーズウイスキー。山崎・白州・知多の原酒に加え、ミズナラ樽熟成原酒を使用した特別なブレンド。甘い果実香とウッディな余韻が調和した、飲みやすく奥深い一本。" },
-          { name: "山崎 18年", img: "yamazaki_18", unit: "1杯", price: 7000, desc: "日本最古の蒸溜所・山崎で18年以上熟成されたシングルモルトの最高峰。ミズナラ樽由来のオリエンタルな香りと深みのある甘さ、長く続く余韻。世界的評価を誇る日本を代表する一本。" },
-          { name: "響 17年", img: "hibiki_17", unit: "1杯", price: 5000, desc: "サントリーが誇るブレンデッドジャパニーズウイスキーの最高峰のひとつ。山崎・白州・知多の原酒を高度な技術でブレンド。花や果実の香りに蜂蜜のような甘み、ミズナラ由来の深みある余韻。現在は製造終了した幻の一本。" },
-          { name: "余市 10年", img: "yoichi_10", unit: "1杯", price: 3000, desc: "ニッカウヰスキー創業の地・北海道余市蒸溜所が手がけるシングルモルト。石炭直火蒸溜による力強くピートの効いた味わいと、10年熟成による深いコクが特徴。海のミネラル感と重厚なスモーキーさが調和した一本。アルコール45%。" },
-          { name: "あかし シングルモルト", img: "akashi_single", unit: "1杯", price: 1000, desc: "兵庫・江井ヶ嶋酒造（Eigashima Distillery）が手がけるシングルモルトジャパニーズウイスキー。複数の樽で熟成した原酒をヴァッティング。バランスの取れた果実香と、やわらかくスモーキーな余韻が特徴。" },
-          { name: "BARヨー子 ハイボールレモン", img: "bar_yoko_lemon", unit: "1杯", price: 1000, desc: "鳥海山麓のBAR「ヨー子」が生んだこだわりのハイボール。旨み・コク・香りが炭酸で引き立つモルト＆グレーンに、瀬戸内の皮ごと絞ったレモン果汁をたっぷりブレンド。アルコール度数40度。おすすめは1：3の炭酸割り。" },
-          { name: "あかし シェリーカスク", img: "akashi_sherry", unit: "1杯", price: 500, desc: "兵庫・江井ヶ嶋酒造のWhite Oakシリーズ。オロロソシェリー樽で熟成したブレンデッドウイスキー。ドライフルーツやチョコレートのような濃厚な甘みと芳醇な香りが特徴。500円で楽しめるコスパ抜群の一本。" },
-          { name: "イチローズモルト ホワイトラベル", img: "ichiros_white", unit: "1杯", price: 800, desc: "秩父蒸溜所の創業者・肥土伊知郎氏がブレンドしたワールドブレンデッドウイスキー。秩父モルトを軸に世界各国の原酒をヴァッティング。ノンチルフィルタード・ノンカラーで、華やかでバランスの取れた味わい。アルコール46%。" },
-          { name: "SOGAINI（ソガイニ）", img: "sogaini", unit: "1杯", price: 500, desc: "広島・桜尾蒸留所（SAKURAO DISTILLERY）が手がけるブレンデッドジャパニーズウイスキー。戸河内と同じ蒸留所から生まれながら、よりアクセスしやすい価格帯で展開。アルコール40%、700cl。" }
+          { name: "宮城峡 10年", addon: true, img: "miyagikyo_10", unit: "1杯", price: 3000, desc: "ニッカウヰスキー宮城峡蒸溜所の10年熟成シングルモルト。仙台郊外・新川（にっかわ）の清流に囲まれた蒸溜所で、スチームによる間接加熱蒸溜が生む華やかでやわらかな酒質が特徴。10年の熟成でモルトの甘みに樽由来のバニラやドライフルーツの香りが重なる。力強い余市とは対照的な、穏やかで上品な一本。アルコール45%。" },
+          { name: "サントリー角", addon: true, img: "kaku", unit: "1杯", price: 500, desc: "1937年誕生のロングセラー。山崎・白州蒸溜所のバーボン樽熟成原酒をバランス良く配合。甘やかな香りと厚みのあるコクが特徴で、ハイボールとの相性が抜群。" },
+          { name: "知多", addon: true, img: "chita", unit: "1杯", price: 1000, desc: "愛知・知多蒸溜所が生み出すシングルグレーンウイスキー。コラムスチルで丁寧に蒸溜し、複数の樽でじっくり熟成。軽やかでなめらかな口当たりに、バニラやハニーの甘い余韻。" },
+          { name: "京都ウイスキー 黒帯", addon: true, img: "kyoto_whisky", unit: "1杯", price: 500, desc: "京都初のウイスキー蒸溜所「京都みやこ蒸溜所」が醸す黒帯。丹波高原の自然に囲まれた蒸溜所で作られ、USC2021で92点を獲得した実力派。西陣織の黒帯ラベルが京都らしい品格を纏う。" },
+          { name: "竹鶴 Pure Malt", addon: true, img: "taketsuru", unit: "1杯", price: 1500, desc: "ニッカウヰスキーの創業者・竹鶴政孝の名を冠したピュアモルト。余市と宮城峡、ふたつの蒸溜所のモルト原酒をヴァッティング。重厚でスモーキーな余市と、華やかで軽やかな宮城峡の個性が見事に調和。" },
+          { name: "<span style='color:red'>【欠品中】</span> 白州 NV", addon: true, img: "hakushu_nv", unit: "1杯", price: 1500, desc: "南アルプスの深い森に囲まれた白州蒸溜所のシングルモルト。ノンヴィンテージながら瑞々しいグリーン感とスモーキーさが共存する、爽やかで軽快な味わい。ハイボールにも最適。" },
+          { name: "白州 12年", addon: true, img: "hakushu_12", unit: "1杯", price: 3000, desc: "白州蒸溜所で12年以上熟成されたシングルモルト。森林を思わせるさわやかなグリーンノートに、ほのかなスモーキーさとフルーティな甘みが重なる。白州らしさを堪能できる定番の一本。" },
+          { name: "宮城峡 アロマティックイースト 2022", addon: true, img: "miyagikyo_ay", unit: "1杯", price: 2500, desc: "ニッカウヰスキーの宮城峡蒸溜所が手がけるNIKKA DISCOVERYシリーズ。特別な酵母を使用したシングルモルト。華やかでフルーティな香りと甘みが印象的な一本。" },
+          { name: "新道 エクスペリメンタル .02", addon: true, img: "shindo", unit: "1杯", price: 2000, desc: "福岡・新道蒸溜所が追求する「王道と新道の掛け合わせ」。バーボン樽（ピート）67%、ミズナラ新樽、コニャック樽、オロロソシェリー樽を多層的にヴァッティング。スモーキーさとミルキーで甘い余韻が重なる実験的な一本。" },
+          { name: "戸河内 PREMIUM", addon: true, img: "togouchi", unit: "1杯", price: 500, desc: "広島・桜尾蒸留所が手がけるブレンデッドジャパニーズウイスキー。中国山地の清流に囲まれた廃鉄道トンネル「臥龍岩トンネル」で熟成。年間を通じて安定した低温環境が、まろやかな味わいと深いアロマをウイスキーに与える。アルコール40%、700ml。" },
+          { name: "戸河内 Peated Cask Finish", addon: true, img: "togouchi_peated", unit: "1杯", price: 800, desc: "戸河内の標準ラインに、ピーテッドカスクフィニッシュを施した上位モデル。スモーキーなピートの香りがやわらかく重なり、奥行きのある複雑な味わいに仕上がっている。ブレンデッドジャパニーズウイスキーの新たな可能性を示す一本。アルコール40%、700ml。" },
+          { name: "厚岸 カムイチェップ", addon: true, img: "akkeshi", unit: "1杯", price: 4000, desc: "北海道・厚岸蒸溜所の人気シリーズ「カムイウイスキー」。カムイチェップはアイヌ語で「鮭」を意味し、ラベルには力強い鮭が描かれる。ピートと潮風、厚岸の自然が凝縮されたシングルモルト。" },
+          { name: "山崎 12年", addon: true, img: "yamazaki_12", unit: "1杯", price: 3000, desc: "日本最古の蒸溜所・山崎が誇る12年熟成シングルモルト。ミズナラ・バーボン・シェリーの多彩な樽が生む、華やかな花の香りとビターチョコレートのような複雑な甘み。2024年サントリー創業100周年記念ラベルで特別な一本。" },
+          { name: "響 ブレンダーズチョイス", addon: true, img: "hibiki_bc", unit: "1杯", price: 2000, desc: "サントリーが手がけるブレンデッドジャパニーズウイスキー。山崎・白州・知多の原酒に加え、ミズナラ樽熟成原酒を使用した特別なブレンド。甘い果実香とウッディな余韻が調和した、飲みやすく奥深い一本。" },
+          { name: "山崎 18年", addon: true, img: "yamazaki_18", unit: "1杯", price: 7000, desc: "日本最古の蒸溜所・山崎で18年以上熟成されたシングルモルトの最高峰。ミズナラ樽由来のオリエンタルな香りと深みのある甘さ、長く続く余韻。世界的評価を誇る日本を代表する一本。" },
+          { name: "響 17年", addon: true, img: "hibiki_17", unit: "1杯", price: 5000, desc: "サントリーが誇るブレンデッドジャパニーズウイスキーの最高峰のひとつ。山崎・白州・知多の原酒を高度な技術でブレンド。花や果実の香りに蜂蜜のような甘み、ミズナラ由来の深みある余韻。現在は製造終了した幻の一本。" },
+          { name: "余市 10年", addon: true, img: "yoichi_10", unit: "1杯", price: 3000, desc: "ニッカウヰスキー創業の地・北海道余市蒸溜所が手がけるシングルモルト。石炭直火蒸溜による力強くピートの効いた味わいと、10年熟成による深いコクが特徴。海のミネラル感と重厚なスモーキーさが調和した一本。アルコール45%。" },
+          { name: "あかし シングルモルト", addon: true, img: "akashi_single", unit: "1杯", price: 1000, desc: "兵庫・江井ヶ嶋酒造（Eigashima Distillery）が手がけるシングルモルトジャパニーズウイスキー。複数の樽で熟成した原酒をヴァッティング。バランスの取れた果実香と、やわらかくスモーキーな余韻が特徴。" },
+          { name: "BARヨー子 ハイボールレモン", addon: true, img: "bar_yoko_lemon", unit: "1杯", price: 1000, desc: "鳥海山麓のBAR「ヨー子」が生んだこだわりのハイボール。旨み・コク・香りが炭酸で引き立つモルト＆グレーンに、瀬戸内の皮ごと絞ったレモン果汁をたっぷりブレンド。アルコール度数40度。おすすめは1：3の炭酸割り。" },
+          { name: "あかし シェリーカスク", addon: true, img: "akashi_sherry", unit: "1杯", price: 500, desc: "兵庫・江井ヶ嶋酒造のWhite Oakシリーズ。オロロソシェリー樽で熟成したブレンデッドウイスキー。ドライフルーツやチョコレートのような濃厚な甘みと芳醇な香りが特徴。500円で楽しめるコスパ抜群の一本。" },
+          { name: "イチローズモルト ホワイトラベル", addon: true, img: "ichiros_white", unit: "1杯", price: 800, desc: "秩父蒸溜所の創業者・肥土伊知郎氏がブレンドしたワールドブレンデッドウイスキー。秩父モルトを軸に世界各国の原酒をヴァッティング。ノンチルフィルタード・ノンカラーで、華やかでバランスの取れた味わい。アルコール46%。" },
+          { name: "SOGAINI（ソガイニ）", addon: true, img: "sogaini", unit: "1杯", price: 500, desc: "広島・桜尾蒸留所（SAKURAO DISTILLERY）が手がけるブレンデッドジャパニーズウイスキー。戸河内と同じ蒸留所から生まれながら、よりアクセスしやすい価格帯で展開。アルコール40%、700cl。" }
         ]
       },
       {
         id: "whisky-scotch", name: "スコッチ", nameEn: "Scotch",
         items: [
-          { name: "カリラ 12年", img: "caol_ila_12", unit: "1杯", price: 1300, desc: "アイラ島ポートアスケイグの入り江にひっそりと佇む、1846年創業のカリラ蒸溜所。アイラモルトとしては比較的ライトな酒質で、オイリーなスモークと潮の香りに、レモンやハーブの爽やかさが同居する。アイラらしさを持ちながら重すぎない、通好みの一本。" },
-          { name: "グレンモーレンジィ オリジナル 10年", img: "glenmorangie_10", unit: "1杯", price: 1000, desc: "スコットランド・ハイランド産シングルモルト。バーボン樽で10年熟成し、バニラや柑橘のフルーティな甘みが広がる。スコッチ入門にも最適な、エレガントで飲みやすい一本。" },
-          { name: "タリスカー 10年", img: "talisker_10", unit: "1杯", price: 1000, desc: "スカイ島唯一の蒸溜所が生む、力強い海のシングルモルト。潮風とピートのスモーキーさに、胡椒のようなスパイシーな余韻。荒々しくも洗練されたアイランズモルトの傑作。" },
-          { name: "ブルックラディ ザ・クラシックラディ 10年", img: "bruichladdich", unit: "1杯", price: 1000, desc: "アイラ島・ブルックラディ蒸溜所のノンピートシングルモルト。スコットランド産大麦100%使用、ノンチルフィルタード。アイラらしからぬ華やかでフルーティな味わいが新鮮な一本。" },
-          { name: "アードベッグ 10年", img: "ardbeg_10", unit: "1杯", price: 1300, desc: "アイラ島最強クラスのスモーキーシングルモルト。強烈なピートの煙と潮気、タールのような複雑さの中に甘みと深みが共存。スモーキーウイスキー愛好家垂涎の一本。" },
-          { name: "ラフロイグ 10年", img: "laphroaig_10", unit: "1杯", price: 1300, desc: "アイラ島の名門ラフロイグ蒸溜所が生む、世界で最も個性的なシングルモルトのひとつ。強烈なピートスモークに海の塩気、ヨードの薬品香が混ざり合い、独特の余韻が長く続く。1815年創業の伝統ある一本。" },
-          { name: "マッカラン 12年 ダブルカスク", img: "macallan_12", unit: "1杯", price: 2000, desc: "スペイサイドを代表する名門マッカランの12年熟成。アメリカンとヨーロピアン、ふたつのシェリー樽で熟成したダブルカスク。バニラ、蜂蜜、フルーツの豊かな甘みが調和した、なめらかで上品な一本。" },
-          { name: "マッカラン 12年 シェリーオークカスク", img: "macallan_12_sherry", unit: "1杯", price: 2500, desc: "スペイサイドの名門マッカランが誇る、シェリー樽のみで熟成したシングルモルト。スペイン・ヘレスのオロロソシェリー樽が生む、豊かなドライフルーツとスパイスの香り。マッカランの真髄を味わえる一本。" },
-          { name: "<span style='color:red'>【欠品中】</span> マッカラン 18年 シェリーオークカスク", img: "macallan_18", unit: "1杯", price: 5000, desc: "スペイサイドの名門マッカランが誇る18年熟成の最高峰。スペイン産オロロソシェリー樽でじっくり熟成され、複雑でリッチなドライフルーツ、スパイス、チョコレートの香り。世界的に高い評価を受ける圧倒的な一本。" },
-          { name: "ボウモア 12年", img: "bowmore_12", unit: "1杯", price: 1000, desc: "アイラ島最古の蒸溜所・ボウモアが手がけるシングルモルト。1779年創業の老舗が誇る、ピートのスモーキーさと潮のミネラル感に、チョコレートやシトラスの甘みが絶妙に調和した入門に最適な一本。" },
-          { name: "ティーチャーズ ハイランドクリーム", img: "teachers", unit: "1杯", price: 500, desc: "1830年グラスゴー創業、ウィリアム・ティーチャー＆サンズのブレンデッドスコッチ。キーモルトはハイランドのアードモア。ブレンデッドとしては異例の高いピーテッドモルト比率で、スモーキーで力強い風味が特徴。「HIGH IN PEATED MALT」の表記どおり、価格を裏切る本格派。" },
-          { name: "ハイランドクイーン シェリーカスクフィニッシュ", img: "highland_queen_sherry", unit: "1杯", price: 500, desc: "1561年、フランスから帰国したスコットランド女王メアリー・スチュアートに捧げられた「ハイランドの女王」の名を冠するブレンデッドスコッチ。熟成後にシェリー樽で追加熟成させることで、ドライフルーツやナッツを思わせるまろやかな甘みとコクをまとった一本。" },
-          { name: "グレンフィディック 12年", img: "glenfiddich_12", unit: "1杯", price: 1000, desc: "スペイサイドの名門グレンフィディックが誇るスタンダードシングルモルト。フレッシュな洋梨とクリーミーなバニラの香り、なめらかで軽やかな口当たり。世界で最も売れるシングルモルトの入門編。" }
+          { name: "カリラ 12年", addon: true, img: "caol_ila_12", unit: "1杯", price: 1300, desc: "アイラ島ポートアスケイグの入り江にひっそりと佇む、1846年創業のカリラ蒸溜所。アイラモルトとしては比較的ライトな酒質で、オイリーなスモークと潮の香りに、レモンやハーブの爽やかさが同居する。アイラらしさを持ちながら重すぎない、通好みの一本。" },
+          { name: "グレンモーレンジィ オリジナル 10年", addon: true, img: "glenmorangie_10", unit: "1杯", price: 1000, desc: "スコットランド・ハイランド産シングルモルト。バーボン樽で10年熟成し、バニラや柑橘のフルーティな甘みが広がる。スコッチ入門にも最適な、エレガントで飲みやすい一本。" },
+          { name: "タリスカー 10年", addon: true, img: "talisker_10", unit: "1杯", price: 1000, desc: "スカイ島唯一の蒸溜所が生む、力強い海のシングルモルト。潮風とピートのスモーキーさに、胡椒のようなスパイシーな余韻。荒々しくも洗練されたアイランズモルトの傑作。" },
+          { name: "ブルックラディ ザ・クラシックラディ 10年", addon: true, img: "bruichladdich", unit: "1杯", price: 1000, desc: "アイラ島・ブルックラディ蒸溜所のノンピートシングルモルト。スコットランド産大麦100%使用、ノンチルフィルタード。アイラらしからぬ華やかでフルーティな味わいが新鮮な一本。" },
+          { name: "アードベッグ 10年", addon: true, img: "ardbeg_10", unit: "1杯", price: 1300, desc: "アイラ島最強クラスのスモーキーシングルモルト。強烈なピートの煙と潮気、タールのような複雑さの中に甘みと深みが共存。スモーキーウイスキー愛好家垂涎の一本。" },
+          { name: "ラフロイグ 10年", addon: true, img: "laphroaig_10", unit: "1杯", price: 1300, desc: "アイラ島の名門ラフロイグ蒸溜所が生む、世界で最も個性的なシングルモルトのひとつ。強烈なピートスモークに海の塩気、ヨードの薬品香が混ざり合い、独特の余韻が長く続く。1815年創業の伝統ある一本。" },
+          { name: "マッカラン 12年 ダブルカスク", addon: true, img: "macallan_12", unit: "1杯", price: 2000, desc: "スペイサイドを代表する名門マッカランの12年熟成。アメリカンとヨーロピアン、ふたつのシェリー樽で熟成したダブルカスク。バニラ、蜂蜜、フルーツの豊かな甘みが調和した、なめらかで上品な一本。" },
+          { name: "マッカラン 12年 シェリーオークカスク", addon: true, img: "macallan_12_sherry", unit: "1杯", price: 2500, desc: "スペイサイドの名門マッカランが誇る、シェリー樽のみで熟成したシングルモルト。スペイン・ヘレスのオロロソシェリー樽が生む、豊かなドライフルーツとスパイスの香り。マッカランの真髄を味わえる一本。" },
+          { name: "<span style='color:red'>【欠品中】</span> マッカラン 18年 シェリーオークカスク", addon: true, img: "macallan_18", unit: "1杯", price: 5000, desc: "スペイサイドの名門マッカランが誇る18年熟成の最高峰。スペイン産オロロソシェリー樽でじっくり熟成され、複雑でリッチなドライフルーツ、スパイス、チョコレートの香り。世界的に高い評価を受ける圧倒的な一本。" },
+          { name: "ボウモア 12年", addon: true, img: "bowmore_12", unit: "1杯", price: 1000, desc: "アイラ島最古の蒸溜所・ボウモアが手がけるシングルモルト。1779年創業の老舗が誇る、ピートのスモーキーさと潮のミネラル感に、チョコレートやシトラスの甘みが絶妙に調和した入門に最適な一本。" },
+          { name: "ティーチャーズ ハイランドクリーム", addon: true, img: "teachers", unit: "1杯", price: 500, desc: "1830年グラスゴー創業、ウィリアム・ティーチャー＆サンズのブレンデッドスコッチ。キーモルトはハイランドのアードモア。ブレンデッドとしては異例の高いピーテッドモルト比率で、スモーキーで力強い風味が特徴。「HIGH IN PEATED MALT」の表記どおり、価格を裏切る本格派。" },
+          { name: "ハイランドクイーン シェリーカスクフィニッシュ", addon: true, img: "highland_queen_sherry", unit: "1杯", price: 500, desc: "1561年、フランスから帰国したスコットランド女王メアリー・スチュアートに捧げられた「ハイランドの女王」の名を冠するブレンデッドスコッチ。熟成後にシェリー樽で追加熟成させることで、ドライフルーツやナッツを思わせるまろやかな甘みとコクをまとった一本。" },
+          { name: "グレンフィディック 12年", addon: true, img: "glenfiddich_12", unit: "1杯", price: 1000, desc: "スペイサイドの名門グレンフィディックが誇るスタンダードシングルモルト。フレッシュな洋梨とクリーミーなバニラの香り、なめらかで軽やかな口当たり。世界で最も売れるシングルモルトの入門編。" }
         ]
       },
       {
         id: "whisky-bourbon", name: "バーボン", nameEn: "Bourbon",
         items: [
-          { name: "フォアローゼス", img: "four_roses", unit: "1杯", price: 500, desc: "ケンタッキー州・フォアローゼス蒸溜所の定番バーボン。1888年創業の老舗が誇る10種のバーボンレシピのブレンド。ローズの香りを思わせる甘くフルーティーな香りと、なめらかで飲みやすい口当たり。バーボン入門に最適な一本。" },
-          { name: "ワイルドターキー 8年", img: "wild_turkey_8", unit: "1杯", price: 500, desc: "ケンタッキー州・オースティン・ニコルズが誇るストレートバーボン。101プルーフの高めのアルコール度数と、バニラ・キャラメル・スパイスの力強い風味が特徴。骨太でクラシックなバーボンの王道。" },
-          { name: "メーカーズマーク", img: "makers_mark", unit: "1杯", price: 500, desc: "ケンタッキー州ロレット・スターヒルファームの手作りバーボン。小麦を使ったソフトな口当たりと、キャラメルの甘みが特徴。赤いワックスシールが目印の、世界中で愛される一本。" },
-          { name: "ヘブンズドア アセンション", img: "heavens_door", unit: "1杯", price: 1000, desc: "ボブ・ディランが手がけるプレミアムバーボン「Heaven's Door」のアセンション。ケンタッキーストレートバーボンで、キャラメルとオーク、スパイスが複雑に絡み合うアーティストらしい個性派。" },
-          { name: "I.W.ハーパー 12年", img: "iw_harper_12", unit: "1杯", price: 1000, desc: "ケンタッキーストレートバーボンの逸品。12年熟成によるなめらかな口当たりと、バニラ・キャラメル・オークのバランスが絶妙。カットガラスを思わせる美しいボトルデザインも印象的な一本。" }
+          { name: "フォアローゼス", addon: true, img: "four_roses", unit: "1杯", price: 500, desc: "ケンタッキー州・フォアローゼス蒸溜所の定番バーボン。1888年創業の老舗が誇る10種のバーボンレシピのブレンド。ローズの香りを思わせる甘くフルーティーな香りと、なめらかで飲みやすい口当たり。バーボン入門に最適な一本。" },
+          { name: "ワイルドターキー 8年", addon: true, img: "wild_turkey_8", unit: "1杯", price: 500, desc: "ケンタッキー州・オースティン・ニコルズが誇るストレートバーボン。101プルーフの高めのアルコール度数と、バニラ・キャラメル・スパイスの力強い風味が特徴。骨太でクラシックなバーボンの王道。" },
+          { name: "メーカーズマーク", addon: true, img: "makers_mark", unit: "1杯", price: 500, desc: "ケンタッキー州ロレット・スターヒルファームの手作りバーボン。小麦を使ったソフトな口当たりと、キャラメルの甘みが特徴。赤いワックスシールが目印の、世界中で愛される一本。" },
+          { name: "ヘブンズドア アセンション", addon: true, img: "heavens_door", unit: "1杯", price: 1000, desc: "ボブ・ディランが手がけるプレミアムバーボン「Heaven's Door」のアセンション。ケンタッキーストレートバーボンで、キャラメルとオーク、スパイスが複雑に絡み合うアーティストらしい個性派。" },
+          { name: "I.W.ハーパー 12年", addon: true, img: "iw_harper_12", unit: "1杯", price: 1000, desc: "ケンタッキーストレートバーボンの逸品。12年熟成によるなめらかな口当たりと、バニラ・キャラメル・オークのバランスが絶妙。カットガラスを思わせる美しいボトルデザインも印象的な一本。" }
         ]
       },
       {
         id: "whisky-others", name: "その他", nameEn: "Others",
         items: [
-          { name: "Jameson", img: "jameson", unit: "1杯", price: 500, desc: "アイルランド・ダブリン発、1780年創業の世界で最も売れるアイリッシュウイスキー。3回蒸溜によるなめらかでクリーンな口当たりと、バニラとナッツの甘い香りが特徴。ストレートでもハイボールでも万能に楽しめる定番の一本。" },
-          { name: "ジャックダニエル", img: "jack_daniels", unit: "1杯", price: 500, desc: "テネシー州リンチバーグ生まれのサワーマッシュウイスキー。チャコールメローイング製法による独特の滑らかさと、バニラとカラメルの甘み。世界で最も売れているアメリカンウイスキーの定番。" },
-          { name: "オールドパリロード", img: "old_pali_road", unit: "1杯", price: 1000, desc: "ハワイ・コオラウ蒸溜所がハワイで手工芸する希少なウイスキー。オアフ島の自然と職人技が生む、フルーティでなめらかな味わい。ハワイの風景を思わせるラベルも印象的な個性派。" },
-          { name: "カバラン ソリスト ヴィーニョバリック", img: "kavalan", unit: "1杯", price: 2500, desc: "台湾・カバラン蒸溜所がヴィーニョ（ワイン）樽でカスクストレングス熟成。57.8%の高アルコールながら、濃厚なフルーツとワインの甘み、スパイシーな余韻が絡み合う複雑な味わい。アジアを代表するシングルモルト。" },
-          { name: "ポールジョン ピーテッド セレクトカスク", img: "pauljohn_peated", unit: "1杯", price: 1500, desc: "インド・ゴア州のポールジョン蒸溜所が手がけるピーテッドシングルモルト。55.5%のカスクストレングス、ノンチルフィルタード。スコッチに引けを取らないスモーキーさに、インド亜大陸の温暖な気候が育む南国的な甘みが共存する個性派。" },
-          { name: "ドメーヌ・デ・オート・グラス エピステーメ R16P24", img: "hautes_glaces_episteme", unit: "1杯", price: 2000, desc: "フランス・アルプス山麓トリエーヴ地方のドメーヌ・デ・オート・グラスが手がける農場型蒸溜所のシングルモルト。自家栽培ライ麦100%使用、テロワールを体現するクラフトウイスキー。清涼感あるハーブと穀物の風味が特徴。" },
-          { name: "ドメーヌ・デ・オート・グラス アンディジェン", img: "hautes_glaces_indigene", unit: "1杯", price: 2000, desc: "同じくドメーヌ・デ・オート・グラスのシングルモルト。アンディジェン（在来種）の名が示す通り、地元在来種の大麦を使用。フランス・アルプスの冷涼な気候と清らかな水が生む、繊細でフローラルな味わい。" }
+          { name: "Jameson", addon: true, img: "jameson", unit: "1杯", price: 500, desc: "アイルランド・ダブリン発、1780年創業の世界で最も売れるアイリッシュウイスキー。3回蒸溜によるなめらかでクリーンな口当たりと、バニラとナッツの甘い香りが特徴。ストレートでもハイボールでも万能に楽しめる定番の一本。" },
+          { name: "ジャックダニエル", addon: true, img: "jack_daniels", unit: "1杯", price: 500, desc: "テネシー州リンチバーグ生まれのサワーマッシュウイスキー。チャコールメローイング製法による独特の滑らかさと、バニラとカラメルの甘み。世界で最も売れているアメリカンウイスキーの定番。" },
+          { name: "オールドパリロード", addon: true, img: "old_pali_road", unit: "1杯", price: 1000, desc: "ハワイ・コオラウ蒸溜所がハワイで手工芸する希少なウイスキー。オアフ島の自然と職人技が生む、フルーティでなめらかな味わい。ハワイの風景を思わせるラベルも印象的な個性派。" },
+          { name: "カバラン ソリスト ヴィーニョバリック", addon: true, img: "kavalan", unit: "1杯", price: 2500, desc: "台湾・カバラン蒸溜所がヴィーニョ（ワイン）樽でカスクストレングス熟成。57.8%の高アルコールながら、濃厚なフルーツとワインの甘み、スパイシーな余韻が絡み合う複雑な味わい。アジアを代表するシングルモルト。" },
+          { name: "ポールジョン ピーテッド セレクトカスク", addon: true, img: "pauljohn_peated", unit: "1杯", price: 1500, desc: "インド・ゴア州のポールジョン蒸溜所が手がけるピーテッドシングルモルト。55.5%のカスクストレングス、ノンチルフィルタード。スコッチに引けを取らないスモーキーさに、インド亜大陸の温暖な気候が育む南国的な甘みが共存する個性派。" },
+          { name: "ドメーヌ・デ・オート・グラス エピステーメ R16P24", addon: true, img: "hautes_glaces_episteme", unit: "1杯", price: 2000, desc: "フランス・アルプス山麓トリエーヴ地方のドメーヌ・デ・オート・グラスが手がける農場型蒸溜所のシングルモルト。自家栽培ライ麦100%使用、テロワールを体現するクラフトウイスキー。清涼感あるハーブと穀物の風味が特徴。" },
+          { name: "ドメーヌ・デ・オート・グラス アンディジェン", addon: true, img: "hautes_glaces_indigene", unit: "1杯", price: 2000, desc: "同じくドメーヌ・デ・オート・グラスのシングルモルト。アンディジェン（在来種）の名が示す通り、地元在来種の大麦を使用。フランス・アルプスの冷涼な気候と清らかな水が生む、繊細でフローラルな味わい。" }
         ]
       }
     ]
@@ -799,7 +800,7 @@ const MENU = [
         items: [
           { name: "四季桜", img: "shiki_cup", unit: "1本", price: 1200, desc: "栃木・宇都宮酒造が醸す地酒。鬼怒川の伏流水を使用し、酸と旨みのバランスが良い特別純米酒。<b>やや辛口</b>。" },
           { name: "瑞鷹 くまもとカップ", img: "mizu_cup", unit: "1合", price: 1000, desc: "熊本・瑞鷹株式会社。くまモンラベルが愛らしい熊本の地酒。やわらかな口当たりと穏やかな旨み。<b>やや辛口</b>ですっきりとした後口。" },
-          { name: "黒松剣菱", img: "kenbishi_cup", unit: "1本", price: 1000, desc: "兵庫・剣菱酒造の代名詞的銘柄。創業500年以上の歴史を持つ辛口の純米酒。どっしりとした旨みとキレのある後味が特徴で、燗でも冷でも楽しめる。<b>甘辛でいえば旨口</b>寄りです。" },
+          { name: "<span style='color:red'>【欠品中】</span> 黒松剣菱", img: "kenbishi_cup", unit: "1本", price: 1000, desc: "兵庫・剣菱酒造の代名詞的銘柄。創業500年以上の歴史を持つ辛口の純米酒。どっしりとした旨みとキレのある後味が特徴で、燗でも冷でも楽しめる。<b>甘辛でいえば旨口</b>寄りです。" },
           { name: "下関名産 とらふぐ骨酒", img: "fugu_kossake", unit: "1本", price: 2000, desc: "下関名産のとらふぐの骨を炙り、旨みをたっぷりと溶け込ませた骨酒。とらふぐならではの上品な出汁と日本酒の風味が溶け合う、下関でしか味わえない贅沢な一杯。ベースのお酒は<b>辛口</b>。カップタイプで手軽に楽しめる。" },
           { name: "おやじ極楽 純吟カップ", img: "oyaji_gokuraku", unit: "1本", price: 2000, desc: "鳥取・境港の千代むすび酒造による純米吟醸カップ。水木しげる先生の故郷ならではの目玉おやじラベルが目印で、「おやじ極楽」の名のとおり湯船（茶碗）に浸かるおやじが描かれています。純米吟醸らしい上品な香りとやわらかな旨み。<b>やや辛口</b>ですっきりとした後口。" },
           { name: "有磯 曙 本醸造カップ", img: "ariiso_akebono", unit: "1本", price: 1800, desc: "富山・氷見の高澤酒造場が醸す本醸造。宴を楽しむ人々を描いたユーモラスなラベルが印象的です。富山湾の海の幸に寄り添う地酒らしく、キレのある<b>辛口</b>で燗にすると旨みがふくらみます。" },
@@ -910,11 +911,10 @@ var I18N = {
     "天下一品 京都濃厚鶏白湯": { n: "Tenkaippin Kyoto Rich Chicken Paitan", d: "From Sanyo Foods' \"Famous Shop\" series. Tenkaippin's signature kotteri broth, born in Kyoto, recreated in bagged form. A thick, almost gravy-like chicken paitan with three-minute non-fried noodles. Rich, and unapologetic about it." },
     "元祖長浜屋 豚骨ラーメン": { n: "Ganso Nagahamaya Tonkotsu Ramen", d: "Co-developed by Marutai and Ganso Nagahamaya of Nagahama, Fukuoka. Founded in 1952 and often credited with inventing kaedama, the shop's tonkotsu is faithfully recreated here. A light yet deep broth with ultra-thin non-fried noodles." },
     "出前一丁": { n: "Demae Itcho", d: "A long-seller since 1968. A wisp of the secret sesame oil over a nostalgic chuka soba. Light soy broth lifted by the sesame chili oil — loved across generations." },
-    "トッピング（2種選択）": { n: "Toppings (Choose 2)", d: "<b>Egg</b><br><b>Spinach</b><br><b>Takana (pickled mustard greens)</b><br><b>Pickled red ginger</b><br><b>Kikurage mushroom</b><br><b>Corn</b><br><b>Butter</b><br><b>Sliced jalapeño</b><br><b>Shiso</b><br><b>Coriander</b><br><b>Nori (2 sheets)</b><br><br>Choose any two." },
+    "トッピング（2種選択）": { n: "Toppings (Choose 2)", d: "<b>Egg</b><br><b>Spinach</b><br><b>Takana (pickled mustard greens)</b><br><b>Pickled red ginger</b><br><b>Kikurage mushroom</b><br><b>Corn</b><br><b>Butter</b><br><b>Sliced jalapeño</b><br><b>Shiso</b><br><b>Coriander</b><br><b>Nori (2 sheets)</b><br><br>Choose any two.<br><br>e.g. ZUBAAAN! Yokohama Iekei Shoyu Tonkotsu ¥500 + Toppings (spinach & nori) ¥200 + Homemade Chashu ¥300 = ¥1,000 total" },
     "小ライス": { n: "Small Rice", d: "Good alongside the noodles, or to finish. Dropping it into what is left of the broth is, in our view, the correct move." },
     "替玉（細麺）": { n: "Extra Noodles (Thin)", d: "A second helping of noodles only. The thin cut holds the broth differently, so one bowl gives you two experiences. Best while there is still broth left." },
     "自家製焼豚": { n: "Homemade Chashu", d: "Chashu prepared by the owner. One slice each of pork shoulder and pork belly." },
-    "トッピング例": { n: "Topping Example", d: "e.g. ZUBAAAN! Yokohama Iekei Shoyu Tonkotsu ¥500 + Toppings (spinach & nori) ¥200 + Homemade Chashu ¥300 = ¥1,000 total" },
     "キリン一番搾り ミニ缶": { n: "Kirin Ichiban Shibori (Mini Can)", d: "Chilled to the bone. Exactly one Hungry Bug glass from Dorohedoro's worth — a size you can finish." },
     "ミチェラーダ / Michelada": { n: "Michelada", d: "The Michelada is a Mexican beer-based cocktail: tart, bracing and made for hot days. A Clamato version is available for +¥1,000 if you like." },
     "アサヒ スーパードライ": { n: "Asahi Super Dry", d: "Japan's definitive dry beer. Sharp and crisp with a clean finish. Goes with anything on the menu." },
@@ -1114,7 +1114,9 @@ function omLabel(o) {
 }
 function omPrice(item) {
   if (item.price === 0) return '';
-  return '¥' + item.price.toLocaleString() + '<span>' + omTax() + ' / ' + omUnit(item.unit) + '</span>';
+  var s = '¥' + item.price.toLocaleString() + '<span>' + omTax() + ' / ' + omUnit(item.unit) + '</span>';
+  if (item.addon) s = s + '<span class="addon">' + (LANG === 'ja' ? 'ソーダ割り +100（税込）' : 'With soda +¥100 (incl. tax)') + '</span>';
+  return s;
 }
 function toggleLang() {
   LANG = (LANG === 'ja') ? 'en' : 'ja';
