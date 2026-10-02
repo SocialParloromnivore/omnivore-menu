@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-02b -->
+<!-- omnivore-menu build 2026-10-02c -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -330,6 +330,10 @@ const IMAGES = {
   "tantakatan": "images/tantakatan.jpg",
   "cranberry": "images/cranberry.jpg",
   "kinngyo": "images/kinngyo.jpg",
+  "shochu_lemon_sour": "images/shochu_lemon_sour.jpg",
+  "ramen_rice": "images/ramen_rice.jpg",
+  "ramen_rice_small": "images/ramen_rice_small.jpg",
+  "ramen_kaedama": "images/ramen_kaedama.jpg",
   "hatomugi_1980": "images/hatomugi_1980.jpg",
   "brulo_ipa": "images/brulo_ipa.jpg",
   "brulo": "images/brulo.jpg",
@@ -549,9 +553,9 @@ const MENU = [
         id: "ramen-toppings", name: "トッピング", nameEn: "Toppings",
         items: [
           { name: "トッピング（2種選択）", img: "ramen_topping_ex", unit: "2種", price: 200, desc: "<b>たまご</b><br><b>ほうれん草</b><br><b>高菜</b><br><b>紅ショウガ</b><br><b>きくらげ</b><br><b>コーン</b><br><b>バター</b><br><b>スライスハラペーニョ</b><br><b>紫蘇</b><br><b>パクチー</b><br><b>海苔2枚</b><br><br>の中からお好きな2種をどうぞ。<br><br>例）ZUBAAAN! 横浜家系醤油豚骨 ¥500 ＋ トッピング（ほうれん草・海苔2枚）¥200 ＋ 自家製焼豚 ¥300 ＝ 合計 ¥1,000" },
-          { name: "小ライス", img: "", emoji: "🍚", unit: "1膳", price: 200, desc: "ラーメンのお供に、あるいは〆に。残ったスープに投入して食べるのが最適解だと思っています。" },
-          { name: "ライス", img: "", emoji: "🍚", unit: "1膳", price: 300, desc: "小ライスより多めの普通盛りです。餃子のお供にも、ラーメンのゆでスープに投入するのにも。" },
-          { name: "替玉（細麺）", img: "", emoji: "🍜", unit: "1玉", price: 200, desc: "麺だけのおかわりです。細麺なのでスープの絡み方が変わり、一杯の中で二度おいしい。スープが残っているうちにどうぞ。" },
+          { name: "小ライス", img: "ramen_rice_small", emoji: "🍚", unit: "1膳", price: 200, desc: "ラーメンのお供に、あるいは〆に。残ったスープに投入して食べるのが最適解だと思っています。" },
+          { name: "ライス", img: "ramen_rice", emoji: "🍚", unit: "1膳", price: 300, desc: "小ライスより多めの普通盛りです。餃子のお供にも、ラーメンのゆでスープに投入するのにも。" },
+          { name: "替玉（細麺）", img: "ramen_kaedama", emoji: "🍜", unit: "1玉", price: 200, desc: "麺だけのおかわりです。細麺なのでスープの絡み方が変わり、一杯の中で二度おいしい。スープが残っているうちにどうぞ。" },
           { name: "自家製焼豚", img: "ramen_chashu", unit: "2枚", price: 300, desc: "店主が仕込む自家製の焼豚。豚肩ロースと豚バラを各1枚ずつ盛り合わせになります。" }
         ]
       }
@@ -771,7 +775,7 @@ const MENU = [
           { name: "1980 はとむぎ焼酎", addon: true, img: "hatomugi_1980", unit: "1杯", price: 1500, desc: "大分県産はとむぎを使用した1980年製造の長期貯蔵焼酎。やわらかな舌触りと深いコクのある上品な味わい。珍しいはとむぎ焼酎として希少性も高い一本。" },
           { name: "鍛高譚", addon: true, img: "tantakatan", unit: "1杯", price: 500, desc: "北海道・高砂酒造が手がけるしそ焼酎。北海道産の赤しそを使用した、爽やかな香りとすっきりとした味わいのリキュール系焼酎。そのままでも炭酸割りでも楽しめる。アルコール20度。" },
           { name: "金魚", img: "kinngyo", unit: "1杯", price: 600, desc: "グラスの中に大葉（水草）と赤唐辛子（金魚）を浮かべて水槽に見立てる粋な飲み方。当店はキンミヤ焼酎に国産唐辛子とカラブリア州産唐辛子を漬け込んだベースを使用。大葉の爽やかな香りと唐辛子のピリッとした辛さが絶妙で、かなり辛い仕上がりです。" },
-          { name: "レモンサワー", img: "", emoji: "🍋", unit: "1杯", price: 600, desc: "レモンとソーダですっきりと。ベースの焼酎は「キンミヤ」か「いいちこ」からお選びいただけます（どちらも同額）。割り物代込みの価格です。" },
+          { name: "レモンサワー", img: "shochu_lemon_sour", emoji: "🍋", unit: "1杯", price: 600, desc: "レモンとソーダですっきりと。ベースの焼酎は「キンミヤ」か「いいちこ」からお選びいただけます（どちらも同額）。割り物代込みの価格です。" },
           { name: "跳ねる一日", addon: true, img: "haneru_ichinichi", unit: "1杯", price: 800, desc: "鹿児島・志布志の若潮酒造が手がける「一日」シリーズ第2弾。麦と芋の焼酎をベースに、柚子の果汁と果皮を加えて再蒸留した爽やかな柑橘香とクリアな味わい。名前の由来は薩摩の言葉「泣こかい跳ぼかい、泣くよかひっ跳べ」——迷うくらいならまず動け。跳ねる金魚のラベルが目印。アルコール27%、720ml。" },
           { name: "米焼酎 ねっか", addon: true, img: "shochu_nekka", unit: "1杯", price: 800, desc: "福島・奥会津の合同会社ねっかが手がける本格米焼酎。地元産の米を100%使用し、減圧蒸留で仕上げたクリアで華やかな味わい。フルーティーな吟醸香とすっきりとした後味が特徴。" },
           { name: "ブラック奄美", addon: true, img: "black_amami", unit: "1杯", price: 800, desc: "鹿児島・徳之島の奄美酒類が造る本格黒糖焼酎。奄美群島でのみ製造が認められている黒糖焼酎を樫樽で長期貯蔵し、アルコール度数40度の原酒に近い力強さに仕上げた一本。琥珀色をした深いコクと黒糖由来のほのかな甘い香りが特徴で、ロックやストレートでじっくりと。" }
