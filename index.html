@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-01f -->
+<!-- omnivore-menu build 2026-10-01g -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -849,7 +849,7 @@ const MENU = [
         items: [
       { name: "Clamato クラマト・トマトカクテル", img: "clamato", unit: "1缶", price: 1000, desc: "カナダ発の定番トマトカクテル。トマトジュースにハマグリのエキスをブレンドした独特の旨みが特徴。メキシコでは「ミチェラーダ」のベースとして絶大な人気を誇る221ml缶。そのまま飲んでも、お酒と合わせても楽しめる。" },
       { name: "シンビーノ ジャワティストレート Premium White", img: "javatea_white", unit: "1本", price: 1000, desc: "プレミアムジャワティのWhiteタイプ。色も味わいも軽やかで澄んだ印象の、すっきりした紅茶です。無糖・ストレートで甘さがないので、食事の邪魔をしません。375ml瓶。" },
-      { name: "クランベリージュース", addon: true, img: "cranberry", unit: "1本", price: 800, desc: "順造選のクランベリー果汁50%ジュース。程よい甘みと酸味が特徴のクランベリー飲料。" },
+      { name: "クランベリージュース", addon: true, addonJa: "ソーダ割り +100（税込）", addonEn: "With soda +¥100 (incl. tax)", img: "cranberry", unit: "1本", price: 800, desc: "順造選のクランベリー果汁50%ジュース。程よい甘みと酸味が特徴のクランベリー飲料。" },
       { name: "東方樹葉 茉莉花茶", img: "dongfang_jasmine", unit: "1本", price: 1000, desc: "中国・農夫山泉が手がける本格派ジャスミン茶。茶葉由来のナチュラルな香りと、すっきりとした無糖の飲み口が特徴。中国で絶大な人気を誇るプレミアムボトルティー。500ml。" },
       { name: "アイスコーヒー", img: "ice_coffee", unit: "1杯", price: 500, desc: "UCC ドリップポッド「鑑定士の誇り」アイスコーヒー。コクと香りをしっかり抽出した本格アイスコーヒー。" },
       { name: "ソイラテ", img: "soy_latte", unit: "1杯", price: 500, desc: "UCC ドリップポッド「鑑定士の誇り」アイスコーヒーを使用したソイラテ。豆乳のまろやかさとコーヒーのコクが調和した一杯。" },
@@ -1120,7 +1120,7 @@ function omLabel(o) {
 function omPrice(item) {
   if (item.price === 0) return '';
   var s = '¥' + item.price.toLocaleString() + '<span>' + omTax() + ' / ' + omUnit(item.unit) + '</span>';
-  if (item.addon) s = s + '<span class="addon">' + (LANG === 'ja' ? '割り物 +100（税込）' : 'Mixer +¥100 (incl. tax)') + '</span>';
+  if (item.addon) { var aj = item.addonJa ? item.addonJa : '割り物 +100（税込）'; var ae = item.addonEn ? item.addonEn : 'Mixer +¥100 (incl. tax)'; s = s + '<span class="addon">' + (LANG === 'ja' ? aj : ae) + '</span>'; }
   return s;
 }
 function toggleLang() {
