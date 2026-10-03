@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-02d -->
+<!-- omnivore-menu build 2026-10-03a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -410,7 +410,6 @@ const IMAGES = {
   "food_tortilla_chips": "images/food_tortilla_chips.jpg",
   "kenbishi_bottle": "images/kenbishi_bottle.jpg",
   "juice_various": "images/juice_various.jpg",
-  "ramen_sugakiya": "images/ramen_sugakiya.jpg",
   "canada_ginger": "images/canada_ginger.jpg",
   "cocacola": "images/cocacola.jpg",
   "ice_coffee": "images/ice_coffee.jpg",
@@ -431,7 +430,6 @@ const IMAGES = {
   "miyagikyo_ay": "images/miyagikyo_ay.jpg",
   "shindo": "images/shindo.jpg",
   "chita": "images/chita.jpg",
-  "kyoto_whisky": "images/kyoto_whisky.jpg",
   "taketsuru": "images/taketsuru.jpg",
   "qr_wifi": "images/qr_wifi.png",
   "qr_insta": "images/qr_insta.jpg",
@@ -542,7 +540,6 @@ const MENU = [
           { name: "うまかっちゃん", img: "ramen_umakachan", unit: "1袋", price: 500, desc: "ハウス食品が手がける九州豚骨ラーメンの定番袋麺。調味オイル付きでコクのあるとんこつスープを再現。博多っ子に愛され続ける、九州の味がそのまま楽しめる一杯。" },
           { name: "イチカラそば", img: "ramen_ichikara_soba", unit: "1袋", price: 500, desc: "新潟県産有機そば全粒粉使用の本格インスタントそば。カップ不要のどんぶり麺スタイルで、厳選素材のスープ付き。種から丁寧に作られた、こだわりの一杯。" },
           { name: "辛ヨン トムヤムクンラーメン", img: "ramen_karyon_tomyam", unit: "1袋", price: 500, desc: "辛ヨンシリーズのトムヤムクン風味。エビの旨みとレモングラス・ナンプラーなどタイ風スパイスの酸辣が融合した個性派麺。辛さレベル3。国内製造のMade in Japan。" },
-          { name: "Sugakiya スガキヤラーメン", img: "ramen_sugakiya", unit: "1袋", price: 500, desc: "名古屋のソウルフード、スガキヤの和風とんこつラーメン。だしを効かせたクリーミーなスープが特徴のノンフライ麺。店舗誕生80周年を迎えた東海地方の定番の味。" },
           { name: "日清 ラ王 柚子しお", img: "ramen_raoh_yuzu", unit: "1袋", price: 500, desc: "まるで生めんのようなもっちもち食感のノンフライ麺。鶏の旨みをベースに、高知県産柚子皮と焼津産鰹節エキスを二段重ねで効かせた爽やかな塩スープ。王道・本格・上質を追い求めた一杯。" },
           { name: "天下一品 京都濃厚鶏白湯", img: "ramen_tenkaippin", unit: "1袋", price: 500, desc: "サンヨー食品「名店の味」シリーズ。京都発の人気チェーン・天下一品の看板「こってり」を袋麺で再現。鶏の旨みを凝縮したドロリと濃厚な鶏白湯スープに、ゆで時間3分のノンフライ麺が絡む。こってり一筋の一杯。" },
           { name: "元祖長浜屋 豚骨ラーメン", img: "ramen_nagahamaya", unit: "1袋", price: 500, desc: "マルタイと福岡・長浜の「元祖長浜屋」の共同開発。昭和二十七年創業、「替玉」発祥の店とも言われる名店の豚骨ラーメンを袋麺で再現。あっさりしながらコクのあるスープに極細ノンフライ麺が絡む、長浜そのものの一杯。" },
@@ -634,7 +631,6 @@ const MENU = [
           { name: "宮城峡 10年", addon: true, img: "miyagikyo_10", unit: "1杯", price: 3000, desc: "ニッカウヰスキー宮城峡蒸溜所の10年熟成シングルモルト。仙台郊外・新川（にっかわ）の清流に囲まれた蒸溜所で、スチームによる間接加熱蒸溜が生む華やかでやわらかな酒質が特徴。10年の熟成でモルトの甘みに樽由来のバニラやドライフルーツの香りが重なる。力強い余市とは対照的な、穏やかで上品な一本。アルコール45%。" },
           { name: "サントリー角", addon: true, img: "kaku", unit: "1杯", price: 500, desc: "1937年誕生のロングセラー。山崎・白州蒸溜所のバーボン樽熟成原酒をバランス良く配合。甘やかな香りと厚みのあるコクが特徴で、ハイボールとの相性が抜群。" },
           { name: "知多", addon: true, img: "chita", unit: "1杯", price: 1000, desc: "愛知・知多蒸溜所が生み出すシングルグレーンウイスキー。コラムスチルで丁寧に蒸溜し、複数の樽でじっくり熟成。軽やかでなめらかな口当たりに、バニラやハニーの甘い余韻。" },
-          { name: "京都ウイスキー 黒帯", addon: true, img: "kyoto_whisky", unit: "1杯", price: 500, desc: "京都初のウイスキー蒸溜所「京都みやこ蒸溜所」が醸す黒帯。丹波高原の自然に囲まれた蒸溜所で作られ、USC2021で92点を獲得した実力派。西陣織の黒帯ラベルが京都らしい品格を纏う。" },
           { name: "竹鶴 Pure Malt", addon: true, img: "taketsuru", unit: "1杯", price: 1500, desc: "ニッカウヰスキーの創業者・竹鶴政孝の名を冠したピュアモルト。余市と宮城峡、ふたつの蒸溜所のモルト原酒をヴァッティング。重厚でスモーキーな余市と、華やかで軽やかな宮城峡の個性が見事に調和。" },
           { name: "<span style='color:red'>【欠品中】</span> 白州 NV", addon: true, img: "hakushu_nv", unit: "1杯", price: 1500, desc: "南アルプスの深い森に囲まれた白州蒸溜所のシングルモルト。ノンヴィンテージながら瑞々しいグリーン感とスモーキーさが共存する、爽やかで軽快な味わい。ハイボールにも最適。" },
           { name: "白州 12年", addon: true, img: "hakushu_12", unit: "1杯", price: 3000, desc: "白州蒸溜所で12年以上熟成されたシングルモルト。森林を思わせるさわやかなグリーンノートに、ほのかなスモーキーさとフルーティな甘みが重なる。白州らしさを堪能できる定番の一本。" },
@@ -913,7 +909,6 @@ var I18N = {
     "うまかっちゃん": { n: "Umakacchan", d: "House Foods' classic Kyushu tonkotsu bagged noodle. A seasoning oil sachet brings the pork broth to life. The taste of Kyushu, still beloved in Hakata after all these years." },
     "イチカラそば": { n: "Ichikara Soba", d: "A proper instant soba made with organic wholegrain buckwheat from Niigata. Donburi-style with no cup needed, and a carefully sourced broth. Made from the seed up." },
     "辛ヨン トムヤムクンラーメン": { n: "Shin-Yon Tom Yum Kung Ramen", d: "The Tom Yum Kung version of the Shin-Yon range. Shrimp umami meets the hot-and-sour lift of lemongrass and fish sauce. Spice level 3. Made in Japan." },
-    "Sugakiya スガキヤラーメン": { n: "Sugakiya Ramen", d: "Nagoya soul food: Sugakiya's Japanese-style tonkotsu ramen. Non-fried noodles in a creamy, dashi-forward broth. The Tokai region's standard, now 80 years on." },
     "日清 ラ王 柚子しお": { n: "Nissin Raoh Yuzu Shio", d: "Non-fried noodles with a springy, almost fresh-noodle texture. A chicken base layered twice over with yuzu peel from Kochi and bonito extract from Yaizu, for a bright salt broth. A pursuit of the classic, done properly." },
     "天下一品 京都濃厚鶏白湯": { n: "Tenkaippin Kyoto Rich Chicken Paitan", d: "From Sanyo Foods' \"Famous Shop\" series. Tenkaippin's signature kotteri broth, born in Kyoto, recreated in bagged form. A thick, almost gravy-like chicken paitan with three-minute non-fried noodles. Rich, and unapologetic about it." },
     "元祖長浜屋 豚骨ラーメン": { n: "Ganso Nagahamaya Tonkotsu Ramen", d: "Co-developed by Marutai and Ganso Nagahamaya of Nagahama, Fukuoka. Founded in 1952 and often credited with inventing kaedama, the shop's tonkotsu is faithfully recreated here. A light yet deep broth with ultra-thin non-fried noodles." },
@@ -937,7 +932,6 @@ var I18N = {
     "がぶ飲みシャトージュン・オレンジ": { n: "Chateau Jun Orange", d: "White grapes vinified like a red, with skins and seeds. Complexity and a little tannin remain, which makes it excellent with spiced dishes. 100% Yamanashi grapes, 11.5% ABV." },
     "サントリー角": { n: "Suntory Kakubin", d: "A long-seller since 1937, blending bourbon-cask malts from the Yamazaki and Hakushu distilleries. Sweet aroma and a solid depth of flavour — and famously good as a highball." },
     "知多": { n: "Chita", d: "A single grain whisky from the Chita distillery in Aichi. Carefully column-distilled and matured in several cask types. Light and silky, with a sweet finish of vanilla and honey." },
-    "京都ウイスキー 黒帯": { n: "Kyoto Whisky Kuroobi", d: "Kuroobi, from Kyoto Miyako Distillery — the city's first whisky distillery, set in the nature of the Tanba highlands. It scored 92 points at USC 2021. The Nishijin-ori black-belt label gives it a distinctly Kyoto sense of dignity." },
     "竹鶴 Pure Malt": { n: "Taketsuru Pure Malt", d: "A pure malt named after Masataka Taketsuru, founder of Nikka. A vatting of malts from two distilleries: the heavy, smoky Yoichi and the bright, delicate Miyagikyo, in fine harmony." },
     "白州 NV": { n: "Hakushu NV", d: "A single malt from the Hakushu distillery, deep in the forests of the Southern Alps. Non-vintage, yet it holds fresh green notes and smoke together. Crisp and lively, and superb as a highball." },
     "白州 12年": { n: "Hakushu 12 Year", d: "A single malt aged at least 12 years at Hakushu. Forest-fresh green notes layered with a whisper of smoke and fruity sweetness. The definitive expression of the distillery." },
