@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-03a -->
+<!-- omnivore-menu build 2026-10-05a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -397,6 +397,11 @@ const IMAGES = {
   "bar_yoko_umeshu": "images/bar_yoko_umeshu.jpg",
   "campari": "images/campari.jpg",
   "ichiros_white": "images/ichiros_white.jpg",
+  "gin_hachioji_elderflower": "images/gin_hachioji_elderflower.jpg",
+  "gin_kanomori": "images/gin_kanomori.jpg",
+  "gin_sicx_spicemagic": "images/gin_sicx_spicemagic.jpg",
+  "shochu_atbrew_ochawari": "images/shochu_atbrew_ochawari.jpg",
+  "tamagawa_timemachine": "images/tamagawa_timemachine.jpg",
   "sakurao_hamagou": "images/sakurao_hamagou.jpg",
   "chill_green": "images/chill_green.jpg",
   "shochu_nekka": "images/shochu_nekka.jpg",
@@ -699,7 +704,10 @@ const MENU = [
       {
         id: "spirits-gin", name: "ジン", nameEn: "Gin",
         items: [
-          { name: "Hendrick's Gin", addon: true, img: "hendricks", unit: "1杯", price: 1000, desc: "スコットランド・ガーヴァン蒸溜所発のプレミアムクラフトジン。ローズとキュウリのエッセンスを加えたユニークなレシピが特徴。フローラルで華やかな香りと、すっきりとしたさわやかな味わい。黒いボトルのデザインも印象的。" },
+          { name: "トーキョーハチオウジン エルダーフラワー", addon: true, img: "gin_hachioji_elderflower", unit: "1杯", price: 900, desc: "東京・八王子の小さな蒸溜所が造るロンドンドライジン。エルダーフラワーのマスカットを思わせる甘く華やかな香りが主役で、口当たりはなめらか。ソーダで割ると花の香りがふわっと開きます。アルコール40%、500ml。" },
+          { name: "養命酒製造 クラフトジン 香の森", addon: true, img: "gin_kanomori", unit: "1杯", price: 900, desc: "あの養命酒が長野で造るクラフトジン。和のハーブ「クロモジ（黒文字）」を主役に、森の中を歩いているような清々しい香り。ウッディで爽やか、後味はすっきり。ソーダ割りやお茶割りで香りが引き立ちます。700ml。" },
+          { name: "SiCX 京都 スパイスマジックジン", addon: true, img: "gin_sicx_spicemagic", unit: "1杯", price: 900, desc: "京都発、スパイスを主役に据えたスモールバッチのクラフトジン。ジュニパーの奥からスパイスの香りが次々に顔を出す、名前どおりの一本。ソーダで割ると香りが立ち、食事にもよく合います。アルコール45%。" },
+          { name: "Hendrick's Gin", addon: true, img: "hendricks", unit: "1杯", price: 900, desc: "スコットランド・ガーヴァン蒸溜所発のプレミアムクラフトジン。ローズとキュウリのエッセンスを加えたユニークなレシピが特徴。フローラルで華やかな香りと、すっきりとしたさわやかな味わい。黒いボトルのデザインも印象的。" },
           { name: "BOMBAY SAPPHIRE", addon: true, img: "bombay", unit: "1杯", price: 500, desc: "1761年のレシピをもとに英国で生まれたロンドンドライジン。10種類のボタニカルを蒸気蒸留で香り立てた、クリアでエレガントな味わい。アルコール47%。" },
           { name: "まさひろ オキナワジン Recipe 01", addon: true, img: "masahiro_gin", unit: "1杯", price: 500, desc: "沖縄・まさひろ酒造が手がけるクラフトジン。泡盛をベースに、シークワーサー・ジュニパーベリー・グァバ葉・ゴーヤー・ローゼル/ハイビスカス属・ピパーズ/ハワモドキを使用。アルコール47%、700ml。沖縄の素材を活かした個性豊かな一本。" },
           { name: "SAKURAO GIN ハマゴウ 2025", addon: true, img: "sakurao_hamagou", unit: "1杯", price: 500, desc: "広島・桜尾蒸溜所のジャパニーズドライジン限定版。宮島の対岸で手摘みしたハマゴウを使用したスモールバッチ蒸留。青いボトルが美しい2025年エディション。アルコール47%、700ml。" },
@@ -742,6 +750,7 @@ const MENU = [
           { name: "DAIYAME 40°", addon: true, img: "daiyame_40", unit: "1杯", price: 1000, desc: "濱田酒造が誇るプレミアムDAIYAMEのハイプルーフ版。アルザス地方のワインを想起させる驚くほど華やかで力強いライチのような香りと、濃醇でフルーティーな味わい。輸出限定として海外で高評価を獲得後、国内販売を開始。世界中のバーテンダーやミクソロジストも認める芋焼酎の概念を超えたプレミアムスピリッツ。" },
           { name: "KIRISHIMA No.8", addon: true, img: "kirishima8", unit: "1杯", price: 500, desc: "宮崎・霧島酒造が手がける本格芋焼酎。フルーリーエレガンスをテーマに、華やかでフルーティーな香りと上品な甘みが特徴。従来の霧島シリーズとは一線を画す、洗練された芋焼酎の新境地。" },
           { name: "GAKUの誘惑", addon: true, img: "gaku_yuwaku", unit: "1杯", price: 500, desc: "鹿児島・西酒造が手がける「天使の誘惑」のシェリー樽10年熟成芋焼酎。ブランデーのような芳醇な香りと芋の甘みが絶妙に融合。アルコール度数40%の、芋焼酎の概念を超えた最高峰の一本。" },
+          { name: "@brew Ochawari!?", addon: true, img: "shochu_atbrew_ochawari", unit: "1杯", price: 700, desc: "鹿児島・志布志の若潮酒造が「お茶割りのためだけ」に造った芋焼酎。ラベルの合言葉は “Made to Fall in Love with Tea”。お茶と合わせると芋の甘い香りと茶葉の香りがきれいに重なります。まずはお茶割りでどうぞ。アルコール25%、720ml。" },
           { name: "三岳（みたけ）", addon: true, img: "mitake", unit: "1杯", price: 500, desc: "世界自然遺産・屋久島の三岳酒造が造る本格芋焼酎。屋久島の名水（軟水）と鹿児島県産のさつま芋を使用し、雑味のないすっきりとした口当たりに、ほのかな芋の甘み。生産量が限られ、島内でも入手困難とされる人気銘柄。" },
           { name: "イヨシコーラ酎", addon: true, img: "iyoshi_cola", unit: "1杯", price: 800, desc: "新宿発・鹿児島の芋焼酎をベースに、コーラナッツ・シナモン・バニラ・クローブなど天然素材を組み合わせたクラフトコーラスピリッツ。カワセミのラベルが印象的な、焼酎の新たな可能性を提示する個性派。" },
           { name: "村尾", addon: true, img: "murao", unit: "1杯", price: 1300, desc: "鹿児島・村尾酒造の芋焼酎。薩摩芋と米麹を甕壺で仕込む伝統的製法。生産量が極めて少なく入手困難な幻の焼酎のひとつ。穏やかな香りと上品でまろやかな旨み、すっきりとしたキレが特徴。" },
@@ -793,6 +802,7 @@ const MENU = [
         items: [
           { name: "鍋島 オレンジ ボトル", img: "nabe_bottle", price: 6000, unit: "1本", desc: "佐賀・富久千代酒造。五百万石100%使用、精米歩合55%の純米吟醸生酒。オレンジのような果実感と素直な甘み、生酒ならではの鮮やかなガス感。鍋島の中でも最もポップな味わい。<b>甘口寄り</b>のジューシーなタイプです。" },
           { name: "獺祭 Blue", img: "dassai_blue", price: 12000, unit: "1本", desc: "山口・旭酒造がニューヨークに構えた蒸溜所で醸造する、獺祭初の海外醸造酒。精米歩合50%の純米大吟醸（Type 50）で、上品でクリアな香りと繊細でなめらかな甘み。NY発という特別なストーリーを纏った一本。<b>やや甘口</b>の華やかなタイプです。" },
+          { name: "玉川 Time Machine 1712", img: "tamagawa_timemachine", unit: "1本（360ml）", price: 4000, desc: "京都・京丹後の木下酒造が、江戸時代・1712年の文献に残る製法で仕込んだ純米酒。琥珀色で、とろりと濃厚。甘みと酸、旨みが一気に押し寄せる、いまの日本酒とは別世界の味です。食後酒として少しずつ、バニラアイスにかけても。<b>超甘口</b>。2023BY。" },
           { name: "極上黒松剣菱", img: "kenbishi_bottle", unit: "1本（300ml）", price: 1800, desc: "1505年創業、日本最古の酒ブランド剣菱酒造の上級酒。「古今第一」を掲げ、複数年熟成の原酒をブレンド。豊かなコクと深いキレ、熟成による円熟した旨みが特徴。青いボトルが目を引く逸品。<b>甘辛でいえば旨口</b>——甘口でも辛口でもない、コク重視のタイプです。" }
         ]
       },
@@ -981,6 +991,7 @@ var I18N = {
     "Don Julio Añejo（ドン フリオ アネホ）": { n: "Don Julio Anejo", d: "Don Julio González, founder in 1942, is the man who took tequila upmarket. 100% blue agave from the Jalisco highlands, aged 18 months in American white oak. Caramel and vanilla sweetness, gentle spice and a silky, lingering finish. Also served in a 15ml shot glass at the same price." },
     "日置蒸溜蔵 甕壺貯蔵 芋（4年）": { n: "Hioki Distillery Kamétsubo Imo, 4 Years", d: "A strictly limited long-aged imo shochu from Komasa Jyozo — the makers of the Kanosuke Japanese whisky — distilled at their Hioki Distillery in Kagoshima, founded in 1883. Kogane Sengan sweet potatoes from Kagoshima and rice koji (black koji) are fermented with Komasa yeast and well water from the Gongen shrine, then aged four years in earthenware pots. Fragrant and gentle on the palate. Only 600 bottles produced." },
     "GAKUの誘惑": { n: "GAKU no Yuwaku", d: "A sherry-cask imo shochu aged ten years, from Nishi Shuzo in Kagoshima — the same house as Tenshi no Yuwaku. Brandy-like richness meets the sweetness of sweet potato. At 40% ABV, it goes well beyond what most people expect of shochu." },
+    "@brew Ochawari!?": { n: "@brew Ochawari!?", d: "An imo shochu made by Wakashio Distillery in Shibushi, Kagoshima, for one purpose only: mixing with tea. The label says it all: \"Made to Fall in Love with Tea\". With tea, the sweet potato aroma and the tea leaf line up beautifully. Start with it ochawari-style. 25% ABV, 720ml." },
     "三岳（みたけ）": { n: "Mitake", d: "An honkaku imo shochu from Mitake Shuzo on Yakushima, a World Natural Heritage site. Made with the island's famously soft water and Kagoshima sweet potatoes, it is clean and free of any rough edges, with a gentle sweetness. Production is small and it is hard to find even on the island." },
     "イヨシコーラ酎": { n: "Iyoshi Cola-chu", d: "A craft cola spirit from Shinjuku, built on Kagoshima imo shochu with natural ingredients including kola nut, cinnamon, vanilla and clove. The kingfisher label is distinctive — and so is the argument it makes for what shochu can be." },
     "村尾": { n: "Murao", d: "An imo shochu from Murao Shuzo in Kagoshima, made the traditional way with sweet potato and rice koji fermented in earthenware pots. Production is tiny, and it is one of the genuinely hard-to-find bottles. Quiet aromatics, refined mellow flavour and a clean finish." },
@@ -1004,6 +1015,7 @@ var I18N = {
     "ブラック奄美": { n: "Black Amami", d: "An honkaku kokuto (brown sugar) shochu from Amami Shurui on Tokunoshima, Kagoshima. Kokuto shochu may only be produced in the Amami islands; this one is long-aged in oak casks and bottled at 40%, close to cask strength. Amber in colour, with real depth and a faint sweetness from the brown sugar. Take your time with it, neat or on the rocks." },
     "鍋島 オレンジ ボトル": { n: "Nabeshima Orange (Bottle)", d: "From Fukuchiyo Shuzo in Saga. A junmai ginjo nama-shu, 100% Gohyakumangoku, milled to 55%. Orange-like fruit and a straightforward sweetness, with the vivid spritz that only unpasteurised sake gives. The most playful bottle in the Nabeshima range. <b>Leans sweet</b> and juicy." },
     "獺祭 Blue": { n: "Dassai Blue", d: "Dassai's first sake brewed outside Japan, made at Asahi Shuzo's New York brewery. A junmai daiginjo milled to 50% (Type 50), refined and clear on the nose with a delicate, silky sweetness. A bottle with a story attached. <b>Slightly sweet</b> and aromatic." },
+    "玉川 Time Machine 1712": { n: "Tamagawa Time Machine 1712", d: "A junmai from Kinoshita Shuzo in Kyotango, Kyoto, brewed by a method recorded in a text from 1712. Amber, thick and rich, with sweetness, acidity and umami all arriving at once. Nothing like modern sake. Sip it slowly after a meal, or pour it over vanilla ice cream. <b>Very sweet.</b> 2023BY." },
     "極上黒松剣菱": { n: "Gokujo Kuromatsu Kenbishi", d: "The senior bottling from Kenbishi Shuzo, founded in 1505 and Japan's oldest sake brand. Under the motto \"first among all, past and present\", it blends undiluted sake matured over several years. Deep body, a firm finish and the roundness that only age gives. The blue bottle is unmistakable. <b>In sweet-dry terms, umakuchi</b> — neither sweet nor dry, but built around depth." },
     "四季桜": { n: "Shikizakura", d: "A local sake from Utsunomiya Shuzo in Tochigi, brewed with underground water from the Kinugawa river. A tokubetsu junmai with a good balance of acidity and umami. <b>Slightly dry.</b>" },
     "瑞鷹 くまもとカップ": { n: "Zuiyo Kumamoto Cup", d: "From Zuiyo in Kumamoto, with a charming Kumamon label. Soft on the palate with a quiet umami. <b>Slightly dry</b>, with a clean finish." },
@@ -1045,6 +1057,9 @@ var I18N = {
     "Delamotte": { d: "A Champagne house founded in 1760, known as the sister of Salon. Delicate and full of minerality." },
     "Laurent Perrier": { d: "A distinguished Champagne house founded in 1812. The Ultra Brut (brut nature) has no dosage, letting the pure Chardonnay character shine." },
     "Jameson": { d: "Founded in Dublin in 1780 and now the world's best-selling Irish whiskey. Triple distillation gives a smooth, clean palate with sweet vanilla and nutty aromas. Equally at home neat or in a highball." },
+    "トーキョーハチオウジン エルダーフラワー": { n: "Tokyo Hachioji Gin Elder Flower", d: "A London dry gin from a small distillery in Hachioji, Tokyo. Elderflower leads, with a sweet, muscat-like floral nose and a smooth palate. Soda opens the flowers right up. 40% ABV, 500ml." },
+    "養命酒製造 クラフトジン 香の森": { n: "Yomeishu Craft Gin Kanomori", d: "A craft gin distilled in Nagano by Yomeishu, the herbal-tonic maker. Built around kuromoji, a Japanese aromatic tree, it smells like a walk through the woods. Woody, fresh and clean on the finish. Lovely with soda or tea. 700ml." },
+    "SiCX 京都 スパイスマジックジン": { n: "SiCX Kyoto Spice Magic Gin", d: "A small-batch craft gin from Kyoto that puts spice front and centre. Behind the juniper, one spice after another shows up, just as the name promises. Soda lifts the aroma, and it is good with food. 45% ABV." },
     "Hendrick's Gin": { d: "A premium craft gin from the Girvan distillery in Scotland, with its unusual infusion of rose and cucumber. Floral and expressive on the nose, clean and refreshing on the palate. The black apothecary bottle is a design classic." },
     "BOMBAY SAPPHIRE": { d: "A London dry gin made in England from a recipe dating to 1761. Ten botanicals are vapour-infused for a clear, elegant character. 47% ABV." },
     "Belvedere Vodka": { d: "A top-tier premium vodka from Żyrardów, Poland. Made from 100% Dankowskie rye, quadruple distilled and non-chill filtered. Clean and rounded, with faint vanilla and almond." },
@@ -1070,7 +1085,7 @@ var I18N = {
     "Martell Cordon Bleu": { d: "An Extra Old cognac from Martell, one of the oldest houses in Cognac, founded in 1715. Matured in Tronçais oak, with plum, spice and floral notes over a deep finish. A benchmark among the world's great cognacs." },
     "Hennessy X.O × Zhang Enli Year of the Tiger": { d: "A Year of the Tiger limited edition XO created with the Chinese contemporary artist Zhang Enli. The crimson bottle is a striking object in its own right. Over a hundred intricately aged eaux-de-vie blended into the pinnacle of Hennessy X.O." },
   },
-  units: {"1杯": "1 glass", "1本": "1 bottle", "1袋": "1 pack", "1皿": "1 plate", "1缶": "1 can", "1人": "1 person", "2本": "2 pcs", "1膳": "1 bowl", "1玉": "1 portion", "1ピース": "1 piece", "2ピース": "2 pieces", "3ピース": "3 pieces", "2種": "2 kinds", "2枚": "2 slices", "1本（300ml）": "1 bottle (300ml)", "1合": "1 go (180ml)", "1カラフェ": "1 carafe"},
+  units: {"1杯": "1 glass", "1本（360ml）": "1 bottle (360ml)", "1本": "1 bottle", "1袋": "1 pack", "1皿": "1 plate", "1缶": "1 can", "1人": "1 person", "2本": "2 pcs", "1膳": "1 bowl", "1玉": "1 portion", "1ピース": "1 piece", "2ピース": "2 pieces", "3ピース": "3 pieces", "2種": "2 kinds", "2枚": "2 slices", "1本（300ml）": "1 bottle (300ml)", "1合": "1 go (180ml)", "1カラフェ": "1 carafe"},
   genreDesc: {"food": "Snacks and small plates", "ramen": "The owner's pick of instant noodles. Customize with toppings.", "beer": "Domestic and imported bottled beer", "wine": "A curated wine selection", "whisky": "A curated whisky collection", "spirits": "A curated spirits collection", "shochu": "A curated shochu collection", "nihonshu": "A curated sake collection", "liqueur": "A selection of fine liqueurs", "others": "Other drinks", "softdrink": "Non-alcoholic drinks", "sparkling": "Available by the glass or bottle"},
   ui: {
     tax: '(incl. tax)',
