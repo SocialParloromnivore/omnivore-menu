@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-05a -->
+<!-- omnivore-menu build 2026-10-08a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -323,7 +323,6 @@ const IMAGES = {
   "murao": "images/murao.jpg",
   "iyoshi_cola": "images/iyoshi_cola.jpg",
   "gaku_yuwaku": "images/gaku_yuwaku.jpg",
-  "matsuri_ka": "images/matsuri_ka.jpg",
   "beni_otome": "images/beni_otome.jpg",
   "kinmiya": "images/kinmiya.jpg",
   "iichiko": "images/iichiko.jpg",
@@ -408,6 +407,7 @@ const IMAGES = {
   "ramen_bokkun_carbo": "images/ramen_bokkun_carbo.jpg",
   "ramen_demae_chuka": "images/ramen_demae_chuka.jpg",
   "akashi_single": "images/akashi_single.jpg",
+  "yoichi_nv": "images/yoichi_nv.jpg",
   "yoichi_10": "images/yoichi_10.jpg",
   "beer_ichiban_mini": "images/beer_ichiban_mini.jpg",
   "beer_michelada": "images/beer_michelada.jpg",
@@ -478,7 +478,6 @@ const IMAGES = {
   "food_gyoza": "images/food_gyoza.jpg",
   "oyaji_gokuraku": "images/oyaji_gokuraku.jpg",
   "ariiso_akebono": "images/ariiso_akebono.jpg",
-  "asabiraki_dry": "images/asabiraki_dry.jpg",
   "food_edamame": "images/food_edamame.jpg",
   "ramen_peyoung_noodle": "images/ramen_peyoung_noodle.jpg",
   "javatea_white": "images/javatea_white.jpg",
@@ -648,6 +647,7 @@ const MENU = [
           { name: "響 ブレンダーズチョイス", addon: true, img: "hibiki_bc", unit: "1杯", price: 2000, desc: "サントリーが手がけるブレンデッドジャパニーズウイスキー。山崎・白州・知多の原酒に加え、ミズナラ樽熟成原酒を使用した特別なブレンド。甘い果実香とウッディな余韻が調和した、飲みやすく奥深い一本。" },
           { name: "山崎 18年", addon: true, img: "yamazaki_18", unit: "1杯", price: 7000, desc: "日本最古の蒸溜所・山崎で18年以上熟成されたシングルモルトの最高峰。ミズナラ樽由来のオリエンタルな香りと深みのある甘さ、長く続く余韻。世界的評価を誇る日本を代表する一本。" },
           { name: "響 17年", addon: true, img: "hibiki_17", unit: "1杯", price: 5000, desc: "サントリーが誇るブレンデッドジャパニーズウイスキーの最高峰のひとつ。山崎・白州・知多の原酒を高度な技術でブレンド。花や果実の香りに蜂蜜のような甘み、ミズナラ由来の深みある余韻。現在は製造終了した幻の一本。" },
+          { name: "余市 NV", addon: true, img: "yoichi_nv", unit: "1杯", price: 1000, desc: "ニッカウヰスキー創業の地・北海道余市蒸溜所のシングルモルト。伝統の石炭直火蒸溜が生む力強いモルトの香りと、穏やかなピートのスモーキーさ、ほのかな潮気が持ち味。年数表記のないノンヴィンテージで、余市らしさを気軽に味わえる一本。アルコール45%。" },
           { name: "余市 10年", addon: true, img: "yoichi_10", unit: "1杯", price: 3000, desc: "ニッカウヰスキー創業の地・北海道余市蒸溜所が手がけるシングルモルト。石炭直火蒸溜による力強くピートの効いた味わいと、10年熟成による深いコクが特徴。海のミネラル感と重厚なスモーキーさが調和した一本。アルコール45%。" },
           { name: "あかし シングルモルト", addon: true, img: "akashi_single", unit: "1杯", price: 1000, desc: "兵庫・江井ヶ嶋酒造（Eigashima Distillery）が手がけるシングルモルトジャパニーズウイスキー。複数の樽で熟成した原酒をヴァッティング。バランスの取れた果実香と、やわらかくスモーキーな余韻が特徴。" },
           { name: "BARヨー子 ハイボールレモン", addon: true, img: "bar_yoko_lemon", unit: "1杯", price: 1000, desc: "鳥海山麓のBAR「ヨー子」が生んだこだわりのハイボール。旨み・コク・香りが炭酸で引き立つモルト＆グレーンに、瀬戸内の皮ごと絞ったレモン果汁をたっぷりブレンド。アルコール度数40度。おすすめは1：3の炭酸割り。" },
@@ -774,7 +774,6 @@ const MENU = [
         id: "shochu-others", name: "その他", nameEn: "Others",
         items: [
           { name: "twilight Awamori", addon: true, img: "twilight_awamori", unit: "1杯", price: 1000, desc: "沖縄の泡盛をベースにした個性派スピリッツ。アルコール度数44%のカスクストレングス。黄昏時の沖縄の風景を映したラベルが美しく、泡盛の新たな可能性を感じさせる一本。" },
-          { name: "茉莉花", addon: true, img: "matsuri_ka", unit: "1杯", price: 500, desc: "サントリーが手がけるジャスミン焼酎。茉莉花（まつりか）はジャスミンの漢字表記。ジャスミンの華やかな香りとさわやかな甘みが特徴の、アルコール20%の飲みやすいリキュール系焼酎。" },
           { name: "胡麻祥酎 紅乙女", addon: true, img: "beni_otome", unit: "1杯", price: 500, desc: "福岡・紅乙女酒造が手がける日本唯一のごま焼酎。焙煎ごまを20%以上使用した長期貯蔵焼酎。ごまの芳ばしい香りとまろやかなコク、上品な甘みが特徴の個性派。" },
           { name: "キンミヤ焼酎", addon: true, img: "kinmiya", unit: "1杯", price: 500, desc: "三重・宮崎本店が手がける甲類焼酎の定番。純粋でクセのないクリアな味わいが特徴で、ホッピーや酎ハイのベースとして全国の居酒屋で愛される一本。" },
           { name: "1980 はとむぎ焼酎", addon: true, img: "hatomugi_1980", unit: "1杯", price: 1500, desc: "大分県産はとむぎを使用した1980年製造の長期貯蔵焼酎。やわらかな舌触りと深いコクのある上品な味わい。珍しいはとむぎ焼酎として希少性も高い一本。" },
@@ -817,7 +816,6 @@ const MENU = [
           { name: "下関名産 とらふぐ骨酒", img: "fugu_kossake", unit: "1本", price: 2000, desc: "下関名産のとらふぐの骨を炙り、旨みをたっぷりと溶け込ませた骨酒。とらふぐならではの上品な出汁と日本酒の風味が溶け合う、下関でしか味わえない贅沢な一杯。ベースのお酒は<b>辛口</b>。カップタイプで手軽に楽しめる。" },
           { name: "おやじ極楽 純吟カップ", img: "oyaji_gokuraku", unit: "1本", price: 2000, desc: "鳥取・境港の千代むすび酒造による純米吟醸カップ。水木しげる先生の故郷ならではの目玉おやじラベルが目印で、「おやじ極楽」の名のとおり湯船（茶碗）に浸かるおやじが描かれています。純米吟醸らしい上品な香りとやわらかな旨み。<b>やや辛口</b>ですっきりとした後口。" },
           { name: "有磯 曙 本醸造カップ", img: "ariiso_akebono", unit: "1本", price: 1800, desc: "富山・氷見の高澤酒造場が醸す本醸造。宴を楽しむ人々を描いたユーモラスなラベルが印象的です。富山湾の海の幸に寄り添う地酒らしく、キレのある<b>辛口</b>で燗にすると旨みがふくらみます。" },
-          { name: "あさ開 純米辛口 男のドライ", img: "asabiraki_dry", unit: "1本", price: 1500, desc: "岩手・盛岡のあさ開が醸す純米辛口。「男の毎日は、ドライだ。」というコピーと哀愁漂うサラリーマンのイラストが全てを物語る一本です。名前のとおりはっきりとした<b>辛口</b>で、後味はきれいに切れます。" }
         ]
       }
     ]
@@ -956,6 +954,7 @@ var I18N = {
     "響 ブレンダーズチョイス": { n: "Hibiki Blender's Choice", d: "A blended Japanese whisky from Suntory. Malts and grain from Yamazaki, Hakushu and Chita, plus mizunara-matured whisky, make a special blend. Sweet fruit aromas and a woody finish — approachable, but deep." },
     "山崎 18年": { n: "Yamazaki 18 Year", d: "The pinnacle of Yamazaki's single malts, aged at least 18 years at Japan's oldest distillery. Oriental mizunara aromatics, profound sweetness and a very long finish. One of the most acclaimed whiskies Japan has produced." },
     "響 17年": { n: "Hibiki 17 Year", d: "One of the high points of Suntory's blended Japanese whisky. Yamazaki, Hakushu and Chita whiskies blended with great skill: flowers and fruit, honeyed sweetness and the depth mizunara brings. Now discontinued, and increasingly hard to find." },
+    "余市 NV": { n: "Yoichi NV", d: "A single malt from the Yoichi distillery in Hokkaido, where Nikka began. Traditional direct coal-fired distillation gives a bold malt character, with gentle peat smoke and a faint briny note. A non-vintage bottling, and an easy way into the Yoichi style. 45% ABV." },
     "余市 10年": { n: "Yoichi 10 Year", d: "A single malt from the Yoichi distillery in Hokkaido, where Nikka began. Direct coal-fired distillation gives a powerful, peaty character, and ten years of maturation adds depth. Sea minerality and heavy smoke in harmony. 45% ABV." },
     "あかし シングルモルト": { n: "Akashi Single Malt", d: "A single malt Japanese whisky from Eigashima Distillery in Hyogo, vatted from whiskies matured in several cask types. Balanced fruit aromatics with a soft, smoky finish." },
     "BARヨー子 ハイボールレモン": { n: "BAR Yoko Highball Lemon", d: "A considered highball from BAR Yoko at the foot of Mt. Chokai. Malt and grain whisky whose depth and aroma open up with soda, blended generously with whole-pressed Setouchi lemon juice. 40% ABV. We suggest 1:3 with soda." },
@@ -1004,7 +1003,6 @@ var I18N = {
     "いいちこ": { n: "iichiko", d: "The definitive barley shochu, from Sanwa Shurui in Oita. \"Iichiko\" means \"good\" in the local dialect. Clean on the palate with a faint barley sweetness — a long-seller loved across Japan." },
     "青鹿毛（あおかげ）": { n: "Aokage", d: "A barley shochu with bold brushwork on a blue label. Generous barley character with a clean palate." },
     "CHILL GREEN（チルグリーン）": { n: "CHILL GREEN", d: "A new-generation flavoured shochu combining barley shochu with maki — a relative of sansho — for a spicy, citrus lift. Bright and quietly addictive. Best on the rocks or with soda." },
-    "茉莉花": { n: "Matsurika", d: "A jasmine shochu from Suntory — matsurika is the Japanese name for jasmine. Expressive floral aroma with a fresh sweetness, at an easy-going 20% ABV." },
     "胡麻祥酎 紅乙女": { n: "Beni Otome Sesame Shochu", d: "The only sesame shochu in Japan, from Beni Otome Shuzo in Fukuoka. Long-aged and made with over 20% roasted sesame. Toasty aroma, mellow depth and a refined sweetness." },
     "キンミヤ焼酎": { n: "Kinmiya Shochu", d: "The standard korui shochu from Miyazakihonten in Mie. Pure and free of any distracting character, which is exactly why izakayas across Japan use it as the base for Hoppy and chuhai." },
     "1980 はとむぎ焼酎": { n: "1980 Hatomugi Shochu", d: "A long-aged shochu distilled in 1980 from Job's tears (hatomugi) grown in Oita. Soft on the tongue with real depth and a refined character. A rarity in more ways than one." },
@@ -1023,7 +1021,6 @@ var I18N = {
     "下関名産 とらふぐ骨酒": { n: "Shimonoseki Torafugu Kotsuzake", d: "Bones of Shimonoseki's famous tiger pufferfish, grilled and steeped to release their flavour into the sake. The refined dashi of torafugu and the character of the sake meet in a way you can really only find in Shimonoseki. The base sake is <b>dry</b>. Served in a cup, so it is easy to enjoy." },
     "おやじ極楽 純吟カップ": { n: "Oyaji Gokuraku Junginjo Cup", d: "A junmai ginjo cup from Chiyomusubi Shuzo in Sakaiminato, Tottori. In the hometown of Shigeru Mizuki, the label naturally features Medama-oyaji — and true to the name \"Oyaji Gokuraku\" (father's paradise), he is soaking in his teacup bath. Refined junmai ginjo aromatics and a soft umami. <b>Slightly dry</b>, with a clean finish." },
     "有磯 曙 本醸造カップ": { n: "Ariiso Akebono Honjozo Cup", d: "A honjozo from Takazawa Brewery in Himi, Toyama, with a wonderfully humorous label of people enjoying a feast. A local sake built to sit alongside the seafood of Toyama Bay: crisp and <b>dry</b>, and it fills out beautifully when warmed." },
-    "あさ開 純米辛口 男のドライ": { n: "Asabiraki Junmai Karakuchi Otoko no Dry", d: "A dry junmai from Asabiraki in Morioka, Iwate. The copy reads \"A man's every day is dry\", and the wistful salaryman on the label says the rest. Decidedly <b>dry</b>, as promised, with a clean finish." },
     "中野BC 赤紫蘇の梅酒": { n: "Nakano BC Red Shiso Umeshu", d: "Red shiso paired with Nanko plums from Wakayama, giving this umeshu both its clean shiso character and its distinctive ruby colour. Refreshing, familiar and yet new — a good bottle for a day when you want a small change of pace. A red umeshu that has been a long-seller for over 30 years." },
     "菊正宗 ぽん酒": { n: "Kikumasamune Ponzake", d: "Sake meets ponzu, bright in both flavour and aroma. A distinctive liqueur from a collaboration between Kikumasamune and Mizkan ponzu. 900ml pack, 8% ABV." },
     "Bar ヨー子 りんご": { n: "Bar Yoko Apple", d: "From the \"Bar Yoko\" liqueur series by Tatenokawa Shuzo in Yamagata. Their junmai daiginjo Tatenokawa is blended with carefully selected apple juice, giving the juicy sweet-tartness of a honey-cored apple pressed whole, with a faintly bitter dryness on the finish. 8% ABV, 720ml." },
