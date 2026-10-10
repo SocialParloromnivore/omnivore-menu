@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-08a -->
+<!-- omnivore-menu build 2026-10-10c -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -315,7 +315,6 @@ const IMAGES = {
   "glow_ep09": "images/glow_ep09.jpg",
   "daiyame_40": "images/daiyame_40.jpg",
   "mugjiru": "images/mugjiru.jpg",
-  "ukaze": "images/ukaze.jpg",
   "twilight_awamori": "images/twilight_awamori.jpg",
   "daiyame": "images/daiyame.jpg",
   "maou": "images/maou.jpg",
@@ -351,6 +350,7 @@ const IMAGES = {
   "heartland": "images/heartland.jpg",
   "prucia": "images/prucia.jpg",
   "hoegaarden": "images/hoegaarden.jpg",
+  "sangria_white": "images/sangria_white.jpg",
   "chateau_jun_red": "images/chateau_jun_red.jpg",
   "chateau_jun_white": "images/chateau_jun_white.jpg",
   "chateau_jun_orange": "images/chateau_jun_orange.jpg",
@@ -383,7 +383,6 @@ const IMAGES = {
   "macallan_18": "images/macallan_18.jpg",
   "macallan_12_sherry": "images/macallan_12_sherry.jpg",
   "yamazaki_12": "images/yamazaki_12.jpg",
-  "iw_harper_12": "images/iw_harper_12.jpg",
   "hibiki_17": "images/hibiki_17.jpg",
   "glenfiddich_12": "images/glenfiddich_12.jpg",
   "four_roses": "images/four_roses.jpg",
@@ -464,7 +463,6 @@ const IMAGES = {
   "ramen_ichikara_soba": "images/ramen_ichikara_soba.jpg",
   "togouchi_peated": "images/togouchi_peated.jpg",
   "aokage": "images/aokage.jpg",
-  "ramen_karyon_tomyam": "images/ramen_karyon_tomyam.jpg",
   "masahiro_gin": "images/masahiro_gin.jpg",
   "teachers": "images/teachers.jpg",
   "mitake": "images/mitake.jpg",
@@ -543,7 +541,6 @@ const MENU = [
           { name: "韓国風旨辛ラーメン（辛ヨン）", img: "ramen_karyon", unit: "1袋", price: 500, desc: "国内製造の韓国風旨辛ラーメン。辛さレベル3のスパイシーなスープが特徴。ピンクのパッケージが目印のMade in Japan韓国テイスト麺。" },
           { name: "うまかっちゃん", img: "ramen_umakachan", unit: "1袋", price: 500, desc: "ハウス食品が手がける九州豚骨ラーメンの定番袋麺。調味オイル付きでコクのあるとんこつスープを再現。博多っ子に愛され続ける、九州の味がそのまま楽しめる一杯。" },
           { name: "イチカラそば", img: "ramen_ichikara_soba", unit: "1袋", price: 500, desc: "新潟県産有機そば全粒粉使用の本格インスタントそば。カップ不要のどんぶり麺スタイルで、厳選素材のスープ付き。種から丁寧に作られた、こだわりの一杯。" },
-          { name: "辛ヨン トムヤムクンラーメン", img: "ramen_karyon_tomyam", unit: "1袋", price: 500, desc: "辛ヨンシリーズのトムヤムクン風味。エビの旨みとレモングラス・ナンプラーなどタイ風スパイスの酸辣が融合した個性派麺。辛さレベル3。国内製造のMade in Japan。" },
           { name: "日清 ラ王 柚子しお", img: "ramen_raoh_yuzu", unit: "1袋", price: 500, desc: "まるで生めんのようなもっちもち食感のノンフライ麺。鶏の旨みをベースに、高知県産柚子皮と焼津産鰹節エキスを二段重ねで効かせた爽やかな塩スープ。王道・本格・上質を追い求めた一杯。" },
           { name: "天下一品 京都濃厚鶏白湯", img: "ramen_tenkaippin", unit: "1袋", price: 500, desc: "サンヨー食品「名店の味」シリーズ。京都発の人気チェーン・天下一品の看板「こってり」を袋麺で再現。鶏の旨みを凝縮したドロリと濃厚な鶏白湯スープに、ゆで時間3分のノンフライ麺が絡む。こってり一筋の一杯。" },
           { name: "元祖長浜屋 豚骨ラーメン", img: "ramen_nagahamaya", unit: "1袋", price: 500, desc: "マルタイと福岡・長浜の「元祖長浜屋」の共同開発。昭和二十七年創業、「替玉」発祥の店とも言われる名店の豚骨ラーメンを袋麺で再現。あっさりしながらコクのあるスープに極細ノンフライ麺が絡む、長浜そのものの一杯。" },
@@ -611,6 +608,7 @@ const MENU = [
       {
         id: "wine-glass", name: "グラス", nameEn: "Glass",
         items: [
+          { name: "白サングリア", addon: true, addonJa: "ソーダ割り +100（税込）", addonEn: "With soda +¥100 (incl. tax)", img: "sangria_white", unit: "1杯", price: 1000, desc: "白ワインにオレンジなどのフルーツを漬け込んだ自家製サングリア。果実の甘みと香りがワインに溶け込んで、すっきり飲みやすい仕上がり。よく冷やしてお出しします。仕込みの量に限りがあるので、なくなり次第終了です。" },
           { name: "がぶ飲みシャトージュン・赤", img: "chateau_jun_red", price: 1000, desc: "山梨県産ぶどう100%使用。スクリューキャップで開けやすく、低アルコールで飲み疲れないドライな辛口。まさにがぶ飲みできる赤ワイン。" },
           { name: "がぶ飲みシャトージュン・白", img: "chateau_jun_white", price: 1000, desc: "山梨県産ぶどう100%使用。スクリューキャップで開けやすく、低アルコールですっきり飲みやすい白ワイン。まさにがぶ飲みできる一本。" },
           { name: "がぶ飲みシャトージュン・オレンジ", img: "chateau_jun_orange", price: 1000, desc: "白ワイン用ぶどうを皮・種ごと仕込む赤ワイン製法で醸造。複雑味とタンニンが残り、香辛料の効いた料理と相性抜群。山梨県産ぶどう100%、アルコール11.5%。" }
@@ -681,7 +679,6 @@ const MENU = [
           { name: "ワイルドターキー 8年", addon: true, img: "wild_turkey_8", unit: "1杯", price: 500, desc: "ケンタッキー州・オースティン・ニコルズが誇るストレートバーボン。101プルーフの高めのアルコール度数と、バニラ・キャラメル・スパイスの力強い風味が特徴。骨太でクラシックなバーボンの王道。" },
           { name: "メーカーズマーク", addon: true, img: "makers_mark", unit: "1杯", price: 500, desc: "ケンタッキー州ロレット・スターヒルファームの手作りバーボン。小麦を使ったソフトな口当たりと、キャラメルの甘みが特徴。赤いワックスシールが目印の、世界中で愛される一本。" },
           { name: "ヘブンズドア アセンション", addon: true, img: "heavens_door", unit: "1杯", price: 1000, desc: "ボブ・ディランが手がけるプレミアムバーボン「Heaven's Door」のアセンション。ケンタッキーストレートバーボンで、キャラメルとオーク、スパイスが複雑に絡み合うアーティストらしい個性派。" },
-          { name: "I.W.ハーパー 12年", addon: true, img: "iw_harper_12", unit: "1杯", price: 1000, desc: "ケンタッキーストレートバーボンの逸品。12年熟成によるなめらかな口当たりと、バニラ・キャラメル・オークのバランスが絶妙。カットガラスを思わせる美しいボトルデザインも印象的な一本。" }
         ]
       },
       {
@@ -764,7 +761,6 @@ const MENU = [
         items: [
           { name: "日置蒸溜蔵 長期熟成 麦（8年）", addon: true, img: "hioki_mugi", unit: "1杯", price: 1000, desc: "国産ウイスキー「嘉之助」を手掛ける小正醸造が、鹿児島県日置市の日置蒸溜蔵（1883年創業）で仕込んだ超限定の長期熟成麦焼酎。大麦と麦麹（白麹菌）を権現様の井戸水と小正酵母で仕込み、アメリカンホワイトオーク樽で8年間熟成。まろやかな口当たりと、樽由来のバニラやナッツを思わせる甘く芳醇な香りが特徴です。製造本数わずか600本。" },
           { name: "豊永蔵 麦汁", addon: true, img: "mugjiru", unit: "1杯", price: 500, desc: "熊本・豊永蔵が手がける無濾過の麦焼酎。国産はだか麦100%使用・麦麹・常圧蒸留。あえて無濾過で仕上げることで麦の香ばしさと原料本来の香りをそのまま残した。まろやかな口当たりで水割りやソーダ割りにも最適。濃い味の料理ともよく合う。" },
-          { name: "うかぜ", addon: true, img: "ukaze", unit: "1杯", price: 500, desc: "本格麦焼酎。水彩画のような柔らかいラベルが印象的な一本。麦の素直な甘みと軽やかな口当たりで、焼酎入門にも最適な飲みやすい味わい。" },
           { name: "いいちこ", addon: true, img: "iichiko", unit: "1杯", price: 500, desc: "大分・三和酒類が手がける麦焼酎の定番中の定番。「いいちこ」は大分の方言で「いい子」の意。すっきりとした飲み口とほのかな麦の甘みで、日本全国で愛されるロングセラー。" },
           { name: "青鹿毛（あおかげ）", addon: true, img: "aokage", unit: "1杯", price: 800, desc: "大麦焼酎。青いラベルに力強い筆文字が印象的な一本。麦の豊かな風味とすっきりとした口当たりが特徴。" },
           { name: "CHILL GREEN（チルグリーン）", addon: true, img: "chill_green", unit: "1杯", price: 500, desc: "麦焼酎の旨みと、マキ（山椒の仲間）のスパイシー＆シトラスな風味を融合させた新感覚のフレーバー焼酎。爽やかでクセになる香りが特徴。ロックやソーダ割りがおすすめ。" }
@@ -916,7 +912,6 @@ var I18N = {
     "韓国風旨辛ラーメン（辛ヨン）": { n: "Shin-Yon Korean Spicy Ramen", d: "A Korean-style spicy ramen made in Japan. Spice level 3, with a distinctly punchy broth. Look for the pink packaging." },
     "うまかっちゃん": { n: "Umakacchan", d: "House Foods' classic Kyushu tonkotsu bagged noodle. A seasoning oil sachet brings the pork broth to life. The taste of Kyushu, still beloved in Hakata after all these years." },
     "イチカラそば": { n: "Ichikara Soba", d: "A proper instant soba made with organic wholegrain buckwheat from Niigata. Donburi-style with no cup needed, and a carefully sourced broth. Made from the seed up." },
-    "辛ヨン トムヤムクンラーメン": { n: "Shin-Yon Tom Yum Kung Ramen", d: "The Tom Yum Kung version of the Shin-Yon range. Shrimp umami meets the hot-and-sour lift of lemongrass and fish sauce. Spice level 3. Made in Japan." },
     "日清 ラ王 柚子しお": { n: "Nissin Raoh Yuzu Shio", d: "Non-fried noodles with a springy, almost fresh-noodle texture. A chicken base layered twice over with yuzu peel from Kochi and bonito extract from Yaizu, for a bright salt broth. A pursuit of the classic, done properly." },
     "天下一品 京都濃厚鶏白湯": { n: "Tenkaippin Kyoto Rich Chicken Paitan", d: "From Sanyo Foods' \"Famous Shop\" series. Tenkaippin's signature kotteri broth, born in Kyoto, recreated in bagged form. A thick, almost gravy-like chicken paitan with three-minute non-fried noodles. Rich, and unapologetic about it." },
     "元祖長浜屋 豚骨ラーメン": { n: "Ganso Nagahamaya Tonkotsu Ramen", d: "Co-developed by Marutai and Ganso Nagahamaya of Nagahama, Fukuoka. Founded in 1952 and often credited with inventing kaedama, the shop's tonkotsu is faithfully recreated here. A light yet deep broth with ultra-thin non-fried noodles." },
@@ -935,6 +930,7 @@ var I18N = {
     "Bottega グラス": { n: "Bottega (Glass)", d: "Prosecco from Veneto, Italy. Gold on black, and elegant with it. Fine bubbles and bright fruit." },
     "QUARTET ハーフボトル": { n: "QUARTET (Half Bottle)", d: "From Anderson Valley, California, made by Roederer Estate. Creamy bubbles and generous fruit." },
     "Bottega ハーフボトル": { n: "Bottega (Half Bottle)", d: "A half bottle of the Veneto prosecco. Just the right size for two on a special evening." },
+    "白サングリア": { n: "White Sangria", d: "House-made sangria: white wine steeped with orange and other fruit. The sweetness and aroma of the fruit melt into the wine, and it goes down very easily. Served well chilled. Made in small batches, so it is available only while it lasts." },
     "がぶ飲みシャトージュン・赤": { n: "Chateau Jun Red", d: "100% Yamanashi-grown grapes. Screw cap, low alcohol, dry and easy — a red you really can drink by the glassful." },
     "がぶ飲みシャトージュン・白": { n: "Chateau Jun White", d: "100% Yamanashi-grown grapes. Screw cap, low alcohol, clean and easy — a white you really can drink by the glassful." },
     "がぶ飲みシャトージュン・オレンジ": { n: "Chateau Jun Orange", d: "White grapes vinified like a red, with skins and seeds. Complexity and a little tannin remain, which makes it excellent with spiced dishes. 100% Yamanashi grapes, 11.5% ABV." },
@@ -977,7 +973,6 @@ var I18N = {
     "ワイルドターキー 8年": { n: "Wild Turkey 8 Year", d: "A straight bourbon from Austin Nichols in Kentucky. Bottled at 101 proof, with bold vanilla, caramel and spice. Big-boned, classic bourbon." },
     "メーカーズマーク": { n: "Maker's Mark", d: "Handmade bourbon from Star Hill Farm in Loretto, Kentucky. Wheat in the mash bill gives a soft palate and caramel sweetness. The red wax seal is known the world over." },
     "ヘブンズドア アセンション": { n: "Heaven's Door Ascension", d: "Ascension, from Heaven's Door — the premium bourbon range created by Bob Dylan. A Kentucky straight bourbon where caramel, oak and spice weave together, with the individuality you would hope for from an artist's label." },
-    "I.W.ハーパー 12年": { n: "I.W. Harper 12 Year", d: "A fine Kentucky straight bourbon. Twelve years bring a smooth palate and a neat balance of vanilla, caramel and oak. The cut-glass-style bottle is a piece of design in itself." },
     "ジャックダニエル": { n: "Jack Daniel's", d: "A sour mash whiskey from Lynchburg, Tennessee. The charcoal mellowing process gives its distinctive smoothness, with vanilla and caramel sweetness. The best-selling American whiskey in the world." },
     "オールドパリロード": { n: "Old Pali Road", d: "A rare, hand-crafted whiskey made in Hawaii by the Ko'olau Distillery. Fruity and smooth, born of Oahu's nature and its makers' craft. The label, evoking the Hawaiian landscape, is worth a look too." },
     "カバラン ソリスト ヴィーニョバリック": { n: "Kavalan Solist Vinho Barrique", d: "Cask strength maturation in vinho (wine) barriques at Taiwan's Kavalan distillery. At 57.8% it is powerful, yet dense fruit, wine sweetness and a spicy finish weave together into real complexity. Asia's flagship single malt." },
@@ -999,7 +994,6 @@ var I18N = {
     "山椒 AKAYANE CRAFT SPIRITS": { n: "Sansho AKAYANE Craft Spirits", d: "A craft spirit from AKAYANE, the red-roofed koji house founded in 1908. More than a century of shochu craft applied to a distinctive bottling made with Japanese sansho pepper. Bright, citrusy aroma and a tingling finish." },
     "日置蒸溜蔵 長期熟成 麦（8年）": { n: "Hioki Distillery Long-Aged Mugi, 8 Years", d: "A strictly limited long-aged mugi shochu from Komasa Jyozo — the makers of the Kanosuke Japanese whisky — distilled at their Hioki Distillery in Kagoshima, founded in 1883. Barley and barley koji (white koji) are fermented with Komasa yeast and well water from the Gongen shrine, then aged eight years in American white oak casks. Mellow on the palate, with sweet, generous aromas of vanilla and nuts from the wood. Only 600 bottles produced." },
     "豊永蔵 麦汁": { n: "Toyonagagura Mugijiru", d: "An unfiltered barley shochu from Toyonagagura in Kumamoto. 100% domestic naked barley, barley koji, atmospheric distillation. Leaving it unfiltered keeps the toasty character and the raw aroma of the grain intact. Mellow, and good with water or soda — and with strongly flavoured food." },
-    "うかぜ": { n: "Ukaze", d: "An honkaku barley shochu with a soft, watercolour-like label. Straightforward barley sweetness and a light palate make it a very easy place to start." },
     "いいちこ": { n: "iichiko", d: "The definitive barley shochu, from Sanwa Shurui in Oita. \"Iichiko\" means \"good\" in the local dialect. Clean on the palate with a faint barley sweetness — a long-seller loved across Japan." },
     "青鹿毛（あおかげ）": { n: "Aokage", d: "A barley shochu with bold brushwork on a blue label. Generous barley character with a clean palate." },
     "CHILL GREEN（チルグリーン）": { n: "CHILL GREEN", d: "A new-generation flavoured shochu combining barley shochu with maki — a relative of sansho — for a spicy, citrus lift. Bright and quietly addictive. Best on the rocks or with soda." },
