@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-10c -->
+<!-- omnivore-menu build 2026-10-11a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -421,7 +421,6 @@ const IMAGES = {
   "soy_latte": "images/soy_latte.jpg",
   "food_tacos_card": "images/food_tacos_card.jpg",
   "dongfang_jasmine": "images/dongfang_jasmine.jpg",
-  "sogaini": "images/sogaini.jpg",
   "food_guilty": "images/food_guilty.jpg",
   "fugu_kossake": "images/fugu_kossake.jpg",
   "ramen_topping_ex": "images/ramen_topping_ex.jpg",
@@ -442,6 +441,7 @@ const IMAGES = {
   "togouchi": "images/togouchi.jpg",
   "corona": "images/corona.jpg",
   "kirishima8": "images/kirishima8.jpg",
+  "food_zakuro": "images/food_zakuro.jpg",
   "food_snack": "images/food_snack.jpg",
   "food_carpas": "images/food_carpas.jpg",
   "food_popcorn": "images/food_popcorn.jpg",
@@ -500,7 +500,10 @@ const MENU = [
   },
   {
     id: "food", name: "フード", nameEn: "Food", icon: "🍽️", desc: "おつまみ・フードメニュー",
-    items: [
+    subs: [
+      {
+        id: "food-regular", name: "定番", nameEn: "Regular",
+        items: [
           { name: "スナック＆Mixナッツ（食べ放題）", img: "food_snack", unit: "1人", price: 500, desc: "お一人につき500円チャージさせて頂きますが、食べ放題となっておりますので、たくさん食べて、喉渇かせて、ドリンクをどんどんおかわりしてください。" },
           { name: "カルパス", img: "food_carpas", unit: "1皿", price: 500, desc: "サラミとカルパスの違いってご存知ですか？お好みでマスタードをおつけ致します。" },
           { name: "ポップコーン", img: "food_popcorn", unit: "1杯", price: 500, desc: "シアターサイズの出来立てポップコーンです。" },
@@ -523,6 +526,15 @@ const MENU = [
           { name: "ポーク・カルニタス タコス", img: "food_tacos_1pc", unit: "1ピース", price: 500, desc: "店主が仕込んだポークカルニタスを使用したタコスです。トルティーヤにはコーントルティーヤを使用しております。数量限定のため、売り切れ次第終了です。<br><b>4枚目以降は1枚につき +¥300</b>" },
           { name: "ポーク・カルニタス タコス", img: "food_tacos_2pc", unit: "2ピース", price: 900, desc: "店主が仕込んだポークカルニタスを使用したタコスです。トルティーヤにはコーントルティーヤを使用しております。数量限定のため、売り切れ次第終了です。<br><b>4枚目以降は1枚につき +¥300</b>" },
           { name: "ポーク・カルニタス タコス", img: "food_tacos_card", unit: "3ピース", price: 1000, desc: "店主が仕込んだポークカルニタスを使用したタコスです。トルティーヤにはコーントルティーヤを使用しております。数量限定のため、売り切れ次第終了です。<br><b>4枚目以降は1枚につき +¥300</b>" }
+        ]
+      },
+      {
+        id: "food-limited", name: "限定", nameEn: "Limited",
+        items: [
+          { name: "柘榴（半個）", img: "food_zakuro", unit: "1皿", price: 1000, desc: "旬のざくろを、食べやすくカットしてお出しします。ルビー色の粒をそのままつまんでどうぞ。プチッと弾ける甘酸っぱさは、ワインにもウイスキーにもよく合います。季節もの・数量限定につき、なくなり次第終了です。<b>半個分</b>。" },
+          { name: "柘榴（1個）", img: "food_zakuro", unit: "1皿", price: 1800, desc: "旬のざくろを、食べやすくカットしてお出しします。ルビー色の粒をそのままつまんでどうぞ。プチッと弾ける甘酸っぱさは、ワインにもウイスキーにもよく合います。季節もの・数量限定につき、なくなり次第終了です。<b>まるごと1個分</b>。シェアにもどうぞ。" }
+        ]
+      }
     ]
   },
   {
@@ -651,7 +663,6 @@ const MENU = [
           { name: "BARヨー子 ハイボールレモン", addon: true, img: "bar_yoko_lemon", unit: "1杯", price: 1000, desc: "鳥海山麓のBAR「ヨー子」が生んだこだわりのハイボール。旨み・コク・香りが炭酸で引き立つモルト＆グレーンに、瀬戸内の皮ごと絞ったレモン果汁をたっぷりブレンド。アルコール度数40度。おすすめは1：3の炭酸割り。" },
           { name: "あかし シェリーカスク", addon: true, img: "akashi_sherry", unit: "1杯", price: 500, desc: "兵庫・江井ヶ嶋酒造のWhite Oakシリーズ。オロロソシェリー樽で熟成したブレンデッドウイスキー。ドライフルーツやチョコレートのような濃厚な甘みと芳醇な香りが特徴。500円で楽しめるコスパ抜群の一本。" },
           { name: "イチローズモルト ホワイトラベル", addon: true, img: "ichiros_white", unit: "1杯", price: 800, desc: "秩父蒸溜所の創業者・肥土伊知郎氏がブレンドしたワールドブレンデッドウイスキー。秩父モルトを軸に世界各国の原酒をヴァッティング。ノンチルフィルタード・ノンカラーで、華やかでバランスの取れた味わい。アルコール46%。" },
-          { name: "SOGAINI（ソガイニ）", addon: true, img: "sogaini", unit: "1杯", price: 500, desc: "広島・桜尾蒸留所（SAKURAO DISTILLERY）が手がけるブレンデッドジャパニーズウイスキー。戸河内と同じ蒸留所から生まれながら、よりアクセスしやすい価格帯で展開。アルコール40%、700cl。" }
         ]
       },
       {
@@ -883,6 +894,8 @@ const MENU = [
 var LANG = 'ja';
 var I18N = {
   items: {
+    "柘榴（半個）": { n: "Pomegranate (Half)", d: "Pomegranate in season, cut so it is easy to eat. Pick the ruby-red seeds straight off the plate. The sweet-tart pop goes well with wine and whisky alike. Seasonal and limited, so it is available only while it lasts. <b>Half a fruit.</b>" },
+    "柘榴（1個）": { n: "Pomegranate (Whole)", d: "Pomegranate in season, cut so it is easy to eat. Pick the ruby-red seeds straight off the plate. The sweet-tart pop goes well with wine and whisky alike. Seasonal and limited, so it is available only while it lasts. <b>One whole fruit.</b> Good for sharing." },
     "スナック＆Mixナッツ（食べ放題）": { n: "Snacks & Mixed Nuts (All You Can Eat)", d: "A ¥500 charge per person, but it is all you can eat. So eat plenty, get thirsty, and keep the drinks coming." },
     "カルパス": { n: "Kalpas Dry Sausage", d: "Do you know the difference between salami and kalpas? Served with mustard on request." },
     "ポップコーン": { n: "Popcorn", d: "Freshly popped, theater-sized popcorn." },
@@ -956,7 +969,6 @@ var I18N = {
     "BARヨー子 ハイボールレモン": { n: "BAR Yoko Highball Lemon", d: "A considered highball from BAR Yoko at the foot of Mt. Chokai. Malt and grain whisky whose depth and aroma open up with soda, blended generously with whole-pressed Setouchi lemon juice. 40% ABV. We suggest 1:3 with soda." },
     "あかし シェリーカスク": { n: "Akashi Sherry Cask", d: "From Eigashima's White Oak series in Hyogo. A blended whisky matured in oloroso sherry casks, with the rich sweetness of dried fruit and chocolate and a generous aroma. Remarkable value at ¥500." },
     "イチローズモルト ホワイトラベル": { n: "Ichiro's Malt White Label", d: "A world blended whisky put together by Ichiro Akuto, founder of the Chichibu distillery. Built around Chichibu malt with whiskies vatted from around the world. Non-chill filtered and natural colour, bright and well balanced. 46% ABV." },
-    "SOGAINI（ソガイニ）": { n: "SOGAINI", d: "A blended Japanese whisky from the Sakurao Distillery in Hiroshima — the same distillery as Togouchi, offered at a more accessible price. 40% ABV, 700ml." },
     "グレンモーレンジィ オリジナル 10年": { n: "Glenmorangie Original 10 Year", d: "A Highland single malt matured ten years in bourbon casks, opening with vanilla and citrus sweetness. Elegant and easy — an ideal introduction to Scotch." },
     "タリスカー 10年": { n: "Talisker 10 Year", d: "A powerful, maritime single malt from the only distillery on the Isle of Skye. Sea air and peat smoke with a peppery finish. Rugged yet refined — a classic of the Islands." },
     "ブルックラディ ザ・クラシックラディ 10年": { n: "Bruichladdich The Classic Laddie 10 Year", d: "An unpeated single malt from Bruichladdich on Islay. 100% Scottish barley, non-chill filtered. Bright and fruity in a way you would not expect from Islay." },
