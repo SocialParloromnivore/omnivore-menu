@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-11a -->
+<!-- omnivore-menu build 2026-10-12b -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -407,6 +407,7 @@ const IMAGES = {
   "ramen_demae_chuka": "images/ramen_demae_chuka.jpg",
   "akashi_single": "images/akashi_single.jpg",
   "yoichi_nv": "images/yoichi_nv.jpg",
+  "hinokami_newborn3": "images/hinokami_newborn3.jpg",
   "yoichi_10": "images/yoichi_10.jpg",
   "beer_ichiban_mini": "images/beer_ichiban_mini.jpg",
   "beer_michelada": "images/beer_michelada.jpg",
@@ -646,7 +647,7 @@ const MENU = [
           { name: "サントリー角", addon: true, img: "kaku", unit: "1杯", price: 500, desc: "1937年誕生のロングセラー。山崎・白州蒸溜所のバーボン樽熟成原酒をバランス良く配合。甘やかな香りと厚みのあるコクが特徴で、ハイボールとの相性が抜群。" },
           { name: "知多", addon: true, img: "chita", unit: "1杯", price: 1000, desc: "愛知・知多蒸溜所が生み出すシングルグレーンウイスキー。コラムスチルで丁寧に蒸溜し、複数の樽でじっくり熟成。軽やかでなめらかな口当たりに、バニラやハニーの甘い余韻。" },
           { name: "竹鶴 Pure Malt", addon: true, img: "taketsuru", unit: "1杯", price: 1500, desc: "ニッカウヰスキーの創業者・竹鶴政孝の名を冠したピュアモルト。余市と宮城峡、ふたつの蒸溜所のモルト原酒をヴァッティング。重厚でスモーキーな余市と、華やかで軽やかな宮城峡の個性が見事に調和。" },
-          { name: "<span style='color:red'>【欠品中】</span> 白州 NV", addon: true, img: "hakushu_nv", unit: "1杯", price: 1500, desc: "南アルプスの深い森に囲まれた白州蒸溜所のシングルモルト。ノンヴィンテージながら瑞々しいグリーン感とスモーキーさが共存する、爽やかで軽快な味わい。ハイボールにも最適。" },
+          { name: "白州 NV", addon: true, img: "hakushu_nv", unit: "1杯", price: 1500, desc: "南アルプスの深い森に囲まれた白州蒸溜所のシングルモルト。ノンヴィンテージながら瑞々しいグリーン感とスモーキーさが共存する、爽やかで軽快な味わい。ハイボールにも最適。" },
           { name: "白州 12年", addon: true, img: "hakushu_12", unit: "1杯", price: 3000, desc: "白州蒸溜所で12年以上熟成されたシングルモルト。森林を思わせるさわやかなグリーンノートに、ほのかなスモーキーさとフルーティな甘みが重なる。白州らしさを堪能できる定番の一本。" },
           { name: "宮城峡 アロマティックイースト 2022", addon: true, img: "miyagikyo_ay", unit: "1杯", price: 2500, desc: "ニッカウヰスキーの宮城峡蒸溜所が手がけるNIKKA DISCOVERYシリーズ。特別な酵母を使用したシングルモルト。華やかでフルーティな香りと甘みが印象的な一本。" },
           { name: "新道 エクスペリメンタル .02", addon: true, img: "shindo", unit: "1杯", price: 2000, desc: "福岡・新道蒸溜所が追求する「王道と新道の掛け合わせ」。バーボン樽（ピート）67%、ミズナラ新樽、コニャック樽、オロロソシェリー樽を多層的にヴァッティング。スモーキーさとミルキーで甘い余韻が重なる実験的な一本。" },
@@ -658,6 +659,8 @@ const MENU = [
           { name: "山崎 18年", addon: true, img: "yamazaki_18", unit: "1杯", price: 7000, desc: "日本最古の蒸溜所・山崎で18年以上熟成されたシングルモルトの最高峰。ミズナラ樽由来のオリエンタルな香りと深みのある甘さ、長く続く余韻。世界的評価を誇る日本を代表する一本。" },
           { name: "響 17年", addon: true, img: "hibiki_17", unit: "1杯", price: 5000, desc: "サントリーが誇るブレンデッドジャパニーズウイスキーの最高峰のひとつ。山崎・白州・知多の原酒を高度な技術でブレンド。花や果実の香りに蜂蜜のような甘み、ミズナラ由来の深みある余韻。現在は製造終了した幻の一本。" },
           { name: "余市 NV", addon: true, img: "yoichi_nv", unit: "1杯", price: 1000, desc: "ニッカウヰスキー創業の地・北海道余市蒸溜所のシングルモルト。伝統の石炭直火蒸溜が生む力強いモルトの香りと、穏やかなピートのスモーキーさ、ほのかな潮気が持ち味。年数表記のないノンヴィンテージで、余市らしさを気軽に味わえる一本。アルコール45%。" },
+          { name: "火の神 NEW BORN 3", addon: true, img: "hinokami_newborn3", emoji: "🥃", unit: "1杯", price: 1800, desc: "鹿児島県枕崎市、薩摩酒造・火の神蒸溜所の「HINOKAMI NEW BORN」シリーズ第3弾にして最終章。全国数量限定3,000本。フェノール値（ピートの強さを表す数値）はシリーズ最高となる20PPM。枕崎の鰹節を燻す煙に着想を得た、「スモーキー」と「エレガント」の共存がテーマ。バーボン樽熟成。爽やかな煙に、焼いたマシュマロやチョコレートのような甘さ、南国フルーツの瑞々しさが重なり、夏祭りの残り火のように長い煙の余韻が続きます。半分の量のショット（¥1,000）もあります。アルコール50%、200ml。" },
+          { name: "火の神 NEW BORN 3（ショット）", addon: true, img: "hinokami_newborn3", emoji: "🥃", unit: "1ショット", price: 1000, desc: "鹿児島県枕崎市、薩摩酒造・火の神蒸溜所の「HINOKAMI NEW BORN」シリーズ第3弾にして最終章。全国数量限定3,000本。フェノール値（ピートの強さを表す数値）はシリーズ最高となる20PPM。枕崎の鰹節を燻す煙に着想を得た、「スモーキー」と「エレガント」の共存がテーマ。バーボン樽熟成。爽やかな煙に、焼いたマシュマロやチョコレートのような甘さ、南国フルーツの瑞々しさが重なり、夏祭りの残り火のように長い煙の余韻が続きます。<b>こちらは通常の半分の量のテイスティングサイズ</b>です。アルコール50%、200ml。" },
           { name: "余市 10年", addon: true, img: "yoichi_10", unit: "1杯", price: 3000, desc: "ニッカウヰスキー創業の地・北海道余市蒸溜所が手がけるシングルモルト。石炭直火蒸溜による力強くピートの効いた味わいと、10年熟成による深いコクが特徴。海のミネラル感と重厚なスモーキーさが調和した一本。アルコール45%。" },
           { name: "あかし シングルモルト", addon: true, img: "akashi_single", unit: "1杯", price: 1000, desc: "兵庫・江井ヶ嶋酒造（Eigashima Distillery）が手がけるシングルモルトジャパニーズウイスキー。複数の樽で熟成した原酒をヴァッティング。バランスの取れた果実香と、やわらかくスモーキーな余韻が特徴。" },
           { name: "BARヨー子 ハイボールレモン", addon: true, img: "bar_yoko_lemon", unit: "1杯", price: 1000, desc: "鳥海山麓のBAR「ヨー子」が生んだこだわりのハイボール。旨み・コク・香りが炭酸で引き立つモルト＆グレーンに、瀬戸内の皮ごと絞ったレモン果汁をたっぷりブレンド。アルコール度数40度。おすすめは1：3の炭酸割り。" },
@@ -740,7 +743,7 @@ const MENU = [
       {
         id: "spirits-tequila", name: "テキーラ", nameEn: "Tequila",
         items: [
-          { name: "Don Julio Añejo（ドン フリオ アネホ）", addon: true, img: "don_julio_anejo", unit: "1杯", price: 1500, desc: "1942年創業、テキーラの高級化を切り拓いた伝説の生産者ドン・フリオ・ゴンザレス。ハリスコ州ハイランズ産100%ブルーアガベを、アメリカンホワイトオーク樽で18ヶ月熟成。キャラメルとバニラの甘み、ほのかなスパイス、シルキーで長い余韻。ショットグラス（15ml）での提供も同価格。" }
+          { name: "Don Julio Añejo（ドン フリオ アネホ）", addon: true, img: "don_julio_anejo", unit: "1杯", price: 1500, desc: "1942年創業、テキーラの高級化を切り拓いた伝説の生産者ドン・フリオ・ゴンザレス。ハリスコ州ハイランズ産100%ブルーアガベを、アメリカンホワイトオーク樽で18ヶ月熟成。キャラメルとバニラの甘み、ほのかなスパイス、シルキーで長い余韻。ショットの場合は同価格で2杯からの提供になります。店主もいつでも乾杯お付き合い致します。" }
         ]
       }
     ]
@@ -964,6 +967,8 @@ var I18N = {
     "山崎 18年": { n: "Yamazaki 18 Year", d: "The pinnacle of Yamazaki's single malts, aged at least 18 years at Japan's oldest distillery. Oriental mizunara aromatics, profound sweetness and a very long finish. One of the most acclaimed whiskies Japan has produced." },
     "響 17年": { n: "Hibiki 17 Year", d: "One of the high points of Suntory's blended Japanese whisky. Yamazaki, Hakushu and Chita whiskies blended with great skill: flowers and fruit, honeyed sweetness and the depth mizunara brings. Now discontinued, and increasingly hard to find." },
     "余市 NV": { n: "Yoichi NV", d: "A single malt from the Yoichi distillery in Hokkaido, where Nikka began. Traditional direct coal-fired distillation gives a bold malt character, with gentle peat smoke and a faint briny note. A non-vintage bottling, and an easy way into the Yoichi style. 45% ABV." },
+    "火の神 NEW BORN 3": { n: "Hinokami NEW BORN 3", d: "The third and final chapter of the HINOKAMI NEW BORN series from Hinokami Distillery (Satsuma Shuzo) in Makurazaki, Kagoshima. Limited to 3,000 bottles nationwide. Its phenol level, the measure of peat intensity, is the highest in the series at 20 PPM. Inspired by the smoke used to cure bonito in Makurazaki, it aims for smoky and elegant at once. Bourbon cask. Fresh smoke, toasted marshmallow and chocolate sweetness, juicy tropical fruit, and a long smoky finish like the embers of a summer festival. A half-size shot (¥1,000) is also available. 50% ABV, 200ml." },
+    "火の神 NEW BORN 3（ショット）": { n: "Hinokami NEW BORN 3 (Shot)", d: "The third and final chapter of the HINOKAMI NEW BORN series from Hinokami Distillery (Satsuma Shuzo) in Makurazaki, Kagoshima. Limited to 3,000 bottles nationwide. Its phenol level, the measure of peat intensity, is the highest in the series at 20 PPM. Inspired by the smoke used to cure bonito in Makurazaki, it aims for smoky and elegant at once. Bourbon cask. Fresh smoke, toasted marshmallow and chocolate sweetness, juicy tropical fruit, and a long smoky finish like the embers of a summer festival. <b>This is a half-size tasting pour.</b> 50% ABV, 200ml." },
     "余市 10年": { n: "Yoichi 10 Year", d: "A single malt from the Yoichi distillery in Hokkaido, where Nikka began. Direct coal-fired distillation gives a powerful, peaty character, and ten years of maturation adds depth. Sea minerality and heavy smoke in harmony. 45% ABV." },
     "あかし シングルモルト": { n: "Akashi Single Malt", d: "A single malt Japanese whisky from Eigashima Distillery in Hyogo, vatted from whiskies matured in several cask types. Balanced fruit aromatics with a soft, smoky finish." },
     "BARヨー子 ハイボールレモン": { n: "BAR Yoko Highball Lemon", d: "A considered highball from BAR Yoko at the foot of Mt. Chokai. Malt and grain whisky whose depth and aroma open up with soda, blended generously with whole-pressed Setouchi lemon juice. 40% ABV. We suggest 1:3 with soda." },
@@ -994,7 +999,7 @@ var I18N = {
     "まさひろ オキナワジン Recipe 01": { n: "Masahiro Okinawa Gin Recipe 01", d: "A craft gin from Masahiro Shuzo in Okinawa. Built on an awamori base with shikuwasa, juniper berry, guava leaf, goya, roselle and hihatsumodoki pepper. 47% ABV, 700ml. A distinctive gin made from Okinawan ingredients." },
     "SAKURAO GIN ハマゴウ 2025": { n: "SAKURAO GIN Hamagou 2025", d: "A limited edition of the Japanese dry gin from the Sakurao Distillery in Hiroshima. A small-batch distillation using hamagou (beach vitex) hand-picked on the shore opposite Miyajima. The 2025 edition, in a beautiful blue bottle. 47% ABV, 700ml." },
     "まさひろ オキナワジン Recipe 02": { n: "Masahiro Okinawa Gin Recipe 02", d: "The second craft gin from Masahiro Shuzo in Okinawa. An awamori base led by tankan, the local citrus, with juniper berry, mint, aromaticus, getto (shell ginger), ginger and lemongrass. Bright citrus and cooling herbs that lift away cleanly. 47% ABV, 700ml. Worth tasting alongside Recipe 01." },
-    "Don Julio Añejo（ドン フリオ アネホ）": { n: "Don Julio Anejo", d: "Don Julio González, founder in 1942, is the man who took tequila upmarket. 100% blue agave from the Jalisco highlands, aged 18 months in American white oak. Caramel and vanilla sweetness, gentle spice and a silky, lingering finish. Also served in a 15ml shot glass at the same price." },
+    "Don Julio Añejo（ドン フリオ アネホ）": { n: "Don Julio Anejo", d: "Don Julio González, founder in 1942, is the man who took tequila upmarket. 100% blue agave from the Jalisco highlands, aged 18 months in American white oak. Caramel and vanilla sweetness, gentle spice and a silky, lingering finish. Shots are the same price and served from two glasses. The owner is always happy to join the toast." },
     "日置蒸溜蔵 甕壺貯蔵 芋（4年）": { n: "Hioki Distillery Kamétsubo Imo, 4 Years", d: "A strictly limited long-aged imo shochu from Komasa Jyozo — the makers of the Kanosuke Japanese whisky — distilled at their Hioki Distillery in Kagoshima, founded in 1883. Kogane Sengan sweet potatoes from Kagoshima and rice koji (black koji) are fermented with Komasa yeast and well water from the Gongen shrine, then aged four years in earthenware pots. Fragrant and gentle on the palate. Only 600 bottles produced." },
     "GAKUの誘惑": { n: "GAKU no Yuwaku", d: "A sherry-cask imo shochu aged ten years, from Nishi Shuzo in Kagoshima — the same house as Tenshi no Yuwaku. Brandy-like richness meets the sweetness of sweet potato. At 40% ABV, it goes well beyond what most people expect of shochu." },
     "@brew Ochawari!?": { n: "@brew Ochawari!?", d: "An imo shochu made by Wakashio Distillery in Shibushi, Kagoshima, for one purpose only: mixing with tea. The label says it all: \"Made to Fall in Love with Tea\". With tea, the sweet potato aroma and the tea leaf line up beautifully. Start with it ochawari-style. 25% ABV, 720ml." },
@@ -1088,7 +1093,7 @@ var I18N = {
     "Martell Cordon Bleu": { d: "An Extra Old cognac from Martell, one of the oldest houses in Cognac, founded in 1715. Matured in Tronçais oak, with plum, spice and floral notes over a deep finish. A benchmark among the world's great cognacs." },
     "Hennessy X.O × Zhang Enli Year of the Tiger": { d: "A Year of the Tiger limited edition XO created with the Chinese contemporary artist Zhang Enli. The crimson bottle is a striking object in its own right. Over a hundred intricately aged eaux-de-vie blended into the pinnacle of Hennessy X.O." },
   },
-  units: {"1杯": "1 glass", "1本（360ml）": "1 bottle (360ml)", "1本": "1 bottle", "1袋": "1 pack", "1皿": "1 plate", "1缶": "1 can", "1人": "1 person", "2本": "2 pcs", "1膳": "1 bowl", "1玉": "1 portion", "1ピース": "1 piece", "2ピース": "2 pieces", "3ピース": "3 pieces", "2種": "2 kinds", "2枚": "2 slices", "1本（300ml）": "1 bottle (300ml)", "1合": "1 go (180ml)", "1カラフェ": "1 carafe"},
+  units: {"1杯": "1 glass", "1ショット": "1 shot", "1本（360ml）": "1 bottle (360ml)", "1本": "1 bottle", "1袋": "1 pack", "1皿": "1 plate", "1缶": "1 can", "1人": "1 person", "2本": "2 pcs", "1膳": "1 bowl", "1玉": "1 portion", "1ピース": "1 piece", "2ピース": "2 pieces", "3ピース": "3 pieces", "2種": "2 kinds", "2枚": "2 slices", "1本（300ml）": "1 bottle (300ml)", "1合": "1 go (180ml)", "1カラフェ": "1 carafe"},
   genreDesc: {"food": "Snacks and small plates", "ramen": "The owner's pick of instant noodles. Customize with toppings.", "beer": "Domestic and imported bottled beer", "wine": "A curated wine selection", "whisky": "A curated whisky collection", "spirits": "A curated spirits collection", "shochu": "A curated shochu collection", "nihonshu": "A curated sake collection", "liqueur": "A selection of fine liqueurs", "others": "Other drinks", "softdrink": "Non-alcoholic drinks", "sparkling": "Available by the glass or bottle"},
   ui: {
     tax: '(incl. tax)',
