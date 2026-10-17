@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-16a -->
+<!-- omnivore-menu build 2026-10-18b -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -376,7 +376,6 @@ const IMAGES = {
   "jameson": "images/jameson.jpg",
   "jack_daniels": "images/jack_daniels.jpg",
   "makers_mark": "images/makers_mark.jpg",
-  "pauljohn_peated": "images/pauljohn_peated.jpg",
   "kavalan": "images/kavalan.jpg",
   "hautes_glaces_episteme": "images/hautes_glaces_episteme.jpg",
   "hautes_glaces_indigene": "images/hautes_glaces_indigene.jpg",
@@ -412,7 +411,6 @@ const IMAGES = {
   "hinokami_newborn3": "images/hinokami_newborn3.jpg",
   "yoichi_10": "images/yoichi_10.jpg",
   "beer_ichiban_mini": "images/beer_ichiban_mini.jpg",
-  "beer_michelada": "images/beer_michelada.jpg",
   "ramen_raoh_yuzu": "images/ramen_raoh_yuzu.jpg",
   "food_tortilla_chips": "images/food_tortilla_chips.jpg",
   "kenbishi_bottle": "images/kenbishi_bottle.jpg",
@@ -456,6 +454,10 @@ const IMAGES = {
   "food_harumaki": "images/food_harumaki.jpg",
   "food_curry": "images/food_curry.jpg",
   "food_charsiu": "images/food_charsiu.jpg",
+  "ramen_sb_kenchin_udon": "images/ramen_sb_kenchin_udon.jpg",
+  "ramen_sb_curry_udon": "images/ramen_sb_curry_udon.jpg",
+  "ramen_sb_chige_udon": "images/ramen_sb_chige_udon.jpg",
+  "ramen_chukabo_malatang": "images/ramen_chukabo_malatang.jpg",
   "ramen_sapporo_miso": "images/ramen_sapporo_miso.jpg",
   "ramen_natto_soba": "images/ramen_natto_soba.jpg",
   "ramen_zubaaan_hakata": "images/ramen_zubaaan_hakata.jpg",
@@ -480,7 +482,6 @@ const IMAGES = {
   "oyaji_gokuraku": "images/oyaji_gokuraku.jpg",
   "ariiso_akebono": "images/ariiso_akebono.jpg",
   "food_edamame": "images/food_edamame.jpg",
-  "ramen_peyoung_noodle": "images/ramen_peyoung_noodle.jpg",
   "javatea_white": "images/javatea_white.jpg",
   "hioki_mugi": "images/hioki_mugi.jpg",
   "miyagikyo_10": "images/miyagikyo_10.jpg",
@@ -534,8 +535,8 @@ const MENU = [
       {
         id: "food-limited", name: "限定", nameEn: "Limited",
         items: [
-          { name: "柘榴（半個）", img: "food_zakuro", unit: "1皿", price: 1000, desc: "旬のざくろを、食べやすくカットしてお出しします。ルビー色の粒をそのままつまんでどうぞ。プチッと弾ける甘酸っぱさは、ワインにもウイスキーにもよく合います。季節もの・数量限定につき、なくなり次第終了です。<b>半個分</b>。" },
-          { name: "柘榴（1個）", img: "food_zakuro", unit: "1皿", price: 1800, desc: "旬のざくろを、食べやすくカットしてお出しします。ルビー色の粒をそのままつまんでどうぞ。プチッと弾ける甘酸っぱさは、ワインにもウイスキーにもよく合います。季節もの・数量限定につき、なくなり次第終了です。<b>まるごと1個分</b>。シェアにもどうぞ。" }
+          { name: "<span style='color:red'>【欠品中】</span> 柘榴（半個）", img: "food_zakuro", unit: "1皿", price: 1000, desc: "旬のざくろを、食べやすくカットしてお出しします。ルビー色の粒をそのままつまんでどうぞ。プチッと弾ける甘酸っぱさは、ワインにもウイスキーにもよく合います。季節もの・数量限定につき、なくなり次第終了です。<b>半個分</b>。" },
+          { name: "<span style='color:red'>【欠品中】</span> 柘榴（1個）", img: "food_zakuro", unit: "1皿", price: 1800, desc: "旬のざくろを、食べやすくカットしてお出しします。ルビー色の粒をそのままつまんでどうぞ。プチッと弾ける甘酸っぱさは、ワインにもウイスキーにもよく合います。季節もの・数量限定につき、なくなり次第終了です。<b>まるごと1個分</b>。シェアにもどうぞ。" }
         ]
       }
     ]
@@ -546,8 +547,11 @@ const MENU = [
       {
         id: "ramen-noodles", name: "各袋麺", nameEn: "Noodles",
         items: [
+          { name: "S&B けんちんうどん", img: "ramen_sb_kenchin_udon", unit: "1袋", price: 500, desc: "S&Bの袋うどん。「ふるさとの味と香りが自慢です」のパッケージどおり、野菜の旨みが溶けた醤油味のけんちん汁に、もちっとしたうどん。別添スープ付き。ほっとする懐かしい味です。" },
+          { name: "S&B カレーうどん", img: "ramen_sb_curry_udon", unit: "1袋", price: 500, desc: "S&Bの袋うどん。「老舗の味と香りが自慢です」のとおり、和風だしの効いたカレースープがうどんにとろりと絡みます。別添スープ付き。飲んだあとの締めにもちょうどいい一杯。" },
+          { name: "S&B 韓国風旨辛チゲうどん", img: "ramen_sb_chige_udon", unit: "1袋", price: 500, desc: "S&Bの袋うどん。牛とあさりのダブルだしに唐辛子の旨辛さを効かせた、韓国風チゲ味のスープ。別添スープ付き。トッピングのたまごを落とすと写真どおりの一杯になります。" },
+          { name: "医食同源 中華房 麻辣湯", img: "ramen_chukabo_malatang", unit: "1袋", price: 500, desc: "中華房の袋麺タイプの麻辣湯（マーラータン）。麺はさつま芋でんぷんのノンフライ春雨で、グルテンフリー。もちもちの太い春雨に、花椒のしびれと唐辛子の辛さが効いたガツンと辛いスープ。お鍋で90秒、またはお湯をかけて5分。" },
           { name: "サッポロ一番 みそラーメン", img: "ramen_sapporo_miso", unit: "1袋", price: 500, desc: "1968年発売、日本のインスタントラーメン史に残るロングセラー。七味唐辛子スパイス付きの本格みそスープに、もちもちとした太麺が絡む定番の一杯。" },
-          { name: "ペヤングヌードル", img: "ramen_peyoung_noodle", unit: "1杯", price: 500, desc: "あの「ペヤング」のまるか食品がつくるカップラーメン。焼そばじゃないほうのペヤングです。東北・北関東が主戦場で、都内ではまず見かけない一杯。味はあっさりしょうゆ。ペヤング＝焼そばだと思っていた方、その認識をここで更新していってください。" },
           { name: "ひきわり納豆そば", img: "ramen_natto_soba", unit: "1袋", price: 500, desc: "新潟県産有機そば全粒粉使用の国産そば麺に、ひきわり納豆スープを合わせた個性派。カップ不要のどんぶり麺スタイルで熱湯3分。納豆好きにはたまらない一杯。" },
           { name: "ZUBAAAN! 博多豚骨ラーメン", img: "ramen_zubaaan_hakata", unit: "1袋", price: 500, desc: "マルちゃんZUBAAAN!シリーズ。博多スタイルの濃厚豚骨スープを袋麺で再現。クリーミーなとんこつ白湯に細麺が絡む、お店品質の一杯。" },
           { name: "ZUBAAAN! 横浜家系 醤油豚骨", img: "ramen_zubaaan_iekei", unit: "1袋", price: 500, desc: "マルちゃんZUBAAAN!シリーズ。横浜家系ラーメンの特徴である醤油豚骨スープを袋麺で再現。海苔・ほうれん草との相性抜群の濃厚スープが楽しめる。" },
@@ -578,7 +582,6 @@ const MENU = [
     id: "beer", name: "ビール", nameEn: "Beer", icon: "🍺", desc: "国産・輸入の瓶ビール",
     items: [
       { name: "キリン一番搾り ミニ缶", unit: "1缶", img: "beer_ichiban_mini", price: 300, desc: "チンカーチンカーに冷やした、ドロヘドロのHungry Bugグラスちょうど一杯分の飲み切りサイズです。" },
-      { name: "ミチェラーダ / Michelada", unit: "1杯", img: "beer_michelada", price: 600, desc: "ミチェラーダ（Michelada）は、メキシコ発祥のビールベースのカクテルです。暑い日にぴったりの酸味と刺激的な味わいが特徴の飲み物です。お好みでクラマトバージョン+1000円も提供可能！" },
       { name: "Budweiser", unit: "1本", img: "budweiser", price: 500, desc: "アメリカ生まれの王道ラガー。スッキリとした飲み口と軽やかな苦み。世界中で愛されるビールの定番。" },
       { name: "アサヒ スーパードライ", unit: "1本", img: "superdry", price: 500, desc: "日本が誇るドライビールの代名詞。キレのある辛口と後味のすっきり感が特徴。どんな料理とも相性抜群。" },
       { name: "サッポロ 黒ラベル", unit: "1本", img: "kurolabel", price: 500, desc: "北海道・サッポロビールの看板銘柄。麦の旨みとホップの香りが調和した、飲み飽きない旨さ。" },
@@ -705,7 +708,6 @@ const MENU = [
           { name: "ジャックダニエル", addon: true, img: "jack_daniels", unit: "1杯", price: 500, desc: "テネシー州リンチバーグ生まれのサワーマッシュウイスキー。チャコールメローイング製法による独特の滑らかさと、バニラとカラメルの甘み。世界で最も売れているアメリカンウイスキーの定番。" },
           { name: "オールドパリロード", addon: true, img: "old_pali_road", unit: "1杯", price: 1000, desc: "ハワイ・コオラウ蒸溜所がハワイで手工芸する希少なウイスキー。オアフ島の自然と職人技が生む、フルーティでなめらかな味わい。ハワイの風景を思わせるラベルも印象的な個性派。" },
           { name: "カバラン ソリスト ヴィーニョバリック", addon: true, img: "kavalan", unit: "1杯", price: 2500, desc: "台湾・カバラン蒸溜所がヴィーニョ（ワイン）樽でカスクストレングス熟成。57.8%の高アルコールながら、濃厚なフルーツとワインの甘み、スパイシーな余韻が絡み合う複雑な味わい。アジアを代表するシングルモルト。" },
-          { name: "ポールジョン ピーテッド セレクトカスク", addon: true, img: "pauljohn_peated", unit: "1杯", price: 1500, desc: "インド・ゴア州のポールジョン蒸溜所が手がけるピーテッドシングルモルト。55.5%のカスクストレングス、ノンチルフィルタード。スコッチに引けを取らないスモーキーさに、インド亜大陸の温暖な気候が育む南国的な甘みが共存する個性派。" },
           { name: "ドメーヌ・デ・オート・グラス エピステーメ R16P24", addon: true, img: "hautes_glaces_episteme", unit: "1杯", price: 2000, desc: "フランス・アルプス山麓トリエーヴ地方のドメーヌ・デ・オート・グラスが手がける農場型蒸溜所のシングルモルト。自家栽培ライ麦100%使用、テロワールを体現するクラフトウイスキー。清涼感あるハーブと穀物の風味が特徴。" },
           { name: "ドメーヌ・デ・オート・グラス アンディジェン", addon: true, img: "hautes_glaces_indigene", unit: "1杯", price: 2000, desc: "同じくドメーヌ・デ・オート・グラスのシングルモルト。アンディジェン（在来種）の名が示す通り、地元在来種の大麦を使用。フランス・アルプスの冷涼な気候と清らかな水が生む、繊細でフローラルな味わい。" }
         ]
@@ -922,8 +924,11 @@ var I18N = {
     "本日のカレー": { n: "Curry of the Day", d: "The owner's homestyle European-style curry. The meat changes each time, so please ask if you would like to know what is in today's pot." },
     "チャーシューエッグ丼": { n: "Chashu & Egg Rice Bowl", d: "A rice bowl with the owner's homemade chashu — originally made as a ramen topping — and a fried egg." },
     "ポーク・カルニタス タコス": { n: "Pork Carnitas Tacos", d: "Tacos filled with pork carnitas prepared in-house, on corn tortillas. Limited quantity, available until sold out.<br><b>From the 4th piece on, +¥300 each</b>" },
+    "S&B けんちんうどん": { n: "S&B Kenchin Udon", d: "Bagged udon from S&B. A soy-based kenchin broth full of vegetable umami, with chewy udon. Soup sachet included. Comforting, old-fashioned flavour." },
+    "S&B カレーうどん": { n: "S&B Curry Udon", d: "Bagged udon from S&B. A dashi-forward Japanese curry soup that clings to the noodles. Soup sachet included. Just right as the last bowl of the night." },
+    "S&B 韓国風旨辛チゲうどん": { n: "S&B Korean-style Spicy Jjigae Udon", d: "Bagged udon from S&B. A double stock of beef and clam with a savoury chili kick, Korean jjigae style. Soup sachet included. Drop in an egg topping and it looks just like the picture." },
+    "医食同源 中華房 麻辣湯": { n: "Chukabo Malatang", d: "Bagged malatang from Chukabo. The noodles are non-fried sweet-potato starch glass noodles, so it is gluten-free. Thick, chewy noodles in a seriously spicy broth with numbing Sichuan pepper and chili. 90 seconds in a pot, or 5 minutes with hot water." },
     "サッポロ一番 みそラーメン": { n: "Sapporo Ichiban Miso Ramen", d: "Released in 1968 and a landmark in Japan's instant noodle history. A proper miso broth with a sachet of shichimi spice, clinging to thick, chewy noodles." },
-    "ペヤングヌードル": { n: "Peyoung Noodle", d: "A cup ramen from Maruka Foods, the makers of the famous Peyoung. This is the one that is not yakisoba. Mostly sold in Tohoku and the northern Kanto region, and almost never seen in Tokyo. Light soy sauce flavour. If you thought Peyoung meant yakisoba, here is your chance to update that." },
     "ひきわり納豆そば": { n: "Hikiwari Natto Soba", d: "Domestic soba noodles made with organic wholegrain buckwheat from Niigata, served with a minced natto broth. A donburi-style noodle that needs no cup — just three minutes of boiling water. A dream for natto lovers." },
     "ZUBAAAN! 博多豚骨ラーメン": { n: "ZUBAAAN! Hakata Tonkotsu Ramen", d: "From Maruchan's ZUBAAAN! series. Hakata-style rich tonkotsu recreated in a bagged noodle. Creamy pork bone broth clinging to thin noodles — shop-quality at home." },
     "ZUBAAAN! 横浜家系 醤油豚骨": { n: "ZUBAAAN! Yokohama Iekei Shoyu Tonkotsu", d: "From Maruchan's ZUBAAAN! series. The shoyu-tonkotsu broth that defines Yokohama Iekei ramen, in bagged form. A rich broth that loves nori and spinach." },
@@ -943,7 +948,6 @@ var I18N = {
     "替玉（細麺）": { n: "Extra Noodles (Thin)", d: "A second helping of noodles only. The thin cut holds the broth differently, so one bowl gives you two experiences. Best while there is still broth left." },
     "自家製焼豚": { n: "Homemade Chashu", d: "Chashu prepared by the owner. One slice each of pork shoulder and pork belly." },
     "キリン一番搾り ミニ缶": { n: "Kirin Ichiban Shibori (Mini Can)", d: "Chilled to the bone. Exactly one Hungry Bug glass from Dorohedoro's worth — a size you can finish." },
-    "ミチェラーダ / Michelada": { n: "Michelada", d: "The Michelada is a Mexican beer-based cocktail: tart, bracing and made for hot days. A Clamato version is available for +¥1,000 if you like." },
     "アサヒ スーパードライ": { n: "Asahi Super Dry", d: "Japan's definitive dry beer. Sharp and crisp with a clean finish. Goes with anything on the menu." },
     "サッポロ 黒ラベル": { n: "Sapporo Black Label", d: "The flagship of Hokkaido's Sapporo Brewery. Malt richness and hop aroma in balance — a beer you never tire of." },
     "キリン ハートランド": { n: "Kirin Heartland", d: "Kirin's premium beer, born in 1986. 100% malt, aroma hops, and the same decoction method ever since. The emerald-green returnable bottle is unmistakable." },
@@ -998,7 +1002,6 @@ var I18N = {
     "ジャックダニエル": { n: "Jack Daniel's", d: "A sour mash whiskey from Lynchburg, Tennessee. The charcoal mellowing process gives its distinctive smoothness, with vanilla and caramel sweetness. The best-selling American whiskey in the world." },
     "オールドパリロード": { n: "Old Pali Road", d: "A rare, hand-crafted whiskey made in Hawaii by the Ko'olau Distillery. Fruity and smooth, born of Oahu's nature and its makers' craft. The label, evoking the Hawaiian landscape, is worth a look too." },
     "カバラン ソリスト ヴィーニョバリック": { n: "Kavalan Solist Vinho Barrique", d: "Cask strength maturation in vinho (wine) barriques at Taiwan's Kavalan distillery. At 57.8% it is powerful, yet dense fruit, wine sweetness and a spicy finish weave together into real complexity. Asia's flagship single malt." },
-    "ポールジョン ピーテッド セレクトカスク": { n: "Paul John Peated Select Cask", d: "A peated single malt from the Paul John distillery in Goa, India. Cask strength at 55.5%, non-chill filtered. Smoke that stands up to any Scotch, alongside the tropical sweetness that India's warm climate brings." },
     "ドメーヌ・デ・オート・グラス エピステーメ R16P24": { n: "Domaine des Hautes Glaces Episteme R16P24", d: "A single malt from Domaine des Hautes Glaces, a farm distillery in the Trièves region at the foot of the French Alps. Made from 100% estate-grown rye — craft whisky that truly expresses its terroir. Fresh herbal and grain notes throughout." },
     "ドメーヌ・デ・オート・グラス アンディジェン": { n: "Domaine des Hautes Glaces Indigene", d: "Another single malt from Domaine des Hautes Glaces. As the name Indigène suggests, it is made from local heritage barley. The cool climate and clear water of the French Alps give it a delicate, floral character." },
     "まさひろ オキナワジン Recipe 01": { n: "Masahiro Okinawa Gin Recipe 01", d: "A craft gin from Masahiro Shuzo in Okinawa. Built on an awamori base with shikuwasa, juniper berry, guava leaf, goya, roselle and hihatsumodoki pepper. 47% ABV, 700ml. A distinctive gin made from Okinawan ingredients." },
