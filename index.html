@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-22b -->
+<!-- omnivore-menu build 2026-10-23b -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -457,6 +457,11 @@ const IMAGES = {
   "ramen_sb_curry_udon": "images/ramen_sb_curry_udon.jpg",
   "ramen_sb_chige_udon": "images/ramen_sb_chige_udon.jpg",
   "ramen_sapporo_miso": "images/ramen_sapporo_miso.jpg",
+  "ramen_sapporo_shio": "images/ramen_sapporo_shio.jpg",
+  "ramen_marutai_bo": "images/ramen_marutai_bo.jpg",
+  "ramen_nissin_yakisoba": "images/ramen_nissin_yakisoba.jpg",
+  "ramen_shin": "images/ramen_shin.jpg",
+  "ramen_zubaaan_seabura": "images/ramen_zubaaan_seabura.jpg",
   "ramen_zubaaan_iekei": "images/ramen_zubaaan_iekei.jpg",
   "ramen_karyon": "images/ramen_karyon.jpg",
   "ramen_umakachan": "images/ramen_umakachan.jpg",
@@ -464,6 +469,7 @@ const IMAGES = {
   "aokage": "images/aokage.jpg",
   "masahiro_gin": "images/masahiro_gin.jpg",
   "teachers": "images/teachers.jpg",
+  "satsuma_shiranami": "images/satsuma_shiranami.jpg",
   "mitake": "images/mitake.jpg",
   "don_julio_anejo": "images/don_julio_anejo.jpg",
   "food_ika_ring": "images/food_ika_ring.jpg",
@@ -479,6 +485,7 @@ const IMAGES = {
   "javatea_white": "images/javatea_white.jpg",
   "hioki_mugi": "images/hioki_mugi.jpg",
   "miyagikyo_10": "images/miyagikyo_10.jpg",
+  "singleton_12": "images/singleton_12.jpg",
   "caol_ila_12": "images/caol_ila_12.jpg",
   "food_tacos_1pc": "images/food_tacos_1pc.jpg",
   "food_tacos_2pc": "images/food_tacos_2pc.jpg",
@@ -545,6 +552,11 @@ const MENU = [
           { name: "S&B カレーうどん", img: "ramen_sb_curry_udon", unit: "1袋", price: 500, desc: "S&Bの袋うどん。「老舗の味と香りが自慢です」のとおり、和風だしの効いたカレースープがうどんにとろりと絡みます。別添スープ付き。飲んだあとの締めにもちょうどいい一杯。" },
           { name: "S&B 韓国風旨辛チゲうどん", img: "ramen_sb_chige_udon", unit: "1袋", price: 500, desc: "S&Bの袋うどん。牛とあさりのダブルだしに唐辛子の旨辛さを効かせた、韓国風チゲ味のスープ。別添スープ付き。トッピングのたまごを落とすと写真どおりの一杯になります。" },
           { name: "サッポロ一番 みそラーメン", img: "ramen_sapporo_miso", unit: "1袋", price: 500, desc: "1968年発売、日本のインスタントラーメン史に残るロングセラー。七味唐辛子スパイス付きの本格みそスープに、もちもちとした太麺が絡む定番の一杯。" },
+          { name: "サッポロ一番 塩らーめん", img: "ramen_sapporo_shio", unit: "1袋", price: 500, desc: "サンヨー食品のロングセラー、みそと並ぶ看板の塩。チキンとポークのだしに野菜の旨みを合わせた澄んだスープで、添付の「切り胡麻」を振るのが正解。ゆで時間3分。野菜やバターのトッピングとの相性が抜群です。" },
+          { name: "マルタイ 棒ラーメン", img: "ramen_marutai_bo", unit: "1袋", price: 500, desc: "福岡・マルタイの元祖「棒ラーメン」。袋には2人前の細いストレート麺が入っていますが、1人前ずつお出しします。ノンフライのストレート麺を煮込み3分、生麺のような歯ごたえに、あっさりしょうゆ味のスープ。九州のソウルフード。" },
+          { name: "日清焼そば（袋）", img: "ramen_nissin_yakisoba", unit: "1袋", price: 500, desc: "1963年発売、日本初の即席焼そば。通称「神の粉末」と呼ばれる粉末ソースで仕上げる、あの香ばしさ。フライパンで作る袋タイプなので、カップ版とは別物の、もっちり太めの麺が楽しめます。目玉焼きを乗せたい人はトッピングのたまごをどうぞ。" },
+          { name: "農心 辛ラーメン", img: "ramen_shin", unit: "1袋", price: 500, desc: "韓国No.1インスタントラーメン。牛骨と唐辛子ベースの「うまから」スープが世界中でファンを獲得。適度な辛さとコクある旨みのバランスが絶妙な国民的一杯。" },
+          { name: "ZUBAAAN! 背脂濃厚醤油", img: "ramen_zubaaan_seabura", unit: "1袋", price: 500, desc: "マルちゃんZUBAAAN!シリーズ。「ラーメン好きのど真ん中」を謳う、背脂たっぷりの濃厚醤油スープ。生麺のようなもちもちの太麺に、甘みのある背脂とキレのある醤油がガツンと絡む、お店品質の一杯。" },
           { name: "ZUBAAAN! 横浜家系 醤油豚骨", img: "ramen_zubaaan_iekei", unit: "1袋", price: 500, desc: "マルちゃんZUBAAAN!シリーズ。横浜家系ラーメンの特徴である醤油豚骨スープを袋麺で再現。海苔・ほうれん草との相性抜群の濃厚スープが楽しめる。" },
           { name: "ポックンミョン 韓国風甘辛カルボ", img: "ramen_bokkun_carbo", unit: "1袋", price: 500, desc: "日清が手がける韓国風まぜそば。もっちり麺に甘辛カルボソースが絡む、クリーミーで濃厚な味わい。マイルドな辛さの中に旨みが広がる、やみつきになる一杯。" },
           { name: "韓国風旨辛ラーメン（辛ヨン）", img: "ramen_karyon", unit: "1袋", price: 500, desc: "国内製造の韓国風旨辛ラーメン。辛さレベル3のスパイシーなスープが特徴。ピンクのパッケージが目印のMade in Japan韓国テイスト麺。" },
@@ -674,6 +686,7 @@ const MENU = [
           { name: "マッカラン 12年 シェリーオークカスク", addon: true, img: "macallan_12_sherry", unit: "1杯", price: 2500, desc: "スペイサイドの名門マッカランが誇る、シェリー樽のみで熟成したシングルモルト。スペイン・ヘレスのオロロソシェリー樽が生む、豊かなドライフルーツとスパイスの香り。マッカランの真髄を味わえる一本。" },
           { name: "<span style='color:red'>【欠品中】</span> マッカラン 18年 シェリーオークカスク", addon: true, img: "macallan_18", unit: "1杯", price: 5000, desc: "スペイサイドの名門マッカランが誇る18年熟成の最高峰。スペイン産オロロソシェリー樽でじっくり熟成され、複雑でリッチなドライフルーツ、スパイス、チョコレートの香り。世界的に高い評価を受ける圧倒的な一本。" },
           { name: "ボウモア 12年", addon: true, img: "bowmore_12", unit: "1杯", price: 1000, desc: "アイラ島最古の蒸溜所・ボウモアが手がけるシングルモルト。1779年創業の老舗が誇る、ピートのスモーキーさと潮のミネラル感に、チョコレートやシトラスの甘みが絶妙に調和した入門に最適な一本。" },
+          { name: "シングルトン 12年 グレンオード", addon: true, img: "singleton_12", unit: "1杯", price: 1000, desc: "スコットランド・ハイランド、グレンオード蒸溜所のシングルモルト12年。じっくり時間をかける「スローバッチ蒸溜」で生まれる、バランスの取れたなめらかさが身上。カシスのようなジューシーな果実味と、クリーミーなバニラの甘み。飲みやすいので、シングルモルト入門にも。アルコール40%。" },
           { name: "ティーチャーズ ハイランドクリーム", addon: true, img: "teachers", unit: "1杯", price: 500, desc: "1830年グラスゴー創業、ウィリアム・ティーチャー＆サンズのブレンデッドスコッチ。キーモルトはハイランドのアードモア。ブレンデッドとしては異例の高いピーテッドモルト比率で、スモーキーで力強い風味が特徴。「HIGH IN PEATED MALT」の表記どおり、価格を裏切る本格派。" },
           { name: "ハイランドクイーン シェリーカスクフィニッシュ", addon: true, img: "highland_queen_sherry", unit: "1杯", price: 500, desc: "1561年、フランスから帰国したスコットランド女王メアリー・スチュアートに捧げられた「ハイランドの女王」の名を冠するブレンデッドスコッチ。熟成後にシェリー樽で追加熟成させることで、ドライフルーツやナッツを思わせるまろやかな甘みとコクをまとった一本。" },
           { name: "グレンフィディック 12年", addon: true, img: "glenfiddich_12", unit: "1杯", price: 1000, desc: "スペイサイドの名門グレンフィディックが誇るスタンダードシングルモルト。フレッシュな洋梨とクリーミーなバニラの香り、なめらかで軽やかな口当たり。世界で最も売れるシングルモルトの入門編。" }
@@ -756,6 +769,7 @@ const MENU = [
           { name: "GAKUの誘惑", addon: true, img: "gaku_yuwaku", unit: "1杯", price: 500, desc: "鹿児島・西酒造が手がける「天使の誘惑」のシェリー樽10年熟成芋焼酎。ブランデーのような芳醇な香りと芋の甘みが絶妙に融合。アルコール度数40%の、芋焼酎の概念を超えた最高峰の一本。" },
           { name: "@brew Ochawari!?", addon: true, img: "shochu_atbrew_ochawari", unit: "1杯", price: 700, desc: "鹿児島・志布志の若潮酒造が「お茶割りのためだけ」に造った芋焼酎。ラベルの合言葉は “Made to Fall in Love with Tea”。お茶と合わせると芋の甘い香りと茶葉の香りがきれいに重なります。まずはお茶割りでどうぞ。アルコール25%、720ml。" },
           { name: "若潮 new pot 2026", addon: true, img: "shochu_wakashio_newpot", unit: "1杯", price: 700, desc: "鹿児島・志布志の若潮酒造から、2026年の新酒。「new pot（ニューポット）」は蒸溜したての原酒のことで、熟成前ならではのフレッシュで華やかな芋の香りと、軽やかな飲み口が楽しめます。今年の出来をそのまま味わう一本。ラベルの合言葉は “Live, Laugh, Love.”。720ml。" },
+          { name: "さつま白波", addon: true, img: "satsuma_shiranami", emoji: "🍶", unit: "1杯", price: 500, desc: "鹿児島・薩摩酒造の看板芋焼酎。「ロクヨンのお湯割り」のCMで知られる、芋焼酎の代名詞的な一本。黄金千貫と米麹で造る、芋の香りをまっすぐに感じる昔ながらの味わい。アルコール25%、900ml。お湯割り、ソーダ割り、ロックでどうぞ。" },
           { name: "三岳（みたけ）", addon: true, img: "mitake", unit: "1杯", price: 500, desc: "世界自然遺産・屋久島の三岳酒造が造る本格芋焼酎。屋久島の名水（軟水）と鹿児島県産のさつま芋を使用し、雑味のないすっきりとした口当たりに、ほのかな芋の甘み。生産量が限られ、島内でも入手困難とされる人気銘柄。" },
           { name: "イヨシコーラ酎", addon: true, img: "iyoshi_cola", unit: "1杯", price: 800, desc: "新宿発・鹿児島の芋焼酎をベースに、コーラナッツ・シナモン・バニラ・クローブなど天然素材を組み合わせたクラフトコーラスピリッツ。カワセミのラベルが印象的な、焼酎の新たな可能性を提示する個性派。" },
           { name: "村尾", addon: true, img: "murao", unit: "1杯", price: 1300, desc: "鹿児島・村尾酒造の芋焼酎。薩摩芋と米麹を甕壺で仕込む伝統的製法。生産量が極めて少なく入手困難な幻の焼酎のひとつ。穏やかな香りと上品でまろやかな旨み、すっきりとしたキレが特徴。" },
@@ -916,6 +930,11 @@ var I18N = {
     "S&B カレーうどん": { n: "S&B Curry Udon", d: "Bagged udon from S&B. A dashi-forward Japanese curry soup that clings to the noodles. Soup sachet included. Just right as the last bowl of the night." },
     "S&B 韓国風旨辛チゲうどん": { n: "S&B Korean-style Spicy Jjigae Udon", d: "Bagged udon from S&B. A double stock of beef and clam with a savoury chili kick, Korean jjigae style. Soup sachet included. Drop in an egg topping and it looks just like the picture." },
     "サッポロ一番 みそラーメン": { n: "Sapporo Ichiban Miso Ramen", d: "Released in 1968 and a landmark in Japan's instant noodle history. A proper miso broth with a sachet of shichimi spice, clinging to thick, chewy noodles." },
+    "サッポロ一番 塩らーめん": { n: "Sapporo Ichiban Shio Ramen", d: "Sanyo Foods' long-seller, the salt-broth sibling of the miso. A clear chicken-and-pork broth with vegetable sweetness. Shake on the sesame sachet, that is the right move. Three-minute boil. Excellent with vegetable or butter toppings." },
+    "マルタイ 棒ラーメン": { n: "Marutai Bo Ramen", d: "The original \"stick ramen\" from Marutai in Fukuoka. The pack holds two portions of thin straight noodles; we serve one. Non-fried straight noodles, three minutes in the pot, with a bite close to fresh noodles and a light soy broth. Kyushu soul food." },
+    "日清焼そば（袋）": { n: "Nissin Yakisoba (Bagged)", d: "Japan's first instant yakisoba, launched in 1963. Finished with the powdered sauce fans call \"the divine powder\". The bagged version is cooked in a frying pan, so the noodles come out thick and chewy, a different animal from the cup. Want a fried egg on top? Order the egg topping." },
+    "農心 辛ラーメン": { n: "Nongshim Shin Ramyun", d: "Korea's No.1 instant ramen. A beef-bone and chili broth — \"deliciously spicy\" — that has won fans worldwide. The balance of heat and savoury depth is what made it a national dish." },
+    "ZUBAAAN! 背脂濃厚醤油": { n: "ZUBAAAN! Seabura Rich Shoyu", d: "From Maruchan's ZUBAAAN! series, aimed squarely at ramen lovers. A rich soy broth loaded with pork back fat. Chewy thick noodles close to fresh ones, sweet back fat and sharp soy, all hitting at once. Shop-quality in a bag." },
     "ZUBAAAN! 横浜家系 醤油豚骨": { n: "ZUBAAAN! Yokohama Iekei Shoyu Tonkotsu", d: "From Maruchan's ZUBAAAN! series. The shoyu-tonkotsu broth that defines Yokohama Iekei ramen, in bagged form. A rich broth that loves nori and spinach." },
     "ポックンミョン 韓国風甘辛カルボ": { n: "Bokkeum-myun Korean Sweet & Spicy Carbo", d: "Nissin's take on Korean stir-fried noodles. Chewy noodles coated in a sweet-and-spicy carbonara sauce, creamy and rich. Mild heat with plenty of umami — genuinely addictive." },
     "韓国風旨辛ラーメン（辛ヨン）": { n: "Shin-Yon Korean Spicy Ramen", d: "A Korean-style spicy ramen made in Japan. Spice level 3, with a distinctly punchy broth. Look for the pink packaging." },
@@ -973,6 +992,7 @@ var I18N = {
     "マッカラン 12年 シェリーオークカスク": { n: "Macallan 12 Year Sherry Oak Cask", d: "Macallan's single malt matured exclusively in sherry casks. Oloroso casks from Jerez, Spain, give abundant dried fruit and spice. The essence of Macallan." },
     "マッカラン 18年 シェリーオークカスク": { n: "Macallan 18 Year Sherry Oak Cask", d: "Macallan's 18-year pinnacle, patiently matured in Spanish oloroso sherry casks. Complex and rich with dried fruit, spice and chocolate. Held in the highest regard worldwide." },
     "ボウモア 12年": { n: "Bowmore 12 Year", d: "A single malt from Bowmore, Islay's oldest distillery, founded in 1779. Peat smoke and sea minerality meet chocolate and citrus sweetness — arguably the best way into Islay." },
+    "シングルトン 12年 グレンオード": { n: "The Singleton 12 Year Glen Ord", d: "A 12-year-old single malt from the Glen Ord distillery in the Scottish Highlands. \"Slow batch distilled\" for a balanced smoothness. Juicy blackcurrant fruit and creamy vanilla. Easy-going enough to be a first single malt. 40% ABV." },
     "ティーチャーズ ハイランドクリーム": { n: "Teacher's Highland Cream", d: "A blended Scotch from William Teacher & Sons, founded in Glasgow in 1830. The key malt is Ardmore of the Highlands, and the proportion of peated malt is unusually high for a blend, giving real smoke and body. The label says HIGH IN PEATED MALT, and it means it — far more serious than the price suggests." },
     "ハイランドクイーン シェリーカスクフィニッシュ": { n: "Highland Queen Sherry Cask Finish", d: "A blended Scotch named for the \"Queen of the Highlands\", dedicated in 1561 to Mary, Queen of Scots on her return from France. An additional maturation in sherry casks lends mellow sweetness and body, with dried fruit and nuts." },
     "グレンフィディック 12年": { n: "Glenfiddich 12 Year", d: "The standard single malt from Speyside's celebrated Glenfiddich. Fresh pear and creamy vanilla, smooth and light on the palate. The world's best-selling single malt, and a fine place to start." },
@@ -1002,6 +1022,7 @@ var I18N = {
     "山椒 AKAYANE CRAFT SPIRITS": { n: "Sansho AKAYANE Craft Spirits", d: "A craft spirit from AKAYANE, the red-roofed koji house founded in 1908. More than a century of shochu craft applied to a distinctive bottling made with Japanese sansho pepper. Bright, citrusy aroma and a tingling finish." },
     "日置蒸溜蔵 長期熟成 麦（8年）": { n: "Hioki Distillery Long-Aged Mugi, 8 Years", d: "A strictly limited long-aged mugi shochu from Komasa Jyozo — the makers of the Kanosuke Japanese whisky — distilled at their Hioki Distillery in Kagoshima, founded in 1883. Barley and barley koji (white koji) are fermented with Komasa yeast and well water from the Gongen shrine, then aged eight years in American white oak casks. Mellow on the palate, with sweet, generous aromas of vanilla and nuts from the wood. Only 600 bottles produced." },
     "豊永蔵 麦汁": { n: "Toyonagagura Mugijiru", d: "An unfiltered barley shochu from Toyonagagura in Kumamoto. 100% domestic naked barley, barley koji, atmospheric distillation. Leaving it unfiltered keeps the toasty character and the raw aroma of the grain intact. Mellow, and good with water or soda — and with strongly flavoured food." },
+    "さつま白波": { n: "Satsuma Shiranami", d: "The flagship imo shochu of Satsuma Shuzo in Kagoshima, famous for its \"6:4 with hot water\" ads and practically synonymous with sweet-potato shochu. Made from koganesengan sweet potato and rice koji, with the honest, old-fashioned sweet-potato aroma up front. Hot water, soda or on the rocks." },
     "いいちこ": { n: "iichiko", d: "The definitive barley shochu, from Sanwa Shurui in Oita. \"Iichiko\" means \"good\" in the local dialect. Clean on the palate with a faint barley sweetness — a long-seller loved across Japan." },
     "青鹿毛（あおかげ）": { n: "Aokage", d: "A barley shochu with bold brushwork on a blue label. Generous barley character with a clean palate." },
     "CHILL GREEN（チルグリーン）": { n: "CHILL GREEN", d: "A new-generation flavoured shochu combining barley shochu with maki — a relative of sansho — for a spicy, citrus lift. Bright and quietly addictive. Best on the rocks or with soda." },
