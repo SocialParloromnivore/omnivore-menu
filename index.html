@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-27a -->
+<!-- omnivore-menu build 2026-10-27c -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -440,6 +440,8 @@ const IMAGES = {
   "corona": "images/corona.jpg",
   "kirishima8": "images/kirishima8.jpg",
   "food_zakuro": "images/food_zakuro.jpg",
+  "food_pickles": "images/food_pickles.jpg",
+  "food_kamo_pastrami": "images/food_kamo_pastrami.jpg",
   "food_snack": "images/food_snack.jpg",
   "food_carpas": "images/food_carpas.jpg",
   "food_popcorn": "images/food_popcorn.jpg",
@@ -507,6 +509,8 @@ const MENU = [
       {
         id: "food-regular", name: "定番", nameEn: "Regular",
         items: [
+          { name: "ガーキンスピクルス", img: "food_pickles", unit: "2本", price: 300, desc: "ガーキンス（小さなきゅうり）のピクルスを2本、食べやすく切ってお出しします。酸味はやさしめで、カリッとした歯ごたえ。お酒の合間の口直しに、もう一品ほしいときに。" },
+          { name: "スモーク合鴨パストラミ", img: "food_kamo_pastrami", unit: "1皿", price: 800, desc: "スモークした合鴨ロースのパストラミを、注文ごとに軽く焼いてお出しします。燻香と黒胡椒の香り、しっとりした赤身の旨み。ウイスキーや赤ワインのお供にどうぞ。" },
           { name: "スナック＆Mixナッツ（食べ放題）", img: "food_snack", unit: "1人", price: 500, desc: "お一人につき500円チャージさせて頂きますが、食べ放題となっておりますので、たくさん食べて、喉渇かせて、ドリンクをどんどんおかわりしてください。" },
           { name: "カルパス", img: "food_carpas", unit: "1皿", price: 500, desc: "サラミとカルパスの違いってご存知ですか？お好みでマスタードをおつけ致します。" },
           { name: "ポップコーン", img: "food_popcorn", unit: "1杯", price: 500, desc: "シアターサイズの出来立てポップコーンです。" },
@@ -526,9 +530,9 @@ const MENU = [
           { name: "揚げたてコーントルティーヤチップス", img: "food_tortilla_chips", unit: "1皿", price: 800, desc: "コーントルティーヤをその場で揚げた、サクサク食感のチップス。店主自家製のサルサソースを添えてお出しします。お酒のお供にぴったりの一皿です。" },
           { name: "本日のカレー", img: "food_curry", unit: "1皿", price: 800, desc: "店主の作る家庭的な欧風カレーです。使用されているお肉はその都度違いますので、気になる方はお手数ですがご確認ください。" },
           { name: "チャーシューエッグ丼", img: "food_charsiu", unit: "1杯", price: 800, desc: "インスタントラーメンのトッピング用に作った、店主の自家製焼豚を使ったチャーシューエッグ丼です。" },
-          { name: "ポーク・カルニタス タコス", img: "food_tacos_1pc", unit: "1ピース", price: 500, desc: "店主が仕込んだポークカルニタスを使用したタコスです。トルティーヤにはコーントルティーヤを使用しております。数量限定のため、売り切れ次第終了です。<br><b>4枚目以降は1枚につき +¥300</b>" },
-          { name: "ポーク・カルニタス タコス", img: "food_tacos_2pc", unit: "2ピース", price: 900, desc: "店主が仕込んだポークカルニタスを使用したタコスです。トルティーヤにはコーントルティーヤを使用しております。数量限定のため、売り切れ次第終了です。<br><b>4枚目以降は1枚につき +¥300</b>" },
-          { name: "ポーク・カルニタス タコス", img: "food_tacos_card", unit: "3ピース", price: 1000, desc: "店主が仕込んだポークカルニタスを使用したタコスです。トルティーヤにはコーントルティーヤを使用しております。数量限定のため、売り切れ次第終了です。<br><b>4枚目以降は1枚につき +¥300</b>" }
+          { name: "カンペチャーノタコス", img: "food_tacos_1pc", unit: "1ピース", price: 500, desc: "店主が仕込んだカンペチャーノ（豚肉を数種類と鳥皮を合わせ、スパイスで煮込んだメキシコ風の具）を使用したタコスです。トルティーヤにはコーントルティーヤを使用しております。数量限定のため、売り切れ次第終了です。<br><b>4枚目以降は1枚につき +¥300</b>" },
+          { name: "カンペチャーノタコス", img: "food_tacos_2pc", unit: "2ピース", price: 900, desc: "店主が仕込んだカンペチャーノ（豚肉を数種類と鳥皮を合わせ、スパイスで煮込んだメキシコ風の具）を使用したタコスです。トルティーヤにはコーントルティーヤを使用しております。数量限定のため、売り切れ次第終了です。<br><b>4枚目以降は1枚につき +¥300</b>" },
+          { name: "カンペチャーノタコス", img: "food_tacos_card", unit: "3ピース", price: 1000, desc: "店主が仕込んだカンペチャーノ（豚肉を数種類と鳥皮を合わせ、スパイスで煮込んだメキシコ風の具）を使用したタコスです。トルティーヤにはコーントルティーヤを使用しております。数量限定のため、売り切れ次第終了です。<br><b>4枚目以降は1枚につき +¥300</b>" }
         ]
       },
       {
@@ -903,6 +907,8 @@ var I18N = {
   items: {
     "柘榴（半個）": { n: "Pomegranate (Half)", d: "Pomegranate in season, cut so it is easy to eat. Pick the ruby-red seeds straight off the plate. The sweet-tart pop goes well with wine and whisky alike. Seasonal and limited, so it is available only while it lasts. <b>Half a fruit.</b>" },
     "柘榴（1個）": { n: "Pomegranate (Whole)", d: "Pomegranate in season, cut so it is easy to eat. Pick the ruby-red seeds straight off the plate. The sweet-tart pop goes well with wine and whisky alike. Seasonal and limited, so it is available only while it lasts. <b>One whole fruit.</b> Good for sharing." },
+    "ガーキンスピクルス": { n: "Gherkin Pickles", d: "Two gherkin pickles, cut into easy pieces. Gently sour with a proper crunch. A palate-cleanser between drinks, or when you want one more small thing." },
+    "スモーク合鴨パストラミ": { n: "Smoked Duck Pastrami", d: "Smoked duck breast pastrami, lightly seared to order. Smoky, black-peppery, with the juicy depth of the lean meat. Made for whisky or red wine." },
     "スナック＆Mixナッツ（食べ放題）": { n: "Snacks & Mixed Nuts (All You Can Eat)", d: "A ¥500 charge per person, but it is all you can eat. So eat plenty, get thirsty, and keep the drinks coming." },
     "カルパス": { n: "Kalpas Dry Sausage", d: "Do you know the difference between salami and kalpas? Served with mustard on request." },
     "ポップコーン": { n: "Popcorn", d: "Freshly popped, theater-sized popcorn." },
@@ -921,7 +927,7 @@ var I18N = {
     "揚げたてコーントルティーヤチップス": { n: "Freshly Fried Corn Tortilla Chips", d: "Corn tortillas fried to order for a crisp, light crunch, served with the owner's homemade salsa. Perfect alongside a drink." },
     "本日のカレー": { n: "Curry of the Day", d: "The owner's homestyle European-style curry. The meat changes each time, so please ask if you would like to know what is in today's pot." },
     "チャーシューエッグ丼": { n: "Chashu & Egg Rice Bowl", d: "A rice bowl with the owner's homemade chashu — originally made as a ramen topping — and a fried egg." },
-    "ポーク・カルニタス タコス": { n: "Pork Carnitas Tacos", d: "Tacos filled with pork carnitas prepared in-house, on corn tortillas. Limited quantity, available until sold out.<br><b>From the 4th piece on, +¥300 each</b>" },
+    "カンペチャーノタコス": { n: "Campechano Tacos", d: "Tacos filled with house-made campechano (a Mexican-style mix of several cuts of pork and chicken skin, braised with spices), on corn tortillas. Limited quantity, available until sold out.<br><b>From the 4th piece on, +¥300 each</b>" },
     "S&B けんちんうどん": { n: "S&B Kenchin Udon", d: "Bagged udon from S&B. A soy-based kenchin broth full of vegetable umami, with chewy udon. Soup sachet included. Comforting, old-fashioned flavour." },
     "S&B カレーうどん": { n: "S&B Curry Udon", d: "Bagged udon from S&B. A dashi-forward Japanese curry soup that clings to the noodles. Soup sachet included. Just right as the last bowl of the night." },
     "S&B 韓国風旨辛チゲうどん": { n: "S&B Korean-style Spicy Jjigae Udon", d: "Bagged udon from S&B. A double stock of beef and clam with a savoury chili kick, Korean jjigae style. Soup sachet included. Drop in an egg topping and it looks just like the picture." },
