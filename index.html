@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-27c -->
+<!-- omnivore-menu build 2026-10-29a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -459,6 +459,8 @@ const IMAGES = {
   "ramen_sapporo_miso": "images/ramen_sapporo_miso.jpg",
   "ramen_sapporo_shio": "images/ramen_sapporo_shio.jpg",
   "ramen_marutai_bo": "images/ramen_marutai_bo.jpg",
+  "ramen_ronryu_tonkotsu": "images/ramen_ronryu_tonkotsu.jpg",
+  "ramen_ronryu_shoyu_tonkotsu": "images/ramen_ronryu_shoyu_tonkotsu.jpg",
   "ramen_nissin_yakisoba": "images/ramen_nissin_yakisoba.jpg",
   "ramen_shin": "images/ramen_shin.jpg",
   "ramen_zubaaan_seabura": "images/ramen_zubaaan_seabura.jpg",
@@ -556,10 +558,12 @@ const MENU = [
           { name: "サッポロ一番 みそラーメン", img: "ramen_sapporo_miso", unit: "1袋", price: 500, desc: "1968年発売、日本のインスタントラーメン史に残るロングセラー。七味唐辛子スパイス付きの本格みそスープに、もちもちとした太麺が絡む定番の一杯。" },
           { name: "サッポロ一番 塩らーめん", img: "ramen_sapporo_shio", unit: "1袋", price: 500, desc: "サンヨー食品のロングセラー、みそと並ぶ看板の塩。チキンとポークのだしに野菜の旨みを合わせた澄んだスープで、添付の「切り胡麻」を振るのが正解。ゆで時間3分。野菜やバターのトッピングとの相性が抜群です。" },
           { name: "マルタイ 棒ラーメン", img: "ramen_marutai_bo", unit: "1袋", price: 500, desc: "福岡・マルタイの元祖「棒ラーメン」。袋には2人前の細いストレート麺が入っていますが、1人前ずつお出しします。ノンフライのストレート麺を煮込み3分、生麺のような歯ごたえに、あっさりしょうゆ味のスープ。九州のソウルフード。" },
+          { name: "ロン龍 九州ラーメン とんこつ", img: "ramen_ronryu_tonkotsu", unit: "1袋", price: 500, desc: "熊本・日の出製粉の「ロン龍」。棒状のノンフライ細麺に、まろやかなとんこつスープ。九州の家庭で長く愛されてきた、素朴で飽きのこない味です。添付の調味油で香ばしさが立ちます。" },
+          { name: "ロン龍 ラーメン 醤油豚骨味", img: "ramen_ronryu_shoyu_tonkotsu", unit: "1袋", price: 500, desc: "熊本・日の出製粉の「ロン龍」、醤油豚骨味。とんこつのコクに醤油のキレを効かせた、すっきり系のスープ。棒状のノンフライ細麺がよく絡みます。とんこつ版と食べ比べてみてください。" },
           { name: "日清焼そば", img: "ramen_nissin_yakisoba", unit: "1袋", price: 500, desc: "1963年発売、日本初の即席焼そば。通称「神の粉末」と呼ばれる粉末ソースで仕上げる、あの香ばしさ。フライパンで作る袋タイプなので、カップ版とは別物の、もっちり太めの麺が楽しめます。目玉焼きを乗せたい人はトッピングのたまごをどうぞ。" },
           { name: "農心 辛ラーメン", img: "ramen_shin", unit: "1袋", price: 500, desc: "韓国No.1インスタントラーメン。牛骨と唐辛子ベースの「うまから」スープが世界中でファンを獲得。適度な辛さとコクある旨みのバランスが絶妙な国民的一杯。" },
           { name: "ZUBAAAN! 背脂濃厚醤油", img: "ramen_zubaaan_seabura", unit: "1袋", price: 500, desc: "マルちゃんZUBAAAN!シリーズ。「ラーメン好きのど真ん中」を謳う、背脂たっぷりの濃厚醤油スープ。生麺のようなもちもちの太麺に、甘みのある背脂とキレのある醤油がガツンと絡む、お店品質の一杯。" },
-          { name: "<span style='color:red'>【欠品中】</span> ZUBAAAN! 横浜家系 醤油豚骨", img: "ramen_zubaaan_iekei", unit: "1袋", price: 500, desc: "マルちゃんZUBAAAN!シリーズ。横浜家系ラーメンの特徴である醤油豚骨スープを袋麺で再現。海苔・ほうれん草との相性抜群の濃厚スープが楽しめる。" },
+          { name: "ZUBAAAN! 横浜家系 醤油豚骨", img: "ramen_zubaaan_iekei", unit: "1袋", price: 500, desc: "マルちゃんZUBAAAN!シリーズ。横浜家系ラーメンの特徴である醤油豚骨スープを袋麺で再現。海苔・ほうれん草との相性抜群の濃厚スープが楽しめる。" },
           { name: "ポックンミョン 韓国風甘辛カルボ", img: "ramen_bokkun_carbo", unit: "1袋", price: 500, desc: "日清が手がける韓国風まぜそば。もっちり麺に甘辛カルボソースが絡む、クリーミーで濃厚な味わい。マイルドな辛さの中に旨みが広がる、やみつきになる一杯。" },
           { name: "韓国風旨辛ラーメン（辛ヨン）", img: "ramen_karyon", unit: "1袋", price: 500, desc: "国内製造の韓国風旨辛ラーメン。辛さレベル3のスパイシーなスープが特徴。ピンクのパッケージが目印のMade in Japan韓国テイスト麺。" },
           { name: "うまかっちゃん", img: "ramen_umakachan", unit: "1袋", price: 500, desc: "ハウス食品が手がける九州豚骨ラーメンの定番袋麺。調味オイル付きでコクのあるとんこつスープを再現。博多っ子に愛され続ける、九州の味がそのまま楽しめる一杯。" },
@@ -934,6 +938,8 @@ var I18N = {
     "サッポロ一番 みそラーメン": { n: "Sapporo Ichiban Miso Ramen", d: "Released in 1968 and a landmark in Japan's instant noodle history. A proper miso broth with a sachet of shichimi spice, clinging to thick, chewy noodles." },
     "サッポロ一番 塩らーめん": { n: "Sapporo Ichiban Shio Ramen", d: "Sanyo Foods' long-seller, the salt-broth sibling of the miso. A clear chicken-and-pork broth with vegetable sweetness. Shake on the sesame sachet, that is the right move. Three-minute boil. Excellent with vegetable or butter toppings." },
     "マルタイ 棒ラーメン": { n: "Marutai Bo Ramen", d: "The original \"stick ramen\" from Marutai in Fukuoka. The pack holds two portions of thin straight noodles; we serve one. Non-fried straight noodles, three minutes in the pot, with a bite close to fresh noodles and a light soy broth. Kyushu soul food." },
+    "ロン龍 九州ラーメン とんこつ": { n: "Ron Ryu Kyushu Ramen Tonkotsu", d: "Ron Ryu from Hinode Seifun in Kumamoto. Thin, non-fried stick noodles in a mellow pork-bone broth. A simple, homely flavour Kyushu families have loved for decades. The seasoning oil sachet adds a toasty note." },
+    "ロン龍 ラーメン 醤油豚骨味": { n: "Ron Ryu Ramen Shoyu Tonkotsu", d: "Ron Ryu from Hinode Seifun in Kumamoto, soy-tonkotsu version. Pork-bone richness sharpened with soy sauce for a cleaner finish. Thin non-fried stick noodles carry it well. Try it side by side with the tonkotsu." },
     "日清焼そば": { n: "Nissin Yakisoba", d: "Japan's first instant yakisoba, launched in 1963. Finished with the powdered sauce fans call \"the divine powder\". The bagged version is cooked in a frying pan, so the noodles come out thick and chewy, a different animal from the cup. Want a fried egg on top? Order the egg topping." },
     "農心 辛ラーメン": { n: "Nongshim Shin Ramyun", d: "Korea's No.1 instant ramen. A beef-bone and chili broth — \"deliciously spicy\" — that has won fans worldwide. The balance of heat and savoury depth is what made it a national dish." },
     "ZUBAAAN! 背脂濃厚醤油": { n: "ZUBAAAN! Seabura Rich Shoyu", d: "From Maruchan's ZUBAAAN! series, aimed squarely at ramen lovers. A rich soy broth loaded with pork back fat. Chewy thick noodles close to fresh ones, sweet back fat and sharp soy, all hitting at once. Shop-quality in a bag." },
