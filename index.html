@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-29a -->
+<!-- omnivore-menu build 2026-10-31a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -441,6 +441,7 @@ const IMAGES = {
   "kirishima8": "images/kirishima8.jpg",
   "food_zakuro": "images/food_zakuro.jpg",
   "food_pickles": "images/food_pickles.jpg",
+  "food_buta_atarime": "images/food_buta_atarime.jpg",
   "food_kamo_pastrami": "images/food_kamo_pastrami.jpg",
   "food_snack": "images/food_snack.jpg",
   "food_carpas": "images/food_carpas.jpg",
@@ -474,11 +475,9 @@ const IMAGES = {
   "satsuma_shiranami": "images/satsuma_shiranami.jpg",
   "mitake": "images/mitake.jpg",
   "don_julio_anejo": "images/don_julio_anejo.jpg",
-  "food_ika_ring": "images/food_ika_ring.jpg",
   "food_onion_ring": "images/food_onion_ring.jpg",
   "highland_queen_sherry": "images/highland_queen_sherry.jpg",
   "black_amami": "images/black_amami.jpg",
-  "food_asari_wine": "images/food_asari_wine.jpg",
   "food_olive": "images/food_olive.jpg",
   "food_gyoza": "images/food_gyoza.jpg",
   "oyaji_gokuraku": "images/oyaji_gokuraku.jpg",
@@ -512,6 +511,7 @@ const MENU = [
         id: "food-regular", name: "定番", nameEn: "Regular",
         items: [
           { name: "ガーキンスピクルス", img: "food_pickles", unit: "2本", price: 300, desc: "ガーキンス（小さなきゅうり）のピクルスを2本、食べやすく切ってお出しします。酸味はやさしめで、カリッとした歯ごたえ。お酒の合間の口直しに、もう一品ほしいときに。" },
+          { name: "豚あたりめ", img: "food_buta_atarime", unit: "1皿", price: 500, desc: "「あたりめ」といってもイカではなく豚。豚肉を薄く裂いて、スルメのように噛むほど味が出るおつまみに仕立てました。黒胡椒と塩気がきいていて、ビールにもハイボールにも焼酎にも。噛みしめながらゆっくりどうぞ。" },
           { name: "スモーク合鴨パストラミ", img: "food_kamo_pastrami", unit: "1皿", price: 800, desc: "スモークした合鴨ロースのパストラミを、注文ごとに軽く焼いてお出しします。燻香と黒胡椒の香り、しっとりした赤身の旨み。ウイスキーや赤ワインのお供にどうぞ。" },
           { name: "スナック＆Mixナッツ（食べ放題）", img: "food_snack", unit: "1人", price: 500, desc: "お一人につき500円チャージさせて頂きますが、食べ放題となっておりますので、たくさん食べて、喉渇かせて、ドリンクをどんどんおかわりしてください。" },
           { name: "カルパス", img: "food_carpas", unit: "1皿", price: 500, desc: "サラミとカルパスの違いってご存知ですか？お好みでマスタードをおつけ致します。" },
@@ -523,11 +523,9 @@ const MENU = [
           { name: "マッケンチーズ", img: "food_mac_cheese", unit: "1杯", price: 800, desc: "マッケンチーズ（マカロニ・アンド・チーズ）は、茹でたマカロニを濃厚なチーズソースに絡めた、アメリカを代表するソウルフード（国民食）です。" },
           { name: "フライドポテト（シューストリング）", img: "food_fries_shoe", unit: "1皿", price: 500, desc: "細長くカットしたフライドポテトです。「靴ひも（Shoestring）」のように細いことから名付けられました。" },
           { name: "春巻き", img: "food_harumaki", unit: "2本", price: 500, desc: "種類の違う春巻きを2本盛り合わせでお出しします。うち1本は店主の自家製。中身はその日によって変わりますので、気になる方はお気軽にお尋ねください。お好みで、シラチャーソース（タイ発祥のチリソース）をつけて食べるのもオススメです。" },
-          { name: "イカリング", img: "food_ika_ring", unit: "1皿", price: 800, desc: "サクッと揚げた衣の中に、やわらかくジューシーなイカ。ビールにもハイボールにもよく合う定番のおつまみです。" },
           { name: "オニオンリング", img: "food_onion_ring", unit: "1皿", price: 800, desc: "厚めに切った玉ねぎを衣をつけてカラッと。噛むと玉ねぎの甘みがじゅわっと広がります。" },
-          { name: "あさりの白ワイン蒸し", img: "food_asari_wine", unit: "1皿", price: 800, desc: "あさりを白ワインとにんにくでさっと蒸し上げました。貝の旨みが溶け出したスープまで美味しい一皿です。<br>+¥200でバゲット2個をお付けできます。残ったスープに浸してどうぞ。" },
           { name: "ミックスオリーヴ", img: "food_olive", unit: "1皿", price: 1000, desc: "グリーン、ブラックなど数種類のオリーヴを盛り合わせでご用意。ワインにもスピリッツにも合う、シンプルなおつまみです。種にご注意ください。" },
-          { name: "<span style='color:red'>【欠品中】</span> 餃子", img: "food_gyoza", unit: "1皿", price: 500, desc: "おそらく日本で一番食べられている冷凍餃子。油も水も不要、羽根つきでパリッと焼き上がる完成度の高さは、もはや家庭料理の定番を超えた存在です。<br><b>1〜6個 ¥500 / 7〜12個 ¥800</b><br><b>小ライス +¥200 / ライス +¥300</b>" },
+          { name: "餃子", img: "food_gyoza", unit: "1皿", price: 500, desc: "おそらく日本で一番食べられている冷凍餃子。油も水も不要、羽根つきでパリッと焼き上がる完成度の高さは、もはや家庭料理の定番を超えた存在です。<br><b>1〜6個 ¥500 / 7〜12個 ¥800</b><br><b>小ライス +¥200 / ライス +¥300</b>" },
           { name: "Guilty Pleasure Plate", img: "food_guilty", unit: "1皿", price: 1500, desc: "これこそ背徳感。AIのざっくりした計算で1食1500kcalオーバー。一人で食べたら絶対胸やけしちゃうメニューなので、お二人以上でのご注文をオススメします。" },
           { name: "揚げたてコーントルティーヤチップス", img: "food_tortilla_chips", unit: "1皿", price: 800, desc: "コーントルティーヤをその場で揚げた、サクサク食感のチップス。店主自家製のサルサソースを添えてお出しします。お酒のお供にぴったりの一皿です。" },
           { name: "本日のカレー", img: "food_curry", unit: "1皿", price: 800, desc: "店主の作る家庭的な欧風カレーです。使用されているお肉はその都度違いますので、気になる方はお手数ですがご確認ください。" },
@@ -595,7 +593,7 @@ const MENU = [
       { name: "Corona Extra", unit: "1本", img: "corona", price: 800, desc: "メキシコ生まれの世界的人気ラガー。透明ボトルから注がれる黄金色の輝きとクリーンでライトな飲み口が特徴。ライムを添えて楽しむスタイルが定番。アルコール4.5%、330ml。" },
       { name: "Hoegaarden 0.0", unit: "1本", img: "hoegaarden", price: 500, desc: "ベルギー生まれのノンアルコールホワイトビール。コリアンダーとオレンジピールの爽やかな風味。アルコールゼロで気軽に楽しめる。" },
       { name: "<span style='color:red'>【欠品中】</span> BRULO LUST FOR LIFE IPA", unit: "1本", img: "brulo", price: 1500, desc: "ベルギー産の低アルクラフトビール「BRULO」のフラッグシップ、LUST FOR LIFE IPA。シトラ・シムコー・モザイクの3種ホップによるダブルドライホッピングで、マンゴー・ピーチ・パインのジューシーなフレーバー。2026年3月より0.5% ABVにリニューアル。ヴィーガン認証取得、人工甘味料・保存料不使用。休肝日や翌日に残したくない日にもおすすめ。" },
-      { name: "BRULO 7 HOP 7 GRAIN IPA", unit: "1缶", img: "brulo_ipa", price: 1500, desc: "7種類の穀物と新鮮で香り高い7種類のホップからなるフルボディで親しみやすい苦味のあるビール。アルコール度数0.5%。World Alcohol Free Award 2023にてBEST BEERを受賞した一本。" }
+      { name: "<span style='color:red'>【欠品中】</span> BRULO 7 HOP 7 GRAIN IPA", unit: "1缶", img: "brulo_ipa", price: 1500, desc: "7種類の穀物と新鮮で香り高い7種類のホップからなるフルボディで親しみやすい苦味のあるビール。アルコール度数0.5%。World Alcohol Free Award 2023にてBEST BEERを受賞した一本。" }
     ]
   },
   {
@@ -912,6 +910,7 @@ var I18N = {
     "柘榴（半個）": { n: "Pomegranate (Half)", d: "Pomegranate in season, cut so it is easy to eat. Pick the ruby-red seeds straight off the plate. The sweet-tart pop goes well with wine and whisky alike. Seasonal and limited, so it is available only while it lasts. <b>Half a fruit.</b>" },
     "柘榴（1個）": { n: "Pomegranate (Whole)", d: "Pomegranate in season, cut so it is easy to eat. Pick the ruby-red seeds straight off the plate. The sweet-tart pop goes well with wine and whisky alike. Seasonal and limited, so it is available only while it lasts. <b>One whole fruit.</b> Good for sharing." },
     "ガーキンスピクルス": { n: "Gherkin Pickles", d: "Two gherkin pickles, cut into easy pieces. Gently sour with a proper crunch. A palate-cleanser between drinks, or when you want one more small thing." },
+    "豚あたりめ": { n: "Pork \"Atarime\"", d: "Atarime usually means dried squid, but this one is pork: thinly shredded and seasoned so it rewards chewing, just like surume. Black pepper and salt up front. Good with beer, highballs or shochu. Take your time with it." },
     "スモーク合鴨パストラミ": { n: "Smoked Duck Pastrami", d: "Smoked duck breast pastrami, lightly seared to order. Smoky, black-peppery, with the juicy depth of the lean meat. Made for whisky or red wine." },
     "スナック＆Mixナッツ（食べ放題）": { n: "Snacks & Mixed Nuts (All You Can Eat)", d: "A ¥500 charge per person, but it is all you can eat. So eat plenty, get thirsty, and keep the drinks coming." },
     "カルパス": { n: "Kalpas Dry Sausage", d: "Do you know the difference between salami and kalpas? Served with mustard on request." },
@@ -923,9 +922,7 @@ var I18N = {
     "マッケンチーズ": { n: "Mac & Cheese", d: "Mac & cheese: boiled macaroni folded into a rich cheese sauce. One of America's great soul foods." },
     "フライドポテト（シューストリング）": { n: "French Fries (Shoestring)", d: "Thinly cut fries, named for their resemblance to shoestrings." },
     "春巻き": { n: "Spring Rolls", d: "Two different spring rolls served together. One of them is the owner's own, and the filling changes by the day — just ask if you are curious. We also recommend a dip of Sriracha (Thai chili sauce)." },
-    "イカリング": { n: "Calamari Rings", d: "Tender, juicy squid in a crisp fried batter. A classic that works with beer and highballs alike." },
     "オニオンリング": { n: "Onion Rings", d: "Thick-cut onion, battered and fried until crisp. Every bite releases a rush of onion sweetness." },
-    "あさりの白ワイン蒸し": { n: "Clams Steamed in White Wine", d: "Clams quickly steamed with white wine and garlic. The broth, full of shellfish flavour, is as good as the clams themselves.<br>Add two pieces of baguette for +¥200 and soak up what is left." },
     "ミックスオリーヴ": { n: "Mixed Olives", d: "An assortment of green, black and other olives. A simple snack that suits wine and spirits equally. Mind the pits." },
     "餃子": { n: "Gyoza (Pan-Fried Dumplings)", d: "Probably the most-eaten frozen gyoza in Japan. No oil, no water, and they crisp up with a lacy skirt — a level of engineering that has outgrown the label of home cooking.<br><b>1–6 pcs ¥500 / 7–12 pcs ¥800</b><br><b>Small rice +¥200 / Rice +¥300</b>" },
     "揚げたてコーントルティーヤチップス": { n: "Freshly Fried Corn Tortilla Chips", d: "Corn tortillas fried to order for a crisp, light crunch, served with the owner's homemade salsa. Perfect alongside a drink." },
