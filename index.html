@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-10-31a -->
+<!-- omnivore-menu build 2026-11-03b -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -312,7 +312,6 @@ const IMAGES = {
   "bombay": "images/bombay.jpg",
   "glow_ep09": "images/glow_ep09.jpg",
   "daiyame_40": "images/daiyame_40.jpg",
-  "mugjiru": "images/mugjiru.jpg",
   "twilight_awamori": "images/twilight_awamori.jpg",
   "daiyame": "images/daiyame.jpg",
   "maou": "images/maou.jpg",
@@ -472,6 +471,7 @@ const IMAGES = {
   "aokage": "images/aokage.jpg",
   "masahiro_gin": "images/masahiro_gin.jpg",
   "teachers": "images/teachers.jpg",
+  "maboroshi_no_tsuyu": "images/maboroshi_no_tsuyu.jpg",
   "satsuma_shiranami": "images/satsuma_shiranami.jpg",
   "mitake": "images/mitake.jpg",
   "don_julio_anejo": "images/don_julio_anejo.jpg",
@@ -524,7 +524,7 @@ const MENU = [
           { name: "フライドポテト（シューストリング）", img: "food_fries_shoe", unit: "1皿", price: 500, desc: "細長くカットしたフライドポテトです。「靴ひも（Shoestring）」のように細いことから名付けられました。" },
           { name: "春巻き", img: "food_harumaki", unit: "2本", price: 500, desc: "種類の違う春巻きを2本盛り合わせでお出しします。うち1本は店主の自家製。中身はその日によって変わりますので、気になる方はお気軽にお尋ねください。お好みで、シラチャーソース（タイ発祥のチリソース）をつけて食べるのもオススメです。" },
           { name: "オニオンリング", img: "food_onion_ring", unit: "1皿", price: 800, desc: "厚めに切った玉ねぎを衣をつけてカラッと。噛むと玉ねぎの甘みがじゅわっと広がります。" },
-          { name: "ミックスオリーヴ", img: "food_olive", unit: "1皿", price: 1000, desc: "グリーン、ブラックなど数種類のオリーヴを盛り合わせでご用意。ワインにもスピリッツにも合う、シンプルなおつまみです。種にご注意ください。" },
+          { name: "<span style='color:red'>【欠品中】</span> ミックスオリーヴ", img: "food_olive", unit: "1皿", price: 1000, desc: "グリーン、ブラックなど数種類のオリーヴを盛り合わせでご用意。ワインにもスピリッツにも合う、シンプルなおつまみです。種にご注意ください。" },
           { name: "餃子", img: "food_gyoza", unit: "1皿", price: 500, desc: "おそらく日本で一番食べられている冷凍餃子。油も水も不要、羽根つきでパリッと焼き上がる完成度の高さは、もはや家庭料理の定番を超えた存在です。<br><b>1〜6個 ¥500 / 7〜12個 ¥800</b><br><b>小ライス +¥200 / ライス +¥300</b>" },
           { name: "Guilty Pleasure Plate", img: "food_guilty", unit: "1皿", price: 1500, desc: "これこそ背徳感。AIのざっくりした計算で1食1500kcalオーバー。一人で食べたら絶対胸やけしちゃうメニューなので、お二人以上でのご注文をオススメします。" },
           { name: "揚げたてコーントルティーヤチップス", img: "food_tortilla_chips", unit: "1皿", price: 800, desc: "コーントルティーヤをその場で揚げた、サクサク食感のチップス。店主自家製のサルサソースを添えてお出しします。お酒のお供にぴったりの一皿です。" },
@@ -723,7 +723,7 @@ const MENU = [
       {
         id: "spirits-gin", name: "ジン", nameEn: "Gin",
         items: [
-          { name: "トーキョーハチオウジン エルダーフラワー", addon: true, img: "gin_hachioji_elderflower", unit: "1杯", price: 900, desc: "東京・八王子の小さな蒸溜所が造るロンドンドライジン。エルダーフラワーのマスカットを思わせる甘く華やかな香りが主役で、口当たりはなめらか。ソーダで割ると花の香りがふわっと開きます。アルコール40%、500ml。" },
+          { name: "<span style='color:red'>【欠品中】</span> トーキョーハチオウジン エルダーフラワー", addon: true, img: "gin_hachioji_elderflower", unit: "1杯", price: 900, desc: "東京・八王子の小さな蒸溜所が造るロンドンドライジン。エルダーフラワーのマスカットを思わせる甘く華やかな香りが主役で、口当たりはなめらか。ソーダで割ると花の香りがふわっと開きます。アルコール40%、500ml。" },
           { name: "養命酒製造 クラフトジン 香の森", addon: true, img: "gin_kanomori", unit: "1杯", price: 900, desc: "あの養命酒が長野で造るクラフトジン。和のハーブ「クロモジ（黒文字）」を主役に、森の中を歩いているような清々しい香り。ウッディで爽やか、後味はすっきり。ソーダ割りやお茶割りで香りが引き立ちます。700ml。" },
           { name: "SiCX 京都 スパイスマジックジン", addon: true, img: "gin_sicx_spicemagic", unit: "1杯", price: 900, desc: "京都発、スパイスを主役に据えたスモールバッチのクラフトジン。ジュニパーの奥からスパイスの香りが次々に顔を出す、名前どおりの一本。ソーダで割ると香りが立ち、食事にもよく合います。アルコール45%。" },
           { name: "Hendrick's Gin", addon: true, img: "hendricks", unit: "1杯", price: 900, desc: "スコットランド・ガーヴァン蒸溜所発のプレミアムクラフトジン。ローズとキュウリのエッセンスを加えたユニークなレシピが特徴。フローラルで華やかな香りと、すっきりとしたさわやかな味わい。黒いボトルのデザインも印象的。" },
@@ -772,6 +772,7 @@ const MENU = [
           { name: "@brew Ochawari!?", addon: true, img: "shochu_atbrew_ochawari", unit: "1杯", price: 700, desc: "鹿児島・志布志の若潮酒造が「お茶割りのためだけ」に造った芋焼酎。ラベルの合言葉は “Made to Fall in Love with Tea”。お茶と合わせると芋の甘い香りと茶葉の香りがきれいに重なります。まずはお茶割りでどうぞ。アルコール25%、720ml。" },
           { name: "若潮 new pot 2026", addon: true, img: "shochu_wakashio_newpot", unit: "1杯", price: 700, desc: "鹿児島・志布志の若潮酒造から、2026年の新酒。「new pot（ニューポット）」は蒸溜したての原酒のことで、熟成前ならではのフレッシュで華やかな芋の香りと、軽やかな飲み口が楽しめます。今年の出来をそのまま味わう一本。ラベルの合言葉は “Live, Laugh, Love.”。720ml。" },
           { name: "さつま白波", addon: true, img: "satsuma_shiranami", emoji: "🍶", unit: "1杯", price: 500, desc: "鹿児島・薩摩酒造の看板芋焼酎。「ロクヨンのお湯割り」のCMで知られる、芋焼酎の代名詞的な一本。黄金千貫と米麹で造る、芋の香りをまっすぐに感じる昔ながらの味わい。アルコール25%、900ml。お湯割り、ソーダ割り、ロックでどうぞ。" },
+          { name: "本格芋焼酎 幻の露", addon: true, img: "maboroshi_no_tsuyu", emoji: "🍶", unit: "1杯", price: 500, desc: "鹿児島・指宿市山川、白露酒造の本格芋焼酎。開聞山麓の水と黄金千貫を使い、黒麹で仕込んだ南薩摩の一本。芋の甘い香りはしっかりありつつ、口当たりはやわらかく、すっきりとした後味。普段飲みにちょうどいい一本で、ロック・水割り・お湯割り・ソーダ割り、どれでもどうぞ。" },
           { name: "三岳（みたけ）", addon: true, img: "mitake", unit: "1杯", price: 500, desc: "世界自然遺産・屋久島の三岳酒造が造る本格芋焼酎。屋久島の名水（軟水）と鹿児島県産のさつま芋を使用し、雑味のないすっきりとした口当たりに、ほのかな芋の甘み。生産量が限られ、島内でも入手困難とされる人気銘柄。" },
           { name: "イヨシコーラ酎", addon: true, img: "iyoshi_cola", unit: "1杯", price: 800, desc: "新宿発・鹿児島の芋焼酎をベースに、コーラナッツ・シナモン・バニラ・クローブなど天然素材を組み合わせたクラフトコーラスピリッツ。カワセミのラベルが印象的な、焼酎の新たな可能性を提示する個性派。" },
           { name: "村尾", addon: true, img: "murao", unit: "1杯", price: 1300, desc: "鹿児島・村尾酒造の芋焼酎。薩摩芋と米麹を甕壺で仕込む伝統的製法。生産量が極めて少なく入手困難な幻の焼酎のひとつ。穏やかな香りと上品でまろやかな旨み、すっきりとしたキレが特徴。" },
@@ -784,7 +785,6 @@ const MENU = [
         id: "shochu-mugi", name: "麦", nameEn: "Mugi",
         items: [
           { name: "日置蒸溜蔵 長期熟成 麦（8年）", addon: true, img: "hioki_mugi", unit: "1杯", price: 1000, desc: "国産ウイスキー「嘉之助」を手掛ける小正醸造が、鹿児島県日置市の日置蒸溜蔵（1883年創業）で仕込んだ超限定の長期熟成麦焼酎。大麦と麦麹（白麹菌）を権現様の井戸水と小正酵母で仕込み、アメリカンホワイトオーク樽で8年間熟成。まろやかな口当たりと、樽由来のバニラやナッツを思わせる甘く芳醇な香りが特徴です。製造本数わずか600本。" },
-          { name: "豊永蔵 麦汁", addon: true, img: "mugjiru", unit: "1杯", price: 500, desc: "熊本・豊永蔵が手がける無濾過の麦焼酎。国産はだか麦100%使用・麦麹・常圧蒸留。あえて無濾過で仕上げることで麦の香ばしさと原料本来の香りをそのまま残した。まろやかな口当たりで水割りやソーダ割りにも最適。濃い味の料理ともよく合う。" },
           { name: "いいちこ", addon: true, img: "iichiko", unit: "1杯", price: 500, desc: "大分・三和酒類が手がける麦焼酎の定番中の定番。「いいちこ」は大分の方言で「いい子」の意。すっきりとした飲み口とほのかな麦の甘みで、日本全国で愛されるロングセラー。" },
           { name: "青鹿毛（あおかげ）", addon: true, img: "aokage", unit: "1杯", price: 800, desc: "大麦焼酎。青いラベルに力強い筆文字が印象的な一本。麦の豊かな風味とすっきりとした口当たりが特徴。" },
           { name: "CHILL GREEN（チルグリーン）", addon: true, img: "chill_green", unit: "1杯", price: 500, desc: "麦焼酎の旨みと、マキ（山椒の仲間）のスパイシー＆シトラスな風味を融合させた新感覚のフレーバー焼酎。爽やかでクセになる香りが特徴。ロックやソーダ割りがおすすめ。" }
@@ -1024,8 +1024,8 @@ var I18N = {
     "森伊蔵": { n: "Moriizo", d: "A pot-fermented imo shochu from Moriizo Shuzo in Kagoshima. One of the \"3M\", and available only by lottery. Delicate, fruity aromatics with concentrated sweet potato sweetness — refined and quite unlike anything else." },
     "山椒 AKAYANE CRAFT SPIRITS": { n: "Sansho AKAYANE Craft Spirits", d: "A craft spirit from AKAYANE, the red-roofed koji house founded in 1908. More than a century of shochu craft applied to a distinctive bottling made with Japanese sansho pepper. Bright, citrusy aroma and a tingling finish." },
     "日置蒸溜蔵 長期熟成 麦（8年）": { n: "Hioki Distillery Long-Aged Mugi, 8 Years", d: "A strictly limited long-aged mugi shochu from Komasa Jyozo — the makers of the Kanosuke Japanese whisky — distilled at their Hioki Distillery in Kagoshima, founded in 1883. Barley and barley koji (white koji) are fermented with Komasa yeast and well water from the Gongen shrine, then aged eight years in American white oak casks. Mellow on the palate, with sweet, generous aromas of vanilla and nuts from the wood. Only 600 bottles produced." },
-    "豊永蔵 麦汁": { n: "Toyonagagura Mugijiru", d: "An unfiltered barley shochu from Toyonagagura in Kumamoto. 100% domestic naked barley, barley koji, atmospheric distillation. Leaving it unfiltered keeps the toasty character and the raw aroma of the grain intact. Mellow, and good with water or soda — and with strongly flavoured food." },
     "さつま白波": { n: "Satsuma Shiranami", d: "The flagship imo shochu of Satsuma Shuzo in Kagoshima, famous for its \"6:4 with hot water\" ads and practically synonymous with sweet-potato shochu. Made from koganesengan sweet potato and rice koji, with the honest, old-fashioned sweet-potato aroma up front. Hot water, soda or on the rocks." },
+    "本格芋焼酎 幻の露": { n: "Maboroshi no Tsuyu", d: "An honkaku imo shochu from Hakuro Shuzo in Yamakawa, Ibusuki, Kagoshima: water from the foot of Mt. Kaimon, koganesengan sweet potato and black koji. Plenty of sweet-potato aroma, yet soft on the palate with a clean finish. An easy everyday pour: rocks, water, hot water or soda, whichever you like." },
     "いいちこ": { n: "iichiko", d: "The definitive barley shochu, from Sanwa Shurui in Oita. \"Iichiko\" means \"good\" in the local dialect. Clean on the palate with a faint barley sweetness — a long-seller loved across Japan." },
     "青鹿毛（あおかげ）": { n: "Aokage", d: "A barley shochu with bold brushwork on a blue label. Generous barley character with a clean palate." },
     "CHILL GREEN（チルグリーン）": { n: "CHILL GREEN", d: "A new-generation flavoured shochu combining barley shochu with maki — a relative of sansho — for a spicy, citrus lift. Bright and quietly addictive. Best on the rocks or with soda." },
