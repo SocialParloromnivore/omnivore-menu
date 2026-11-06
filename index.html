@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-11-03b -->
+<!-- omnivore-menu build 2026-11-06a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -439,6 +439,7 @@ const IMAGES = {
   "corona": "images/corona.jpg",
   "kirishima8": "images/kirishima8.jpg",
   "food_zakuro": "images/food_zakuro.jpg",
+  "food_pasta_basilico": "images/food_pasta_basilico.jpg",
   "food_pickles": "images/food_pickles.jpg",
   "food_buta_atarime": "images/food_buta_atarime.jpg",
   "food_kamo_pastrami": "images/food_kamo_pastrami.jpg",
@@ -510,6 +511,7 @@ const MENU = [
       {
         id: "food-regular", name: "定番", nameEn: "Regular",
         items: [
+          { name: "妄想スパゲティ・バジリコ", img: "food_pasta_basilico", unit: "1皿", price: 1000, desc: "食べたことないんですけどよく存じている、某有名店のパスタを妄想して作りました。麺には浅草開化楼の製麺師である「不死鳥カラス」さんと、イタリアンレストラン「サローネグループ」の樋口敬洋シェフが共同開発した、まいばすけっとで購入可能な話題の低加水生パスタ（パスタフレスカ）、カラヒグ麺を使用してます。" },
           { name: "ガーキンスピクルス", img: "food_pickles", unit: "2本", price: 300, desc: "ガーキンス（小さなきゅうり）のピクルスを2本、食べやすく切ってお出しします。酸味はやさしめで、カリッとした歯ごたえ。お酒の合間の口直しに、もう一品ほしいときに。" },
           { name: "豚あたりめ", img: "food_buta_atarime", unit: "1皿", price: 500, desc: "「あたりめ」といってもイカではなく豚。豚肉を薄く裂いて、スルメのように噛むほど味が出るおつまみに仕立てました。黒胡椒と塩気がきいていて、ビールにもハイボールにも焼酎にも。噛みしめながらゆっくりどうぞ。" },
           { name: "スモーク合鴨パストラミ", img: "food_kamo_pastrami", unit: "1皿", price: 800, desc: "スモークした合鴨ロースのパストラミを、注文ごとに軽く焼いてお出しします。燻香と黒胡椒の香り、しっとりした赤身の旨み。ウイスキーや赤ワインのお供にどうぞ。" },
@@ -630,7 +632,7 @@ const MENU = [
       {
         id: "wine-glass", name: "グラス", nameEn: "Glass",
         items: [
-          { name: "オレンジサングリア", addon: true, addonJa: "ソーダ割り +100（税込）", addonEn: "With soda +¥100 (incl. tax)", img: "sangria_white", unit: "1杯", price: 1000, desc: "オレンジワインにオレンジなどのフルーツを漬け込んだ自家製サングリア。果実の甘みと香りがワインに溶け込んで、すっきり飲みやすい仕上がり。よく冷やしてお出しします。仕込みの量に限りがあるので、なくなり次第終了です。" },
+          { name: "白サングリア", addon: true, addonJa: "ソーダ割り +100（税込）", addonEn: "With soda +¥100 (incl. tax)", img: "sangria_white", unit: "1杯", price: 1000, desc: "白ワインにオレンジなどのフルーツを漬け込んだ自家製サングリア。果実の甘みと香りがワインに溶け込んで、すっきり飲みやすい仕上がり。よく冷やしてお出しします。仕込みの量に限りがあるので、なくなり次第終了です。" },
           { name: "がぶ飲みシャトージュン・赤", img: "chateau_jun_red", price: 1000, desc: "山梨県産ぶどう100%使用。スクリューキャップで開けやすく、低アルコールで飲み疲れないドライな辛口。まさにがぶ飲みできる赤ワイン。" },
           { name: "がぶ飲みシャトージュン・白", img: "chateau_jun_white", price: 1000, desc: "山梨県産ぶどう100%使用。スクリューキャップで開けやすく、低アルコールですっきり飲みやすい白ワイン。まさにがぶ飲みできる一本。" },
           { name: "がぶ飲みシャトージュン・オレンジ", img: "chateau_jun_orange", price: 1000, desc: "白ワイン用ぶどうを皮・種ごと仕込む赤ワイン製法で醸造。複雑味とタンニンが残り、香辛料の効いた料理と相性抜群。山梨県産ぶどう100%、アルコール11.5%。" }
@@ -890,7 +892,7 @@ const MENU = [
       {
         id: "softdrink-hot", name: "HOT", nameEn: "Hot",
         items: [
-          { name: "リッチブレンド（ホットコーヒー）", img: "hot_richblend", unit: "1杯", price: 500, desc: "UCC ドリップポッド「鑑定士の誇り」リッチブレンド。ブラジル・ホンジュラス産の豆を使用した、コクと香り豊かなホットコーヒー。" },
+          { name: "リッチブレンド（ホットコーヒー）", img: "hot_richblend", unit: "1杯", price: 500, desc: "UCC ドリップポッド「鑑定士の誇り」リッチブレンド。ブラジル・ホンジュラス産の豆を使用した、コクと香り豊かなホットコーヒー。+100円でソイラテに変更も可能です。" },
           { name: "アールグレイ（ホット）", img: "hot_earlgrey", unit: "1杯", price: 500, desc: "UCC ドリップポッドのアールグレイ紅茶。ベルガモットの華やかな香りが広がる、上品なホットティー。" },
           { name: "しょうが紅茶（ホット）", img: "hot_ginger", unit: "1杯", price: 500, desc: "鹿児島・下堂薗のしょうが紅茶。国産生姜のぴりっとした辛みと紅茶の香りが体を温める、三角ティーバッグの本格ホットティー。" },
           { name: "Chocca-Roo-Brew（ホット）", img: "hot_chocca", unit: "1杯", price: 500, desc: "ロンドンのJOE'S TEA Co.が手がけるチョコレート風味のルイボスブレンド。ノンカフェインで、ほんのり甘い香りが楽しめる英国発のホットティー。" },
@@ -909,6 +911,7 @@ var I18N = {
   items: {
     "柘榴（半個）": { n: "Pomegranate (Half)", d: "Pomegranate in season, cut so it is easy to eat. Pick the ruby-red seeds straight off the plate. The sweet-tart pop goes well with wine and whisky alike. Seasonal and limited, so it is available only while it lasts. <b>Half a fruit.</b>" },
     "柘榴（1個）": { n: "Pomegranate (Whole)", d: "Pomegranate in season, cut so it is easy to eat. Pick the ruby-red seeds straight off the plate. The sweet-tart pop goes well with wine and whisky alike. Seasonal and limited, so it is available only while it lasts. <b>One whole fruit.</b> Good for sharing." },
+    "妄想スパゲティ・バジリコ": { n: "Imaginary Spaghetti Basilico", d: "A tribute to a certain famous restaurant's pasta that the owner has never actually eaten, but knows all about. The noodles are Karahigu-men, the much-talked-about low-hydration fresh pasta (pasta fresca) developed jointly by \"Phoenix Karasu\", the noodle master of Asakusa Kaikaro, and chef Takahiro Higuchi of the Salone group, and sold at the My Basket supermarket chain." },
     "ガーキンスピクルス": { n: "Gherkin Pickles", d: "Two gherkin pickles, cut into easy pieces. Gently sour with a proper crunch. A palate-cleanser between drinks, or when you want one more small thing." },
     "豚あたりめ": { n: "Pork \"Atarime\"", d: "Atarime usually means dried squid, but this one is pork: thinly shredded and seasoned so it rewards chewing, just like surume. Black pepper and salt up front. Good with beer, highballs or shochu. Take your time with it." },
     "スモーク合鴨パストラミ": { n: "Smoked Duck Pastrami", d: "Smoked duck breast pastrami, lightly seared to order. Smoky, black-peppery, with the juicy depth of the lean meat. Made for whisky or red wine." },
@@ -960,7 +963,7 @@ var I18N = {
     "Bottega グラス": { n: "Bottega (Glass)", d: "Prosecco from Veneto, Italy. Gold on black, and elegant with it. Fine bubbles and bright fruit." },
     "QUARTET ハーフボトル": { n: "QUARTET (Half Bottle)", d: "From Anderson Valley, California, made by Roederer Estate. Creamy bubbles and generous fruit." },
     "Bottega ハーフボトル": { n: "Bottega (Half Bottle)", d: "A half bottle of the Veneto prosecco. Just the right size for two on a special evening." },
-    "オレンジサングリア": { n: "Orange Sangria", d: "House-made sangria: orange wine steeped with orange and other fruit. The sweetness and aroma of the fruit melt into the wine, and it goes down very easily. Served well chilled. Made in small batches, so it is available only while it lasts." },
+    "白サングリア": { n: "White Sangria", d: "House-made sangria: white wine steeped with orange and other fruit. The sweetness and aroma of the fruit melt into the wine, and it goes down very easily. Served well chilled. Made in small batches, so it is available only while it lasts." },
     "がぶ飲みシャトージュン・赤": { n: "Chateau Jun Red", d: "100% Yamanashi-grown grapes. Screw cap, low alcohol, dry and easy — a red you really can drink by the glassful." },
     "がぶ飲みシャトージュン・白": { n: "Chateau Jun White", d: "100% Yamanashi-grown grapes. Screw cap, low alcohol, clean and easy — a white you really can drink by the glassful." },
     "がぶ飲みシャトージュン・オレンジ": { n: "Chateau Jun Orange", d: "White grapes vinified like a red, with skins and seeds. Complexity and a little tannin remain, which makes it excellent with spiced dishes. 100% Yamanashi grapes, 11.5% ABV." },
@@ -1065,7 +1068,7 @@ var I18N = {
     "コカコーラ": { n: "Coca-Cola", d: "Classic Coca-Cola." },
     "ジンジャエール": { n: "Ginger Ale", d: "Canada Dry Ginger Ale. Crisp and dry." },
     "ジュース各種": { n: "Assorted Juices", d: "Choose from orange juice, grapefruit juice or tomato juice." },
-    "リッチブレンド（ホットコーヒー）": { n: "Rich Blend (Hot Coffee)", d: "UCC Drip Pod \"Kanteishi no Hokori\" Rich Blend. Brazilian and Honduran beans for a hot coffee with body and aroma." },
+    "リッチブレンド（ホットコーヒー）": { n: "Rich Blend (Hot Coffee)", d: "UCC Drip Pod \"Kanteishi no Hokori\" Rich Blend. Brazilian and Honduran beans for a hot coffee with body and aroma. Make it a soy latte for +¥100." },
     "アールグレイ（ホット）": { n: "Earl Grey (Hot)", d: "UCC Drip Pod Earl Grey. Bright bergamot aroma in a refined hot tea." },
     "しょうが紅茶（ホット）": { n: "Ginger Tea (Hot)", d: "Ginger tea from Shimodozono in Kagoshima. The gentle heat of Japanese ginger with the aroma of black tea, in a proper pyramid tea bag. Warming." },
     "Chocca-Roo-Brew（ホット）": { n: "Chocca-Roo-Brew (Hot)", d: "A chocolate-flavoured rooibos blend from JOE'S TEA Co. in London. Caffeine free, with a softly sweet aroma." },
