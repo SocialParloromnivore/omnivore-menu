@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-11-07a -->
+<!-- omnivore-menu build 2026-11-07b -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -422,6 +422,7 @@ const IMAGES = {
   "fugu_kossake": "images/fugu_kossake.jpg",
   "ramen_topping_ex": "images/ramen_topping_ex.jpg",
   "ramen_chashu": "images/ramen_chashu.jpg",
+  "tanqueray_ten": "images/tanqueray_ten.jpg",
   "hendricks": "images/hendricks.jpg",
   "clamato": "images/clamato.jpg",
   "akayane": "images/akayane.jpg",
@@ -725,9 +726,10 @@ const MENU = [
       {
         id: "spirits-gin", name: "ジン", nameEn: "Gin",
         items: [
-          { name: "<span style='color:red'>【欠品中】</span> トーキョーハチオウジン エルダーフラワー", addon: true, img: "gin_hachioji_elderflower", unit: "1杯", price: 900, desc: "東京・八王子の小さな蒸溜所が造るロンドンドライジン。エルダーフラワーのマスカットを思わせる甘く華やかな香りが主役で、口当たりはなめらか。ソーダで割ると花の香りがふわっと開きます。アルコール40%、500ml。" },
+          { name: "トーキョーハチオウジン エルダーフラワー", addon: true, img: "gin_hachioji_elderflower", unit: "1杯", price: 900, desc: "東京・八王子の小さな蒸溜所が造るロンドンドライジン。エルダーフラワーのマスカットを思わせる甘く華やかな香りが主役で、口当たりはなめらか。ソーダで割ると花の香りがふわっと開きます。アルコール40%、500ml。" },
           { name: "養命酒製造 クラフトジン 香の森", addon: true, img: "gin_kanomori", unit: "1杯", price: 900, desc: "あの養命酒が長野で造るクラフトジン。和のハーブ「クロモジ（黒文字）」を主役に、森の中を歩いているような清々しい香り。ウッディで爽やか、後味はすっきり。ソーダ割りやお茶割りで香りが引き立ちます。700ml。" },
           { name: "SiCX 京都 スパイスマジックジン", addon: true, img: "gin_sicx_spicemagic", unit: "1杯", price: 900, desc: "京都発、スパイスを主役に据えたスモールバッチのクラフトジン。ジュニパーの奥からスパイスの香りが次々に顔を出す、名前どおりの一本。ソーダで割ると香りが立ち、食事にもよく合います。アルコール45%。" },
+          { name: "タンカレー No.TEN", addon: true, img: "tanqueray_ten", unit: "1杯", price: 900, desc: "タンカレーの最上級ライン、No.TEN（ナンバーテン）。「Tiny Ten」と呼ばれる小型の蒸溜器で少量生産し、グレープフルーツ・オレンジ・ライムの生の柑橘とカモミールを丸ごと蒸溜に加えた贅沢なレシピ。フレッシュな柑橘の香りが際立ち、ジントニックにすると真価を発揮します。アルコール47.3%、750ml。" },
           { name: "Hendrick's Gin", addon: true, img: "hendricks", unit: "1杯", price: 900, desc: "スコットランド・ガーヴァン蒸溜所発のプレミアムクラフトジン。ローズとキュウリのエッセンスを加えたユニークなレシピが特徴。フローラルで華やかな香りと、すっきりとしたさわやかな味わい。黒いボトルのデザインも印象的。" },
           { name: "BOMBAY SAPPHIRE", addon: true, img: "bombay", unit: "1杯", price: 500, desc: "1761年のレシピをもとに英国で生まれたロンドンドライジン。10種類のボタニカルを蒸気蒸留で香り立てた、クリアでエレガントな味わい。アルコール47%。" },
           { name: "まさひろ オキナワジン Recipe 01", addon: true, img: "masahiro_gin", unit: "1杯", price: 500, desc: "沖縄・まさひろ酒造が手がけるクラフトジン。泡盛をベースに、シークワーサー・ジュニパーベリー・グァバ葉・ゴーヤー・ローゼル/ハイビスカス属・ピパーズ/ハワモドキを使用。アルコール47%、700ml。沖縄の素材を活かした個性豊かな一本。" },
@@ -1086,6 +1088,7 @@ var I18N = {
     "トーキョーハチオウジン エルダーフラワー": { n: "Tokyo Hachioji Gin Elder Flower", d: "A London dry gin from a small distillery in Hachioji, Tokyo. Elderflower leads, with a sweet, muscat-like floral nose and a smooth palate. Soda opens the flowers right up. 40% ABV, 500ml." },
     "養命酒製造 クラフトジン 香の森": { n: "Yomeishu Craft Gin Kanomori", d: "A craft gin distilled in Nagano by Yomeishu, the herbal-tonic maker. Built around kuromoji, a Japanese aromatic tree, it smells like a walk through the woods. Woody, fresh and clean on the finish. Lovely with soda or tea. 700ml." },
     "SiCX 京都 スパイスマジックジン": { n: "SiCX Kyoto Spice Magic Gin", d: "A small-batch craft gin from Kyoto that puts spice front and centre. Behind the juniper, one spice after another shows up, just as the name promises. Soda lifts the aroma, and it is good with food. 45% ABV." },
+    "タンカレー No.TEN": { n: "Tanqueray No. TEN", d: "Tanqueray's top-of-the-line gin. Distilled in small batches in a little still nicknamed \"Tiny Ten\", with whole fresh grapefruit, orange and lime plus chamomile going into the still. Bright, fresh citrus leads, and it really comes into its own in a gin and tonic. 47.3% ABV, 750ml." },
     "Hendrick's Gin": { d: "A premium craft gin from the Girvan distillery in Scotland, with its unusual infusion of rose and cucumber. Floral and expressive on the nose, clean and refreshing on the palate. The black apothecary bottle is a design classic." },
     "BOMBAY SAPPHIRE": { d: "A London dry gin made in England from a recipe dating to 1761. Ten botanicals are vapour-infused for a clear, elegant character. 47% ABV." },
     "Belvedere Vodka": { d: "A top-tier premium vodka from Żyrardów, Poland. Made from 100% Dankowskie rye, quadruple distilled and non-chill filtered. Clean and rounded, with faint vanilla and almond." },
