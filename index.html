@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-11-11b -->
+<!-- omnivore-menu build 2026-11-13a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -358,7 +358,7 @@ const IMAGES = {
   "dassai_blue": "images/dassai_blue.jpg",
   "nakano_akashiso": "images/nakano_akashiso.jpg",
   "kenbishi_cup": "images/kenbishi_cup.jpg",
-  "glenmorangie_10": "images/glenmorangie_10.jpg",
+  "glenmorangie_12": "images/glenmorangie_12.jpg",
   "talisker_10": "images/talisker_10.jpg",
   "laphroaig_10": "images/laphroaig_10.jpg",
   "hibiki_bc": "images/hibiki_bc.jpg",
@@ -525,7 +525,7 @@ const MENU = [
           { name: "フライドポテト（シューストリング）", img: "food_fries_shoe", unit: "1皿", price: 500, desc: "細長くカットしたフライドポテトです。「靴ひも（Shoestring）」のように細いことから名付けられました。" },
           { name: "春巻き", img: "food_harumaki", unit: "2本", price: 500, desc: "種類の違う春巻きを2本盛り合わせでお出しします。うち1本は店主の自家製。中身はその日によって変わりますので、気になる方はお気軽にお尋ねください。お好みで、シラチャーソース（タイ発祥のチリソース）をつけて食べるのもオススメです。" },
           { name: "オニオンリング", img: "food_onion_ring", unit: "1皿", price: 800, desc: "厚めに切った玉ねぎを衣をつけてカラッと。噛むと玉ねぎの甘みがじゅわっと広がります。" },
-          { name: "<span style='color:red'>【欠品中】</span> ミックスオリーヴ", img: "food_olive", unit: "1皿", price: 1000, desc: "グリーン、ブラックなど数種類のオリーヴを盛り合わせでご用意。ワインにもスピリッツにも合う、シンプルなおつまみです。種にご注意ください。" },
+          { name: "ミックスオリーヴ", img: "food_olive", unit: "1皿", price: 1000, desc: "グリーン、ブラックなど数種類のオリーヴを盛り合わせでご用意。ワインにもスピリッツにも合う、シンプルなおつまみです。種にご注意ください。" },
           { name: "餃子", img: "food_gyoza", unit: "1皿", price: 500, desc: "おそらく日本で一番食べられている冷凍餃子。油も水も不要、羽根つきでパリッと焼き上がる完成度の高さは、もはや家庭料理の定番を超えた存在です。<br><b>1〜6個 ¥500 / 7〜12個 ¥800</b><br><b>小ライス +¥200 / ライス +¥300</b>" },
           { name: "Guilty Pleasure Plate", img: "food_guilty", unit: "1皿", price: 1500, desc: "これこそ背徳感。AIのざっくりした計算で1食1500kcalオーバー。一人で食べたら絶対胸やけしちゃうメニューなので、お二人以上でのご注文をオススメします。" },
           { name: "揚げたてコーントルティーヤチップス", img: "food_tortilla_chips", unit: "1皿", price: 800, desc: "コーントルティーヤをその場で揚げた、サクサク食感のチップス。店主自家製のサルサソースを添えてお出しします。お酒のお供にぴったりの一皿です。" },
@@ -681,7 +681,7 @@ const MENU = [
         id: "whisky-scotch", name: "スコッチ", nameEn: "Scotch",
         items: [
           { name: "カリラ 12年", addon: true, img: "caol_ila_12", unit: "1杯", price: 1300, desc: "アイラ島ポートアスケイグの入り江にひっそりと佇む、1846年創業のカリラ蒸溜所。アイラモルトとしては比較的ライトな酒質で、オイリーなスモークと潮の香りに、レモンやハーブの爽やかさが同居する。アイラらしさを持ちながら重すぎない、通好みの一本。" },
-          { name: "<span style='color:red'>【欠品中】</span> グレンモーレンジィ オリジナル 10年", addon: true, img: "glenmorangie_10", unit: "1杯", price: 1000, desc: "スコットランド・ハイランド産シングルモルト。バーボン樽で10年熟成し、バニラや柑橘のフルーティな甘みが広がる。スコッチ入門にも最適な、エレガントで飲みやすい一本。" },
+          { name: "グレンモーレンジィ オリジナル 12年", addon: true, img: "glenmorangie_12", unit: "1杯", price: 1000, desc: "スコットランド・ハイランド産シングルモルト。バーボン樽で12年熟成した「ジ・オリジナル」。オレンジや蜂蜜、バニラ、桃を思わせる滑らかでクリーミーな甘みが広がる。スコッチ入門にも最適な、エレガントで飲みやすい一本。" },
           { name: "タリスカー 10年", addon: true, img: "talisker_10", unit: "1杯", price: 1000, desc: "スカイ島唯一の蒸溜所が生む、力強い海のシングルモルト。潮風とピートのスモーキーさに、胡椒のようなスパイシーな余韻。荒々しくも洗練されたアイランズモルトの傑作。" },
           { name: "ブルックラディ ザ・クラシックラディ 10年", addon: true, img: "bruichladdich", unit: "1杯", price: 1000, desc: "アイラ島・ブルックラディ蒸溜所のノンピートシングルモルト。スコットランド産大麦100%使用、ノンチルフィルタード。アイラらしからぬ華やかでフルーティな味わいが新鮮な一本。" },
           { name: "アードベッグ 10年", addon: true, img: "ardbeg_10", unit: "1杯", price: 1300, desc: "アイラ島最強クラスのスモーキーシングルモルト。強烈なピートの煙と潮気、タールのような複雑さの中に甘みと深みが共存。スモーキーウイスキー愛好家垂涎の一本。" },
@@ -832,7 +832,7 @@ const MENU = [
         items: [
           { name: "四季桜", img: "shiki_cup", unit: "1本", price: 1200, desc: "栃木・宇都宮酒造が醸す地酒。鬼怒川の伏流水を使用し、酸と旨みのバランスが良い特別純米酒。<b>やや辛口</b>。" },
           { name: "瑞鷹 くまもとカップ", img: "mizu_cup", unit: "1合", price: 1000, desc: "熊本・瑞鷹株式会社。くまモンラベルが愛らしい熊本の地酒。やわらかな口当たりと穏やかな旨み。<b>やや辛口</b>ですっきりとした後口。" },
-          { name: "<span style='color:red'>【欠品中】</span> 黒松剣菱", img: "kenbishi_cup", unit: "1本", price: 1000, desc: "兵庫・剣菱酒造の代名詞的銘柄。創業500年以上の歴史を持つ辛口の純米酒。どっしりとした旨みとキレのある後味が特徴で、燗でも冷でも楽しめる。<b>甘辛でいえば旨口</b>寄りです。" },
+          { name: "<span style='color:red'>【欠品中】</span> 黒松剣菱", img: "kenbishi_cup", unit: "1本", price: 1200, desc: "兵庫・剣菱酒造の代名詞的銘柄。創業500年以上の歴史を持つ辛口の純米酒。どっしりとした旨みとキレのある後味が特徴で、燗でも冷でも楽しめる。<b>甘辛でいえば旨口</b>寄りです。" },
           { name: "下関名産 とらふぐ骨酒", img: "fugu_kossake", unit: "1本", price: 2000, desc: "下関名産のとらふぐの骨を炙り、旨みをたっぷりと溶け込ませた骨酒。とらふぐならではの上品な出汁と日本酒の風味が溶け合う、下関でしか味わえない贅沢な一杯。ベースのお酒は<b>辛口</b>。カップタイプで手軽に楽しめる。" },
           { name: "おやじ極楽 純吟カップ", img: "oyaji_gokuraku", unit: "1本", price: 2000, desc: "鳥取・境港の千代むすび酒造による純米吟醸カップ。水木しげる先生の故郷ならではの目玉おやじラベルが目印で、「おやじ極楽」の名のとおり湯船（茶碗）に浸かるおやじが描かれています。純米吟醸らしい上品な香りとやわらかな旨み。<b>やや辛口</b>ですっきりとした後口。" },
           { name: "有磯 曙 本醸造カップ", img: "ariiso_akebono", unit: "1本", price: 1800, desc: "富山・氷見の高澤酒造場が醸す本醸造。宴を楽しむ人々を描いたユーモラスなラベルが印象的です。富山湾の海の幸に寄り添う地酒らしく、キレのある<b>辛口</b>で燗にすると旨みがふくらみます。" },
@@ -988,7 +988,7 @@ var I18N = {
     "あかし シングルモルト": { n: "Akashi Single Malt", d: "A single malt Japanese whisky from Eigashima Distillery in Hyogo, vatted from whiskies matured in several cask types. Balanced fruit aromatics with a soft, smoky finish." },
     "あかし シェリーカスク": { n: "Akashi Sherry Cask", d: "From Eigashima's White Oak series in Hyogo. A blended whisky matured in oloroso sherry casks, with the rich sweetness of dried fruit and chocolate and a generous aroma. Remarkable value at ¥500." },
     "イチローズモルト ホワイトラベル": { n: "Ichiro's Malt White Label", d: "A world blended whisky put together by Ichiro Akuto, founder of the Chichibu distillery. Built around Chichibu malt with whiskies vatted from around the world. Non-chill filtered and natural colour, bright and well balanced. 46% ABV." },
-    "グレンモーレンジィ オリジナル 10年": { n: "Glenmorangie Original 10 Year", d: "A Highland single malt matured ten years in bourbon casks, opening with vanilla and citrus sweetness. Elegant and easy — an ideal introduction to Scotch." },
+    "グレンモーレンジィ オリジナル 12年": { n: "Glenmorangie Original 12 Year", d: "The Original: a Highland single malt matured twelve years in bourbon casks, smooth and creamy with orange, honey, vanilla and peach. Elegant and easy — an ideal introduction to Scotch." },
     "タリスカー 10年": { n: "Talisker 10 Year", d: "A powerful, maritime single malt from the only distillery on the Isle of Skye. Sea air and peat smoke with a peppery finish. Rugged yet refined — a classic of the Islands." },
     "ブルックラディ ザ・クラシックラディ 10年": { n: "Bruichladdich The Classic Laddie 10 Year", d: "An unpeated single malt from Bruichladdich on Islay. 100% Scottish barley, non-chill filtered. Bright and fruity in a way you would not expect from Islay." },
     "アードベッグ 10年": { n: "Ardbeg 10 Year", d: "One of the smokiest single malts on Islay. Intense peat smoke, sea salt and a tar-like complexity, with sweetness and depth underneath. The one peat lovers reach for." },
