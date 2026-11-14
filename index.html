@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-11-13a -->
+<!-- omnivore-menu build 2026-11-14a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -419,7 +419,6 @@ const IMAGES = {
   "dongfang_jasmine": "images/dongfang_jasmine.jpg",
   "food_guilty": "images/food_guilty.jpg",
   "fugu_kossake": "images/fugu_kossake.jpg",
-  "ramen_topping_ex": "images/ramen_topping_ex.jpg",
   "ramen_chashu": "images/ramen_chashu.jpg",
   "tanqueray_ten": "images/tanqueray_ten.jpg",
   "hendricks": "images/hendricks.jpg",
@@ -574,7 +573,7 @@ const MENU = [
       {
         id: "ramen-toppings", name: "トッピング", nameEn: "Toppings",
         items: [
-          { name: "トッピング（2種選択）", img: "ramen_topping_ex", unit: "2種", price: 200, desc: "<b>たまご</b><br><b>ほうれん草</b><br><b>高菜</b><br><b>紅ショウガ</b><br><b>きくらげ</b><br><b>コーン</b><br><b>バター</b><br><b>スライスハラペーニョ</b><br><b>紫蘇</b><br><b>パクチー</b><br><b>海苔2枚</b><br><b>きざみにんにく（大匙1）</b><br><br>の中からお好きな2種をどうぞ。<br><br>例）ZUBAAAN! 横浜家系醤油豚骨 ¥500 ＋ トッピング（ほうれん草・海苔2枚）¥200 ＋ 自家製焼豚 ¥300 ＝ 合計 ¥1,000" },
+          { name: "トッピング（1種）", img: "", emoji: "🥚", unit: "1種", price: 100, desc: "🥚 <b>たまご</b><br>🍄 <b>きくらげ</b><br>🧈 <b>バター</b><br>🌿 <b>パクチー</b><br>🧄 <b>きざみにんにく（大匙1）</b><br><br>の中からお好きな1種をどうぞ。1種につき¥100です。" },
           { name: "小ライス", img: "ramen_rice_small", emoji: "🍚", unit: "1膳", price: 200, desc: "ラーメンのお供に、あるいは〆に。残ったスープに投入して食べるのが最適解だと思っています。" },
           { name: "ライス", img: "ramen_rice", emoji: "🍚", unit: "1膳", price: 300, desc: "小ライスより多めの普通盛りです。餃子のお供にも、ラーメンのゆでスープに投入するのにも。" },
           { name: "替玉（細麺）", img: "ramen_kaedama", emoji: "🍜", unit: "1玉", price: 200, desc: "麺だけのおかわりです。細麺なのでスープの絡み方が変わり、一杯の中で二度おいしい。スープが残っているうちにどうぞ。" },
@@ -832,7 +831,7 @@ const MENU = [
         items: [
           { name: "四季桜", img: "shiki_cup", unit: "1本", price: 1200, desc: "栃木・宇都宮酒造が醸す地酒。鬼怒川の伏流水を使用し、酸と旨みのバランスが良い特別純米酒。<b>やや辛口</b>。" },
           { name: "瑞鷹 くまもとカップ", img: "mizu_cup", unit: "1合", price: 1000, desc: "熊本・瑞鷹株式会社。くまモンラベルが愛らしい熊本の地酒。やわらかな口当たりと穏やかな旨み。<b>やや辛口</b>ですっきりとした後口。" },
-          { name: "<span style='color:red'>【欠品中】</span> 黒松剣菱", img: "kenbishi_cup", unit: "1本", price: 1200, desc: "兵庫・剣菱酒造の代名詞的銘柄。創業500年以上の歴史を持つ辛口の純米酒。どっしりとした旨みとキレのある後味が特徴で、燗でも冷でも楽しめる。<b>甘辛でいえば旨口</b>寄りです。" },
+          { name: "黒松剣菱", img: "kenbishi_cup", unit: "1本", price: 1200, desc: "兵庫・剣菱酒造の代名詞的銘柄。創業500年以上の歴史を持つ辛口の純米酒。どっしりとした旨みとキレのある後味が特徴で、燗でも冷でも楽しめる。<b>甘辛でいえば旨口</b>寄りです。" },
           { name: "下関名産 とらふぐ骨酒", img: "fugu_kossake", unit: "1本", price: 2000, desc: "下関名産のとらふぐの骨を炙り、旨みをたっぷりと溶け込ませた骨酒。とらふぐならではの上品な出汁と日本酒の風味が溶け合う、下関でしか味わえない贅沢な一杯。ベースのお酒は<b>辛口</b>。カップタイプで手軽に楽しめる。" },
           { name: "おやじ極楽 純吟カップ", img: "oyaji_gokuraku", unit: "1本", price: 2000, desc: "鳥取・境港の千代むすび酒造による純米吟醸カップ。水木しげる先生の故郷ならではの目玉おやじラベルが目印で、「おやじ極楽」の名のとおり湯船（茶碗）に浸かるおやじが描かれています。純米吟醸らしい上品な香りとやわらかな旨み。<b>やや辛口</b>ですっきりとした後口。" },
           { name: "有磯 曙 本醸造カップ", img: "ariiso_akebono", unit: "1本", price: 1800, desc: "富山・氷見の高澤酒造場が醸す本醸造。宴を楽しむ人々を描いたユーモラスなラベルが印象的です。富山湾の海の幸に寄り添う地酒らしく、キレのある<b>辛口</b>で燗にすると旨みがふくらみます。" },
@@ -948,7 +947,7 @@ var I18N = {
     "日清 ラ王 柚子しお": { n: "Nissin Raoh Yuzu Shio", d: "Non-fried noodles with a springy, almost fresh-noodle texture. A chicken base layered twice over with yuzu peel from Kochi and bonito extract from Yaizu, for a bright salt broth. A pursuit of the classic, done properly." },
     "元祖長浜屋 豚骨ラーメン": { n: "Ganso Nagahamaya Tonkotsu Ramen", d: "Co-developed by Marutai and Ganso Nagahamaya of Nagahama, Fukuoka. Founded in 1952 and often credited with inventing kaedama, the shop's tonkotsu is faithfully recreated here. A light yet deep broth with ultra-thin non-fried noodles." },
     "出前一丁": { n: "Demae Itcho", d: "A long-seller since 1968. A wisp of the secret sesame oil over a nostalgic chuka soba. Light soy broth lifted by the sesame chili oil — loved across generations." },
-    "トッピング（2種選択）": { n: "Toppings (Choose 2)", d: "<b>Egg</b><br><b>Spinach</b><br><b>Takana (pickled mustard greens)</b><br><b>Pickled red ginger</b><br><b>Kikurage mushroom</b><br><b>Corn</b><br><b>Butter</b><br><b>Sliced jalapeño</b><br><b>Shiso</b><br><b>Coriander</b><br><b>Nori (2 sheets)</b><br><b>Chopped garlic (1 tbsp)</b><br><br>Choose any two.<br><br>e.g. ZUBAAAN! Yokohama Iekei Shoyu Tonkotsu ¥500 + Toppings (spinach & nori) ¥200 + Homemade Chashu ¥300 = ¥1,000 total" },
+    "トッピング（1種）": { n: "Topping (1 kind)", d: "🥚 <b>Egg</b><br>🍄 <b>Kikurage mushroom</b><br>🧈 <b>Butter</b><br>🌿 <b>Coriander</b><br>🧄 <b>Chopped garlic (1 tbsp)</b><br><br>Choose any one. ¥100 per topping." },
     "レモンサワー": { n: "Lemon Sour", d: "Lemon and soda, clean and simple. Choose your shochu base: Kinmiya or Iichiko — same price either way. The mixer is already included." },
     "ライス": { n: "Rice", d: "A full portion, larger than the small rice. Good alongside the gyoza, or dropped into what is left of your ramen broth." },
     "小ライス": { n: "Small Rice", d: "Good alongside the noodles, or to finish. Dropping it into what is left of the broth is, in our view, the correct move." },
@@ -1108,7 +1107,7 @@ var I18N = {
     "Martell Cordon Bleu": { d: "An Extra Old cognac from Martell, one of the oldest houses in Cognac, founded in 1715. Matured in Tronçais oak, with plum, spice and floral notes over a deep finish. A benchmark among the world's great cognacs." },
     "Hennessy X.O × Zhang Enli Year of the Tiger": { d: "A Year of the Tiger limited edition XO created with the Chinese contemporary artist Zhang Enli. The crimson bottle is a striking object in its own right. Over a hundred intricately aged eaux-de-vie blended into the pinnacle of Hennessy X.O." },
   },
-  units: {"1杯": "1 glass", "1ショット": "1 shot", "1本（360ml）": "1 bottle (360ml)", "1本": "1 bottle", "1袋": "1 pack", "1皿": "1 plate", "1缶": "1 can", "1人": "1 person", "2本": "2 pcs", "1膳": "1 bowl", "1玉": "1 portion", "1ピース": "1 piece", "2ピース": "2 pieces", "3ピース": "3 pieces", "2種": "2 kinds", "2枚": "2 slices", "1本（300ml）": "1 bottle (300ml)", "1合": "1 go (180ml)", "1カラフェ": "1 carafe"},
+  units: {"1杯": "1 glass", "1ショット": "1 shot", "1本（360ml）": "1 bottle (360ml)", "1本": "1 bottle", "1袋": "1 pack", "1皿": "1 plate", "1缶": "1 can", "1人": "1 person", "2本": "2 pcs", "1膳": "1 bowl", "1玉": "1 portion", "1ピース": "1 piece", "2ピース": "2 pieces", "3ピース": "3 pieces", "1種": "1 kind", "2枚": "2 slices", "1本（300ml）": "1 bottle (300ml)", "1合": "1 go (180ml)", "1カラフェ": "1 carafe"},
   genreDesc: {"food": "Snacks and small plates", "ramen": "The owner's pick of instant noodles. Customize with toppings.", "beer": "Domestic and imported bottled beer", "wine": "A curated wine selection", "whisky": "A curated whisky collection", "spirits": "A curated spirits collection", "shochu": "A curated shochu collection", "nihonshu": "A curated sake collection", "liqueur": "A selection of fine liqueurs", "others": "Other drinks", "softdrink": "Non-alcoholic drinks", "sparkling": "Available by the glass or bottle"},
   ui: {
     tax: '(incl. tax)',
