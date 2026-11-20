@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-11-16a -->
+<!-- omnivore-menu build 2026-11-20a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -348,6 +348,8 @@ const IMAGES = {
   "hoegaarden": "images/hoegaarden.jpg",
   "sangria_white": "images/sangria_white.jpg",
   "chateau_jun_red": "images/chateau_jun_red.jpg",
+  "beaujolais_rose_2026": "images/beaujolais_rose_2026.jpg",
+  "beaujolais_villages_2026": "images/beaujolais_villages_2026.jpg",
   "chateau_jun_white": "images/chateau_jun_white.jpg",
   "chateau_jun_orange": "images/chateau_jun_orange.jpg",
   "hakushu_nv": "images/hakushu_nv.jpg",
@@ -634,6 +636,8 @@ const MENU = [
         id: "wine-glass", name: "グラス", nameEn: "Glass",
         items: [
           { name: "<span style='color:red'>【欠品中】</span> 白サングリア", addon: true, addonJa: "ソーダ割り +100（税込）", addonEn: "With soda +¥100 (incl. tax)", img: "sangria_white", unit: "1杯", price: 1000, desc: "白ワインにオレンジなどのフルーツを漬け込んだ自家製サングリア。果実の甘みと香りがワインに溶け込んで、すっきり飲みやすい仕上がり。よく冷やしてお出しします。仕込みの量に限りがあるので、なくなり次第終了です。" },
+          { name: "H.バラック ド ラ ペリエール ボジョレー ヌーヴォー ロゼ", img: "beaujolais_rose_2026", unit: "1杯", price: 800, desc: "<b>期間限定</b>。ボジョレーの名門、H.バラック・ド・ラ・ペリエールが造る2026年の新酒ロゼ「LE ROSÉ Par Brac」。ガメイ種の赤い果実の香りがそのまま弾ける、フレッシュで軽やかな一杯。今年の収穫をまず一杯で。無くなり次第終了です。" },
+          { name: "バラック イストワール ボジョレー ヴィラージュ ヌーヴォー", img: "beaujolais_villages_2026", unit: "1杯", price: 1000, desc: "<b>期間限定</b>。1574年創業の名門バラック家による2026年のボジョレー・ヴィラージュ・ヌーヴォー「Brac Histoire」。黒いラベルに金の手形が目印。普通のボジョレー・ヌーヴォーより格上の「ヴィラージュ」で、ガメイの果実味にひと回り深いコクと骨格がある。無くなり次第終了です。" },
           { name: "がぶ飲みシャトージュン・赤", img: "chateau_jun_red", price: 1000, desc: "山梨県産ぶどう100%使用。スクリューキャップで開けやすく、低アルコールで飲み疲れないドライな辛口。まさにがぶ飲みできる赤ワイン。" },
           { name: "がぶ飲みシャトージュン・白", img: "chateau_jun_white", price: 1000, desc: "山梨県産ぶどう100%使用。スクリューキャップで開けやすく、低アルコールですっきり飲みやすい白ワイン。まさにがぶ飲みできる一本。" },
           { name: "がぶ飲みシャトージュン・オレンジ", img: "chateau_jun_orange", price: 1000, desc: "白ワイン用ぶどうを皮・種ごと仕込む赤ワイン製法で醸造。複雑味とタンニンが残り、香辛料の効いた料理と相性抜群。山梨県産ぶどう100%、アルコール11.5%。" }
@@ -966,6 +970,8 @@ var I18N = {
     "QUARTET ハーフボトル": { n: "QUARTET (Half Bottle)", d: "From Anderson Valley, California, made by Roederer Estate. Creamy bubbles and generous fruit." },
     "Bottega ハーフボトル": { n: "Bottega (Half Bottle)", d: "A half bottle of the Veneto prosecco. Just the right size for two on a special evening." },
     "白サングリア": { n: "White Sangria", d: "House-made sangria: white wine steeped with orange and other fruit. The sweetness and aroma of the fruit melt into the wine, and it goes down very easily. Served well chilled. Made in small batches, so it is available only while it lasts." },
+    "H.バラック ド ラ ペリエール ボジョレー ヌーヴォー ロゼ": { n: "H. Brac de la Perrière Beaujolais Nouveau Rosé", d: "<b>Limited time.</b> LE ROSÉ Par Brac, the 2026 new-vintage rosé from H. Brac de la Perrière, a leading Beaujolais house. Fresh and light, bursting with the red-berry aromas of Gamay. A first taste of this year's harvest. Gone when it's gone." },
+    "バラック イストワール ボジョレー ヴィラージュ ヌーヴォー": { n: "Brac Histoire Beaujolais Villages Nouveau", d: "<b>Limited time.</b> The 2026 Beaujolais Villages Nouveau from the Brac family, founded in 1574, with the gold handprint on a black label. A step above basic Beaujolais Nouveau: the same juicy Gamay fruit with more depth and structure. Gone when it's gone." },
     "がぶ飲みシャトージュン・赤": { n: "Chateau Jun Red", d: "100% Yamanashi-grown grapes. Screw cap, low alcohol, dry and easy — a red you really can drink by the glassful." },
     "がぶ飲みシャトージュン・白": { n: "Chateau Jun White", d: "100% Yamanashi-grown grapes. Screw cap, low alcohol, clean and easy — a white you really can drink by the glassful." },
     "がぶ飲みシャトージュン・オレンジ": { n: "Chateau Jun Orange", d: "White grapes vinified like a red, with skins and seeds. Complexity and a little tannin remain, which makes it excellent with spiced dishes. 100% Yamanashi grapes, 11.5% ABV." },
