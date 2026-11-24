@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-11-20a -->
+<!-- omnivore-menu build 2026-11-24a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -296,6 +296,7 @@ const IMAGES = {
   "mizu_cup": "images/mizu_cup.jpg",
   "nabe_bottle": "images/nabe_bottle.jpg",
   "bottega": "images/bottega.jpg",
+  "codorniu_clasico": "images/codorniu_clasico.jpg",
   "quartet": "images/quartet.jpg",
   "delamotte": "images/delamotte.jpg",
   "laurent_perrier": "images/laurent_perrier.jpg",
@@ -402,7 +403,6 @@ const IMAGES = {
   "sakurao_hamagou": "images/sakurao_hamagou.jpg",
   "chill_green": "images/chill_green.jpg",
   "shochu_nekka": "images/shochu_nekka.jpg",
-  "ramen_bokkun_carbo": "images/ramen_bokkun_carbo.jpg",
   "ramen_demae_chuka": "images/ramen_demae_chuka.jpg",
   "akashi_single": "images/akashi_single.jpg",
   "yoichi_nv": "images/yoichi_nv.jpg",
@@ -467,9 +467,9 @@ const IMAGES = {
   "ramen_ronryu_shoyu_tonkotsu": "images/ramen_ronryu_shoyu_tonkotsu.jpg",
   "ramen_nissin_yakisoba": "images/ramen_nissin_yakisoba.jpg",
   "ramen_shin": "images/ramen_shin.jpg",
+  "ramen_shin_toomba": "images/ramen_shin_toomba.jpg",
   "ramen_zubaaan_seabura": "images/ramen_zubaaan_seabura.jpg",
   "ramen_zubaaan_iekei": "images/ramen_zubaaan_iekei.jpg",
-  "ramen_karyon": "images/ramen_karyon.jpg",
   "ramen_umakachan": "images/ramen_umakachan.jpg",
   "togouchi_peated": "images/togouchi_peated.jpg",
   "aokage": "images/aokage.jpg",
@@ -564,11 +564,10 @@ const MENU = [
           { name: "ロン龍 九州ラーメン とんこつ", img: "ramen_ronryu_tonkotsu", unit: "1袋", price: 500, desc: "熊本・日の出製粉の「ロン龍」。棒状のノンフライ細麺に、まろやかなとんこつスープ。九州の家庭で長く愛されてきた、素朴で飽きのこない味です。添付の調味油で香ばしさが立ちます。" },
           { name: "ロン龍 ラーメン 醤油豚骨味", img: "ramen_ronryu_shoyu_tonkotsu", unit: "1袋", price: 500, desc: "熊本・日の出製粉の「ロン龍」、醤油豚骨味。とんこつのコクに醤油のキレを効かせた、すっきり系のスープ。棒状のノンフライ細麺がよく絡みます。とんこつ版と食べ比べてみてください。" },
           { name: "日清焼そば", img: "ramen_nissin_yakisoba", unit: "1袋", price: 500, desc: "1963年発売、日本初の即席焼そば。通称「神の粉末」と呼ばれる粉末ソースで仕上げる、あの香ばしさ。フライパンで作る袋タイプなので、カップ版とは別物の、もっちり太めの麺が楽しめます。目玉焼きを乗せたい人はトッピングのたまごをどうぞ。" },
+          { name: "農心 辛ラーメン トゥーンバ", img: "ramen_shin_toomba", unit: "1袋", price: 500, desc: "辛ラーメンのクリーム系まぜ麺バージョン。韓国で人気の「トゥーンバ（チーズクリームパスタ風）」をラーメンに。辛ラーメンの辛さにクリーミーでリッチなソースが絡む、スパイシー＆クリーミーな一杯。ハラル認証。" },
           { name: "農心 辛ラーメン", img: "ramen_shin", unit: "1袋", price: 500, desc: "韓国No.1インスタントラーメン。牛骨と唐辛子ベースの「うまから」スープが世界中でファンを獲得。適度な辛さとコクある旨みのバランスが絶妙な国民的一杯。" },
           { name: "ZUBAAAN! 背脂濃厚醤油", img: "ramen_zubaaan_seabura", unit: "1袋", price: 500, desc: "マルちゃんZUBAAAN!シリーズ。「ラーメン好きのど真ん中」を謳う、背脂たっぷりの濃厚醤油スープ。生麺のようなもちもちの太麺に、甘みのある背脂とキレのある醤油がガツンと絡む、お店品質の一杯。" },
           { name: "ZUBAAAN! 横浜家系 醤油豚骨", img: "ramen_zubaaan_iekei", unit: "1袋", price: 500, desc: "マルちゃんZUBAAAN!シリーズ。横浜家系ラーメンの特徴である醤油豚骨スープを袋麺で再現。海苔・ほうれん草との相性抜群の濃厚スープが楽しめる。" },
-          { name: "ポックンミョン 韓国風甘辛カルボ", img: "ramen_bokkun_carbo", unit: "1袋", price: 500, desc: "日清が手がける韓国風まぜそば。もっちり麺に甘辛カルボソースが絡む、クリーミーで濃厚な味わい。マイルドな辛さの中に旨みが広がる、やみつきになる一杯。" },
-          { name: "韓国風旨辛ラーメン（辛ヨン）", img: "ramen_karyon", unit: "1袋", price: 500, desc: "国内製造の韓国風旨辛ラーメン。辛さレベル3のスパイシーなスープが特徴。ピンクのパッケージが目印のMade in Japan韓国テイスト麺。" },
           { name: "うまかっちゃん", img: "ramen_umakachan", unit: "1袋", price: 500, desc: "ハウス食品が手がける九州豚骨ラーメンの定番袋麺。調味オイル付きでコクのあるとんこつスープを再現。博多っ子に愛され続ける、九州の味がそのまま楽しめる一杯。" },
           { name: "日清 ラ王 柚子しお", img: "ramen_raoh_yuzu", unit: "1袋", price: 500, desc: "まるで生めんのようなもっちもち食感のノンフライ麺。鶏の旨みをベースに、高知県産柚子皮と焼津産鰹節エキスを二段重ねで効かせた爽やかな塩スープ。王道・本格・上質を追い求めた一杯。" },
           { name: "元祖長浜屋 豚骨ラーメン", img: "ramen_nagahamaya", unit: "1袋", price: 500, desc: "マルタイと福岡・長浜の「元祖長浜屋」の共同開発。昭和二十七年創業、「替玉」発祥の店とも言われる名店の豚骨ラーメンを袋麺で再現。あっさりしながらコクのあるスープに極細ノンフライ麺が絡む、長浜そのものの一杯。" },
@@ -613,6 +612,7 @@ const MENU = [
         name: "グラス",
         nameEn: "Glass",
         items: [
+          { name: "コドルニウ キュヴェ クラシコ セック オーガニック グラス", img: "codorniu_clasico", price: 1000, desc: "1551年創業、スペイン最古のワイナリー、コドルニウのカヴァ。有機栽培ぶどうを使ったオーガニック。シャンパーニュと同じ瓶内二次発酵で、きめ細かな泡と青りんごや柑橘の香り。「SEC」はやや甘口で、口当たりがやわらかく飲みやすい一杯。" },
           { name: "Bottega グラス", img: "bottega", price: 1000, desc: "イタリア・ヴェネト州産プロセッコ。黒いボトルに金のラベルが映えるエレガントな一本。細かい泡と爽やかな果実味が心地よい。" }
         ]
       },
@@ -623,6 +623,7 @@ const MENU = [
         items: [
           { name: "QUARTET ハーフボトル", unit: "1本", img: "quartet", price: 8000, desc: "カリフォルニア・アンダーソンヴァレー産。ロデレール・エステートが手がけるスパークリング。クリーミーな泡立ちと豊かな果実味。" },
           { name: "Delamotte", unit: "1本", img: "delamotte", price: 20000, desc: "1760年創業のシャンパーニュメゾン。サロンの姉妹ブランドとして知られ、繊細でミネラル感豊かなシャンパーニュ。" },
+          { name: "コドルニウ キュヴェ クラシコ セック オーガニック ハーフボトル", unit: "1本", img: "codorniu_clasico", price: 3500, desc: "1551年創業、スペイン最古のワイナリー、コドルニウのオーガニック・カヴァのハーフボトル。瓶内二次発酵のきめ細かな泡と青りんごや柑橘の香り。「SEC」はやや甘口で、口当たりがやわらかく飲みやすい。二人でちょうどいいサイズ。" },
           { name: "Bottega ハーフボトル", unit: "1本", img: "bottega", price: 3500, desc: "イタリア・ヴェネト州産プロセッコのハーフボトル。特別な夜を二人で楽しむのに最適なサイズ。" },
           { name: "Laurent Perrier", unit: "1本", img: "laurent_perrier", price: 45000, desc: "1812年創業の名門シャンパーニュメゾン。Ultra Brut（ブリュット・ナチュール）は砂糖無添加。純粋なシャルドネの旨みが際立つ。" }
         ]
@@ -679,7 +680,7 @@ const MENU = [
           { name: "火の神 NEW BORN 3（ショット）", addon: true, img: "hinokami_newborn3", emoji: "🥃", unit: "1ショット", price: 1000, desc: "鹿児島県枕崎市、薩摩酒造・火の神蒸溜所の「HINOKAMI NEW BORN」シリーズ第3弾にして最終章。全国数量限定3,000本。フェノール値（ピートの強さを表す数値）はシリーズ最高となる20PPM。枕崎の鰹節を燻す煙に着想を得た、「スモーキー」と「エレガント」の共存がテーマ。バーボン樽熟成。爽やかな煙に、焼いたマシュマロやチョコレートのような甘さ、南国フルーツの瑞々しさが重なり、夏祭りの残り火のように長い煙の余韻が続きます。<b>こちらは通常の半分の量のテイスティングサイズ</b>です。アルコール50%、200ml。" },
           { name: "余市 10年", addon: true, img: "yoichi_10", unit: "1杯", price: 3000, desc: "ニッカウヰスキー創業の地・北海道余市蒸溜所が手がけるシングルモルト。石炭直火蒸溜による力強くピートの効いた味わいと、10年熟成による深いコクが特徴。海のミネラル感と重厚なスモーキーさが調和した一本。アルコール45%。" },
           { name: "あかし シングルモルト", addon: true, img: "akashi_single", unit: "1杯", price: 1000, desc: "兵庫・江井ヶ嶋酒造（Eigashima Distillery）が手がけるシングルモルトジャパニーズウイスキー。複数の樽で熟成した原酒をヴァッティング。バランスの取れた果実香と、やわらかくスモーキーな余韻が特徴。" },
-          { name: "あかし シェリーカスク", addon: true, img: "akashi_sherry", unit: "1杯", price: 500, desc: "兵庫・江井ヶ嶋酒造のWhite Oakシリーズ。オロロソシェリー樽で熟成したブレンデッドウイスキー。ドライフルーツやチョコレートのような濃厚な甘みと芳醇な香りが特徴。500円で楽しめるコスパ抜群の一本。" },
+          { name: "<span style='color:red'>【欠品中】</span> あかし シェリーカスク", addon: true, img: "akashi_sherry", unit: "1杯", price: 500, desc: "兵庫・江井ヶ嶋酒造のWhite Oakシリーズ。オロロソシェリー樽で熟成したブレンデッドウイスキー。ドライフルーツやチョコレートのような濃厚な甘みと芳醇な香りが特徴。500円で楽しめるコスパ抜群の一本。" },
           { name: "イチローズモルト ホワイトラベル", addon: true, img: "ichiros_white", unit: "1杯", price: 800, desc: "秩父蒸溜所の創業者・肥土伊知郎氏がブレンドしたワールドブレンデッドウイスキー。秩父モルトを軸に世界各国の原酒をヴァッティング。ノンチルフィルタード・ノンカラーで、華やかでバランスの取れた味わい。アルコール46%。" },
         ]
       },
@@ -947,11 +948,10 @@ var I18N = {
     "ロン龍 九州ラーメン とんこつ": { n: "Ron Ryu Kyushu Ramen Tonkotsu", d: "Ron Ryu from Hinode Seifun in Kumamoto. Thin, non-fried stick noodles in a mellow pork-bone broth. A simple, homely flavour Kyushu families have loved for decades. The seasoning oil sachet adds a toasty note." },
     "ロン龍 ラーメン 醤油豚骨味": { n: "Ron Ryu Ramen Shoyu Tonkotsu", d: "Ron Ryu from Hinode Seifun in Kumamoto, soy-tonkotsu version. Pork-bone richness sharpened with soy sauce for a cleaner finish. Thin non-fried stick noodles carry it well. Try it side by side with the tonkotsu." },
     "日清焼そば": { n: "Nissin Yakisoba", d: "Japan's first instant yakisoba, launched in 1963. Finished with the powdered sauce fans call \"the divine powder\". The bagged version is cooked in a frying pan, so the noodles come out thick and chewy, a different animal from the cup. Want a fried egg on top? Order the egg topping." },
+    "農心 辛ラーメン トゥーンバ": { n: "Nongshim Shin Ramyun Toomba", d: "Shin Ramyun as a creamy stir-fried noodle. Korea's popular \"toomba\" (cheese-cream pasta style) meets Shin Ramyun heat: a rich, spicy and creamy sauce clinging to the noodles. Halal certified." },
     "農心 辛ラーメン": { n: "Nongshim Shin Ramyun", d: "Korea's No.1 instant ramen. A beef-bone and chili broth — \"deliciously spicy\" — that has won fans worldwide. The balance of heat and savoury depth is what made it a national dish." },
     "ZUBAAAN! 背脂濃厚醤油": { n: "ZUBAAAN! Seabura Rich Shoyu", d: "From Maruchan's ZUBAAAN! series, aimed squarely at ramen lovers. A rich soy broth loaded with pork back fat. Chewy thick noodles close to fresh ones, sweet back fat and sharp soy, all hitting at once. Shop-quality in a bag." },
     "ZUBAAAN! 横浜家系 醤油豚骨": { n: "ZUBAAAN! Yokohama Iekei Shoyu Tonkotsu", d: "From Maruchan's ZUBAAAN! series. The shoyu-tonkotsu broth that defines Yokohama Iekei ramen, in bagged form. A rich broth that loves nori and spinach." },
-    "ポックンミョン 韓国風甘辛カルボ": { n: "Bokkeum-myun Korean Sweet & Spicy Carbo", d: "Nissin's take on Korean stir-fried noodles. Chewy noodles coated in a sweet-and-spicy carbonara sauce, creamy and rich. Mild heat with plenty of umami — genuinely addictive." },
-    "韓国風旨辛ラーメン（辛ヨン）": { n: "Shin-Yon Korean Spicy Ramen", d: "A Korean-style spicy ramen made in Japan. Spice level 3, with a distinctly punchy broth. Look for the pink packaging." },
     "うまかっちゃん": { n: "Umakacchan", d: "House Foods' classic Kyushu tonkotsu bagged noodle. A seasoning oil sachet brings the pork broth to life. The taste of Kyushu, still beloved in Hakata after all these years." },
     "日清 ラ王 柚子しお": { n: "Nissin Raoh Yuzu Shio", d: "Non-fried noodles with a springy, almost fresh-noodle texture. A chicken base layered twice over with yuzu peel from Kochi and bonito extract from Yaizu, for a bright salt broth. A pursuit of the classic, done properly." },
     "元祖長浜屋 豚骨ラーメン": { n: "Ganso Nagahamaya Tonkotsu Ramen", d: "Co-developed by Marutai and Ganso Nagahamaya of Nagahama, Fukuoka. Founded in 1952 and often credited with inventing kaedama, the shop's tonkotsu is faithfully recreated here. A light yet deep broth with ultra-thin non-fried noodles." },
@@ -966,6 +966,8 @@ var I18N = {
     "アサヒ スーパードライ": { n: "Asahi Super Dry", d: "Japan's definitive dry beer. Sharp and crisp with a clean finish. Goes with anything on the menu." },
     "サッポロ 黒ラベル": { n: "Sapporo Black Label", d: "The flagship of Hokkaido's Sapporo Brewery. Malt richness and hop aroma in balance — a beer you never tire of." },
     "キリン ハートランド": { n: "Kirin Heartland", d: "Kirin's premium beer, born in 1986. 100% malt, aroma hops, and the same decoction method ever since. The emerald-green returnable bottle is unmistakable." },
+    "コドルニウ キュヴェ クラシコ セック オーガニック グラス": { n: "Codorníu Cuvée Clásico Sec Organic (Glass)", d: "Cava from Codorníu, Spain's oldest winery, founded in 1551, made with organically grown grapes. Second fermentation in the bottle, as in Champagne, gives fine bubbles and notes of green apple and citrus. \"Sec\" means off-dry: soft, gentle and very easy to drink." },
+    "コドルニウ キュヴェ クラシコ セック オーガニック ハーフボトル": { n: "Codorníu Cuvée Clásico Sec Organic (Half Bottle)", d: "A half bottle of the organic cava from Codorníu, Spain's oldest winery, founded in 1551. Fine bottle-fermented bubbles with green apple and citrus. \"Sec\" means off-dry: soft and gentle. Just the right size for two." },
     "Bottega グラス": { n: "Bottega (Glass)", d: "Prosecco from Veneto, Italy. Gold on black, and elegant with it. Fine bubbles and bright fruit." },
     "QUARTET ハーフボトル": { n: "QUARTET (Half Bottle)", d: "From Anderson Valley, California, made by Roederer Estate. Creamy bubbles and generous fruit." },
     "Bottega ハーフボトル": { n: "Bottega (Half Bottle)", d: "A half bottle of the Veneto prosecco. Just the right size for two on a special evening." },
