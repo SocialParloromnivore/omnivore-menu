@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-11-24a -->
+<!-- omnivore-menu build 2026-11-27b -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -336,6 +336,8 @@ const IMAGES = {
   "myers_rum": "images/myers_rum.jpg",
   "zacapa": "images/zacapa.jpg",
   "absolut_tabasco": "images/absolut_tabasco.jpg",
+  "absolut_vodka": "images/absolut_vodka.jpg",
+  "noguchi_shochu_kome": "images/noguchi_shochu_kome.jpg",
   "belvedere": "images/belvedere.jpg",
   "hennessy_vsop": "images/hennessy_vsop.jpg",
   "hennessy_xo": "images/hennessy_xo.jpg",
@@ -350,7 +352,6 @@ const IMAGES = {
   "sangria_white": "images/sangria_white.jpg",
   "chateau_jun_red": "images/chateau_jun_red.jpg",
   "beaujolais_rose_2026": "images/beaujolais_rose_2026.jpg",
-  "beaujolais_villages_2026": "images/beaujolais_villages_2026.jpg",
   "chateau_jun_white": "images/chateau_jun_white.jpg",
   "chateau_jun_orange": "images/chateau_jun_orange.jpg",
   "hakushu_nv": "images/hakushu_nv.jpg",
@@ -522,7 +523,7 @@ const MENU = [
           { name: "カルパス", img: "food_carpas", unit: "1皿", price: 500, desc: "サラミとカルパスの違いってご存知ですか？お好みでマスタードをおつけ致します。" },
           { name: "ポップコーン", img: "food_popcorn", unit: "1杯", price: 500, desc: "シアターサイズの出来立てポップコーンです。" },
           { name: "うずらの卵のピクルス", img: "food_uzura", unit: "1皿", price: 800, desc: "idsumi（いずみ）ピクルスの製品になります。ウイスキーを香り付けに使用し、ウイスキーとの相性は抜群とのこと。" },
-          { name: "えだ豆（バター醬油味）", img: "food_edamame", unit: "1皿", price: 500, desc: "冷凍枝豆じゃつまらないので、バターと醬油とにんにくで炒めました。塩茹でとは別モノの、こってり香ばしいやつです。手も口もベタベタになりますが、そういう食べ物なので気にせずどうぞ。ビールにも、ハイボールにも、日本酒にも合います。" },
+          { name: "<span style='color:red'>【欠品中】</span> えだ豆（バター醬油味）", img: "food_edamame", unit: "1皿", price: 500, desc: "冷凍枝豆じゃつまらないので、バターと醬油とにんにくで炒めました。塩茹でとは別モノの、こってり香ばしいやつです。手も口もベタベタになりますが、そういう食べ物なので気にせずどうぞ。ビールにも、ハイボールにも、日本酒にも合います。" },
           { name: "チョリソー", img: "food_chorizo", unit: "1皿", price: 800, desc: "日本でおなじみの辛いタイプのメキシコ風チョリソーです。" },
           { name: "ビーフジャーキー", img: "food_jerky", unit: "1皿", price: 800, desc: "高くても、やっぱりジャーキーはTenguでしょ。ってことで、もしTenguより美味しくてコスパのよいジャーキーをご存知の方は教えてください。" },
           { name: "マッケンチーズ", img: "food_mac_cheese", unit: "1杯", price: 800, desc: "マッケンチーズ（マカロニ・アンド・チーズ）は、茹でたマカロニを濃厚なチーズソースに絡めた、アメリカを代表するソウルフード（国民食）です。" },
@@ -638,7 +639,6 @@ const MENU = [
         items: [
           { name: "<span style='color:red'>【欠品中】</span> 白サングリア", addon: true, addonJa: "ソーダ割り +100（税込）", addonEn: "With soda +¥100 (incl. tax)", img: "sangria_white", unit: "1杯", price: 1000, desc: "白ワインにオレンジなどのフルーツを漬け込んだ自家製サングリア。果実の甘みと香りがワインに溶け込んで、すっきり飲みやすい仕上がり。よく冷やしてお出しします。仕込みの量に限りがあるので、なくなり次第終了です。" },
           { name: "H.バラック ド ラ ペリエール ボジョレー ヌーヴォー ロゼ", img: "beaujolais_rose_2026", unit: "1杯", price: 800, desc: "<b>期間限定</b>。ボジョレーの名門、H.バラック・ド・ラ・ペリエールが造る2026年の新酒ロゼ「LE ROSÉ Par Brac」。ガメイ種の赤い果実の香りがそのまま弾ける、フレッシュで軽やかな一杯。今年の収穫をまず一杯で。無くなり次第終了です。" },
-          { name: "バラック イストワール ボジョレー ヴィラージュ ヌーヴォー", img: "beaujolais_villages_2026", unit: "1杯", price: 1000, desc: "<b>期間限定</b>。1574年創業の名門バラック家による2026年のボジョレー・ヴィラージュ・ヌーヴォー「Brac Histoire」。黒いラベルに金の手形が目印。普通のボジョレー・ヌーヴォーより格上の「ヴィラージュ」で、ガメイの果実味にひと回り深いコクと骨格がある。無くなり次第終了です。" },
           { name: "がぶ飲みシャトージュン・赤", img: "chateau_jun_red", price: 1000, desc: "山梨県産ぶどう100%使用。スクリューキャップで開けやすく、低アルコールで飲み疲れないドライな辛口。まさにがぶ飲みできる赤ワイン。" },
           { name: "がぶ飲みシャトージュン・白", img: "chateau_jun_white", price: 1000, desc: "山梨県産ぶどう100%使用。スクリューキャップで開けやすく、低アルコールですっきり飲みやすい白ワイン。まさにがぶ飲みできる一本。" },
           { name: "がぶ飲みシャトージュン・オレンジ", img: "chateau_jun_orange", price: 1000, desc: "白ワイン用ぶどうを皮・種ごと仕込む赤ワイン製法で醸造。複雑味とタンニンが残り、香辛料の効いた料理と相性抜群。山梨県産ぶどう100%、アルコール11.5%。" }
@@ -747,6 +747,7 @@ const MENU = [
         id: "spirits-vodka", name: "ウォッカ", nameEn: "Vodka",
         items: [
           { name: "Belvedere Vodka", addon: true, img: "belvedere", unit: "1杯", price: 1000, desc: "ポーランド・ジラルドフ産の最高峰プレミアムウォッカ。ダンコウスキー・ライ麦100%使用、4回蒸溜後にノンチルフィルタード。クリーンでまろやかな口当たりに、ほのかなバニラとアーモンドの香りが特徴。" },
+          { name: "ABSOLUT VODKA", addon: true, img: "absolut_vodka", emoji: "🍸", unit: "1杯", price: 500, desc: "スウェーデン南部オーフスで造られる、世界で最も飲まれているウォッカのひとつ。冬小麦と地元の湧き水から連続蒸留で造られ、クセがなくクリーンでなめらか。ソーダやトニックで割っても、カクテルのベースにも。" },
           { name: "ABSOLUT TABASCO", addon: true, img: "absolut_tabasco", unit: "1杯", price: 500, desc: "スウェーデン発のプレミアムウォッカ「ABSOLUT」と世界的ホットソース「TABASCO」のコラボレーション。チリペッパーの刺激とウォッカのクリーンな味わいが融合した、スパイシーな一本。アルコール38%。" }
         ]
       },
@@ -801,6 +802,7 @@ const MENU = [
       {
         id: "shochu-others", name: "その他", nameEn: "Others",
         items: [
+          { name: "農口尚彦研究所 SHOCHU KOME 2023", addon: true, img: "noguchi_shochu_kome", emoji: "🍶", unit: "1杯", price: 1000, desc: "石川県小松市、伝説の杜氏・農口尚彦氏の「農口尚彦研究所」が造る米焼酎。日本酒と同じやり方で純米吟醸酒を仕込み、それを減圧蒸留したもの。吟醸香を思わせる華やかさと、米の甘み。アルコール40%。" },
           { name: "twilight Awamori", addon: true, img: "twilight_awamori", unit: "1杯", price: 1000, desc: "沖縄の泡盛をベースにした個性派スピリッツ。アルコール度数44%のカスクストレングス。黄昏時の沖縄の風景を映したラベルが美しく、泡盛の新たな可能性を感じさせる一本。" },
           { name: "胡麻祥酎 紅乙女", addon: true, img: "beni_otome", unit: "1杯", price: 500, desc: "福岡・紅乙女酒造が手がける日本唯一のごま焼酎。焙煎ごまを20%以上使用した長期貯蔵焼酎。ごまの芳ばしい香りとまろやかなコク、上品な甘みが特徴の個性派。" },
           { name: "キンミヤ焼酎", addon: true, img: "kinmiya", unit: "1杯", price: 500, desc: "三重・宮崎本店が手がける甲類焼酎の定番。純粋でクセのないクリアな味わいが特徴で、ホッピーや酎ハイのベースとして全国の居酒屋で愛される一本。" },
@@ -973,7 +975,6 @@ var I18N = {
     "Bottega ハーフボトル": { n: "Bottega (Half Bottle)", d: "A half bottle of the Veneto prosecco. Just the right size for two on a special evening." },
     "白サングリア": { n: "White Sangria", d: "House-made sangria: white wine steeped with orange and other fruit. The sweetness and aroma of the fruit melt into the wine, and it goes down very easily. Served well chilled. Made in small batches, so it is available only while it lasts." },
     "H.バラック ド ラ ペリエール ボジョレー ヌーヴォー ロゼ": { n: "H. Brac de la Perrière Beaujolais Nouveau Rosé", d: "<b>Limited time.</b> LE ROSÉ Par Brac, the 2026 new-vintage rosé from H. Brac de la Perrière, a leading Beaujolais house. Fresh and light, bursting with the red-berry aromas of Gamay. A first taste of this year's harvest. Gone when it's gone." },
-    "バラック イストワール ボジョレー ヴィラージュ ヌーヴォー": { n: "Brac Histoire Beaujolais Villages Nouveau", d: "<b>Limited time.</b> The 2026 Beaujolais Villages Nouveau from the Brac family, founded in 1574, with the gold handprint on a black label. A step above basic Beaujolais Nouveau: the same juicy Gamay fruit with more depth and structure. Gone when it's gone." },
     "がぶ飲みシャトージュン・赤": { n: "Chateau Jun Red", d: "100% Yamanashi-grown grapes. Screw cap, low alcohol, dry and easy — a red you really can drink by the glassful." },
     "がぶ飲みシャトージュン・白": { n: "Chateau Jun White", d: "100% Yamanashi-grown grapes. Screw cap, low alcohol, clean and easy — a white you really can drink by the glassful." },
     "がぶ飲みシャトージュン・オレンジ": { n: "Chateau Jun Orange", d: "White grapes vinified like a red, with skins and seeds. Complexity and a little tannin remain, which makes it excellent with spiced dishes. 100% Yamanashi grapes, 11.5% ABV." },
@@ -1100,6 +1101,7 @@ var I18N = {
     "Hendrick's Gin": { d: "A premium craft gin from the Girvan distillery in Scotland, with its unusual infusion of rose and cucumber. Floral and expressive on the nose, clean and refreshing on the palate. The black apothecary bottle is a design classic." },
     "BOMBAY SAPPHIRE": { d: "A London dry gin made in England from a recipe dating to 1761. Ten botanicals are vapour-infused for a clear, elegant character. 47% ABV." },
     "Belvedere Vodka": { d: "A top-tier premium vodka from Żyrardów, Poland. Made from 100% Dankowskie rye, quadruple distilled and non-chill filtered. Clean and rounded, with faint vanilla and almond." },
+    "ABSOLUT VODKA": { n: "ABSOLUT VODKA", d: "One of the world's most-drunk vodkas, made in Åhus in southern Sweden from winter wheat and local spring water by continuous distillation. Clean, smooth and neutral: good with soda or tonic, and the base for countless cocktails." },
     "ABSOLUT TABASCO": { d: "A collaboration between Sweden's ABSOLUT and the world's best-known hot sauce, TABASCO. Chili pepper heat over the clean spine of the vodka. 38% ABV." },
     "Myers's Rum Original Dark": { d: "The benchmark Jamaican dark rum, blended from nine rums for real complexity, with sweet tropical fruit and molasses on the nose. Rich and full — and a workhorse behind the bar." },
     "Ron Zacapa Centenario Solera Gran Reserva": { d: "A premium rum from Guatemala, aged in oak by the solera method at 2,300m above sea level. Complex vanilla, dried fruit and spice; silky and rich on the palate. 40% ABV." },
@@ -1108,6 +1110,7 @@ var I18N = {
     "DAIYAME": { d: "The flagship of Hamada Shuzo in Kagoshima. \"Daiyame\" is Kagoshima dialect for an evening drink. Famous for its lychee-like sweet aroma, and best enjoyed on the rocks or with water." },
     "DAIYAME 40°": { d: "The high-proof version of Hamada Shuzo's premium DAIYAME. A startlingly expressive, powerful lychee aroma reminiscent of Alsatian wine, with a dense, fruity palate. Originally export-only, it earned acclaim abroad before its domestic release. Bartenders and mixologists worldwide treat it as a premium spirit rather than simply a shochu." },
     "KIRISHIMA No.8": { d: "An honkaku imo shochu from Kirishima Shuzo in Miyazaki. Built on the theme of \"fleury elegance\", with bright fruity aromatics and a refined sweetness. A clear departure from the classic Kirishima range." },
+    "農口尚彦研究所 SHOCHU KOME 2023": { n: "Noguchi Naohiko Sake Institute SHOCHU KOME 2023", d: "A rice shochu from the Noguchi Naohiko Sake Institute in Komatsu, Ishikawa, the brewery of the legendary toji Naohiko Noguchi. A junmai ginjo sake is brewed the usual way, then vacuum-distilled into shochu. Ginjo-like aromatics and the sweetness of rice. 40% ABV." },
     "twilight Awamori": { d: "A distinctive spirit built on Okinawan awamori, bottled at cask strength, 44% ABV. The label captures Okinawa at dusk, and the liquid makes a real case for where awamori can go." },
     "Aperol": { d: "An aperitivo born in Padua, Italy. Orange sweetness with its own distinctive bitterness. Loved worldwide as the base of a spritz." },
     "Jägermeister": { d: "From Germany, a blend of 56 herbs, roots, peels and spices. Complex and herbal with sweetness, and a cool finish." },
