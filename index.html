@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-11-27c -->
+<!-- omnivore-menu build 2026-11-28a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -448,6 +448,7 @@ const IMAGES = {
   "food_zakuro": "images/food_zakuro.jpg",
   "food_pasta_basilico": "images/food_pasta_basilico.jpg",
   "food_pickles": "images/food_pickles.jpg",
+  "food_la_baicai": "images/food_la_baicai.jpg",
   "food_buta_atarime": "images/food_buta_atarime.jpg",
   "food_hirao_shiokara": "images/food_hirao_shiokara.jpg",
   "food_kamo_pastrami": "images/food_kamo_pastrami.jpg",
@@ -519,6 +520,7 @@ const MENU = [
         id: "food-regular", name: "定番", nameEn: "Regular",
         items: [
           { name: "妄想スパゲティ・バジリコ", img: "food_pasta_basilico", unit: "1皿", price: 1000, desc: "食べたことないんですけどよく存じている、某有名店のパスタを妄想して作りました。麺には浅草開化楼の製麺師である「不死鳥カラス」さんと、イタリアンレストラン「サローネグループ」の樋口敬洋シェフが共同開発した、まいばすけっとで購入可能な話題の低加水生パスタ（パスタフレスカ）、カラヒグ麺を使用してます。" },
+          { name: "自家製 辣白菜（ラーパイツァイ）", img: "food_la_baicai", unit: "1皿", price: 300, desc: "自家製の中華風ピリ辛甘酢漬け。シャキシャキの白菜に花椒の香り、辛さはほんのり。お酒の合間の口直しに。" },
           { name: "ガーキンスピクルス", img: "food_pickles", unit: "2本", price: 300, desc: "ガーキンス（小さなきゅうり）のピクルスを2本、食べやすく切ってお出しします。酸味はやさしめで、カリッとした歯ごたえ。お酒の合間の口直しに、もう一品ほしいときに。" },
           { name: "福岡のあの天婦羅処のいかの塩辛", img: "food_hirao_shiokara", unit: "1皿", price: 500, desc: "福岡の人なら誰でも知っている、あの天婦羅処の名物いかの塩辛。天ぷらと同じくらい、これ目当てで列に並ぶ人がいるほど。甘みのあるやわらかなイカに、塩気はやさしく、ごはんにも酒にも合う博多の味。30gを小鉢で。日本酒・焼酎はもちろん、ウイスキーのハイボールにも。" },
           { name: "豚あたりめ", img: "food_buta_atarime", unit: "1皿", price: 500, desc: "「あたりめ」といってもイカではなく豚。豚肉を薄く裂いて、スルメのように噛むほど味が出るおつまみに仕立てました。黒胡椒と塩気がきいていて、ビールにもハイボールにも焼酎にも。噛みしめながらゆっくりどうぞ。" },
@@ -527,7 +529,7 @@ const MENU = [
           { name: "カルパス", img: "food_carpas", unit: "1皿", price: 500, desc: "サラミとカルパスの違いってご存知ですか？お好みでマスタードをおつけ致します。" },
           { name: "ポップコーン", img: "food_popcorn", unit: "1杯", price: 500, desc: "シアターサイズの出来立てポップコーンです。" },
           { name: "うずらの卵のピクルス", img: "food_uzura", unit: "1皿", price: 800, desc: "idsumi（いずみ）ピクルスの製品になります。ウイスキーを香り付けに使用し、ウイスキーとの相性は抜群とのこと。" },
-          { name: "<span style='color:red'>【欠品中】</span> えだ豆（バター醬油味）", img: "food_edamame", unit: "1皿", price: 500, desc: "冷凍枝豆じゃつまらないので、バターと醬油とにんにくで炒めました。塩茹でとは別モノの、こってり香ばしいやつです。手も口もベタベタになりますが、そういう食べ物なので気にせずどうぞ。ビールにも、ハイボールにも、日本酒にも合います。" },
+          { name: "えだ豆（バター醬油味）", img: "food_edamame", unit: "1皿", price: 500, desc: "冷凍枝豆じゃつまらないので、バターと醬油とにんにくで炒めました。塩茹でとは別モノの、こってり香ばしいやつです。手も口もベタベタになりますが、そういう食べ物なので気にせずどうぞ。ビールにも、ハイボールにも、日本酒にも合います。" },
           { name: "チョリソー", img: "food_chorizo", unit: "1皿", price: 800, desc: "日本でおなじみの辛いタイプのメキシコ風チョリソーです。" },
           { name: "ビーフジャーキー", img: "food_jerky", unit: "1皿", price: 800, desc: "高くても、やっぱりジャーキーはTenguでしょ。ってことで、もしTenguより美味しくてコスパのよいジャーキーをご存知の方は教えてください。" },
           { name: "マッケンチーズ", img: "food_mac_cheese", unit: "1杯", price: 800, desc: "マッケンチーズ（マカロニ・アンド・チーズ）は、茹でたマカロニを濃厚なチーズソースに絡めた、アメリカを代表するソウルフード（国民食）です。" },
@@ -924,6 +926,7 @@ var I18N = {
     "柘榴（半個）": { n: "Pomegranate (Half)", d: "Pomegranate in season, cut so it is easy to eat. Pick the ruby-red seeds straight off the plate. The sweet-tart pop goes well with wine and whisky alike. Seasonal and limited, so it is available only while it lasts. <b>Half a fruit.</b>" },
     "柘榴（1個）": { n: "Pomegranate (Whole)", d: "Pomegranate in season, cut so it is easy to eat. Pick the ruby-red seeds straight off the plate. The sweet-tart pop goes well with wine and whisky alike. Seasonal and limited, so it is available only while it lasts. <b>One whole fruit.</b> Good for sharing." },
     "妄想スパゲティ・バジリコ": { n: "Imaginary Spaghetti Basilico", d: "A tribute to a certain famous restaurant's pasta that the owner has never actually eaten, but knows all about. The noodles are Karahigu-men, the much-talked-about low-hydration fresh pasta (pasta fresca) developed jointly by \"Phoenix Karasu\", the noodle master of Asakusa Kaikaro, and chef Takahiro Higuchi of the Salone group, and sold at the My Basket supermarket chain." },
+    "自家製 辣白菜（ラーパイツァイ）": { n: "House-made La Bai Cai (Sweet & Sour Napa Cabbage)", d: "House-made Chinese-style sweet & sour napa cabbage pickle with a hint of chili and Sichuan pepper. Only mildly spicy. A refreshing bite between drinks." },
     "ガーキンスピクルス": { n: "Gherkin Pickles", d: "Two gherkin pickles, cut into easy pieces. Gently sour with a proper crunch. A palate-cleanser between drinks, or when you want one more small thing." },
     "豚あたりめ": { n: "Pork \"Atarime\"", d: "Atarime usually means dried squid, but this one is pork: thinly shredded and seasoned so it rewards chewing, just like surume. Black pepper and salt up front. Good with beer, highballs or shochu. Take your time with it." },
     "福岡のあの天婦羅処のいかの塩辛": { n: "Squid Shiokara from That Tempura Place in Fukuoka", d: "The famous salted squid from a tempura restaurant every Fukuoka local knows by name. People queue for it as much as for the tempura. Sweet, tender squid with a gentle saltiness: a Hakata staple that suits rice and drinks alike. 30g in a small bowl. Great with sake or shochu, and surprisingly good with a whisky highball." },
