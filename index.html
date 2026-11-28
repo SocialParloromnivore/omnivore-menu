@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- omnivore-menu build 2026-11-28a -->
+<!-- omnivore-menu build 2026-11-29a -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Parlor omnivore — Drinks</title>
@@ -299,7 +299,6 @@ const IMAGES = {
   "shiki_cup": "images/shiki_cup.jpg",
   "mizu_cup": "images/mizu_cup.jpg",
   "nabe_bottle": "images/nabe_bottle.jpg",
-  "bottega": "images/bottega.jpg",
   "codorniu_clasico": "images/codorniu_clasico.jpg",
   "quartet": "images/quartet.jpg",
   "delamotte": "images/delamotte.jpg",
@@ -401,7 +400,6 @@ const IMAGES = {
   "ichiros_white": "images/ichiros_white.jpg",
   "gin_hachioji_elderflower": "images/gin_hachioji_elderflower.jpg",
   "gin_kanomori": "images/gin_kanomori.jpg",
-  "gin_sicx_spicemagic": "images/gin_sicx_spicemagic.jpg",
   "shochu_atbrew_ochawari": "images/shochu_atbrew_ochawari.jpg",
   "shochu_wakashio_newpot": "images/shochu_wakashio_newpot.jpg",
   "tamagawa_timemachine": "images/tamagawa_timemachine.jpg",
@@ -429,7 +427,6 @@ const IMAGES = {
   "fugu_kossake": "images/fugu_kossake.jpg",
   "ramen_chashu": "images/ramen_chashu.jpg",
   "tanqueray_ten": "images/tanqueray_ten.jpg",
-  "hendricks": "images/hendricks.jpg",
   "clamato": "images/clamato.jpg",
   "akayane": "images/akayane.jpg",
   "glow_ep05": "images/glow_ep05.jpg",
@@ -464,6 +461,7 @@ const IMAGES = {
   "food_curry": "images/food_curry.jpg",
   "food_charsiu": "images/food_charsiu.jpg",
   "ramen_sb_kenchin_udon": "images/ramen_sb_kenchin_udon.jpg",
+  "ramen_maruchan_tempura_soba": "images/ramen_maruchan_tempura_soba.jpg",
   "ramen_sb_curry_udon": "images/ramen_sb_curry_udon.jpg",
   "ramen_sb_chige_udon": "images/ramen_sb_chige_udon.jpg",
   "ramen_sapporo_miso": "images/ramen_sapporo_miso.jpg",
@@ -562,6 +560,7 @@ const MENU = [
       {
         id: "ramen-noodles", name: "各袋麺", nameEn: "Noodles",
         items: [
+          { name: "マルちゃん 天ぷらそば", img: "ramen_maruchan_tempura_soba", unit: "1袋", price: 500, desc: "東洋水産「マルちゃん」のロングセラー袋そば。なめらかなノンフライ麺に、かつおだしの効いた醤油つゆ。小えび入りの天ぷら（揚げ玉）が付いていて、つゆに溶け出すコクが昔ながらの立ち食いそばを思わせます。<b>1袋限り</b>。" },
           { name: "S&B けんちんうどん", img: "ramen_sb_kenchin_udon", unit: "1袋", price: 500, desc: "S&Bの袋うどん。「ふるさとの味と香りが自慢です」のパッケージどおり、野菜の旨みが溶けた醤油味のけんちん汁に、もちっとしたうどん。別添スープ付き。ほっとする懐かしい味です。" },
           { name: "S&B カレーうどん", img: "ramen_sb_curry_udon", unit: "1袋", price: 500, desc: "S&Bの袋うどん。「老舗の味と香りが自慢です」のとおり、和風だしの効いたカレースープがうどんにとろりと絡みます。別添スープ付き。飲んだあとの締めにもちょうどいい一杯。" },
           { name: "S&B 韓国風旨辛チゲうどん", img: "ramen_sb_chige_udon", unit: "1袋", price: 500, desc: "S&Bの袋うどん。牛とあさりのダブルだしに唐辛子の旨辛さを効かせた、韓国風チゲ味のスープ。別添スープ付き。トッピングのたまごを落とすと写真どおりの一杯になります。" },
@@ -620,7 +619,6 @@ const MENU = [
         nameEn: "Glass",
         items: [
           { name: "コドルニウ キュヴェ クラシコ セック オーガニック グラス", img: "codorniu_clasico", price: 1000, desc: "1551年創業、スペイン最古のワイナリー、コドルニウのカヴァ。有機栽培ぶどうを使ったオーガニック。シャンパーニュと同じ瓶内二次発酵で、きめ細かな泡と青りんごや柑橘の香り。「SEC」はやや甘口で、口当たりがやわらかく飲みやすい一杯。" },
-          { name: "Bottega グラス", img: "bottega", price: 1000, desc: "イタリア・ヴェネト州産プロセッコ。黒いボトルに金のラベルが映えるエレガントな一本。細かい泡と爽やかな果実味が心地よい。" }
         ]
       },
       {
@@ -631,7 +629,6 @@ const MENU = [
           { name: "QUARTET ハーフボトル", unit: "1本", img: "quartet", price: 8000, desc: "カリフォルニア・アンダーソンヴァレー産。ロデレール・エステートが手がけるスパークリング。クリーミーな泡立ちと豊かな果実味。" },
           { name: "Delamotte", unit: "1本", img: "delamotte", price: 20000, desc: "1760年創業のシャンパーニュメゾン。サロンの姉妹ブランドとして知られ、繊細でミネラル感豊かなシャンパーニュ。" },
           { name: "コドルニウ キュヴェ クラシコ セック オーガニック ハーフボトル", unit: "1本", img: "codorniu_clasico", price: 3500, desc: "1551年創業、スペイン最古のワイナリー、コドルニウのオーガニック・カヴァのハーフボトル。瓶内二次発酵のきめ細かな泡と青りんごや柑橘の香り。「SEC」はやや甘口で、口当たりがやわらかく飲みやすい。二人でちょうどいいサイズ。" },
-          { name: "Bottega ハーフボトル", unit: "1本", img: "bottega", price: 3500, desc: "イタリア・ヴェネト州産プロセッコのハーフボトル。特別な夜を二人で楽しむのに最適なサイズ。" },
           { name: "Laurent Perrier", unit: "1本", img: "laurent_perrier", price: 45000, desc: "1812年創業の名門シャンパーニュメゾン。Ultra Brut（ブリュット・ナチュール）は砂糖無添加。純粋なシャルドネの旨みが際立つ。" }
         ]
       }
@@ -740,9 +737,7 @@ const MENU = [
         items: [
           { name: "トーキョーハチオウジン エルダーフラワー", addon: true, img: "gin_hachioji_elderflower", unit: "1杯", price: 900, desc: "東京・八王子の小さな蒸溜所が造るロンドンドライジン。エルダーフラワーのマスカットを思わせる甘く華やかな香りが主役で、口当たりはなめらか。ソーダで割ると花の香りがふわっと開きます。アルコール40%。" },
           { name: "養命酒製造 クラフトジン 香の森", addon: true, img: "gin_kanomori", unit: "1杯", price: 900, desc: "あの養命酒が長野で造るクラフトジン。和のハーブ「クロモジ（黒文字）」を主役に、森の中を歩いているような清々しい香り。ウッディで爽やか、後味はすっきり。ソーダ割りで香りが引き立ちます。" },
-          { name: "SiCX 京都 スパイスマジックジン", addon: true, img: "gin_sicx_spicemagic", unit: "1杯", price: 900, desc: "京都発、スパイスを主役に据えたスモールバッチのクラフトジン。ジュニパーの奥からスパイスの香りが次々に顔を出す、名前どおりの一本。ソーダで割ると香りが立ち、食事にもよく合います。アルコール45%。" },
           { name: "タンカレー No.TEN", addon: true, img: "tanqueray_ten", unit: "1杯", price: 900, desc: "タンカレーの最上級ライン、No.TEN（ナンバーテン）。「Tiny Ten」と呼ばれる小型の蒸溜器で少量生産し、グレープフルーツ・オレンジ・ライムの生の柑橘とカモミールを丸ごと蒸溜に加えた贅沢なレシピ。フレッシュな柑橘の香りが際立ち、ジントニックにすると真価を発揮します。アルコール47.3%。" },
-          { name: "Hendrick's Gin", addon: true, img: "hendricks", unit: "1杯", price: 900, desc: "スコットランド・ガーヴァン蒸溜所発のプレミアムクラフトジン。ローズとキュウリのエッセンスを加えたユニークなレシピが特徴。フローラルで華やかな香りと、すっきりとしたさわやかな味わい。黒いボトルのデザインも印象的。" },
           { name: "BOMBAY SAPPHIRE", addon: true, img: "bombay", unit: "1杯", price: 500, desc: "1761年のレシピをもとに英国で生まれたロンドンドライジン。10種類のボタニカルを蒸気蒸留で香り立てた、クリアでエレガントな味わい。アルコール47%。" },
           { name: "まさひろ オキナワジン Recipe 01", addon: true, img: "masahiro_gin", unit: "1杯", price: 500, desc: "沖縄・まさひろ酒造が手がけるクラフトジン。泡盛をベースに、シークワーサー・ジュニパーベリー・グァバ葉・ゴーヤー・ローゼル/ハイビスカス属・ピパーズ/ハワモドキを使用。アルコール47%。沖縄の素材を活かした個性豊かな一本。" },
           { name: "SAKURAO GIN ハマゴウ 2025", addon: true, img: "sakurao_hamagou", unit: "1杯", price: 500, desc: "広島・桜尾蒸溜所のジャパニーズドライジン限定版。宮島の対岸で手摘みしたハマゴウを使用したスモールバッチ蒸留。青いボトルが美しい2025年エディション。アルコール47%。" },
@@ -948,6 +943,7 @@ var I18N = {
     "本日のカレー": { n: "Curry of the Day", d: "The owner's homestyle European-style curry. The meat changes each time, so please ask if you would like to know what is in today's pot." },
     "チャーシューエッグ丼": { n: "Chashu & Egg Rice Bowl", d: "A rice bowl with the owner's homemade chashu — originally made as a ramen topping — and a fried egg." },
     "カンペチャーノタコス": { n: "Campechano Tacos", d: "Tacos filled with house-made campechano (a Mexican-style mix of several cuts of pork and chicken skin, braised with spices), on corn tortillas. Limited quantity, available until sold out.<br><b>From the 4th piece on, +¥300 each</b>" },
+    "マルちゃん 天ぷらそば": { n: "Maruchan Tempura Soba", d: "Toyo Suisan's long-selling bagged soba. Smooth non-fried buckwheat noodles in a soy broth rich with bonito dashi, topped with crispy tempura bits studded with tiny shrimp that melt into the soup — the taste of an old-school standing soba bar. <b>Only one bag left.</b>" },
     "S&B けんちんうどん": { n: "S&B Kenchin Udon", d: "Bagged udon from S&B. A soy-based kenchin broth full of vegetable umami, with chewy udon. Soup sachet included. Comforting, old-fashioned flavour." },
     "S&B カレーうどん": { n: "S&B Curry Udon", d: "Bagged udon from S&B. A dashi-forward Japanese curry soup that clings to the noodles. Soup sachet included. Just right as the last bowl of the night." },
     "S&B 韓国風旨辛チゲうどん": { n: "S&B Korean-style Spicy Jjigae Udon", d: "Bagged udon from S&B. A double stock of beef and clam with a savoury chili kick, Korean jjigae style. Soup sachet included. Drop in an egg topping and it looks just like the picture." },
@@ -977,9 +973,7 @@ var I18N = {
     "キリン ハートランド": { n: "Kirin Heartland", d: "Kirin's premium beer, born in 1986. 100% malt, aroma hops, and the same decoction method ever since. The emerald-green returnable bottle is unmistakable." },
     "コドルニウ キュヴェ クラシコ セック オーガニック グラス": { n: "Codorníu Cuvée Clásico Sec Organic (Glass)", d: "Cava from Codorníu, Spain's oldest winery, founded in 1551, made with organically grown grapes. Second fermentation in the bottle, as in Champagne, gives fine bubbles and notes of green apple and citrus. \"Sec\" means off-dry: soft, gentle and very easy to drink." },
     "コドルニウ キュヴェ クラシコ セック オーガニック ハーフボトル": { n: "Codorníu Cuvée Clásico Sec Organic (Half Bottle)", d: "A half bottle of the organic cava from Codorníu, Spain's oldest winery, founded in 1551. Fine bottle-fermented bubbles with green apple and citrus. \"Sec\" means off-dry: soft and gentle. Just the right size for two." },
-    "Bottega グラス": { n: "Bottega (Glass)", d: "Prosecco from Veneto, Italy. Gold on black, and elegant with it. Fine bubbles and bright fruit." },
     "QUARTET ハーフボトル": { n: "QUARTET (Half Bottle)", d: "From Anderson Valley, California, made by Roederer Estate. Creamy bubbles and generous fruit." },
-    "Bottega ハーフボトル": { n: "Bottega (Half Bottle)", d: "A half bottle of the Veneto prosecco. Just the right size for two on a special evening." },
     "白サングリア": { n: "White Sangria", d: "House-made sangria: white wine steeped with orange and other fruit. The sweetness and aroma of the fruit melt into the wine, and it goes down very easily. Served well chilled. Made in small batches, so it is available only while it lasts." },
     "H.バラック ド ラ ペリエール ボジョレー ヌーヴォー ロゼ": { n: "H. Brac de la Perrière Beaujolais Nouveau Rosé", d: "<b>Limited time.</b> LE ROSÉ Par Brac, the 2026 new-vintage rosé from H. Brac de la Perrière, a leading Beaujolais house. Fresh and light, bursting with the red-berry aromas of Gamay. A first taste of this year's harvest. Gone when it's gone." },
     "がぶ飲みシャトージュン・赤": { n: "Chateau Jun Red", d: "100% Yamanashi-grown grapes. Screw cap, low alcohol, dry and easy — a red you really can drink by the glassful." },
@@ -1103,9 +1097,7 @@ var I18N = {
     "Jameson": { d: "Founded in Dublin in 1780 and now the world's best-selling Irish whiskey. Triple distillation gives a smooth, clean palate with sweet vanilla and nutty aromas. Equally at home neat or in a highball." },
     "トーキョーハチオウジン エルダーフラワー": { n: "Tokyo Hachioji Gin Elder Flower", d: "A London dry gin from a small distillery in Hachioji, Tokyo. Elderflower leads, with a sweet, muscat-like floral nose and a smooth palate. Soda opens the flowers right up. 40% ABV." },
     "養命酒製造 クラフトジン 香の森": { n: "Yomeishu Craft Gin Kanomori", d: "A craft gin distilled in Nagano by Yomeishu, the herbal-tonic maker. Built around kuromoji, a Japanese aromatic tree, it smells like a walk through the woods. Woody, fresh and clean on the finish. Lovely with soda." },
-    "SiCX 京都 スパイスマジックジン": { n: "SiCX Kyoto Spice Magic Gin", d: "A small-batch craft gin from Kyoto that puts spice front and centre. Behind the juniper, one spice after another shows up, just as the name promises. Soda lifts the aroma, and it is good with food. 45% ABV." },
     "タンカレー No.TEN": { n: "Tanqueray No. TEN", d: "Tanqueray's top-of-the-line gin. Distilled in small batches in a little still nicknamed \"Tiny Ten\", with whole fresh grapefruit, orange and lime plus chamomile going into the still. Bright, fresh citrus leads, and it really comes into its own in a gin and tonic. 47.3% ABV." },
-    "Hendrick's Gin": { d: "A premium craft gin from the Girvan distillery in Scotland, with its unusual infusion of rose and cucumber. Floral and expressive on the nose, clean and refreshing on the palate. The black apothecary bottle is a design classic." },
     "BOMBAY SAPPHIRE": { d: "A London dry gin made in England from a recipe dating to 1761. Ten botanicals are vapour-infused for a clear, elegant character. 47% ABV." },
     "Belvedere Vodka": { d: "A top-tier premium vodka from Żyrardów, Poland. Made from 100% Dankowskie rye, quadruple distilled and non-chill filtered. Clean and rounded, with faint vanilla and almond." },
     "ABSOLUT VODKA": { n: "ABSOLUT VODKA", d: "One of the world's most-drunk vodkas, made in Åhus in southern Sweden from winter wheat and local spring water by continuous distillation. Clean, smooth and neutral: good with soda or tonic, and the base for countless cocktails." },
